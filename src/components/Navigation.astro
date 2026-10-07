@@ -1,99 +1,135 @@
 ---
-// Navigation.astro - Refined Minimal Observatory Navigation Bar
+// Navigation.astro - Clean White Traditional Indian Astrologer Header
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-[#05060B]/85 backdrop-blur-md border-b border-hairline transition-all duration-300">
+<header class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
   
-  <!-- Subtle Top Micro Metadata Strip -->
-  <div class="hidden md:flex justify-between items-center max-w-7xl mx-auto px-6 py-1.5 text-[9px] tracking-[0.28em] text-[#9696A5]/60 font-mono border-b border-hairline/50">
-    <div class="flex items-center gap-4">
-      <span>CELESTIAL OBSERVATORY</span>
-      <span>&bull;</span>
-      <span>HOLLYWOOD BLVD &bull; LOS ANGELES, CA</span>
-    </div>
-    <div class="flex items-center gap-4">
-      <span>LAT 34°06'06" N &nbsp;|&nbsp; LON 118°20'40" W</span>
-      <span>&bull;</span>
-      <span class="text-[#C8A45C]">SANCTUARY OPEN</span>
-      <span>&bull;</span>
-      <a href="tel:+15103714626" class="hover:text-[#F2EEE7] transition-colors">+1 510-371-4626</a>
+  <!-- Top Bar: Coordinates, Address & Direct Phone -->
+  <div class="bg-gradient-to-r from-red-900 via-red-800 to-amber-700 text-white text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      
+      <!-- Address & Availability -->
+      <div class="flex items-center gap-4 text-[11px] sm:text-xs">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-amber-300" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+          </svg>
+          7001 Hollywood Blvd, Los Angeles, CA 90028
+        </span>
+        <span class="hidden md:inline text-red-200">|</span>
+        <span class="hidden md:inline text-amber-200 font-medium">⚡ Available 24/7 Mon-Sun</span>
+      </div>
+
+      <!-- Quick Call & WhatsApp -->
+      <div class="flex items-center gap-4 text-xs font-semibold">
+        <a href="tel:+15103714626" class="flex items-center gap-1.5 hover:text-amber-200 transition-colors">
+          <svg class="w-3.5 h-3.5 text-amber-300 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
+          </svg>
+          Call: +1 510-371-4626
+        </a>
+        <span class="text-red-300">|</span>
+        <a href="https://wa.me/15103714626" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-green-300 hover:text-white transition-colors">
+          <span>WhatsApp Chat</span>
+        </a>
+      </div>
+
     </div>
   </div>
 
   <!-- Main Navigation Bar -->
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
     
-    <!-- Editorial Brand Title -->
-    <a href="#top" class="flex flex-col group">
-      <span class="font-editorial text-2xl tracking-[0.08em] text-[#F2EEE7] font-medium leading-none group-hover:text-[#C8A45C] transition-colors">
-        PANDITH VIKRAM
-      </span>
-      <span class="text-[9px] uppercase tracking-[0.32em] text-[#9696A5] font-sans mt-1">
-        Indian Astrologer & Vedic Sanctuary
-      </span>
+    <!-- Astrologer Brand Identity -->
+    <a href="#home" class="flex items-center gap-3 group">
+      <div class="w-11 h-11 rounded-full bg-gradient-to-br from-amber-500 to-red-800 text-white flex items-center justify-center font-heading text-2xl font-bold shadow-md shadow-amber-500/20">
+        🕉️
+      </div>
+      <div>
+        <span class="block font-heading text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-amber-700 transition-colors tracking-tight">
+          Pandith Vikram
+        </span>
+        <span class="block text-[10px] sm:text-xs font-semibold text-amber-700 uppercase tracking-wider">
+          Best Indian Astrologer in Los Angeles
+        </span>
+      </div>
     </a>
 
-    <!-- Center Observatory Navigation Links -->
-    <nav class="hidden lg:flex items-center gap-8 text-[11px] font-sans font-medium tracking-[0.22em] text-[#9696A5] uppercase">
-      <a href="#top" class="hover:text-[#F2EEE7] transition-colors">OBSERVATORY</a>
-      <a href="#zodiac" class="hover:text-[#F2EEE7] transition-colors">YOUR SKY</a>
-      <a href="#services" class="hover:text-[#F2EEE7] transition-colors">BIRTH CHART</a>
-      <a href="#matcher" class="hover:text-[#F2EEE7] transition-colors">TRANSITS</a>
-      <a href="#lineage" class="hover:text-[#F2EEE7] transition-colors">LINEAGE</a>
-      <a href="#testimonials" class="hover:text-[#F2EEE7] transition-colors">RECORD OF TRUTH</a>
+    <!-- Navigation Menu Links -->
+    <nav class="hidden xl:flex items-center gap-6 text-sm font-semibold text-gray-700">
+      <a href="#home" class="hover:text-amber-700 transition-colors">Home</a>
+      <a href="#about" class="hover:text-amber-700 transition-colors">About Pandith Ji</a>
+      <a href="#services" class="hover:text-amber-700 transition-colors">Services</a>
+      <a href="#love-problems" class="hover:text-amber-700 transition-colors">Love Problem Solution</a>
+      <a href="#black-magic" class="hover:text-amber-700 transition-colors">Black Magic Removal</a>
+      <a href="#palmistry" class="hover:text-amber-700 transition-colors">Palm Reading</a>
+      <a href="#testimonials" class="hover:text-amber-700 transition-colors">Testimonials</a>
+      <a href="#contact" class="hover:text-amber-700 transition-colors">Contact</a>
     </nav>
 
-    <!-- Right Minimal Action Button -->
-    <div class="flex items-center gap-4">
-      <a href="https://wa.me/15103714626" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-block text-[11px] tracking-[0.16em] uppercase text-[#9696A5] hover:text-[#C8A45C] transition-colors">
-        WhatsApp
-      </a>
-
-      <a href="#consultation" class="btn-observatory-primary">
-        BOOK A READING
-      </a>
-
-      <!-- Mobile Menu Trigger -->
-      <button id="obs-mobile-btn" class="lg:hidden p-2 text-[#9696A5] hover:text-[#F2EEE7] focus:outline-none" aria-label="Toggle Navigation">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 6h18M3 12h18M3 18h18"></path>
+    <!-- Header Action Call Button -->
+    <div class="hidden sm:flex items-center gap-3">
+      <a 
+        href="tel:+15103714626" 
+        class="btn-primary-call text-xs sm:text-sm py-2.5 px-4"
+      >
+        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
         </svg>
-      </button>
+        <span>+1 510-371-4626</span>
+      </a>
     </div>
+
+    <!-- Mobile Menu Button -->
+    <button 
+      id="mobile-nav-toggle" 
+      type="button" 
+      class="xl:hidden p-2 rounded-md text-gray-700 hover:text-amber-700 hover:bg-gray-100"
+      aria-label="Toggle Mobile Menu"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
 
   </div>
 
   <!-- Mobile Drawer Menu -->
-  <div id="obs-mobile-drawer" class="hidden lg:hidden bg-[#080A12] border-t border-hairline px-6 py-6 space-y-4">
-    <div class="flex flex-col space-y-3 text-[11px] tracking-[0.25em] uppercase text-[#9696A5]">
-      <a href="#top" class="obs-mobile-link py-2 border-b border-hairline hover:text-[#F2EEE7]">OBSERVATORY</a>
-      <a href="#zodiac" class="obs-mobile-link py-2 border-b border-hairline hover:text-[#F2EEE7]">YOUR SKY</a>
-      <a href="#services" class="obs-mobile-link py-2 border-b border-hairline hover:text-[#F2EEE7]">BIRTH CHART & PILLARS</a>
-      <a href="#matcher" class="obs-mobile-link py-2 border-b border-hairline hover:text-[#F2EEE7]">TRANSITS</a>
-      <a href="#lineage" class="obs-mobile-link py-2 border-b border-hairline hover:text-[#F2EEE7]">LINEAGE & HERITAGE</a>
-      <a href="#testimonials" class="obs-mobile-link py-2 hover:text-[#F2EEE7]">RECORD OF TRUTH</a>
-    </div>
-    <div class="pt-3">
-      <a href="#consultation" class="obs-mobile-link w-full btn-observatory-primary text-center">
-        BOOK A READING
+  <div id="mobile-nav-menu" class="hidden xl:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 shadow-lg">
+    <a href="#home" class="mobile-nav-link block py-2 border-b border-gray-100 text-gray-800 font-medium">Home</a>
+    <a href="#about" class="mobile-nav-link block py-2 border-b border-gray-100 text-gray-800 font-medium">About Pandith Ji</a>
+    <a href="#services" class="mobile-nav-link block py-2 border-b border-gray-100 text-gray-800 font-medium">All Services</a>
+    <a href="#love-problems" class="mobile-nav-link block py-2 border-b border-gray-100 text-gray-800 font-medium">Get Love Back</a>
+    <a href="#black-magic" class="mobile-nav-link block py-2 border-b border-gray-100 text-gray-800 font-medium">Black Magic Removal</a>
+    <a href="#palmistry" class="mobile-nav-link block py-2 border-b border-gray-100 text-gray-800 font-medium">Palm Reading</a>
+    <a href="#testimonials" class="mobile-nav-link block py-2 border-b border-gray-100 text-gray-800 font-medium">Client Testimonials</a>
+    <a href="#contact" class="mobile-nav-link block py-2 text-gray-800 font-medium">Contact & Location</a>
+    
+    <div class="pt-2 flex flex-col gap-2">
+      <a href="tel:+15103714626" class="btn-primary-call w-full text-center text-sm py-2.5">
+        📞 Call: +1 510-371-4626
+      </a>
+      <a href="https://wa.me/15103714626" target="_blank" rel="noopener noreferrer" class="btn-primary-whatsapp w-full text-center text-sm py-2.5">
+        💬 WhatsApp Consultation
       </a>
     </div>
   </div>
+
 </header>
 
 <script>
-  const btn = document.getElementById('obs-mobile-btn');
-  const drawer = document.getElementById('obs-mobile-drawer');
-  const links = document.querySelectorAll('.obs-mobile-link');
+  const toggleBtn = document.getElementById('mobile-nav-toggle');
+  const menu = document.getElementById('mobile-nav-menu');
+  const links = document.querySelectorAll('.mobile-nav-link');
 
-  if (btn && drawer) {
-    btn.addEventListener('click', () => {
-      drawer.classList.toggle('hidden');
+  if (toggleBtn && menu) {
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
     });
 
     links.forEach((link) => {
       link.addEventListener('click', () => {
-        drawer.classList.add('hidden');
+        menu.classList.add('hidden');
       });
     });
   }

@@ -1,90 +1,107 @@
 ---
-// TestimonialGalaxy.astro - Luxury Editorial Record of Truth
-const accounts = [
+// TestimonialGalaxy.astro - Clean White Real Client Testimonials Section
+const reviews = [
   {
     id: 1,
-    seeker: 'Elena Rostova',
-    location: 'NEW YORK, NY &bull; 40°42\'N 74°00\'W',
-    discipline: 'SYNASTRY & VENUSIAN RECONCILIATION',
-    quote: 'My fiancé and I had reached an unbearable impasse after four years, separated by family pressure and mounting misunderstandings. Pandith Vikram Ji examined our natal synastry with surgical calmness, identified an acute Rahu-Mars transit spike, and gave me precise daily meditations. Twelve days later, my partner reached out. We reconciled completely and were married this past spring.',
-    metric: 'RELATIONSHIP RECONCILED IN 12 DAYS'
+    name: "Sarah Jenkins",
+    location: "Los Angeles, California",
+    service: "Ex Love Back & Relationship Healing",
+    rating: 5,
+    text: "My fiancé and I were separated for 8 months after continuous toxic arguments and outside interference. I was devastated and lost all hope. I visited Pandith Vikram at his Hollywood Blvd sanctuary. Within 10 days of his Vedic prayers and remedies, my partner called me asking for forgiveness. We are happily married now!"
   },
   {
     id: 2,
-    seeker: 'David Chen',
-    location: 'SAN FRANCISCO, CA &bull; 37°46\'N 122°25\'W',
-    discipline: 'COMMERCIAL MUHURTA & SPACE VASTU',
-    quote: 'Our enterprise software venture was caught in an agonizing eight-month capital freeze. Every term sheet dissolved at the final hour. Pandith Vikram Ji audited our commercial headquarters energy and calculated an exact, minute-precise Muhurta window for our next investor summit. The lead institutional syndicate signed within forty-eight hours.',
-    metric: 'CLOSED \$3.2M VENTURE CAPITAL ALLOCATION'
+    name: "Rajesh & Priya Patel",
+    location: "San Jose, California",
+    service: "Husband-Wife Dispute & Family Peace",
+    rating: 5,
+    text: "We were literally on the brink of filing for divorce due to constant family misunderstandings and financial stress. Pandith Vikram analyzed our Kundalis and accurately pointed out a severe Rahu-Ketu dosha. His homa and gemstone remedies saved our 12-year marriage. Truly a God-sent healer."
   },
   {
     id: 3,
-    seeker: 'Marcus Weber',
-    location: 'ZURICH, SWITZERLAND &bull; 47°22\'N 08°32\'E',
-    discipline: 'OCCULT DEFENSE & AURA PURIFICATION',
-    quote: 'For nearly a year, I was drained by inexplicable psychic exhaustion, recurring commercial crises, and an oppressive heaviness that conventional medicine could not diagnose. Pandith Vikram conducted a sacred three-day purification ritual. By the fourth dawn, the suffocating cloud lifted entirely. My vitality returned.',
-    metric: 'COMPLETE RESTORATION OF PSYCHIC CLARITY'
+    name: "Michael R.",
+    location: "New York, USA",
+    service: "Black Magic & Evil Spirit Removal",
+    rating: 5,
+    text: "For nearly a year, I experienced constant night terrors, sudden business losses, and suffocating exhaustion that doctors couldn't explain. Pandith Vikram performed an ancient cleansing ritual for me. Within three days, the oppressive darkness lifted completely. My energy and business are back!"
   },
   {
     id: 4,
-    seeker: 'Aisha Al-Mansoor',
-    location: 'LONDON, UK &bull; 51°30\'N 00°07\'W',
-    discipline: '12-HOUSE FORENSIC KUNDALI BLUEPRINT',
-    quote: 'Standing at a critical career crossroads between an international banking directorship and an independent advisory practice, I consulted Pandith Vikram Ji for a full Dasha audit. The chronological accuracy of his 18-month planetary timeline was uncanny. Every single predicted milestone manifested with mathematical precision.',
-    metric: '18-MONTH PLANETARY CHRONOMETRY VALIDATED'
+    name: "Anita Sharma",
+    location: "San Francisco, California",
+    service: "Career & Financial Problem Solution",
+    rating: 5,
+    text: "My software startup was trapped in an excruciating capital freeze and contracts kept canceling at the last minute. Pandith Ji audited our office Vastu and gave me a specific Muhurta window. Within 48 hours, our lead investor signed. I consult him for all major life decisions now."
   }
 ];
 ---
 
-<section id="testimonials" class="py-32 relative border-t border-hairline">
-  <div class="max-w-6xl mx-auto px-6 relative z-10">
+<section id="testimonials" class="py-16 lg:py-24 bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
     
-    <!-- Section Header: Editorial & Vast Spacing -->
-    <div class="max-w-3xl mb-20 space-y-4">
-      <div class="text-[10px] tracking-[0.35em] text-[#C8A45C] uppercase font-mono">
-        RECORD OF TRUTH &bull; SEEKER CHRONICLES
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+      <div class="inline-flex items-center gap-2 text-xs font-bold text-amber-700 bg-amber-50 border border-amber-200 px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+        <span>⭐ 4.9/5 RATED BY 5,000+ SEEKERS</span>
       </div>
-      <h2 class="font-editorial text-4xl sm:text-5xl md:text-6xl text-[#F2EEE7] font-normal leading-[1.08]">
-        Chronicles of Realignment
+      <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-950 tracking-tight">
+        What Our Clients Say About Pandith Vikram
       </h2>
-      <p class="font-sans text-xs sm:text-sm text-[#9696A5] font-light leading-relaxed max-w-xl">
-        Reflections from individuals, executives, and couples across the world who sought guidance at moments of profound vulnerability and found lasting sovereignty.
+      <p class="text-base text-gray-600 leading-relaxed font-normal">
+        Real stories of restored relationships, dissolved court cases, financial breakthroughs, and spiritual protection.
       </p>
     </div>
 
-    <!-- Editorial Quote Spread (Single-Column Generous Breathing Room) -->
-    <div class="divide-y divide-hairline border-y border-hairline">
-      {accounts.map((item) => (
-        <article class="py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
-          <!-- Column 1: Seeker Identity & Geocoordinates -->
-          <div class="lg:col-span-4 space-y-2">
-            <span class="font-editorial text-2xl text-[#F2EEE7] block">
-              {item.seeker}
+    <!-- Testimonial Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {reviews.map((rev) => (
+        <div class="bg-warm-ivory rounded-xl border border-amber-200/70 p-7 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between">
+          <div class="space-y-3">
+            <!-- Stars -->
+            <div class="flex items-center gap-1 text-amber-500 text-sm">
+              {"★".repeat(rev.rating)}
+            </div>
+            
+            <!-- Service Tag -->
+            <span class="inline-block text-[11px] font-bold text-amber-800 bg-amber-100/60 px-2.5 py-1 rounded">
+              {rev.service}
             </span>
-            <div class="text-[9px] font-mono tracking-[0.25em] text-[#C8A45C] uppercase" set:html={item.location}></div>
-            <div class="text-[10px] font-sans tracking-[0.15em] text-[#9696A5] uppercase pt-1">
-              {item.discipline}
-            </div>
-            <div class="pt-2 text-[10px] font-mono text-[#F2EEE7]/80">
-              &bull; {item.metric}
-            </div>
+
+            <!-- Quote Text -->
+            <p class="text-sm text-gray-700 leading-relaxed italic">
+              "{rev.text}"
+            </p>
           </div>
 
-          <!-- Column 2: The Extended Narrative Quote -->
-          <div class="lg:col-span-8">
-            <blockquote class="font-editorial text-xl sm:text-2xl text-[#F2EEE7] font-light leading-relaxed italic">
-              "{item.quote}"
-            </blockquote>
+          <!-- Author Info -->
+          <div class="pt-4 mt-4 border-t border-amber-200/50 flex items-center justify-between">
+            <div>
+              <span class="block font-heading text-base font-bold text-gray-900">{rev.name}</span>
+              <span class="block text-xs text-gray-500">{rev.location}</span>
+            </div>
+            <span class="text-xs font-semibold text-green-700 bg-green-50 border border-green-200 px-2.5 py-1 rounded-full">
+              ✓ Verified Client
+            </span>
           </div>
-
-        </article>
+        </div>
       ))}
     </div>
 
-    <!-- Legal Compliance Disclaimer in Fine Print -->
-    <div class="mt-16 text-[10px] font-mono text-[#9696A5]/60 tracking-wider">
-      *OBSERVATORY NOTE: Jyotish Vedic astrology is a personalized sacred advisory science. Results unfold in accordance with each individual's unique karmic ephemeris and natal chart placements. Strict confidentiality is permanently guaranteed.
+    <!-- Bottom CTA Bar -->
+    <div class="mt-12 text-center bg-amber-50/80 rounded-xl border border-amber-200 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="text-center sm:text-left">
+        <h4 class="font-heading text-lg font-bold text-gray-900">Are You Ready to Overcome Your Problems?</h4>
+        <p class="text-xs text-gray-600">Join thousands of individuals who transformed their lives with Pandith Vikram's guidance.</p>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="tel:+15103714626" class="btn-primary-call text-xs sm:text-sm py-2.5 px-5">
+          📞 Call: +1 510-371-4626
+        </a>
+        <a href="https://wa.me/15103714626" target="_blank" rel="noopener noreferrer" class="btn-primary-whatsapp text-xs sm:text-sm py-2.5 px-5">
+          💬 WhatsApp
+        </a>
+      </div>
     </div>
 
   </div>

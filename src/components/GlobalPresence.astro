@@ -1,100 +1,83 @@
 ---
-// GlobalPresence.astro - Geodesic Observatory Directory
-const usJurisdictions = [
-  { name: 'California (Los Angeles HQ - Hollywood Blvd)', coord: '34°06\'N 118°20\'W' },
-  { name: 'New York', coord: '40°42\'N 74°00\'W' },
-  { name: 'Texas', coord: '31°58\'N 99°54\'W' },
-  { name: 'Florida', coord: '27°40\'N 81°31\'W' },
-  { name: 'Illinois', coord: '40°38\'N 89°23\'W' },
-  { name: 'New Jersey', coord: '40°03\'N 74°31\'W' },
-  { name: 'Pennsylvania', coord: '41°12\'N 77°11\'W' },
-  { name: 'Georgia', coord: '32°09\'N 82°54\'W' },
-  { name: 'Washington', coord: '47°45\'N 120°44\'W' },
-  { name: 'Virginia', coord: '37°26\'N 78°39\'W' },
-  { name: 'Massachusetts', coord: '42°24\'N 71°23\'W' },
-  { name: 'Colorado', coord: '39°33\'N 105°47\'W' }
+// GlobalPresence.astro - Clean White Service Locations Directory in California & USA
+const californiaCities = [
+  "Los Angeles (Hollywood Blvd HQ)", "Beverly Hills", "Glendale", "Pasadena", "Burbank",
+  "Long Beach", "Santa Monica", "Anaheim", "Irvine", "Santa Ana",
+  "San Diego", "San Jose", "San Francisco", "Sacramento", "Oakland", "Fresno"
 ];
 
-const canadaJurisdictions = [
-  { name: 'Ontario (Toronto & Mississauga)', coord: '43°39\'N 79°23\'W' },
-  { name: 'British Columbia (Vancouver)', coord: '49°15\'N 123°07\'W' },
-  { name: 'Quebec (Montreal)', coord: '45°30\'N 73°34\'W' },
-  { name: 'Alberta (Calgary & Edmonton)', coord: '51°03\'N 114°04\'W' },
-  { name: 'Manitoba (Winnipeg)', coord: '49°53\'N 97°08\'W' }
+const usaStates = [
+  "California", "New York", "Texas", "Florida", "Illinois", "New Jersey",
+  "Pennsylvania", "Georgia", "Washington", "Virginia", "Massachusetts", "Arizona",
+  "North Carolina", "Ohio", "Michigan", "Colorado"
 ];
 
-const internationalJurisdictions = [
-  { name: 'United Kingdom (London)', coord: '51°30\'N 00°07\'W' },
-  { name: 'Switzerland (Zurich & Geneva)', coord: '47°22\'N 08°32\'E' },
-  { name: 'United Arab Emirates (Dubai)', coord: '25°12\'N 55°16\'E' },
-  { name: 'Australia (Sydney & Melbourne)', coord: '33°52\'S 151°12\'E' },
-  { name: 'Singapore', coord: '01°21\'N 103°49\'E' }
+const internationalDiaspora = [
+  "United States (Nationwide)", "Canada (Toronto, Vancouver, Montreal)",
+  "United Kingdom (London, Birmingham)", "Australia (Sydney, Melbourne)",
+  "United Arab Emirates (Dubai)", "Singapore", "New Zealand", "Europe"
 ];
 ---
 
-<section id="coverage" class="py-32 relative border-t border-hairline">
-  <div class="max-w-6xl mx-auto px-6 relative z-10">
+<section id="locations" class="py-16 bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
     
     <!-- Section Header -->
-    <div class="max-w-3xl mb-16 space-y-4">
-      <div class="text-[10px] tracking-[0.35em] text-[#C8A45C] uppercase font-mono">
-        GEODESIC REACH &bull; OBSERVATORY NETWORK
+    <div class="text-center max-w-3xl mx-auto mb-10 space-y-2">
+      <div class="inline-flex items-center gap-2 text-xs font-bold text-amber-700 bg-amber-50 border border-amber-200 px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+        <span>🌎 NATIONWIDE & GLOBAL REACH</span>
       </div>
-      <h2 class="font-editorial text-4xl sm:text-5xl md:text-6xl text-[#F2EEE7] font-normal leading-[1.08]">
-        Planetary Jurisdiction
+      <h2 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-950">
+        Astrology Services Across California & USA
       </h2>
-      <p class="font-sans text-xs sm:text-sm text-[#9696A5] font-light leading-relaxed max-w-xl">
-        Consciousness is non-local. Whether attending an in-person private sanctuary session or an encrypted high-definition video ephemeris reading, seekers across all territories receive identical precision.
+      <p class="text-xs sm:text-sm text-gray-600">
+        Pandith Vikram conducts both in-person private sessions at 7001 Hollywood Blvd, Los Angeles and phone/WhatsApp consultations across the USA and worldwide.
       </p>
     </div>
 
-    <!-- Minimal Geodesic Switcher -->
-    <div class="border border-hairline bg-[#080A12]/80 p-8 sm:p-10 space-y-8">
+    <!-- 3 Location Pillars -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       
-      <!-- Tab Controls -->
-      <div class="flex flex-wrap gap-4 border-b border-hairline pb-6 text-[10px] font-mono tracking-[0.22em] uppercase">
-        <button type="button" class="geo-tab-btn text-[#C8A45C] border-b border-[#C8A45C] pb-2 cursor-pointer transition-colors" data-geo="usa">
-          UNITED STATES SANCTUARIES
-        </button>
-        <button type="button" class="geo-tab-btn text-[#9696A5] hover:text-[#F2EEE7] pb-2 cursor-pointer transition-colors" data-geo="can">
-          CANADIAN PROVINCES
-        </button>
-        <button type="button" class="geo-tab-btn text-[#9696A5] hover:text-[#F2EEE7] pb-2 cursor-pointer transition-colors" data-geo="int">
-          INTERNATIONAL DIASPORA
-        </button>
-      </div>
-
-      <!-- USA Pane -->
-      <div id="geo-pane-usa" class="geo-pane">
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {usJurisdictions.map((item) => (
-            <div class="p-4 border border-hairline bg-[#05060B] space-y-1">
-              <span class="text-xs font-editorial text-[#F2EEE7] block">{item.name}</span>
-              <span class="text-[9px] font-mono text-[#9696A5]/60 block tracking-wider">{item.coord}</span>
-            </div>
+      <!-- California Cities -->
+      <div class="bg-warm-ivory rounded-xl border border-amber-200/80 p-6 space-y-3">
+        <div class="flex items-center gap-2 border-b border-amber-200 pb-2">
+          <span class="text-xl">📍</span>
+          <h3 class="font-heading text-base font-bold text-gray-900">California Cities Served</h3>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-xs text-gray-700 font-medium pt-1">
+          {californiaCities.map((city) => (
+            <span class="py-1 px-2 bg-white rounded border border-gray-100 shadow-2xs">
+              • {city}
+            </span>
           ))}
         </div>
       </div>
 
-      <!-- Canada Pane -->
-      <div id="geo-pane-can" class="geo-pane hidden">
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {canadaJurisdictions.map((item) => (
-            <div class="p-4 border border-hairline bg-[#05060B] space-y-1">
-              <span class="text-xs font-editorial text-[#F2EEE7] block">{item.name}</span>
-              <span class="text-[9px] font-mono text-[#9696A5]/60 block tracking-wider">{item.coord}</span>
-            </div>
+      <!-- USA States -->
+      <div class="bg-warm-ivory rounded-xl border border-amber-200/80 p-6 space-y-3">
+        <div class="flex items-center gap-2 border-b border-amber-200 pb-2">
+          <span class="text-xl">🇺🇸</span>
+          <h3 class="font-heading text-base font-bold text-gray-900">Major US States</h3>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-xs text-gray-700 font-medium pt-1">
+          {usaStates.map((st) => (
+            <span class="py-1 px-2 bg-white rounded border border-gray-100 shadow-2xs">
+              • {st}
+            </span>
           ))}
         </div>
       </div>
 
-      <!-- International Pane -->
-      <div id="geo-pane-int" class="geo-pane hidden">
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {internationalJurisdictions.map((item) => (
-            <div class="p-4 border border-hairline bg-[#05060B] space-y-1">
-              <span class="text-xs font-editorial text-[#F2EEE7] block">{item.name}</span>
-              <span class="text-[9px] font-mono text-[#9696A5]/60 block tracking-wider">{item.coord}</span>
+      <!-- International -->
+      <div class="bg-warm-ivory rounded-xl border border-amber-200/80 p-6 space-y-3">
+        <div class="flex items-center gap-2 border-b border-amber-200 pb-2">
+          <span class="text-xl">🌐</span>
+          <h3 class="font-heading text-base font-bold text-gray-900">Worldwide Diaspora</h3>
+        </div>
+        <div class="space-y-1.5 text-xs text-gray-700 font-medium pt-1">
+          {internationalDiaspora.map((place) => (
+            <div class="py-1 px-2.5 bg-white rounded border border-gray-100 shadow-2xs">
+              ✓ {place}
             </div>
           ))}
         </div>
@@ -104,27 +87,3 @@ const internationalJurisdictions = [
 
   </div>
 </section>
-
-<script>
-  const geoBtns = document.querySelectorAll('.geo-tab-btn');
-  const geoPanes = document.querySelectorAll('.geo-pane');
-
-  geoBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const target = btn.getAttribute('data-geo');
-
-      geoBtns.forEach((b) => {
-        b.className = 'geo-tab-btn text-[#9696A5] hover:text-[#F2EEE7] pb-2 cursor-pointer transition-colors';
-      });
-      btn.className = 'geo-tab-btn text-[#C8A45C] border-b border-[#C8A45C] pb-2 cursor-pointer transition-colors';
-
-      geoPanes.forEach((p) => {
-        if (p.id === `geo-pane-${target}`) {
-          p.classList.remove('hidden');
-        } else {
-          p.classList.add('hidden');
-        }
-      });
-    });
-  });
-</script>
