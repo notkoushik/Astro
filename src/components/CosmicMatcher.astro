@@ -1,0 +1,213 @@
+---
+// CosmicMatcher.astro - Astronomical Diagnostic Conduit
+---
+
+<section id="matcher" class="py-32 relative border-t border-hairline">
+  <div class="max-w-4xl mx-auto px-6 relative z-10">
+    
+    <!-- Editorial Section Header -->
+    <div class="text-center max-w-xl mx-auto mb-16 space-y-3">
+      <div class="text-[10px] tracking-[0.35em] text-[#C8A45C] uppercase font-mono">
+        OBSERVATORY DIAGNOSTIC &bull; KARMIC TRIAGE
+      </div>
+      <h2 class="font-editorial text-4xl sm:text-5xl text-[#F2EEE7] font-normal">
+        Locate Your Coordinate
+      </h2>
+      <p class="font-sans text-xs sm:text-sm text-[#9696A5] font-light leading-relaxed">
+        If you are uncertain which Vedic discipline matches your current life phase, state your primary disruption to reveal its governing celestial house.
+      </p>
+    </div>
+
+    <!-- Diagnostic Instrument Container -->
+    <div class="border border-hairline bg-[#080A12]/80 p-8 sm:p-12 relative">
+      
+      <!-- Top Instrument Header -->
+      <div class="flex items-center justify-between pb-6 border-b border-hairline mb-8 text-[10px] font-mono tracking-[0.25em] text-[#9696A5]">
+        <div class="flex items-center gap-3">
+          <span id="dia-step-num" class="text-[#C8A45C]">STAGE 01 OF 02</span>
+          <span>&bull;</span>
+          <span id="dia-step-label">PRIMARY DISRUPTION</span>
+        </div>
+        <div class="text-[#9696A5]/50">INDEX: VEDIC_TRIAGE_SYS</div>
+      </div>
+
+      <!-- Step 1: Area of Concern -->
+      <div id="dia-step-1" class="space-y-4">
+        <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#F2EEE7] mb-6">
+          SELECT THE ACTIVE LIFE SECTOR UNDER PRESSURE:
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <button type="button" class="dia-option p-5 text-left border border-hairline hover:border-[#C8A45C] bg-[#05060B] transition-colors group cursor-pointer" data-domain="love">
+            <span class="text-[9px] font-mono text-[#C8A45C] tracking-widest block mb-2">01 / KALATRA</span>
+            <div class="font-editorial text-xl text-[#F2EEE7] group-hover:text-[#C8A45C] transition-colors">Love & Estrangement</div>
+            <div class="text-xs text-[#9696A5] font-light mt-1">Fractured relationships, marital threat, or lost partner.</div>
+          </button>
+
+          <button type="button" class="dia-option p-5 text-left border border-hairline hover:border-[#C8A45C] bg-[#05060B] transition-colors group cursor-pointer" data-domain="career">
+            <span class="text-[9px] font-mono text-[#C8A45C] tracking-widest block mb-2">02 / KARMA</span>
+            <div class="font-editorial text-xl text-[#F2EEE7] group-hover:text-[#C8A45C] transition-colors">Career & Commercial Inertia</div>
+            <div class="text-xs text-[#9696A5] font-light mt-1">Financial bottleneck, failed ventures, or delayed stature.</div>
+          </button>
+
+          <button type="button" class="dia-option p-5 text-left border border-hairline hover:border-[#C8A45C] bg-[#05060B] transition-colors group cursor-pointer" data-domain="curse">
+            <span class="text-[9px] font-mono text-[#C8A45C] tracking-widest block mb-2">03 / RAKSHA</span>
+            <div class="font-editorial text-xl text-[#F2EEE7] group-hover:text-[#C8A45C] transition-colors">Aura Heaviness & Evil Eye</div>
+            <div class="text-xs text-[#9696A5] font-light mt-1">Unexplained recurring misfortunes, nightmares, or psychic heaviness.</div>
+          </button>
+
+          <button type="button" class="dia-option p-5 text-left border border-hairline hover:border-[#C8A45C] bg-[#05060B] transition-colors group cursor-pointer" data-domain="destiny">
+            <span class="text-[9px] font-mono text-[#C8A45C] tracking-widest block mb-2">04 / JANMA</span>
+            <div class="font-editorial text-xl text-[#F2EEE7] group-hover:text-[#C8A45C] transition-colors">Natal Chart Roadmap</div>
+            <div class="text-xs text-[#9696A5] font-light mt-1">Complete 12-house forensic analysis and Dasha timelines.</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Temporal Duration -->
+      <div id="dia-step-2" class="hidden space-y-4">
+        <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#F2EEE7] mb-6">
+          CHRONOLOGICAL DURATION OF ACTIVE DISTURBANCE:
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <button type="button" class="dia-dur p-5 text-center border border-hairline hover:border-[#C8A45C] bg-[#05060B] transition-colors group cursor-pointer" data-dur="acute">
+            <span class="text-[9px] font-mono text-[#C8A45C] tracking-widest block mb-2">PHASE I</span>
+            <div class="font-editorial text-lg text-[#F2EEE7] group-hover:text-[#C8A45C]">Under 30 Days</div>
+            <div class="text-xs text-[#9696A5] font-light mt-1">Sudden onset or transit spike.</div>
+          </button>
+
+          <button type="button" class="dia-dur p-5 text-center border border-hairline hover:border-[#C8A45C] bg-[#05060B] transition-colors group cursor-pointer" data-dur="mid">
+            <span class="text-[9px] font-mono text-[#C8A45C] tracking-widest block mb-2">PHASE II</span>
+            <div class="font-editorial text-lg text-[#F2EEE7] group-hover:text-[#C8A45C]">1 to 6 Months</div>
+            <div class="text-xs text-[#9696A5] font-light mt-1">Established repeating friction.</div>
+          </button>
+
+          <button type="button" class="dia-dur p-5 text-center border border-hairline hover:border-[#C8A45C] bg-[#05060B] transition-colors group cursor-pointer" data-dur="deep">
+            <span class="text-[9px] font-mono text-[#C8A45C] tracking-widest block mb-2">PHASE III</span>
+            <div class="font-editorial text-lg text-[#F2EEE7] group-hover:text-[#C8A45C]">Over 1 Year</div>
+            <div class="text-xs text-[#9696A5] font-light mt-1">Deep-seated Dasha or karmic cycle.</div>
+          </button>
+        </div>
+
+        <div class="pt-4">
+          <button id="dia-back-btn" type="button" class="text-[10px] font-mono tracking-widest uppercase text-[#9696A5] hover:text-[#F2EEE7]">
+            &larr; RETURN TO SECTOR SELECTION
+          </button>
+        </div>
+      </div>
+
+      <!-- Result Readout Block -->
+      <div id="dia-result" class="hidden space-y-6">
+        <div class="border-t border-b border-hairline py-6 space-y-3">
+          <span class="text-[9px] font-mono tracking-[0.25em] text-[#C8A45C] uppercase block">
+            RECOMMENDED OBSERVATORY DISCIPLINE
+          </span>
+          <h3 id="dia-res-title" class="font-editorial text-3xl sm:text-4xl text-[#F2EEE7] font-normal">
+            Ashtakoota Synastry & Venusian Reconciliation
+          </h3>
+          <p id="dia-res-desc" class="font-sans text-xs sm:text-sm text-[#9696A5] font-light leading-relaxed max-w-2xl">
+            Active Rahu-Venus tension is identified. A targeted synastry consultation paired with traditional Rigvedic reconciliation remediation balances the emotional polarization.
+          </p>
+          <div class="pt-3 flex flex-wrap gap-8 text-[11px] font-mono text-[#9696A5]">
+            <div>GOVERNING BHAVA: <span id="dia-res-house" class="text-[#F2EEE7]">7TH HOUSE (KALATRA)</span></div>
+            <div>TYPICAL REMEDIAL ARC: <span id="dia-res-time" class="text-[#C8A45C]">7 TO 14 DAYS</span></div>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 pt-2">
+          <a href="#consultation" class="btn-observatory-primary text-center">
+            SCHEDULE THIS DISCIPLINE
+          </a>
+          <button id="dia-reset-btn" type="button" class="btn-observatory-secondary text-center">
+            RECALCULATE COORDINATES
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  let selDomain = 'love';
+  let selDuration = 'acute';
+
+  const step1 = document.getElementById('dia-step-1');
+  const step2 = document.getElementById('dia-step-2');
+  const resultBlock = document.getElementById('dia-result');
+
+  const stepNum = document.getElementById('dia-step-num');
+  const stepLabel = document.getElementById('dia-step-label');
+
+  const backBtn = document.getElementById('dia-back-btn');
+  const resetBtn = document.getElementById('dia-reset-btn');
+
+  const resTitle = document.getElementById('dia-res-title');
+  const resDesc = document.getElementById('dia-res-desc');
+  const resHouse = document.getElementById('dia-res-house');
+  const resTime = document.getElementById('dia-res-time');
+
+  document.querySelectorAll('.dia-option').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      selDomain = btn.getAttribute('data-domain') || 'love';
+      step1?.classList.add('hidden');
+      step2?.classList.remove('hidden');
+
+      if (stepNum) stepNum.textContent = 'STAGE 02 OF 02';
+      if (stepLabel) stepLabel.textContent = 'CHRONOLOGICAL DURATION';
+    });
+  });
+
+  document.querySelectorAll('.dia-dur').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      selDuration = btn.getAttribute('data-dur') || 'acute';
+
+      // Compute Diagnosis
+      if (resTitle && resDesc && resHouse && resTime) {
+        if (selDomain === 'love') {
+          resTitle.textContent = 'Ashtakoota Synastry & Venusian Reconciliation';
+          resDesc.textContent = 'Active planetary discord in the Seventh House. A forensic chart synastry coupled with consecrated Venusian remediation dissolves emotional polarization.';
+          resHouse.textContent = '7TH HOUSE (KALATRA BHAVA)';
+          resTime.textContent = selDuration === 'acute' ? '7 TO 14 DAYS' : '21 DAYS';
+        } else if (selDomain === 'career') {
+          resTitle.textContent = 'Solar-Jupiterian Wealth Activation & Commercial Muhurta';
+          resDesc.textContent = 'Obstacles across the Tenth and Eleventh Bhavas. Precise mathematical timing for contractual agreements removes commercial stagnation.';
+          resHouse.textContent = '10TH & 11TH BHAVAS (KARMA & LABHA)';
+          resTime.textContent = '1 TO 2 LUNAR CYCLES';
+        } else if (selDomain === 'curse') {
+          resTitle.textContent = 'Aura Purification & Sudarshana Raksha Shielding';
+          resDesc.textContent = 'Heavy spiritual fog, drishti (evil eye), or environmental interference. Consecrated Vedic mantras and personalized protective Kavach restore psychic sovereignty.';
+          resHouse.textContent = '8TH & 12TH BHAVAS (RANDHRA & VYAYA)';
+          resTime.textContent = 'IMMEDIATE (3-DAY FULL CONSECRATION)';
+        } else {
+          resTitle.textContent = 'Comprehensive 12-House Kundali & Vimshottari Ephemeris';
+          resDesc.textContent = 'Forensic audit of your birth coordinates, Mahadasha timelines, and divisional charts to determine your authentic karmic trajectory.';
+          resHouse.textContent = 'ENTIRE 12 BHAVA MANDALA';
+          resTime.textContent = 'IMMEDIATE 60-MINUTE DEEP AUDIT';
+        }
+      }
+
+      step2?.classList.add('hidden');
+      resultBlock?.classList.remove('hidden');
+
+      if (stepNum) stepNum.textContent = 'DIAGNOSIS COMPLETE';
+      if (stepLabel) stepLabel.textContent = 'REMEDIAL CONDUIT IDENTIFIED';
+    });
+  });
+
+  backBtn?.addEventListener('click', () => {
+    step2?.classList.add('hidden');
+    step1?.classList.remove('hidden');
+    if (stepNum) stepNum.textContent = 'STAGE 01 OF 02';
+    if (stepLabel) stepLabel.textContent = 'PRIMARY DISRUPTION';
+  });
+
+  resetBtn?.addEventListener('click', () => {
+    resultBlock?.classList.add('hidden');
+    step1?.classList.remove('hidden');
+    if (stepNum) stepNum.textContent = 'STAGE 01 OF 02';
+    if (stepLabel) stepLabel.textContent = 'PRIMARY DISRUPTION';
+  });
+</script>

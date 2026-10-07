@@ -1,0 +1,91 @@
+---
+// TestimonialGalaxy.astro - Luxury Editorial Record of Truth
+const accounts = [
+  {
+    id: 1,
+    seeker: 'Elena Rostova',
+    location: 'NEW YORK, NY &bull; 40°42\'N 74°00\'W',
+    discipline: 'SYNASTRY & VENUSIAN RECONCILIATION',
+    quote: 'My fiancé and I had reached an unbearable impasse after four years, separated by family pressure and mounting misunderstandings. Pandith Vikram Ji examined our natal synastry with surgical calmness, identified an acute Rahu-Mars transit spike, and gave me precise daily meditations. Twelve days later, my partner reached out. We reconciled completely and were married this past spring.',
+    metric: 'RELATIONSHIP RECONCILED IN 12 DAYS'
+  },
+  {
+    id: 2,
+    seeker: 'David Chen',
+    location: 'SAN FRANCISCO, CA &bull; 37°46\'N 122°25\'W',
+    discipline: 'COMMERCIAL MUHURTA & SPACE VASTU',
+    quote: 'Our enterprise software venture was caught in an agonizing eight-month capital freeze. Every term sheet dissolved at the final hour. Pandith Vikram Ji audited our commercial headquarters energy and calculated an exact, minute-precise Muhurta window for our next investor summit. The lead institutional syndicate signed within forty-eight hours.',
+    metric: 'CLOSED \$3.2M VENTURE CAPITAL ALLOCATION'
+  },
+  {
+    id: 3,
+    seeker: 'Marcus Weber',
+    location: 'ZURICH, SWITZERLAND &bull; 47°22\'N 08°32\'E',
+    discipline: 'OCCULT DEFENSE & AURA PURIFICATION',
+    quote: 'For nearly a year, I was drained by inexplicable psychic exhaustion, recurring commercial crises, and an oppressive heaviness that conventional medicine could not diagnose. Pandith Vikram conducted a sacred three-day purification ritual. By the fourth dawn, the suffocating cloud lifted entirely. My vitality returned.',
+    metric: 'COMPLETE RESTORATION OF PSYCHIC CLARITY'
+  },
+  {
+    id: 4,
+    seeker: 'Aisha Al-Mansoor',
+    location: 'LONDON, UK &bull; 51°30\'N 00°07\'W',
+    discipline: '12-HOUSE FORENSIC KUNDALI BLUEPRINT',
+    quote: 'Standing at a critical career crossroads between an international banking directorship and an independent advisory practice, I consulted Pandith Vikram Ji for a full Dasha audit. The chronological accuracy of his 18-month planetary timeline was uncanny. Every single predicted milestone manifested with mathematical precision.',
+    metric: '18-MONTH PLANETARY CHRONOMETRY VALIDATED'
+  }
+];
+---
+
+<section id="testimonials" class="py-32 relative border-t border-hairline">
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    
+    <!-- Section Header: Editorial & Vast Spacing -->
+    <div class="max-w-3xl mb-20 space-y-4">
+      <div class="text-[10px] tracking-[0.35em] text-[#C8A45C] uppercase font-mono">
+        RECORD OF TRUTH &bull; SEEKER CHRONICLES
+      </div>
+      <h2 class="font-editorial text-4xl sm:text-5xl md:text-6xl text-[#F2EEE7] font-normal leading-[1.08]">
+        Chronicles of Realignment
+      </h2>
+      <p class="font-sans text-xs sm:text-sm text-[#9696A5] font-light leading-relaxed max-w-xl">
+        Reflections from individuals, executives, and couples across the world who sought guidance at moments of profound vulnerability and found lasting sovereignty.
+      </p>
+    </div>
+
+    <!-- Editorial Quote Spread (Single-Column Generous Breathing Room) -->
+    <div class="divide-y divide-hairline border-y border-hairline">
+      {accounts.map((item) => (
+        <article class="py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Column 1: Seeker Identity & Geocoordinates -->
+          <div class="lg:col-span-4 space-y-2">
+            <span class="font-editorial text-2xl text-[#F2EEE7] block">
+              {item.seeker}
+            </span>
+            <div class="text-[9px] font-mono tracking-[0.25em] text-[#C8A45C] uppercase" set:html={item.location}></div>
+            <div class="text-[10px] font-sans tracking-[0.15em] text-[#9696A5] uppercase pt-1">
+              {item.discipline}
+            </div>
+            <div class="pt-2 text-[10px] font-mono text-[#F2EEE7]/80">
+              &bull; {item.metric}
+            </div>
+          </div>
+
+          <!-- Column 2: The Extended Narrative Quote -->
+          <div class="lg:col-span-8">
+            <blockquote class="font-editorial text-xl sm:text-2xl text-[#F2EEE7] font-light leading-relaxed italic">
+              "{item.quote}"
+            </blockquote>
+          </div>
+
+        </article>
+      ))}
+    </div>
+
+    <!-- Legal Compliance Disclaimer in Fine Print -->
+    <div class="mt-16 text-[10px] font-mono text-[#9696A5]/60 tracking-wider">
+      *OBSERVATORY NOTE: Jyotish Vedic astrology is a personalized sacred advisory science. Results unfold in accordance with each individual's unique karmic ephemeris and natal chart placements. Strict confidentiality is permanently guaranteed.
+    </div>
+
+  </div>
+</section>

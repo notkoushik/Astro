@@ -1,0 +1,66 @@
+---
+// Hero.astro - Full-Bleed Cinematic Editorial Hero matching reference design
+import ThreeOrrery from './ThreeOrrery.astro';
+---
+
+<section id="top" class="relative min-h-screen w-full flex items-center overflow-hidden pt-24 pb-16">
+  
+  <!-- The 3D Cinematic Slanted Orrery Canvas in Background/Right -->
+  <div class="absolute inset-0 z-0 pointer-events-auto">
+    <ThreeOrrery />
+  </div>
+
+  <!-- Left Side Vignette Gradient so text is 100% legible against the space background -->
+  <div class="absolute inset-0 z-1 pointer-events-none bg-gradient-to-r from-[#05060B] via-[#05060B]/85 to-transparent w-full lg:w-3/5"></div>
+
+  <!-- Foreground Editorial Content Container -->
+  <div class="max-w-6xl mx-auto px-6 w-full relative z-10 pointer-events-none">
+    
+    <div class="max-w-xl space-y-6 pointer-events-auto">
+      
+      <!-- Metadata Tag -->
+      <div class="inline-flex items-center gap-2.5 text-[10px] tracking-[0.32em] text-[#C8A45C] uppercase font-mono">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#C8A45C] shadow-[0_0_8px_#C8A45C]"></span>
+        <span>CELESTIAL OBSERVATORY &bull; EPOCH 2026.8</span>
+      </div>
+
+      <!-- Editorial Headline matching media_1791313654101.png exactly -->
+      <h1 class="font-editorial text-5xl sm:text-6xl md:text-7xl lg:text-[84px] font-normal text-[#F2EEE7] tracking-[-0.01em] leading-[0.98]">
+        THE SKY <br />
+        <span class="italic font-light text-[#E8DCC4] block mt-1">ABOVE YOU</span>
+      </h1>
+
+      <!-- Body Narrative -->
+      <p class="font-sans text-xs sm:text-sm text-[#9696A5] font-light leading-relaxed max-w-lg">
+        Your personal celestial map, interpreted through three generations of Vedic astrological wisdom. Uncover the geometry of your destiny, soul synastry, and planetary cycles.
+      </p>
+
+      <!-- Editorial Action Buttons -->
+      <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+        <a 
+          href="#consultation" 
+          class="btn-observatory-primary text-center shadow-[0_4px_24px_rgba(200,164,92,0.25)]"
+        >
+          INITIATE CHART CALCULATION
+        </a>
+
+        <a 
+          href="#zodiac" 
+          class="btn-observatory-secondary text-center"
+        >
+          EXPLORE EPHEMERIS
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bottom Editorial Credentials Ribbon -->
+  <div class="absolute bottom-4 left-6 right-6 hidden md:flex justify-between items-center text-[9px] font-mono tracking-[0.25em] text-[#9696A5]/50 border-t border-hairline/60 pt-3 z-10 pointer-events-none">
+    <div>HOLLYWOOD BLVD, LOS ANGELES &bull; 34°06'06" N</div>
+    <div class="text-[#C8A45C]/70">● INDIAN ASTROLOGER PANDITH VIKRAM &bull; +1 510-371-4626</div>
+    <div>100% STRICT SACRED NON-DISCLOSURE</div>
+  </div>
+
+</section>

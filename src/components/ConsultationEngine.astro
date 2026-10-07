@@ -1,0 +1,284 @@
+---
+// ConsultationEngine.astro - Astronomical Consultation Intake Engine
+---
+
+<section id="consultation" class="py-32 relative border-t border-hairline">
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl mb-20 space-y-4">
+      <div class="text-[10px] tracking-[0.35em] text-[#C8A45C] uppercase font-mono">
+        OBSERVATORY INTAKE &bull; JANMA EPHEMERIS RECORD
+      </div>
+      <h2 class="font-editorial text-4xl sm:text-5xl md:text-6xl text-[#F2EEE7] font-normal leading-[1.08]">
+        Commission a Private Reading
+      </h2>
+      <p class="font-sans text-xs sm:text-sm text-[#9696A5] font-light leading-relaxed max-w-xl">
+        To calculate your Ascendant (Lagna) and Vimshottari Mahadasha timeline with mathematical precision, provide your exact chronological birth data.
+      </p>
+    </div>
+
+    <!-- 2-Column Observatory Intake Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Left Column: Session Modalities & Sanctuary Contact -->
+      <div class="lg:col-span-5 space-y-8">
+        
+        <div class="border border-hairline bg-[#080A12]/80 p-8 space-y-6">
+          <div class="text-[10px] font-mono tracking-[0.25em] text-[#C8A45C] uppercase">
+            SESSION MODALITIES
+          </div>
+
+          <div class="space-y-4">
+            <!-- Option 1 -->
+            <label class="block p-4 border border-[#C8A45C] bg-[#C8A45C]/5 cursor-pointer transition-colors mode-card">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="font-editorial text-xl text-[#F2EEE7]">Private Encrypted Video</div>
+                  <div class="text-xs text-[#9696A5] font-light mt-0.5">60 Minutes &bull; Live Screen-Share Chart Analysis</div>
+                </div>
+                <input type="radio" name="intake_mode" value="video" checked class="accent-[#C8A45C]" />
+              </div>
+            </label>
+
+            <!-- Option 2 -->
+            <label class="block p-4 border border-hairline hover:border-[#C8A45C]/50 cursor-pointer transition-colors mode-card">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="font-editorial text-xl text-[#F2EEE7]">Confidential Voice Call</div>
+                  <div class="text-xs text-[#9696A5] font-light mt-0.5">45 Minutes &bull; Cellular or Encrypted Audio Line</div>
+                </div>
+                <input type="radio" name="intake_mode" value="voice" class="accent-[#C8A45C]" />
+              </div>
+            </label>
+
+            <!-- Option 3 -->
+            <label class="block p-4 border border-hairline hover:border-[#C8A45C]/50 cursor-pointer transition-colors mode-card">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="font-editorial text-xl text-[#F2EEE7]">Written Analytical Dossier</div>
+                  <div class="text-xs text-[#9696A5] font-light mt-0.5">30-Page Bound PDF &bull; Full Life Ephemeris</div>
+                </div>
+                <input type="radio" name="intake_mode" value="dossier" class="accent-[#C8A45C]" />
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Direct Telephone Sanctuary Conduit -->
+        <div class="border border-hairline p-8 space-y-4 text-xs">
+          <div class="text-[10px] font-mono tracking-[0.25em] text-[#C8A45C] uppercase">
+            PANDITH VIKRAM SANCTUARY
+          </div>
+          <p class="text-[#9696A5] font-light leading-relaxed">
+            For urgent reconciliation cases, negative energy defense, or in-person consultation at our Hollywood Blvd sanctuary, direct contact is monitored around the clock.
+          </p>
+          <div class="pt-2 space-y-2 border-t border-hairline/60">
+            <a href="tel:+15103714626" class="block font-mono text-sm text-[#F2EEE7] hover:text-[#C8A45C] transition-colors">
+              USA DIRECT: +1 510-371-4626
+            </a>
+            <a href="https://wa.me/15103714626" target="_blank" rel="noopener noreferrer" class="block font-mono text-xs text-[#C8A45C] hover:text-[#F2EEE7] transition-colors">
+              WHATSAPP: +1 510-371-4626
+            </a>
+            <div class="pt-2 text-[10px] font-mono text-[#9696A5] leading-relaxed">
+              <span class="text-[#F2EEE7] block">SANCTUARY LOCATION:</span>
+              7001 Hollywood Blvd, Los Angeles, CA 90028, United States
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Clean Architectural Form -->
+      <div class="lg:col-span-7">
+        <div class="border border-hairline bg-[#080A12]/80 p-8 sm:p-10 relative">
+          
+          <form id="intake-form" class="space-y-6">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="f_name" class="block text-[10px] font-mono uppercase tracking-widest text-[#9696A5] mb-2">FULL NAME *</label>
+                <input 
+                  type="text" 
+                  id="f_name" 
+                  name="name" 
+                  required 
+                  placeholder="e.g. Katherine Reynolds" 
+                  class="w-full px-4 py-3 bg-[#05060B] border border-hairline text-sm text-[#F2EEE7] focus:border-[#C8A45C] outline-none transition-colors rounded-none placeholder:text-[#9696A5]/40"
+                />
+              </div>
+
+              <div>
+                <label for="f_email" class="block text-[10px] font-mono uppercase tracking-widest text-[#9696A5] mb-2">EMAIL ADDRESS *</label>
+                <input 
+                  type="email" 
+                  id="f_email" 
+                  name="email" 
+                  required 
+                  placeholder="e.g. katherine@domain.com" 
+                  class="w-full px-4 py-3 bg-[#05060B] border border-hairline text-sm text-[#F2EEE7] focus:border-[#C8A45C] outline-none transition-colors rounded-none placeholder:text-[#9696A5]/40"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="f_phone" class="block text-[10px] font-mono uppercase tracking-widest text-[#9696A5] mb-2">TELEPHONE / WHATSAPP *</label>
+                <input 
+                  type="tel" 
+                  id="f_phone" 
+                  name="phone" 
+                  required 
+                  placeholder="+1 (555) 000-0000" 
+                  class="w-full px-4 py-3 bg-[#05060B] border border-hairline text-sm text-[#F2EEE7] focus:border-[#C8A45C] outline-none transition-colors rounded-none placeholder:text-[#9696A5]/40"
+                />
+              </div>
+
+              <div>
+                <label for="f_residence" class="block text-[10px] font-mono uppercase tracking-widest text-[#9696A5] mb-2">CURRENT CITY & COUNTRY *</label>
+                <input 
+                  type="text" 
+                  id="f_residence" 
+                  name="residence" 
+                  required 
+                  placeholder="e.g. New York, USA" 
+                  class="w-full px-4 py-3 bg-[#05060B] border border-hairline text-sm text-[#F2EEE7] focus:border-[#C8A45C] outline-none transition-colors rounded-none placeholder:text-[#9696A5]/40"
+                />
+              </div>
+            </div>
+
+            <!-- Astrological Chronometry Block -->
+            <div class="pt-4 pb-2 border-t border-b border-hairline space-y-4">
+              <span class="text-[9px] font-mono tracking-[0.25em] text-[#C8A45C] uppercase block">
+                CHRONOLOGICAL NATAL DATA (FOR EXACT LAGNA CALCULATION)
+              </span>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label for="f_dob" class="block text-[10px] font-mono uppercase tracking-widest text-[#9696A5] mb-1.5">DATE OF BIRTH *</label>
+                  <input 
+                    type="date" 
+                    id="f_dob" 
+                    name="dob" 
+                    required 
+                    class="w-full px-3 py-2.5 bg-[#05060B] border border-hairline text-xs text-[#F2EEE7] focus:border-[#C8A45C] outline-none rounded-none"
+                  />
+                </div>
+
+                <div>
+                  <label for="f_tob" class="block text-[10px] font-mono uppercase tracking-widest text-[#9696A5] mb-1.5">TIME OF BIRTH</label>
+                  <input 
+                    type="time" 
+                    id="f_tob" 
+                    name="tob" 
+                    class="w-full px-3 py-2.5 bg-[#05060B] border border-hairline text-xs text-[#F2EEE7] focus:border-[#C8A45C] outline-none rounded-none"
+                  />
+                </div>
+
+                <div>
+                  <label for="f_pob" class="block text-[10px] font-mono uppercase tracking-widest text-[#9696A5] mb-1.5">PLACE OF BIRTH *</label>
+                  <input 
+                    type="text" 
+                    id="f_pob" 
+                    name="pob" 
+                    required 
+                    placeholder="City, State/Country" 
+                    class="w-full px-3 py-2.5 bg-[#05060B] border border-hairline text-xs text-[#F2EEE7] focus:border-[#C8A45C] outline-none rounded-none placeholder:text-[#9696A5]/40"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label for="f_discipline" class="block text-[10px] font-mono uppercase tracking-widest text-[#9696A5] mb-2">PRIMARY FOCUS DISCIPLINE *</label>
+              <select 
+                id="f_discipline" 
+                name="discipline" 
+                class="w-full px-4 py-3 bg-[#05060B] border border-hairline text-sm text-[#F2EEE7] focus:border-[#C8A45C] outline-none rounded-none"
+              >
+                <option value="love">Sacred Love & Synastry Alignment (Reconciliation)</option>
+                <option value="kundali">Natal Chart & 12-House Forensic Ephemeris</option>
+                <option value="cleansing">Aura Purification & Occult Defense</option>
+                <option value="wealth">Commercial Wealth & Space Vastu Muhurta</option>
+                <option value="remedy">Vedic Ceremonies & Untreated Gemstone Prescription</option>
+                <option value="confidential">Confidential Life Crossroad (General)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="f_notes" class="block text-[10px] font-mono uppercase tracking-widest text-[#9696A5] mb-2">CONFIDENTIAL CIRCUMSTANCES</label>
+              <textarea 
+                id="f_notes" 
+                name="notes" 
+                rows="3" 
+                placeholder="Share any essential dates, names, or circumstances to be audited prior to the reading..."
+                class="w-full px-4 py-3 bg-[#05060B] border border-hairline text-sm text-[#F2EEE7] focus:border-[#C8A45C] outline-none rounded-none resize-none placeholder:text-[#9696A5]/40"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button (Dark text on warm gold) -->
+            <button 
+              type="submit" 
+              class="w-full btn-observatory-primary cursor-pointer text-center"
+            >
+              SUBMIT EPHEMERIS FOR CHART CALCULATION
+            </button>
+            
+          </form>
+
+          <!-- Success Modal Overlay -->
+          <div id="intake-success" class="hidden absolute inset-0 bg-[#05060B]/98 p-10 flex flex-col items-center justify-center text-center space-y-4 z-20">
+            <div class="text-[10px] font-mono tracking-[0.35em] text-[#C8A45C] uppercase">
+              TRANSMISSION RECORDED
+            </div>
+            <h3 class="font-editorial text-3xl sm:text-4xl text-[#F2EEE7] font-normal">
+              Ephemeris Calibration Initiated
+            </h3>
+            <p class="text-xs sm:text-sm text-[#9696A5] font-light max-w-md leading-relaxed">
+              Your birth coordinates have entered Pandith Vikram Ji's private sanctuary registry. A confirmation dispatch containing your auspicious session window will arrive via WhatsApp and email within <span class="text-[#F2EEE7]">15 minutes</span>.
+            </p>
+            <div class="pt-4">
+              <button id="intake-reset-btn" type="button" class="btn-observatory-secondary text-[10px]">
+                SUBMIT ANOTHER RECORD
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('intake-form');
+  const success = document.getElementById('intake-success');
+  const resetBtn = document.getElementById('intake-reset-btn');
+
+  if (form && success) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      success.classList.remove('hidden');
+    });
+
+    resetBtn?.addEventListener('click', () => {
+      success.classList.add('hidden');
+      (form as HTMLFormElement).reset();
+    });
+  }
+
+  // Radio styling
+  document.querySelectorAll('input[name="intake_mode"]').forEach((radio) => {
+    radio.addEventListener('change', () => {
+      document.querySelectorAll('.mode-card').forEach((card) => {
+        card.className = 'block p-4 border border-hairline hover:border-[#C8A45C]/50 cursor-pointer transition-colors mode-card';
+      });
+      const parent = radio.closest('.mode-card');
+      if (parent) {
+        parent.className = 'block p-4 border border-[#C8A45C] bg-[#C8A45C]/5 cursor-pointer transition-colors mode-card';
+      }
+    });
+  });
+</script>

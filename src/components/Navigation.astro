@@ -1,0 +1,100 @@
+---
+// Navigation.astro - Refined Minimal Observatory Navigation Bar
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#05060B]/85 backdrop-blur-md border-b border-hairline transition-all duration-300">
+  
+  <!-- Subtle Top Micro Metadata Strip -->
+  <div class="hidden md:flex justify-between items-center max-w-7xl mx-auto px-6 py-1.5 text-[9px] tracking-[0.28em] text-[#9696A5]/60 font-mono border-b border-hairline/50">
+    <div class="flex items-center gap-4">
+      <span>CELESTIAL OBSERVATORY</span>
+      <span>&bull;</span>
+      <span>HOLLYWOOD BLVD &bull; LOS ANGELES, CA</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <span>LAT 34°06'06" N &nbsp;|&nbsp; LON 118°20'40" W</span>
+      <span>&bull;</span>
+      <span class="text-[#C8A45C]">SANCTUARY OPEN</span>
+      <span>&bull;</span>
+      <a href="tel:+15103714626" class="hover:text-[#F2EEE7] transition-colors">+1 510-371-4626</a>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <!-- Editorial Brand Title -->
+    <a href="#top" class="flex flex-col group">
+      <span class="font-editorial text-2xl tracking-[0.08em] text-[#F2EEE7] font-medium leading-none group-hover:text-[#C8A45C] transition-colors">
+        PANDITH VIKRAM
+      </span>
+      <span class="text-[9px] uppercase tracking-[0.32em] text-[#9696A5] font-sans mt-1">
+        Indian Astrologer & Vedic Sanctuary
+      </span>
+    </a>
+
+    <!-- Center Observatory Navigation Links -->
+    <nav class="hidden lg:flex items-center gap-8 text-[11px] font-sans font-medium tracking-[0.22em] text-[#9696A5] uppercase">
+      <a href="#top" class="hover:text-[#F2EEE7] transition-colors">OBSERVATORY</a>
+      <a href="#zodiac" class="hover:text-[#F2EEE7] transition-colors">YOUR SKY</a>
+      <a href="#services" class="hover:text-[#F2EEE7] transition-colors">BIRTH CHART</a>
+      <a href="#matcher" class="hover:text-[#F2EEE7] transition-colors">TRANSITS</a>
+      <a href="#lineage" class="hover:text-[#F2EEE7] transition-colors">LINEAGE</a>
+      <a href="#testimonials" class="hover:text-[#F2EEE7] transition-colors">RECORD OF TRUTH</a>
+    </nav>
+
+    <!-- Right Minimal Action Button -->
+    <div class="flex items-center gap-4">
+      <a href="https://wa.me/15103714626" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-block text-[11px] tracking-[0.16em] uppercase text-[#9696A5] hover:text-[#C8A45C] transition-colors">
+        WhatsApp
+      </a>
+
+      <a href="#consultation" class="btn-observatory-primary">
+        BOOK A READING
+      </a>
+
+      <!-- Mobile Menu Trigger -->
+      <button id="obs-mobile-btn" class="lg:hidden p-2 text-[#9696A5] hover:text-[#F2EEE7] focus:outline-none" aria-label="Toggle Navigation">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 6h18M3 12h18M3 18h18"></path>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="obs-mobile-drawer" class="hidden lg:hidden bg-[#080A12] border-t border-hairline px-6 py-6 space-y-4">
+    <div class="flex flex-col space-y-3 text-[11px] tracking-[0.25em] uppercase text-[#9696A5]">
+      <a href="#top" class="obs-mobile-link py-2 border-b border-hairline hover:text-[#F2EEE7]">OBSERVATORY</a>
+      <a href="#zodiac" class="obs-mobile-link py-2 border-b border-hairline hover:text-[#F2EEE7]">YOUR SKY</a>
+      <a href="#services" class="obs-mobile-link py-2 border-b border-hairline hover:text-[#F2EEE7]">BIRTH CHART & PILLARS</a>
+      <a href="#matcher" class="obs-mobile-link py-2 border-b border-hairline hover:text-[#F2EEE7]">TRANSITS</a>
+      <a href="#lineage" class="obs-mobile-link py-2 border-b border-hairline hover:text-[#F2EEE7]">LINEAGE & HERITAGE</a>
+      <a href="#testimonials" class="obs-mobile-link py-2 hover:text-[#F2EEE7]">RECORD OF TRUTH</a>
+    </div>
+    <div class="pt-3">
+      <a href="#consultation" class="obs-mobile-link w-full btn-observatory-primary text-center">
+        BOOK A READING
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('obs-mobile-btn');
+  const drawer = document.getElementById('obs-mobile-drawer');
+  const links = document.querySelectorAll('.obs-mobile-link');
+
+  if (btn && drawer) {
+    btn.addEventListener('click', () => {
+      drawer.classList.toggle('hidden');
+    });
+
+    links.forEach((link) => {
+      link.addEventListener('click', () => {
+        drawer.classList.add('hidden');
+      });
+    });
+  }
+</script>

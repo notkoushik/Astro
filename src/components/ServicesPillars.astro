@@ -1,0 +1,144 @@
+---
+// ServicesPillars.astro - Luxury Editorial Astrological Catalogue
+const disciplines = [
+  {
+    num: 'I',
+    title: 'Sacred Love & Synastry Alignment',
+    sanskrit: 'Vivaha & Prema Shanti',
+    classification: 'VEDIC DISCIPLINE: 7TH BHAVA KALATRA',
+    scope: 'Reconciliation · Estrangement Healing · Soulmate Synastry',
+    description: 'When Venus and Mars suffer malefic aspects from Rahu or Saturn, emotional friction and abrupt separations manifest. Through forensic synastry (Ashtakoota Milan) and authentic Rigvedic reconciliation rituals, unspoken resentments dissolve, allowing true devotion to rekindle.',
+    inclusions: ['Ashtakoota Synastry Mapping', 'Breakup & Divorce Neutralization', 'Third-Party Interference Cleansing', 'Venusian Harmonization Mantras']
+  },
+  {
+    num: 'II',
+    title: 'Natal Chart (Kundali) & Forensic Ephemeris',
+    sanskrit: 'Janma Patrika & Mahadasha',
+    classification: 'VEDIC DISCIPLINE: 12-HOUSE FORENSIC HORARY',
+    scope: 'Life Path · Career Pivots · Dasha Timelines · Manglik Dosha',
+    description: 'A mathematical deconstruction of your twelve astrological houses and divisional charts (Navamsha D9 and Dashamsha D10). We map your exact planetary periods (Vimshottari Dasha) to forecast financial surges, relocation opportunities, and karmic inflection points.',
+    inclusions: ['Comprehensive 12-House Analysis', 'Sade Sati & Shani Transit Audit', 'Karmic Debt & Calling Discovery', 'Auspicious Timing (Muhurta) Matrix']
+  },
+  {
+    num: 'III',
+    title: 'Aura Purification & Occult Defense',
+    sanskrit: 'Raksha & Drishti Dosha Nivaran',
+    classification: 'VEDIC DISCIPLINE: PRATYANGIRA & SUDARSHANA',
+    scope: 'Negative Energy Cleansing · Evil Eye Neutralization · Curse Removal',
+    description: 'Psychic burdens, unexplained domestic chaos, and chronic bad luck frequently stem from malevolent drishti (evil eye) or toxic environmental energy. We invoke consecrated protective hymns and sanctify a personalized Kavach to fortify your aura.',
+    inclusions: ['Black Magic & Evil Eye Neutralization', 'Generational Karmic Cleansing', 'Home & Commercial Space Purification', 'Personalized Consecrated Kavach']
+  },
+  {
+    num: 'IV',
+    title: 'Commercial Wealth, Enterprise & Space Vastu',
+    sanskrit: 'Artha & Vastu Shastra',
+    classification: 'VEDIC DISCIPLINE: 10TH & 11TH BHAVA LABHA',
+    scope: 'Business Stagnation · Contractual Timing · Spatial Alignment',
+    description: 'Commercial success requires the convergence of spatial harmony (Vastu Shastra) and auspicious astronomical timing. We identify geometric blockages draining revenue and determine exact astronomical windows for capital investment.',
+    inclusions: ['Commercial Vastu Energy Audit', 'Corporate Contract Execution Muhurta', 'Property Dispute Resolution Guidance', 'Solar-Jupiterian Wealth Activation']
+  },
+  {
+    num: 'V',
+    title: 'Vedic Ceremonies & Consecrated Gemstones',
+    sanskrit: 'Yajna, Homa & Ratna Pariksha',
+    classification: 'VEDIC DISCIPLINE: NAVAGRAHA REMEDIATION',
+    scope: 'Sacred Hawan · Certified Untreated Gemstones · Siddh Yantras',
+    description: 'Vedic remediation does not promise miracles; it applies celestial mineralogy and sonic frequencies. We identify your optimal Jyotish gemstones and conduct targeted planetary ceremonies (Hawan) calibrated to your Nakshatra.',
+    inclusions: ['Maha Lakshmi & Navagraha Hawan', 'Untreated Certified Gemstone Selection', 'Prana Pratishtha Siddh Yantras', 'Personalized Sound Vibration Mantras']
+  }
+];
+---
+
+<section id="services" class="py-32 relative border-t border-hairline">
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    
+    <!-- Section Title: Pure Luxury Editorial Architecture -->
+    <div class="max-w-3xl mb-20 space-y-4">
+      <div class="text-[10px] tracking-[0.35em] text-[#C8A45C] uppercase font-mono">
+        CANON OF DISCIPLINES &bull; FIVE VEDIC PILLARS
+      </div>
+      <h2 class="font-editorial text-4xl sm:text-5xl md:text-6xl text-[#F2EEE7] font-normal leading-[1.08]">
+        Architectures of Remediation
+      </h2>
+      <p class="font-sans text-xs sm:text-sm text-[#9696A5] font-light leading-relaxed max-w-xl">
+        Ancient Sanskrit treatises establish that planetary afflictions are not sentences of doom, but structural alignments that can be balanced through geometry, sound, and intention.
+      </p>
+    </div>
+
+    <!-- Editorial Catalog List (Thin Hairline Dividers, Ample Breathing Room) -->
+    <div class="divide-y divide-hairline border-y border-hairline">
+      {disciplines.map((item) => (
+        <article class="py-14 sm:py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start group transition-colors">
+          
+          <!-- Column 1: Roman Numeral & Classification -->
+          <div class="lg:col-span-3 space-y-2">
+            <span class="font-editorial text-3xl sm:text-4xl text-[#C8A45C] block">
+              {item.num}
+            </span>
+            <span class="text-[9px] font-mono tracking-[0.25em] text-[#9696A5]/80 uppercase block">
+              {item.classification}
+            </span>
+            <span class="text-[11px] font-editorial italic text-[#9696A5] block">
+              {item.sanskrit}
+            </span>
+          </div>
+
+          <!-- Column 2: Discipline Title & Deep Narrative -->
+          <div class="lg:col-span-6 space-y-4">
+            <h3 class="font-editorial text-2xl sm:text-3xl text-[#F2EEE7] font-normal group-hover:text-[#C8A45C] transition-colors">
+              {item.title}
+            </h3>
+
+            <div class="text-xs font-sans tracking-[0.14em] uppercase text-[#C8A45C]">
+              {item.scope}
+            </div>
+
+            <p class="font-sans text-xs sm:text-sm text-[#9696A5] font-light leading-relaxed">
+              {item.description}
+            </p>
+
+            <!-- Technical Inclusions List -->
+            <div class="pt-2 flex flex-wrap gap-x-6 gap-y-2 text-[11px] font-mono text-[#9696A5]/70">
+              {item.inclusions.map((inc) => (
+                <span class="flex items-center gap-1.5">
+                  <span class="text-[#C8A45C] text-[10px]">&bull;</span>
+                  {inc}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <!-- Column 3: Minimal Consultation Trigger -->
+          <div class="lg:col-span-3 lg:text-right pt-2 lg:pt-0">
+            <a 
+              href="#consultation" 
+              class="btn-observatory-secondary text-[10px]"
+            >
+              REQUEST DISCIPLINE
+            </a>
+          </div>
+
+        </article>
+      ))}
+    </div>
+
+    <!-- Editorial Note on Urgent Sanctuary Guidance -->
+    <div class="mt-16 pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-xs text-[#9696A5]">
+      <div class="space-y-1">
+        <span class="text-[10px] font-mono tracking-[0.25em] text-[#C8A45C] uppercase block">DIRECT EMERGENCY CONDUIT</span>
+        <span>For acute relationship crises or active spiritual disturbance, direct telephone triage is maintained.</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="tel:+15103714626" class="font-mono text-sm text-[#F2EEE7] hover:text-[#C8A45C] transition-colors">
+          TEL: +1 510-371-4626
+        </a>
+        <span class="text-hairline">|</span>
+        <a href="https://wa.me/15103714626" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-[#C8A45C] hover:text-[#F2EEE7] transition-colors">
+          WHATSAPP ENCRYPTED
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
