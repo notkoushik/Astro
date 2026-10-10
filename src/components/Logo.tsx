@@ -5,16 +5,16 @@ interface LogoProps {
   variant?: 'light' | 'dark' | 'gold'
 }
 
-export default function Logo({ className = "h-12", variant = "light" }: LogoProps) {
+export default function Logo({ className = "min-h-12 py-1", variant = "light" }: LogoProps) {
   const isLight = variant === 'light'
 
   return (
-    <div className={`flex items-center gap-3 select-none ${className}`}>
+    <div className={`flex items-center gap-2.5 sm:gap-3 select-none overflow-visible ${className}`}>
       {/* 100% Original Vector Astronomical Astrolabe & Navagraha Surya Mandala */}
-      <div className="relative w-11 h-11 shrink-0 flex items-center justify-center">
+      <div className="relative w-11 h-11 sm:w-12 sm:h-12 shrink-0 flex items-center justify-center overflow-visible">
         <svg
           viewBox="0 0 100 100"
-          className="w-full h-full drop-shadow-sm"
+          className="w-full h-full drop-shadow-sm overflow-visible"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >

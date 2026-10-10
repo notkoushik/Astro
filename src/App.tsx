@@ -150,7 +150,7 @@ const heroSlides: HeroSlide[] = [
     category: 'Relationship Reunion & Shukra Vashikaran',
     bgImage: '/images/love-couple-reunion.webp',
     isBrightRedOrange: false,
-    hasWheel: false,
+    hasWheel: true,
     classicKicker: '✦ SACRED VEDIC LOVE RESTORATION ✦',
     line1: 'GET YOUR LOVE EX BACK',
     line2: 'REUNITE BROKEN RELATIONSHIPS',
@@ -164,7 +164,7 @@ const heroSlides: HeroSlide[] = [
     category: '10th House Karma & Business Prosperity',
     bgImage: '/images/career.webp',
     isBrightRedOrange: false,
-    hasWheel: false,
+    hasWheel: true,
     classicKicker: '✦ SOLAR KARMIC ALIGNMENT & WEALTH ✦',
     line1: 'CAREER & BUSINESS GROWTH',
     line2: 'UNLOCK FINANCIAL TRIUMPH',
@@ -178,7 +178,7 @@ const heroSlides: HeroSlide[] = [
     category: 'Maha Sudarshana & Pratyangira Shield',
     bgImage: '/images/fire.webp',
     isBrightRedOrange: true,
-    hasWheel: false,
+    hasWheel: true,
     classicKicker: '✦ 100% CONFIDENTIAL SPIRITUAL PROTECTION ✦',
     line1: 'BLACK MAGIC & EVIL EYE REMOVAL',
     line2: 'DIVINE SPIRITUAL CLEANSING',
@@ -192,7 +192,7 @@ const heroSlides: HeroSlide[] = [
     category: 'Vivaha & Kundali Milan Compatibility',
     bgImage: '/images/indian_wedding_regal.webp',
     isBrightRedOrange: false,
-    hasWheel: false,
+    hasWheel: true,
     classicKicker: '✦ SACRED NUPTIAL COMPATIBILITY ✦',
     line1: 'MARRIAGE & COMPATIBILITY',
     line2: '36 GUNA MILAN & DOSHA SHANTI',
@@ -1019,8 +1019,8 @@ export default function App() {
         />
       ) : (
         <>
-          {/* 3. HERO SLIDER SECTION (Classic Bold Typography, Transparent Rotating Vedic Zodiac Wheel) */}
-          <section id="home" className="relative w-full min-h-[580px] sm:min-h-[640px] lg:min-h-[700px] xl:min-h-[750px] bg-black overflow-hidden select-none flex items-center">
+          {/* 3. HERO SLIDER SECTION (Classic Bold Typography, Full Rotating Vedic Surya Sun & Zodiac Wheel on Mobile & Desktop) */}
+          <section id="home" className="relative w-full min-h-[820px] sm:min-h-[860px] md:min-h-[680px] lg:min-h-[720px] xl:min-h-[750px] bg-black overflow-hidden select-none flex items-center">
             {/* Cosmic Starfield Particle Overlay */}
             <div className="absolute inset-0 cosmic-stars-bg opacity-30 pointer-events-none z-10"></div>
 
@@ -1057,66 +1057,66 @@ export default function App() {
                       : 'bg-gradient-to-r from-black/88 via-black/55 to-black/30'
                   } z-10 pointer-events-none`}></div>
 
-                  {/* Content Container - Always Front, Center & Fully Visible */}
-                  <div className="absolute inset-0 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex flex-col md:flex-row items-center justify-between gap-8 z-20 py-8">
+                  {/* Content Container - Always Front, Center & Fully Visible on Mobile & Desktop */}
+                  <div className="absolute inset-0 w-full max-w-7xl mx-auto px-5 sm:px-10 lg:px-16 flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 sm:gap-6 md:gap-8 z-20 pt-5 pb-12 md:py-8">
                     {/* Left Text Overlay - Oswald + Manrope Typography Matching Reference */}
-                    <div className="max-w-xl lg:max-w-2xl space-y-4 sm:space-y-5 z-20">
+                    <div className="w-full md:w-auto max-w-xl lg:max-w-2xl space-y-3 sm:space-y-4 md:space-y-5 z-20">
                       {/* Authority Kicker Badge (Manrope Bold) */}
-                      <div className="inline-block bg-[#9B120E] text-white border border-[#E5A000] px-4 py-1.5 text-[11px] sm:text-xs font-manrope font-bold uppercase tracking-[0.08em] shadow-md rounded-none">
+                      <div className="inline-block bg-[#9B120E] text-white border border-[#E5A000] px-3.5 sm:px-4 py-1.5 text-[10px] sm:text-xs font-manrope font-bold uppercase tracking-[0.08em] shadow-md rounded-none">
                         {slide.classicKicker}
                       </div>
 
                       {/* Display Headings (Strictly ONE H1 on the active slide; H2 on inactive slides for Proper H1/H2 SEO Structure) */}
                       <div className="space-y-0.5">
                         {isActive ? (
-                          <h1 className="font-oswald text-4xl sm:text-6xl lg:text-[64px] xl:text-[70px] font-bold text-white uppercase tracking-[-0.01em] leading-[0.98]">
+                          <h1 className="font-oswald text-[34px] sm:text-6xl lg:text-[64px] xl:text-[70px] font-bold text-white uppercase tracking-[-0.01em] leading-[0.98]">
                             {slide.line1}
                           </h1>
                         ) : (
-                          <h2 className="font-oswald text-4xl sm:text-6xl lg:text-[64px] xl:text-[70px] font-bold text-white uppercase tracking-[-0.01em] leading-[0.98]">
+                          <h2 className="font-oswald text-[34px] sm:text-6xl lg:text-[64px] xl:text-[70px] font-bold text-white uppercase tracking-[-0.01em] leading-[0.98]">
                             {slide.line1}
                           </h2>
                         )}
-                        <div className="font-oswald text-4xl sm:text-6xl lg:text-[64px] xl:text-[70px] font-bold text-[#F5B800] uppercase tracking-[-0.01em] leading-[0.98]">
+                        <div className="font-oswald text-[34px] sm:text-6xl lg:text-[64px] xl:text-[70px] font-bold text-[#F5B800] uppercase tracking-[-0.01em] leading-[0.98]">
                           {slide.line2}
                         </div>
                       </div>
 
                       {/* Subtitle with Gold Left Accent Bar (Manrope Regular) */}
-                      <p className="font-manrope text-xs sm:text-base lg:text-[17px] text-white/95 max-w-2xl leading-[1.6] font-normal border-l-[3px] border-[#F5B800] pl-4 py-0.5">
+                      <p className="font-manrope text-xs sm:text-base lg:text-[17px] text-white/95 max-w-2xl leading-[1.55] sm:leading-[1.6] font-normal border-l-[3px] border-[#F5B800] pl-3.5 sm:pl-4 py-0.5">
                         {slide.subtitle}
                       </p>
 
                       {/* Trust Pills (Manrope Bold, Gold Bordered) */}
-                      <div className="flex flex-wrap items-center gap-3 pt-1 text-[11px] font-manrope font-bold uppercase tracking-[0.06em] text-[#F5B800]">
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-0.5 sm:pt-1 text-[10px] sm:text-[11px] font-manrope font-bold uppercase tracking-[0.06em] text-[#F5B800]">
                         <button
                           type="button"
                           onClick={() => setActiveModal(slide.modalType)}
-                          className="bg-black/65 hover:bg-black/85 border border-[#E5A000]/80 px-3.5 py-2 rounded-[4px] transition-colors cursor-pointer"
+                          className="bg-black/65 hover:bg-black/85 border border-[#E5A000]/80 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-[4px] transition-colors cursor-pointer"
                         >
                           ✦ 100% CONFIDENTIAL
                         </button>
                         <button
                           type="button"
                           onClick={() => setActiveModal(slide.modalType)}
-                          className="bg-black/65 hover:bg-black/85 border border-[#E5A000]/80 px-3.5 py-2 rounded-[4px] transition-colors cursor-pointer"
+                          className="bg-black/65 hover:bg-black/85 border border-[#E5A000]/80 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-[4px] transition-colors cursor-pointer"
                         >
                           ✦ 35+ YEARS MASTERY
                         </button>
                         <button
                           type="button"
                           onClick={() => setActiveModal(slide.modalType)}
-                          className="bg-black/65 hover:bg-black/85 border border-[#E5A000]/80 px-3.5 py-2 rounded-[4px] transition-colors cursor-pointer"
+                          className="bg-black/65 hover:bg-black/85 border border-[#E5A000]/80 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-[4px] transition-colors cursor-pointer"
                         >
                           ✦ 45K+ SATISFIED CLIENTS
                         </button>
                       </div>
                     </div>
 
-                    {/* Right Side Rotating Background-Less Vedic Zodiac Wheel */}
+                    {/* Full Rotating Background-Less Vedic Surya Sun & Zodiac Wheel — Visible in Full on Mobile & Desktop */}
                     {slide.hasWheel && (
-                      <div className="hidden md:flex items-center justify-center shrink-0 z-20 md:pr-4 lg:pr-8">
-                        <ZodiacWheel className="w-[300px] sm:w-[400px] md:w-[460px] lg:w-[520px] xl:w-[580px] h-[300px] sm:h-[400px] md:h-[460px] lg:h-[520px] xl:h-[580px]" />
+                      <div className="flex items-center justify-center shrink-0 z-20 mx-auto md:mx-0 md:pr-4 lg:pr-8">
+                        <ZodiacWheel className="w-[260px] h-[260px] sm:w-[330px] sm:h-[330px] md:w-[440px] md:h-[440px] lg:w-[520px] lg:h-[520px] xl:w-[580px] xl:h-[580px]" />
                       </div>
                     )}
                   </div>
