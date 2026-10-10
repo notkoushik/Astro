@@ -1,26 +1,28 @@
 {
-  "name": "astro",
+  "name": "astro-v2",
+  "private": true,
+  "version": "1.0.0",
   "type": "module",
-  "version": "0.0.1",
-  "engines": {
-    "node": ">=22.12.0"
-  },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node tests/run_e2e_tests.cjs"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.3.3",
-    "@types/canvas-confetti": "^1.9.0",
-    "@types/three": "^0.186.0",
-    "astro": "^7.3.6",
-    "canvas-confetti": "^1.9.4",
-    "tailwindcss": "^4.3.3",
-    "three": "^0.186.1"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "canvas-confetti": "^1.9.4"
   },
-  "allowScripts": {
-    "esbuild": true
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^8.0.0"
   }
 }

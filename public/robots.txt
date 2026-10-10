@@ -1,0 +1,19 @@
+# robots.txt for Indian Astrologer Pandith Vikram
+# Official Website: https://pandithvikramastrology.com
+
+User-agent: *
+Allow: /
+Allow: /services/
+Allow: /images/
+Disallow: /private/
+Disallow: /admin/
+
+# Googlebot & Googlebot-Image full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+# XML Sitemap Location
+Sitemap: https://pandithvikramastrology.com/sitemap.xml

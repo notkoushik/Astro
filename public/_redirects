@@ -1,0 +1,6 @@
+# Enforce HTTPS
+http://pandithvikramastrology.com/* https://pandithvikramastrology.com/:splat 301!
+
+# Clean URLs for all 12 Vedic Astrology Services
+/services/* /index.html 200
+/* /index.html 200
