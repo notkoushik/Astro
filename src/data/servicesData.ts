@@ -23,6 +23,11 @@ export interface ServiceTheme {
   glowColor: string
 }
 
+export interface ServiceFAQ {
+  question: string
+  answer: string
+}
+
 export interface DetailedService {
   id: string
   title: string
@@ -38,6 +43,7 @@ export interface DetailedService {
   testimonial: { quote: string; client: string; location: string }
   theme: ServiceTheme
   gallery: ServiceGalleryImage[]
+  faqs?: ServiceFAQ[]
 }
 
 export const detailedServicesData: Record<string, DetailedService> = {
@@ -99,6 +105,24 @@ export const detailedServicesData: Record<string, DetailedService> = {
       client: 'Sunita & Raj',
       location: 'Wembley, London, UK',
     },
+    faqs: [
+      {
+            "question": "Can Vedic astrology help if my partner has emotionally detached or blocked me?",
+            "answer": "Yes. In Vedic astrology, sudden emotional withdrawals are often linked to malefic transits across the 7th house (Kalatra Bhava) or adverse afflictions to Venus (Shukra). Pandith Vikram pinpoints the exact planetary trigger and prescribes targeted Shukra Graha Shanti rituals and personalized Samvada mantras to clear negative psychic barriers and reopen gentle communication."
+      },
+      {
+            "question": "Are these remedies safe for both of us, or do they carry negative karmic repercussions?",
+            "answer": "They are 100% safe, pure, and Sattvic. Pandith Vikram practices strictly scriptural Vedic Jyotish rituals rooted in harmony, compassion, and divine grace. He does not use forceful or manipulative magic, ensuring that all outcomes bring genuine peace, mutual respect, and lasting devotion without any karmic backlash."
+      },
+      {
+            "question": "What birth details do I need to provide for a relationship consultation?",
+            "answer": "Ideally, both partners' full names, dates of birth, exact times of birth, and birth cities. However, if your partner's exact birth time is unavailable, Pandith Vikram utilizes Prashna Horary Astrology (the planetary chart of the moment of query) alongside Palmistry and Face Reading to perform an accurate diagnostic reading."
+      },
+      {
+            "question": "How long does it typically take for emotional warmth and mutual understanding to return?",
+            "answer": "While energetic shifts begin immediately upon the commencement of remedies, planetary alignment operates on a natural 21-to-41 day mandala cycle. Most clients experience marked softening in conversations and dissolution of tension within 3 to 4 weeks of consistent remedial practice."
+      }
+],
     gallery: [
       {
         url: 'https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=1200&q=80',
@@ -191,6 +215,20 @@ export const detailedServicesData: Record<string, DetailedService> = {
       client: 'Pooja & Harpreet',
       location: 'Hounslow, London, UK',
     },
+    faqs: [
+      {
+            "question": "What if our Kundali Milan scores low (below 18 Gunas) or reveals Nadi / Bhakoot Dosha?",
+            "answer": "A low score or Nadi Dosha indicates energetic friction, but does not mean a marriage is doomed. Vedic astrology provides specific neutralizing homams (such as Maha Mrityunjaya and Gauri Shankar pujas) and gemstone recommendations that bridge energetic disparities and allow couples to build a harmonious, enduring marriage."
+      },
+      {
+            "question": "How serious is Manglik Dosha (Kuja Dosha), and can it be fully resolved?",
+            "answer": "Manglik Dosha is one of the most common and misunderstood astrological combinations. It occurs when Mars is placed in specific houses, generating aggressive fiery energy. Pandith Vikram calculates whether the dosha is canceled by other planetary placements (Bhanga) or prescribes tailored Kuja Shanti rituals that effectively pacify Martian turbulence before or after marriage."
+      },
+      {
+            "question": "Can Pandith Vikram assist with inter-caste or inter-faith marriages facing family resistance?",
+            "answer": "Yes. Parental resistance is frequently caused by 4th and 9th house afflictions in the charts. Pandith Vikram prescribes Brihaspati (Jupiter) and Chandra (Moon) balancing remedies to soften family hearts, remove misunderstandings, and facilitate peaceful parental acceptance."
+      }
+],
     gallery: [
       {
         url: 'https://commons.wikimedia.org/wiki/Special:FilePath/Pooja_and_Havan_Kund_1.jpg',
@@ -283,6 +321,20 @@ export const detailedServicesData: Record<string, DetailedService> = {
       client: 'Amit Patel',
       location: 'Canary Wharf, London, UK',
     },
+    faqs: [
+      {
+            "question": "Can a reading determine whether I should remain in employment or start an independent business?",
+            "answer": "Yes. The 10th house (Karma Bhava) indicates your career status, the 6th house indicates service/employment, and the 7th and 11th houses govern independent business and commercial profits. Pandith Vikram assesses the comparative strength of these houses and your Mahadasha to recommend your most lucrative and stable vocational path."
+      },
+      {
+            "question": "How does Shani Sade Sati or Rahu Mahadasha impact corporate careers and leadership roles?",
+            "answer": "Saturn (Shani) tests discipline and integrity, often bringing unexpected delays, workplace politics, or restructuring. Rahu can create sudden volatile shifts or illusionary opportunities. Pandith Vikram provides precise Sade Sati pacification remedies and strategic timelines so you know when to maintain patience and when to push aggressively for promotion."
+      },
+      {
+            "question": "When is the ideal astrological time (Muhurat) to sign a major commercial agreement or launch a company?",
+            "answer": "Selecting an auspicious Shubh Muhurat ensures that planetary horas, lunar tithis, and nakshatras align with your chart to favor sustainable profit. Pandith Vikram calculates bespoke dates and times for corporate incorporation, contract execution, and store inaugurations."
+      }
+],
     gallery: [
       {
         url: 'https://commons.wikimedia.org/wiki/Special:FilePath/(A)_puja_in_progress_before_Yagam_Yajna.jpg',
@@ -375,6 +427,20 @@ export const detailedServicesData: Record<string, DetailedService> = {
       client: 'Ramesh K.',
       location: 'Southall, London, UK',
     },
+    faqs: [
+      {
+            "question": "Why do sudden financial losses, stalled cash flow, or mounting debts occur according to Vedic astrology?",
+            "answer": "Financial turbulence is governed by the 2nd (accumulated wealth), 8th (sudden liabilities), and 12th (uncontrolled expenditure) houses, alongside afflictions from Rahu, Ketu, or a debilitated Jupiter. When negative transits suppress Dhan Yogas, hard work fails to translate into retained wealth. Pandith Vikram identifies these blocks and activates corrective remedies."
+      },
+      {
+            "question": "What is a Dhan Yoga, and how does Pandith Vikram activate dormant wealth combinations?",
+            "answer": "Dhan Yogas are auspicious alignments between wealth lords (e.g. 1st, 2nd, 5th, 9th, and 11th houses). If these yogas are dormant due to planetary combustion or malefic aspects, Pandith Vikram utilizes consecrated Lakshmi-Kuber Yantras and targeted planetary mantras to re-energize wealth reception."
+      },
+      {
+            "question": "Do natural certified gemstones help with debt relief and income acceleration?",
+            "answer": "Yes, but only when carefully chosen. Wearing the wrong gemstone can exacerbate financial strain. Pandith Vikram conducts rigorous calculations to determine your Yogakaraka planet before recommending certified natural gemstones (such as Yellow Sapphire or Emerald) energized during specific planetary horas."
+      }
+],
     gallery: [
       {
         url: 'https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Yantra_copper.jpg',
@@ -467,6 +533,20 @@ export const detailedServicesData: Record<string, DetailedService> = {
       client: 'Jaswinder & Family',
       location: 'Slough, UK',
     },
+    faqs: [
+      {
+            "question": "How can I differentiate between psychological/physical stress and negative spiritual energy?",
+            "answer": "Genuine negative energy afflictions manifest as sudden, unnatural patterns: continuous medical deterioration despite normal clinical test results, sudden irrational domestic hatred among loving family members, severe recurring nightmares, and a heavy, suffocating atmosphere at home. Pandith Vikram examines your 8th house, Rahu/Ketu axis, and Gulika placement to verify spiritual intrusion."
+      },
+      {
+            "question": "Is your spiritual cleansing completely safe and confidential for my family?",
+            "answer": "Absolutely. Pandith Vikram relies exclusively on sacred Vedic Maha Sudarshana, Pratyangira Devi, and Narasimha kavacham procedures. These are protective, purifying divine rituals that permanently neutralize external negativity and establish an impenetrable spiritual barrier around your home and loved ones."
+      },
+      {
+            "question": "Can spiritual cleansing be conducted remotely if I am located outside London or in the USA?",
+            "answer": "Yes. In authentic Vedic science, spiritual energy transcends geographic distance. Pandith Vikram performs the consecrated homam using your photograph, Janam Kundali, and Gotra/name, delivering protective energized kavachs and instructions directly to your home."
+      }
+],
     gallery: [
       {
         url: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80',
@@ -559,6 +639,20 @@ export const detailedServicesData: Record<string, DetailedService> = {
       client: 'Priya Mehta',
       location: 'Ealing, London, UK',
     },
+    faqs: [
+      {
+            "question": "What is Buri Nazar (Evil Eye / Drishti Dosha) in classical Vedic astrology?",
+            "answer": "Drishti Dosha refers to the psychic projection of jealousy, envy, or malice from others that disrupts your personal aura and destabilizes your planetary harmony. It frequently strikes after visible milestones like weddings, new business launches, child births, or promotions."
+      },
+      {
+            "question": "How does an authentic Vedic Raksha Kavach protect against ongoing jealousy?",
+            "answer": "A consecrated Raksha Kavach acts as a personal electromagnetic shield for your aura. Energized with sacred Vedic mantras during auspicious planetary horas, it reflects negative psychic projections back to the universe, preventing emotional drain, sudden disputes, and unexplainable misfortune."
+      },
+      {
+            "question": "Can the Evil Eye affect infants, businesses, or newly acquired properties?",
+            "answer": "Yes. Newborns, pregnant mothers, front-facing retail shops, and newly bought homes possess vulnerable energetic fields that readily absorb heavy environmental vibrations. Pandith Vikram provides specific Vastu and Nazar Nivaran remedies to fortify these spaces permanently."
+      }
+],
     gallery: [
       {
         url: 'https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?auto=format&fit=crop&w=1200&q=80',
@@ -651,6 +745,20 @@ export const detailedServicesData: Record<string, DetailedService> = {
       client: 'Deepa Verma',
       location: 'Croydon, London, UK',
     },
+    faqs: [
+      {
+            "question": "Which planetary placements cause bitter family feuds and parent-child alienation?",
+            "answer": "The 2nd house (family unity), 4th house (domestic peace and mother), and 5th house (children and progeny) govern household harmony. Afflictions from Rahu, Saturn, or Mars in these houses cause misunderstandings, emotional rebelliousness, and estrangement. Pandith Vikram\u2019s remedies restore mutual empathy and respectful communication."
+      },
+      {
+            "question": "What astrological remedies assist couples struggling with delays in conceiving (Santana Dosha)?",
+            "answer": "Delays in childbirth often stem from 5th house afflictions, Pitra Dosha, or Rahu-Jupiter discord (Guru Chandal Yoga). Pandith Vikram calculates the Kshetra and Beeja Sphuta points in both parents' charts and prescribes Santana Gopala pujas and scriptural remedies to support healthy parenthood."
+      },
+      {
+            "question": "Can a parent perform remedies on behalf of a child who is struggling or unwilling to participate?",
+            "answer": "Yes. A biological parent shares an intimate karmic and energetic link with their child. By utilizing the parent\u2019s Sankalpa and chart, Pandith Vikram guides mothers and fathers through specific daily prayers and charity rituals that positively influence the child\u2019s mental focus, emotional calm, and destiny."
+      }
+],
     gallery: [
       {
         url: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ganesha_Puja_Setup.jpg',
@@ -743,6 +851,20 @@ export const detailedServicesData: Record<string, DetailedService> = {
       client: 'Meera K.',
       location: 'Ilford, London, UK',
     },
+    faqs: [
+      {
+            "question": "Does Ayur-Jyotish replace medical diagnosis or modern hospital care?",
+            "answer": "No. Pandith Vikram firmly emphasizes that medical treatments and qualified physicians must always be consulted for all physical illnesses. Ayur-Jyotish works in tandem as complementary spiritual support, identifying subtle planetary root causes, optimizing treatment timing, and strengthening the body\u2019s innate vitality (Prana)."
+      },
+      {
+            "question": "Which planetary cycles trigger chronic fatigue, emotional anxiety, and insomnia?",
+            "answer": "The Moon (Chandra) rules the mind and fluids; Sun (Surya) governs vital stamina; and Saturn/Rahu cause chronic exhaustion and mental restlessness. Afflictions to the Lagna (1st house) or Moon during adverse Dashas frequently manifest as chronic malaise. Pandith Vikram prescribes Chandra Shanti and Surya Arghya to revitalize physical and mental vitality."
+      },
+      {
+            "question": "How does the Maha Mrityunjaya Mantra support healing and longevity?",
+            "answer": "The Maha Mrityunjaya Mantra is the supreme Vedic healing hymn dedicated to Lord Shiva. Energized recitation and homams neutralize Maraka (death-inflicting) planetary periods, clearing negative karmic imprints and instilling profound physical and psychological resilience."
+      }
+],
     gallery: [
       {
         url: 'https://commons.wikimedia.org/wiki/Special:FilePath/Pooja_and_Havan_Kund_1.jpg',
@@ -835,6 +957,20 @@ export const detailedServicesData: Record<string, DetailedService> = {
       client: 'Vikramjit Singh',
       location: 'Birmingham, UK',
     },
+    faqs: [
+      {
+            "question": "Can Vedic astrology predict the likely trajectory and timeline of an active legal dispute?",
+            "answer": "Yes. The 6th house (Shatru Bhava) governs court litigation, enemies, and disputes, while the 9th house reflects legal justice and judges. By analyzing these houses and Mars (Mangal - courage/litigation), Pandith Vikram forecasts favorable negotiation windows, trial dates, and settlement opportunities."
+      },
+      {
+            "question": "How does Maa Baglamukhi propitiation assist in overcoming hostile opponents and false allegations?",
+            "answer": "Goddess Baglamukhi is revered as the deity of Stambhana (paralyzing hostile intentions). Consecrated Baglamukhi rituals silence malicious slander, dissolve fabricated allegations, and tilt judicial clarity in favor of truthful, righteous outcomes."
+      },
+      {
+            "question": "What should I do if a legal case has been dragging on for years without resolution?",
+            "answer": "Prolonged litigation usually coincides with slow-moving Saturn or Ketu transits across the 6th or 8th house. Pandith Vikram prescribes specific Tuesday and Saturday remedial sankalpas designed to break legal stagnation and achieve an honorable out-of-court settlement or decisive victory."
+      }
+],
     gallery: [
       {
         url: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80',
@@ -927,6 +1063,20 @@ export const detailedServicesData: Record<string, DetailedService> = {
       client: 'Tariq & Shreya',
       location: 'Stratford, London, UK',
     },
+    faqs: [
+      {
+            "question": "Which planets and houses govern real estate, land disputes, and ancestral property?",
+            "answer": "Mars (Bhumi Karaka) rules raw land and construction, while the 4th house (Matru & Griha Bhava) governs residential properties and happiness. The 8th house oversees ancestral inheritance. Malefic aspects from Rahu or Saturn often trigger fraudulent claims, boundary conflicts, or delayed probate approvals."
+      },
+      {
+            "question": "How do Vastu Purusha alignments and Mars pacification accelerate stuck property transactions?",
+            "answer": "Energetic imbalances in the North-East or South-West quadrants of a plot cause financial inertia and buyer hesitation. Pandith Vikram\u2019s Vastu corrections and Mars Graha Shanti dissolve energetic deadlock, enabling smooth sales at equitable market values."
+      },
+      {
+            "question": "What is the importance of a Shubh Griha Pravesh Muhurat before occupying a new home?",
+            "answer": "Entering a home under an auspicious celestial window ensures that the living space is infused with health, peace, and abundance from day one. Pandith Vikram calculates custom Griha Pravesh dates based on your Janam Nakshatra, avoiding malefic Rahu Kaal and eclipse hours."
+      }
+],
     gallery: [
       {
         url: 'https://commons.wikimedia.org/wiki/Special:FilePath/Vastu_Purusha_Vis%C3%A3o_Dorsal.jpg',
@@ -1019,6 +1169,24 @@ export const detailedServicesData: Record<string, DetailedService> = {
       client: 'Chloe & Arjun',
       location: 'Central London, UK',
     },
+    faqs: [
+      {
+            "question": "How is Vedic Love Restoration fundamentally different from forceful black magic or coercive rituals?",
+            "answer": "Vedic love restoration focuses entirely on resolving negative planetary afflictions, dissolving mutual misunderstandings, and awakening genuine soul affection through sacred Shukra (Venus) and Kamakhya mantras. It respects free will and creates an authentic, lasting reunion built on mutual forgiveness and respect, rather than temporary, dangerous obsession."
+      },
+      {
+            "question": "Can a reunion reading be performed if my ex-partner has blocked me everywhere and refuses to speak?",
+            "answer": "Yes. In Vedic astrology, sudden blocking and hostile silence often correspond to intense transit afflictions (such as Rahu or Mars influencing the 7th house). Pandith Vikram assesses the chart to determine if the soul connection remains open, performing distance pacification rituals that dissolve pride, anger, and third-party interference."
+      },
+      {
+            "question": "What information do I need to share with Pandith Vikram for an ex-love consultation?",
+            "answer": "You will need your birth details (date, time, and city) and, if possible, your partner's details. If your partner's birth time is unknown, a clear photograph and full name suffice for Pandith Vikram to examine the energetic bond through Prashna astrology."
+      },
+      {
+            "question": "What happens after the relationship is restored \u2014 will the problems return?",
+            "answer": "To prevent recurrent misunderstandings, Pandith Vikram provides an energized Vedic relationship protective kavach and practical astrological counsel on navigating upcoming sensitive transit dates, ensuring lifelong harmony and commitment."
+      }
+],
     gallery: [
       {
         url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80',
@@ -1111,6 +1279,20 @@ export const detailedServicesData: Record<string, DetailedService> = {
       client: 'Kavita Sharma',
       location: 'Richmond, London, UK',
     },
+    faqs: [
+      {
+            "question": "What comprehensive insights does a full Janam Kundali consultation provide?",
+            "answer": "A complete life reading analyzes all 12 Bhavas of your birth chart, detailing career trajectory, wealth accumulation, marriage timing and partner compatibility, health vulnerabilities, foreign travel, and spiritual evolution. It also maps your upcoming 5-year Vimshottari Dasha timeline."
+      },
+      {
+            "question": "What if I do not have an exact birth time recorded on my hospital certificate?",
+            "answer": "Pandith Vikram specializes in Birth Time Rectification (Nashta Jataka) through detailed verification of major past life events, alongside Prashna Horary Astrology (the planetary chart cast at the query moment) and Palmistry to provide exceptionally precise guidance."
+      },
+      {
+            "question": "How does Vedic Sidereal astrology differ from Western Tropical astrology or tarot cards?",
+            "answer": "Western astrology uses a fixed seasonal calendar, whereas Vedic (Sidereal) astrology calculates the actual visible astronomical positions of the planets and stars against the 27 Nakshatras. Vedic astrology also incorporates the unmatched Dasha system, allowing for chronological precision down to specific months and weeks."
+      }
+],
     gallery: [
       {
         url: 'https://images.unsplash.com/photo-1519791883288-dc8bd696e667?auto=format&fit=crop&w=1200&q=80',

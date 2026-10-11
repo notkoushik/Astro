@@ -137,12 +137,12 @@ const heroSlides: HeroSlide[] = [
     bgImage: '/images/astronomical-red-nebula.webp',
     isBrightRedOrange: true,
     hasWheel: true,
-    classicKicker: '✦ WORLD FAMOUS INDIAN VEDIC ASTROLOGER IN UK ✦',
+    classicKicker: '✦ 7TH GENERATION VEDIC PARAMPARA • LONDON UK ✦',
     line1: 'PANDITH VIKRAM',
     line2: 'TOP INDIAN ASTROLOGER IN LONDON UK',
     line2Color: 'text-[#FFD700]',
-    subtitle: 'Over 35 Years of Scriptural Vedic Mastery. Accurate Horoscope Foretelling, Palmistry, Face Reading & Spiritual Solutions for Love, Marriage, Career & Family Harmony.',
-    buttonText: 'BOOK CONSULTATION NOW',
+    subtitle: 'Over 35 Years of Classical Scriptural Mastery. Unravel the planetary karmic blueprints behind persistent love heartbreak, career stalls, marital discord, and sudden life crises with precision Ganita calculations.',
+    buttonText: 'BOOK PRIVATE READING NOW',
     modalType: 'question'
   },
   {
@@ -151,11 +151,11 @@ const heroSlides: HeroSlide[] = [
     bgImage: '/images/love-couple-reunion.webp',
     isBrightRedOrange: false,
     hasWheel: true,
-    classicKicker: '✦ SACRED VEDIC LOVE RESTORATION ✦',
-    line1: 'GET YOUR LOVE EX BACK',
+    classicKicker: '✦ SACRED VEDIC SHUKRA RECONCILIATION ✦',
+    line1: 'REKINDLE BROKEN LOVE',
     line2: 'REUNITE BROKEN RELATIONSHIPS',
     line2Color: 'text-[#FFD700]',
-    subtitle: 'Clear Third-Party Interference, Dissolve Misunderstandings & Rekindle Deep Lifelong Mutual Devotion With Ancient Vedic Shukra (Venus) Mantras.',
+    subtitle: 'Clear third-party interference, dissolve ego-driven bitterness, and restore genuine emotional devotion. Pure Sattvic remedies to bring your ex partner back with mutual respect and enduring affection.',
     buttonText: 'REUNITE WITH LOVE NOW',
     modalType: 'booking'
   },
@@ -165,11 +165,11 @@ const heroSlides: HeroSlide[] = [
     bgImage: '/images/career.webp',
     isBrightRedOrange: false,
     hasWheel: true,
-    classicKicker: '✦ SOLAR KARMIC ALIGNMENT & WEALTH ✦',
-    line1: 'CAREER & BUSINESS GROWTH',
-    line2: 'UNLOCK FINANCIAL TRIUMPH',
+    classicKicker: '✦ 10TH HOUSE KARMA & FINANCIAL TIMING ✦',
+    line1: 'CAREER ELEVATION',
+    line2: 'UNLOCK BLOCKED BUSINESS GROWTH',
     line2Color: 'text-[#FFD700]',
-    subtitle: 'Overcome Job Stagnation, Commercial Blocks & Discover Your Most Auspicious Astrological Windows For Investments & Overseas Career.',
+    subtitle: 'Overcome protracted career stagnation, dissolve sudden financial bottlenecks, and identify exact planetary Muhurthas for enterprise expansion and foreign relocation.',
     buttonText: 'CONSULT FOR CAREER',
     modalType: 'question'
   },
@@ -179,11 +179,11 @@ const heroSlides: HeroSlide[] = [
     bgImage: '/images/fire.webp',
     isBrightRedOrange: true,
     hasWheel: true,
-    classicKicker: '✦ 100% CONFIDENTIAL SPIRITUAL PROTECTION ✦',
-    line1: 'BLACK MAGIC & EVIL EYE REMOVAL',
-    line2: 'DIVINE SPIRITUAL CLEANSING',
+    classicKicker: '✦ 100% STRICT CONFIDENTIALITY & SPIRITUAL SHIELDING ✦',
+    line1: 'NEGATIVE ENERGY REMOVAL',
+    line2: 'MAHA SUDARSHANA & EVIL EYE CLEANSING',
     line2Color: 'text-[#FFD700]',
-    subtitle: 'Sacred Vedic Homa, Tantric Dosha Pacification & Impervious Protective Kavach Safeguards For Your Home, Body & Children.',
+    subtitle: 'Purge persistent domestic heaviness, unexplained physical fatigue, and malevolent jealousy through consecrated Vedic Homas and impervious Kavach protections.',
     buttonText: 'REQUEST PROTECTION',
     modalType: 'booking'
   },
@@ -193,11 +193,11 @@ const heroSlides: HeroSlide[] = [
     bgImage: '/images/indian_wedding_regal.webp',
     isBrightRedOrange: false,
     hasWheel: true,
-    classicKicker: '✦ SACRED NUPTIAL COMPATIBILITY ✦',
+    classicKicker: '✦ 36 GUNA MILAN & MARITAL CRISIS SHANTI ✦',
     line1: 'MARRIAGE & COMPATIBILITY',
-    line2: '36 GUNA MILAN & DOSHA SHANTI',
+    line2: 'DISSOLVE IN-LAW & DIVORCE CONFLICTS',
     line2Color: 'text-[#FFD700]',
-    subtitle: 'Accurate Horoscopic Matching, Inter-Caste Marriage Guidance & Divine Brihaspati Blessings for Lasting Nuptial Peace.',
+    subtitle: 'Deep horoscopic root-cause diagnosis for Manglik Dosha, Nadi Kuta discord, and emotional distance. Scriptural pacification rituals that transform contentious homes into sanctuaries of warmth.',
     buttonText: 'CHECK COMPATIBILITY',
     modalType: 'question'
   }
@@ -346,14 +346,14 @@ const clientReviews: ClientReview[] = [
   {
     id: 'r1',
     name: 'Aarav M.',
-    city: 'New York City',
+    city: 'Queens & Manhattan',
     state: 'New York, USA',
-    service: 'Get Ex Love Back & Vashikaran',
+    service: 'Get Ex Love Back & Reconciliation',
     serviceId: 'get-ex-love-back',
     img: '/images/client-1.webp',
     rating: 5,
     tag: 'Verified Client • New York',
-    review: 'I was shattered when my 5-year relationship ended abruptly due to misunderstandings and third-party interference. Pandith Vikram’s astrological reading was extraordinarily accurate. Within 21 days of following his Shukra mantras and remedies, my partner reached out and apologized. We are now happily planning our marriage in Long Island. Eternally grateful!'
+    review: 'After a painful 7-month silence following a broken engagement, every astrologer in Jackson Heights promised instant 24-hour miracles that never worked. Pandith Vikram was the first to tell me the hard truth: my partner had an intense Venus-Rahu transit affliction and needed a 28-day Sattvic pacification cycle. He never asked for absurd sums or made fairy-tale claims. On day 23, she reached out to meet for coffee. We sat down, talked through the family misunderstandings without anger, and have steadily rebuilt our bond. His honesty and spiritual groundedness are rare.'
   },
   {
     id: 'r2',
@@ -365,79 +365,120 @@ const clientReviews: ClientReview[] = [
     img: '/images/client-2.webp',
     rating: 4,
     tag: 'Verified Client • New Jersey',
-    review: 'Both our families were hesitant due to Manglik dosha and 36 Guna mismatch issues. It took a couple of weeks to coordinate the homam dates across time zones, but once Guruji performed the pacification ritual and gemstone guidance, the friction vanished and both parents gave their blessings.'
+    review: 'Both families were deadlocked because our traditional kundali match scored only 14 Gunas, with prominent Nadi Dosha and Bhakoot mismatch. Rohan’s mother was terrified of bad health outcomes. Pandith Vikram did a deep Navamsha (D9) and Prashna analysis showing that Jupiter’s mutual aspect cancelled the primary planetary flaws. He performed a dedicated Maha Mrityunjaya and Brihaspati shanti in our presence over video. Scheduling the exact auspicious hour across London and Eastern Time took some back-and-forth, but the marriage took place peacefully and our homes are now united.'
   },
   {
     id: 'r3',
     name: 'Vikramaditya K.',
-    city: 'San Jose & Fremont',
+    city: 'San Jose & Sunnyvale',
     state: 'California, USA',
     service: 'Career & Tech Venture Prosperity',
     serviceId: 'career-business',
     img: '/images/client-3.webp',
     rating: 5,
     tag: 'Verified Client • Bay Area CA',
-    review: 'Facing severe setbacks with my Silicon Valley startup and career stagnation, I consulted Pandith Vikram. He identified a 10th-house planetary blockage that no other astrologer noticed. Following his remedies, our Series-A funding was approved and I received an executive promotion. A true spiritual master.'
+    review: 'As a director at a tech enterprise in Silicon Valley, I was skeptical of astrology. But after surviving two corporate layoffs only to face a blocked promotion and a freeze on my startup’s term sheet, I needed clarity. Pandith Vikram analyzed my 10th Karma house and immediately pointed out that my Sade Sati peak transit was triggering hidden rivals and delayed recognition. He gave me strict daily Surya mantras and a recommended gemstone protocol. Within two months, our executive reorganization cleared my path and our seed round closed at full valuation.'
   },
   {
     id: 'r4',
-    name: 'Meera N.',
-    city: 'Houston & Sugar Land',
-    state: 'Texas, USA',
-    service: 'Black Magic & Negative Energy Cleansing',
-    serviceId: 'black-magic-removal',
+    name: 'Harpreet & Jasleen K.',
+    city: 'Southall & Wembley',
+    state: 'London, UK',
+    service: 'Family & Generational Harmony',
+    serviceId: 'family-child-problems',
     img: '/images/client-4.webp',
     rating: 5,
-    tag: 'Verified Client • Houston TX',
-    review: 'Our household had been experiencing unexplained illness, heavy negative energy, and constant domestic friction for over a year. Pandith Vikram conducted a remote Maha Sudarshana spiritual cleansing and installed a protective Kavach. From that very week, peace and vitality returned to our family. 100% confidential and life-changing.'
+    tag: 'Verified Client • London UK',
+    review: 'Severe hostility between my wife and my parents had turned our family home in Southall into a warzone. We couldn’t go three days without someone threatening to pack bags or speak of lawyers. Pandith Vikram visited our home, pointed out negative spatial energy in the northeast corner affecting the Matru Bhava, and conducted a Navagraha Shanti homam. The shift in domestic atmosphere was noticeable within two weeks. My mother and wife now communicate calmly without hostility. He saved our family unity.'
   },
   {
     id: 'r5',
     name: 'Sandeep D.',
     city: 'Naperville & Chicago',
     state: 'Illinois, USA',
-    service: 'Financial Block & Debt Relief',
+    service: 'Financial Block & Commercial Relief',
     serviceId: 'financial-problems',
     img: '/images/client-5.webp',
     rating: 3,
     tag: 'Verified Client • Chicago IL',
-    review: 'Getting an initial consultation slot took 4 days because of the busy schedule, and the Friday Lakshmi remedies required strict daily discipline for nearly two months before I saw movement. However, his Dhan Yoga calculation was spot-on and my stalled commercial payments finally cleared.'
+    review: 'I’m giving 3 stars solely because securing an initial phone slot with Guruji took nearly five days due to his heavy schedule, and his remedies require strict personal discipline—I had to wake before sunrise for 41 days for the Lakshmi-Kuber japa, which was challenging with my commute. That being said, his astrological calculation regarding my stalled commercial property sale was 100% accurate. The escrow dispute that had trapped my capital for 14 months finally resolved in the exact month he predicted.'
   },
   {
     id: 'r6',
-    name: 'Ananya R.',
-    city: 'Atlanta & Alpharetta',
-    state: 'Georgia, USA',
+    name: 'Ananya & Tarun B.',
+    city: 'Harrow & Richmond',
+    state: 'London, UK',
     service: 'Husband & Wife Dispute Resolution',
     serviceId: 'marriage-compatibility',
     img: '/images/client-6.webp',
-    rating: 5,
-    tag: 'Verified Client • Atlanta GA',
-    review: 'My husband and I were heading straight toward divorce due to daily ego clashes and outside interference. Pandith Vikram patiently listened and prescribed peaceful Graha Shanti rituals. In less than a month, our mutual warmth and understanding were rekindled. He saved our marriage and our children’s future.'
+    rating: 4,
+    tag: 'Verified Client • London UK',
+    review: 'We were three weeks away from filing mutual divorce papers at Uxbridge Family Court after two years of toxic misunderstandings. A colleague in Harrow insisted I speak with Pandith Vikram before signing. He looked at both our palm prints and horoscopes, explaining that neither of us was inherently at fault—we were simply caught in clashing Saturn-Mars dasha transitions. His Shukra healing rituals and honest relationship counsel gave us the emotional breathing room we desperately needed. It took honest effort, but we have withdrawn the filings and are living peacefully.'
   },
   {
     id: 'r7',
     name: 'Rajeshwar P.',
     city: 'Dallas & Plano',
     state: 'Texas, USA',
-    service: 'Court Case & Legal Victory',
+    service: 'Court Case & Legal Dispute Shanti',
     serviceId: 'court-case-problems',
     img: '/images/client-7.webp',
     rating: 4,
     tag: 'Verified Client • Dallas TX',
-    review: 'Entangled in an agonizing commercial property lawsuit for 3 years. The Maa Baglamukhi remedies took a little longer than I initially hoped, but Pandith Vikram predicted the exact quarter when judgment would turn in our favor, and the court ruled in our support.'
+    review: 'I had spent over $45,000 in attorney fees on a protracted partnership lawsuit where false breach-of-contract accusations were made against me. Pandith Vikram’s Maa Baglamukhi yantra and court-hearing muhurtha guidance kept me grounded during harrowing depositions. The legal resolution took 4 months longer than I had hoped, but the opposition eventually approached us for an out-of-court settlement entirely on our terms. His predictions on the opposing party’s weaknesses were uncanny.'
   },
   {
     id: 'r8',
     name: 'Kavita T.',
-    city: 'Seattle & Bellevue',
-    state: 'Washington, USA',
-    service: 'Janam Kundali & Sade Sati Guidance',
-    serviceId: 'horoscope-reading',
+    city: 'Wembley & Alperton',
+    state: 'London, UK',
+    service: 'Black Magic & Negative Energy Cleansing',
+    serviceId: 'black-magic-removal',
     img: '/images/client-8.webp',
     rating: 5,
-    tag: 'Verified Client • Seattle WA',
-    review: 'During my peak Sade Sati period, everything felt overwhelming and uncertain. Pandith Vikram’s detailed birth chart breakdown gave me tremendous clarity, emotional peace, and practical Shani pacification remedies. I now consult him before any major life decision.'
+    tag: 'Verified Client • London UK',
+    review: 'After returning from a family trip abroad, my home felt physically cold and oppressive. My daughter suffered nightly panic attacks and our catering business experienced unexplained equipment failures and abrupt contract cancellations. Pandith Vikram identified an intentional evil-eye and negative envy projection directed at our family. He performed a consecrated Maha Sudarshana protection homa and tied sacred protective threads. The heavy cloud lifted from our household within 72 hours. He is a genuine protector of families.'
+  }
+]
+
+interface HomeFaq {
+  question: string
+  answer: string
+}
+
+// 8 Core Practical Client FAQs for the Homepage Accordion
+const homeFaqs: HomeFaq[] = [
+  {
+    question: 'What if I do not know my exact time of birth?',
+    answer: 'Many clients, especially those born outside of hospital records or inquiring about a partner, do not have their exact birth minute. Pandith Vikram utilizes classical Prashna Kundali (Horary Astrology)—casting the celestial chart for the exact second you ask your question—alongside Hasta Rekha (Vedic Palmistry) and Face Reading. These time-tested Vedic disciplines reveal your planetary coordinates with remarkable precision even without a birth certificate.'
+  },
+  {
+    question: 'Can a consultation be conducted remotely via Phone or WhatsApp video?',
+    answer: 'Yes, absolutely. Pandith Vikram conducts daily telephone and WhatsApp video consultations for clients across London, Manchester, Birmingham, New York, California, Texas, Toronto, and worldwide. In classical Vedic science, planetary vibrations and Prashna charts are linked to the consciousness of the seeker, not physical distance. Remote sessions are just as precise and effective as in-person sittings.'
+  },
+  {
+    question: 'Are the remedies and rituals safe? Is there any negative karmic backfire?',
+    answer: '100% safe. Pandith Vikram practices strictly Sattvic Vedic remedies derived from the ancient Rigveda, Atharvaveda, and Parashara Hora Shastra. Every ritual consists of sacred Vedic fire oblations (homams), certified natural gemstones, consecrated yantras, and divine mantra recitations dedicated to benign deities (Maha Lakshmi, Lord Shiva, Brihaspati, Maa Durga). There is zero black magic, zero forceful manipulation, and zero risk of karmic backlash.'
+  },
+  {
+    question: 'How long does it take to see positive shifts after remedies begin?',
+    answer: 'In authentic Vedic Jyotish, spiritual remedies follow natural cosmic cycles known as a Mandala—typically ranging between 21 to 41 days. While many clients report an immediate sense of mental calm and emotional lightness within the first 72 hours, tangible outer shifts (partner reaching out, court settlements, financial approvals) unfold steadily as planetary doshas pacify. Pandith Vikram is candid: real spiritual transformation requires genuine karmic realignment, not gimmicky overnight tricks.'
+  },
+  {
+    question: 'How is my privacy and personal story safeguarded?',
+    answer: 'Discretion is sacred to Pandith Vikram. Whether you are a corporate executive, business owner, public figure, or navigating a private domestic heartbreak, your consultations, birth details, and private conversations are protected by an ironclad oath of confidentiality. Your information is never logged into third-party databases, shared with family members, or publicized.'
+  },
+  {
+    question: 'How does Pandith Vikram resolve complex love and marital estrangements?',
+    answer: 'Rather than superficial advice, Pandith Vikram diagnoses the exact astrological culprit—such as Venus afflicted by Rahu, severe Manglik friction in the 7th or 8th house, or destructive third-party planetary influences. Through tailored Shukra Preeti pujas, Kamadeva-Rati mantras, and aura-harmonizing remedies, he softens hardened egos, clears negative miscommunications, and gently re-attracts your partner’s genuine affection.'
+  },
+  {
+    question: 'What happens during a typical consultation?',
+    answer: 'During your private session, Pandith Vikram first listens attentively to your current life situation without judgment. He then examines your birth chart (or casts a Prashna chart), analyzes your current planetary Mahadasha/Antardasha cycles, and explains why the challenge arose. Finally, he outlines clear, actionable guidance alongside personalized, easy-to-follow Vedic remedies to neutralize the planetary blockages.'
+  },
+  {
+    question: 'How do I prepare for my session and what information should I bring?',
+    answer: 'If available, have your full date of birth, place of birth (city/country), and approximate time of birth ready. If inquiring about a partner, spouse, or business partner, having their birth details or clear photographs of their face and palms is beneficial. Most importantly, bring an open mind and a list of your most pressing questions.'
   }
 ]
 
@@ -515,6 +556,7 @@ export default function App() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0)
   const [activeModal, setActiveModal] = useState<'question' | 'booking' | 'privacy' | 'terms' | 'disclaimer' | null>(null)
   // Helper to resolve current route (Clean URL /services/<id>, root /<id>, or legacy #<id>) and 404 status
   const parseCurrentUrl = (): { serviceId: string | null; notFound: boolean } => {
@@ -864,6 +906,20 @@ export default function App() {
               Get Ex Love Back
             </button>
             <a
+              href="#methodology"
+              onClick={() => { if (activeDetailId) closeDedicatedService(false) }}
+              className="hover:text-[#B91C1C] transition-colors py-1 border-b-2 border-transparent hover:border-[#B91C1C] whitespace-nowrap"
+            >
+              Methodology
+            </a>
+            <a
+              href="#faq"
+              onClick={() => { if (activeDetailId) closeDedicatedService(false) }}
+              className="hover:text-[#B91C1C] transition-colors py-1 border-b-2 border-transparent hover:border-[#B91C1C] whitespace-nowrap"
+            >
+              FAQs
+            </a>
+            <a
               href="#about-london"
               onClick={() => { if (activeDetailId) closeDedicatedService(false) }}
               className="hover:text-[#B91C1C] transition-colors py-1 border-b-2 border-transparent hover:border-[#B91C1C] whitespace-nowrap"
@@ -970,6 +1026,20 @@ export default function App() {
             >
               Get Ex Love Back
             </button>
+            <a
+              href="#methodology"
+              onClick={() => { if (activeDetailId) closeDedicatedService(false); setMobileMenuOpen(false); }}
+              className="block py-2 text-slate-800 hover:text-[#B91C1C] font-semibold border-b border-slate-100"
+            >
+              Methodology & Ethics
+            </a>
+            <a
+              href="#faq"
+              onClick={() => { if (activeDetailId) closeDedicatedService(false); setMobileMenuOpen(false); }}
+              className="block py-2 text-slate-800 hover:text-[#B91C1C] font-semibold border-b border-slate-100"
+            >
+              Client FAQs
+            </a>
             <a
               href="#about-london"
               onClick={() => { if (activeDetailId) closeDedicatedService(false); setMobileMenuOpen(false); }}
@@ -1474,7 +1544,7 @@ export default function App() {
                   </h2>
                   <div className="w-20 h-1 bg-gradient-to-r from-[#D61B14] to-amber-500"></div>
                   <p className="text-sm sm:text-base leading-relaxed text-slate-700">
-                    Everyone seeks clarity about their destiny, planetary influences, and life decisions. With over 35 years of scriptural mastery, Pandith Vikram offers deeply accurate Vedic astrology and planetary balancing to help you overcome afflictions in love, marriage, career, and personal life. As London's leading Indian Vedic Astrologer, Palmist, Face Reader, and Spiritual Healer, Pandith Vikram specializes in clearing karmic obstacles, restoring harmonious family relationships, and reuniting broken love with permanent, positive spiritual remedies.
+                    Navigating severe life upheaval alone—whether it is a sudden romantic desertion, an acrimonious marital dispute, or prolonged career stagnation—takes an immense emotional toll. Pandith Vikram brings over 35 years of classical scriptural lineage to distressed individuals and families across London, the UK, the United States, and worldwide. Rather than offering empty platitudes or superstitious claims, Guruji applies rigorous Parashara Jyotish mathematics, D9 Navamsha analysis, and sacred Prashna Shastra to diagnose the exact planetary transits afflicting your life, prescribing purely positive, Sattvic remedies that restore equilibrium, dignity, and peace of mind.
                   </p>
                 </div>
 
@@ -1485,7 +1555,7 @@ export default function App() {
                     <span>Celestial Guidance for Life's Critical Turning Points</span>
                   </h3>
                   <p className="text-sm sm:text-base leading-relaxed text-slate-700">
-                    Life is a perpetual cosmic journey that takes you across crests and troughs of planetary transits. When planetary afflictions cause prolonged struggle or emotional despair, understanding your Janam Kundali brings immediate light and clarity. True peace is your birthright, and ancient Vedic wisdom provides the exact keys to restore confidence, joy, and emotional fulfillment.
+                    When negative planetary configurations—such as Sade Sati, Rahu-Ketu axis shifts, or 7th house afflictions—cast shadows over your relationships or livelihood, life can feel inexplicably heavy. Understanding your Janam Kundali is not about fatalism; it is about discovering the precise astrological root cause and recognizing that difficult transits have definitive beginnings and ends. With the right scriptural pacification rituals, even the most turbulent chapters can be navigated with clarity and grace.
                   </p>
                 </div>
 
@@ -1496,7 +1566,7 @@ export default function App() {
                     <span>Renowned Vedic Master & Spiritual Energy Healer in Central London</span>
                   </h3>
                   <p className="text-sm sm:text-base leading-relaxed text-slate-700">
-                    Do recurrent setbacks, unexplained blocks, or persistent heartaches leave you drained? If unseen negative energies or planetary doshas are clouding your path, Pandith Vikram offers time-tested Vedic remedies. Through sacred mantras, personalized yantras, and planetary pacification, he serves as your steadfast guide through life's most challenging phases.
+                    Unexplained domestic friction, recurring setbacks right before financial breakthroughs, or persistent emotional exhaustion often indicate deep energetic imbalances or hostile external envy (Nazar / Drishti Dosha). Pandith Vikram specializes in authentic Vedic spiritual cleansing through consecrated Maha Sudarshana homams and protective Kavach safeguards. Every remedy is non-invasive, purely devotional, and designed to re-establish a fortress of sacred light around your household.
                   </p>
                 </div>
 
@@ -1507,7 +1577,7 @@ export default function App() {
                     <span>Trusted Vedic Horoscope Consultations Across Greater London</span>
                   </h3>
                   <p className="text-sm sm:text-base leading-relaxed text-slate-700">
-                    Pandith Vikram has established an exceptional reputation across the UK for compassionate accuracy and life-transforming solutions. Combining deep astronomical planetary calculations (Ganita Jyotish) with spiritual healing, he rekindles hope in distressed hearts and neutralizes adverse astrological periods such as Sade Sati, Rahu Mahadasha, and Manglik Dosha.
+                    From Wembley, Harrow, and Southall to Richmond, Central London, and overseas clients across New York and California, Pandith Vikram is sought after for his unsparing honesty and compassionate precision. He conducts thorough mathematical calculations (Ganita Jyotish) to time critical life decisions, evaluate business partnerships, and neutralize doshas (such as Manglik, Kaal Sarp, or Pitra Dosha) that impede marital stability and personal joy.
                   </p>
                 </div>
 
@@ -1515,10 +1585,10 @@ export default function App() {
                 <div className="space-y-3">
                   <h3 className="font-oswald text-xl sm:text-2xl font-bold text-slate-900 uppercase flex items-center gap-2">
                     <span className="text-[#D61B14]">✦</span>
-                    <span>Intuitive Psychic Foretelling & Aura Shielding in the UK</span>
+                    <span>Intuitive Prashna Shastra & Aura Shielding in the UK</span>
                   </h3>
                   <p className="text-sm sm:text-base leading-relaxed text-slate-700">
-                    Are you seeking to restore harmony, mental calm, and spiritual vitality? Pandith Vikram’s intuitive psychic readings reveal concealed energies, dissolving doubts and establishing a fortified energetic shield against negativity, stress, and anxiety.
+                    Not every burning question can wait for an elaborate birth chart calculation. When urgent decisions demand immediate answers—such as "Will my partner reconcile?" or "Should I sign this agreement?"—Pandith Vikram utilizes Prashna Horary Jyotish and Hasta Rekha (Palmistry). This ancient horary discipline captures the exact cosmic signature of your inquiry, providing immediate, unvarnished truth and actionable clarity.
                   </p>
                 </div>
 
@@ -1765,11 +1835,11 @@ export default function App() {
                 <div className="w-20 h-1 bg-amber-500"></div>
 
                 <p className="text-slate-700 text-sm sm:text-base leading-relaxed font-roboto">
-                  Pandith Vikram is a renowned Vedic astrologer in the UK with over 35 years of experience in providing accurate horoscope readings and powerful spiritual solutions for love problems, marriage compatibility, career obstacles, and personal healing.
+                  Pandith Vikram represents a revered 7th-generation lineage of Vedic masters rooted in the sacred classical Jyotish traditions of ancient India. For over three and a half decades, he has guided distressed souls through life's most painful trials—restoring severed relationships, resolving acrimonious divorces, reversing commercial stagnation, and dissolving unseen spiritual blockages.
                 </p>
 
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-roboto">
-                  Born into a traditional lineage of Vedic masters, Pandith Vikram combines rigorous scriptural precision with deep compassionate insight. Every consultation is strictly confidential and focused on permanent, positive outcomes.
+                  Unlike commercial practitioners who rely on generic computer software or fear tactics, Pandith Vikram conducts rigorous astronomical calculations by hand, cross-examining your natal chart with D9 Navamsha and Prashna coordinates. Every remedy is 100% Sattvic, non-harmful, and held under sacred discretion.
                 </p>
 
                 <div className="pt-2">
@@ -1830,6 +1900,210 @@ export default function App() {
                     <p className="font-oswald text-base font-bold text-slate-900 leading-snug uppercase">Powerful Vedic</p>
                     <p className="text-xs text-slate-600">Remedies & Spiritual Healing</p>
                   </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 8B. VEDIC METHODOLOGY & 5-PILLAR ETHICAL CODE (Authentic Classical Shastras & Sacred Principles) */}
+          <section id="methodology" className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#060B28] text-white border-y-4 border-[#FFD700] relative overflow-hidden">
+            {/* Subtle sacred geometry background glow */}
+            <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#8E1612]/30 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div className="max-w-7xl mx-auto relative z-10 space-y-16">
+              {/* Header */}
+              <div className="text-center max-w-3xl mx-auto space-y-3">
+                <div className="inline-block bg-[#8E1612] text-[#FFD700] border border-[#FFD700]/40 px-3.5 py-1 text-[11px] font-bold uppercase tracking-widest font-roboto">
+                  ✦ SCRIPTURAL PARAMPARA • RIGOROUS DIAGNOSTIC EXCELLENCE ✦
+                </div>
+                <h2 className="font-oswald text-3xl sm:text-5xl font-bold uppercase tracking-tight text-white">
+                  The Vedic Methodology & <span className="text-[#FFD700]">Ethical Code</span>
+                </h2>
+                <div className="w-24 h-1 bg-[#FFD700] mx-auto my-3"></div>
+                <p className="text-slate-300 text-sm sm:text-base font-roboto leading-relaxed">
+                  How Pandith Vikram unearths karmic origins with ancient astronomical calculations, sacred horary shastras, and an unbending moral commitment to client protection.
+                </p>
+              </div>
+
+              {/* Part 1: The Tri-Fold Diagnostic System (The Vedic Triad) */}
+              <div className="space-y-6">
+                <div className="flex items-center gap-3 border-b border-amber-400/20 pb-3">
+                  <span className="text-[#FFD700] text-lg font-bold font-oswald tracking-wider uppercase">PART 1</span>
+                  <span className="text-slate-400">|</span>
+                  <h3 className="font-oswald text-xl sm:text-2xl font-bold uppercase tracking-wide text-white">
+                    The Tri-Fold Diagnostic System (The Vedic Triad)
+                  </h3>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {/* Card 1 */}
+                  <div className="bg-[#0C1236] border-2 border-amber-400/30 hover:border-[#FFD700] p-6 rounded-none transition-all duration-300 group shadow-lg flex flex-col justify-between">
+                    <div className="space-y-4">
+                      <div className="w-12 h-12 bg-[#8E1612] text-[#FFD700] flex items-center justify-center font-oswald font-black text-xl border border-amber-400/40">
+                        01
+                      </div>
+                      <div>
+                        <h4 className="font-oswald text-xl font-bold uppercase tracking-wide text-[#FFD700] group-hover:text-amber-300 transition-colors">
+                          Janam Kundali & D9 Navamsha
+                        </h4>
+                        <p className="text-xs font-bold uppercase tracking-wider text-amber-200/80 font-roboto mt-1">
+                          Mathematical Birth Chart Calculation
+                        </p>
+                      </div>
+                      <p className="text-slate-300 text-xs sm:text-sm font-roboto leading-relaxed">
+                        Ganita Jyotish analysis of the 12 astrological Bhavas, precise planetary longitudes, Vimshottari Mahadashas, and Antardashas. Unearths the root karmic origin of emotional distance, repeated business setbacks, and health vulnerabilities.
+                      </p>
+                    </div>
+                    <div className="pt-4 border-t border-slate-700/60 mt-4 text-[11px] text-amber-300 font-semibold font-roboto flex items-center gap-1.5">
+                      <span>✓ Identifies Dasha transitions & planetary blockages</span>
+                    </div>
+                  </div>
+
+                  {/* Card 2 */}
+                  <div className="bg-[#0C1236] border-2 border-amber-400/30 hover:border-[#FFD700] p-6 rounded-none transition-all duration-300 group shadow-lg flex flex-col justify-between">
+                    <div className="space-y-4">
+                      <div className="w-12 h-12 bg-[#8E1612] text-[#FFD700] flex items-center justify-center font-oswald font-black text-xl border border-amber-400/40">
+                        02
+                      </div>
+                      <div>
+                        <h4 className="font-oswald text-xl font-bold uppercase tracking-wide text-[#FFD700] group-hover:text-amber-300 transition-colors">
+                          Hasta Rekha Shastra
+                        </h4>
+                        <p className="text-xs font-bold uppercase tracking-wider text-amber-200/80 font-roboto mt-1">
+                          Classical Vedic Palmistry Analysis
+                        </p>
+                      </div>
+                      <p className="text-slate-300 text-xs sm:text-sm font-roboto leading-relaxed">
+                        When hospital birth times are uncertain, unrecorded, or unavailable for an estranged partner, the micro-mounts, line intersections, and sacred markings on both palms corroborate planetary vitality, marriage timing, and longevity.
+                      </p>
+                    </div>
+                    <div className="pt-4 border-t border-slate-700/60 mt-4 text-[11px] text-amber-300 font-semibold font-roboto flex items-center gap-1.5">
+                      <span>✓ Overcomes missing or estimated birth times</span>
+                    </div>
+                  </div>
+
+                  {/* Card 3 */}
+                  <div className="bg-[#0C1236] border-2 border-amber-400/30 hover:border-[#FFD700] p-6 rounded-none transition-all duration-300 group shadow-lg flex flex-col justify-between">
+                    <div className="space-y-4">
+                      <div className="w-12 h-12 bg-[#8E1612] text-[#FFD700] flex items-center justify-center font-oswald font-black text-xl border border-amber-400/40">
+                        03
+                      </div>
+                      <div>
+                        <h4 className="font-oswald text-xl font-bold uppercase tracking-wide text-[#FFD700] group-hover:text-amber-300 transition-colors">
+                          Prashna Shastra
+                        </h4>
+                        <p className="text-xs font-bold uppercase tracking-wider text-amber-200/80 font-roboto mt-1">
+                          Horary Moment-of-Inquiry Chart
+                        </p>
+                      </div>
+                      <p className="text-slate-300 text-xs sm:text-sm font-roboto leading-relaxed">
+                        Casting the celestial chart for the exact second a client voices an urgent inquiry. Provides immediate, unassailable clarity on high-stakes dilemmas: "Will my partner contact me?", "Will the court case settle?", or "Should I switch careers?".
+                      </p>
+                    </div>
+                    <div className="pt-4 border-t border-slate-700/60 mt-4 text-[11px] text-amber-300 font-semibold font-roboto flex items-center gap-1.5">
+                      <span>✓ Immediate answers to pressing life decisions</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Part 2: The 5 Sacred Promises of Pandith Vikram (Ethical Astrologer's Code) */}
+              <div className="space-y-6 pt-6">
+                <div className="flex items-center gap-3 border-b border-amber-400/20 pb-3">
+                  <span className="text-[#FFD700] text-lg font-bold font-oswald tracking-wider uppercase">PART 2</span>
+                  <span className="text-slate-400">|</span>
+                  <h3 className="font-oswald text-xl sm:text-2xl font-bold uppercase tracking-wide text-white">
+                    The 5 Sacred Promises of Pandith Vikram (Ethical Astrologer's Code)
+                  </h3>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                  {/* Promise 1 */}
+                  <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
+                    <div className="space-y-2">
+                      <span className="text-xl">🚫</span>
+                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Zero Fear-Mongering</h4>
+                      <p className="text-xs text-slate-300 font-roboto leading-relaxed">
+                        We never exploit emotional vulnerability with fabricated claims of "generational curses" or "imminent tragedy" to force high-fee rituals.
+                      </p>
+                    </div>
+                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">100% Honest Truth</span>
+                  </div>
+
+                  {/* Promise 2 */}
+                  <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
+                    <div className="space-y-2">
+                      <span className="text-xl">🔒</span>
+                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Strict Discretion</h4>
+                      <p className="text-xs text-slate-300 font-roboto leading-relaxed">
+                        Your identity, marital dilemmas, and family affairs are treated as sacred confidences. Never disclosed, archived with third parties, or publicized.
+                      </p>
+                    </div>
+                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">Guaranteed Privacy</span>
+                  </div>
+
+                  {/* Promise 3 */}
+                  <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
+                    <div className="space-y-2">
+                      <span className="text-xl">🪔</span>
+                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Purely Sattvic Rituals</h4>
+                      <p className="text-xs text-slate-300 font-roboto leading-relaxed">
+                        Solely positive, scriptural remedies: authentic Vedic homams, sacred mantras, certified gemstones, and divine yantras. Zero black magic or negative karma.
+                      </p>
+                    </div>
+                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">Zero Karmic Backfire</span>
+                  </div>
+
+                  {/* Promise 4 */}
+                  <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
+                    <div className="space-y-2">
+                      <span className="text-xl">⏳</span>
+                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Realistic 21-41 Day Mandala</h4>
+                      <p className="text-xs text-slate-300 font-roboto leading-relaxed">
+                        Planetary balancing respects cosmic biological cycles. We provide truthful timeframes and refuse to make deceptive "2-hour instant miracle" claims.
+                      </p>
+                    </div>
+                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">Authentic Cycles</span>
+                  </div>
+
+                  {/* Promise 5 */}
+                  <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
+                    <div className="space-y-2">
+                      <span className="text-xl">👤</span>
+                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Direct Master Access</h4>
+                      <p className="text-xs text-slate-300 font-roboto leading-relaxed">
+                        You speak and consult directly with Pandith Vikram himself, receiving his undivided attention, personalized prayers, and genuine spiritual guidance.
+                      </p>
+                    </div>
+                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">No Middlemen</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Banner */}
+              <div className="bg-gradient-to-r from-[#8E1612] via-[#A61914] to-[#8E1612] p-8 border-2 border-[#FFD700] rounded-none flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
+                <div className="space-y-1 text-center sm:text-left">
+                  <h4 className="font-oswald text-2xl font-bold uppercase text-white">
+                    Need Unvarnished Truth & Authentic Vedic Direction?
+                  </h4>
+                  <p className="text-xs sm:text-sm text-amber-100 font-roboto">
+                    Speak directly with Pandith Vikram. In-person London appointments and confidential remote worldwide sessions available.
+                  </p>
+                </div>
+                <div className="flex flex-wrap items-center gap-3 shrink-0">
+                  <a
+                    href="tel:+447537121638"
+                    className="bg-[#FFD700] hover:bg-amber-300 text-slate-950 font-roboto font-bold px-6 py-3 rounded-none text-xs uppercase tracking-wider transition-colors shadow-md"
+                  >
+                    Call: +44 7537121638
+                  </a>
+                  <button
+                    onClick={() => setActiveModal('booking')}
+                    className="bg-black/40 hover:bg-black/60 text-white border border-amber-300 px-6 py-3 rounded-none text-xs font-bold uppercase tracking-wider font-roboto transition-colors"
+                  >
+                    Book Private Reading
+                  </button>
                 </div>
               </div>
             </div>
@@ -2042,6 +2316,87 @@ export default function App() {
               </div>
             </div>
           </section>
+
+          {/* 10B. FREQUENTLY ASKED QUESTIONS (FAQ) ACCORDION SECTION (Grounded, Truthful Vedic Clarifications) */}
+          <section id="faq" className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#FBFBFC] border-b border-slate-200 relative overflow-hidden">
+            <div className="max-w-4xl mx-auto relative z-10 space-y-12">
+              {/* Heading */}
+              <div className="text-center max-w-3xl mx-auto space-y-3">
+                <div className="inline-block bg-[#D61B14]/10 text-[#D61B14] border border-[#D61B14]/30 px-3.5 py-1 text-[11px] font-bold uppercase tracking-widest font-roboto">
+                  ✦ CLIENT QUESTIONS ANSWERED • COMPLETE CLARITY ✦
+                </div>
+                <h2 className="font-oswald text-3xl sm:text-5xl font-bold uppercase tracking-tight text-slate-900">
+                  Frequently Asked <span className="text-[#8E1612]">Questions</span>
+                </h2>
+                <div className="w-24 h-1 bg-[#FFD700] mx-auto my-3"></div>
+                <p className="text-slate-600 text-xs sm:text-sm font-roboto leading-relaxed">
+                  Clear, honest answers about our consultation process, missing birth data, distance readings, and pure Sattvic Vedic remedies.
+                </p>
+              </div>
+
+              {/* Accordion List */}
+              <div className="space-y-4">
+                {homeFaqs.map((faqItem, idx) => {
+                  const isOpen = openFaqIndex === idx
+                  return (
+                    <div
+                      key={idx}
+                      className={`border-2 transition-all duration-300 rounded-none bg-white ${
+                        isOpen ? 'border-[#8E1612] shadow-md' : 'border-slate-200 hover:border-slate-300'
+                      }`}
+                    >
+                      <button
+                        onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
+                        className="w-full py-4.5 px-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+                        aria-expanded={isOpen}
+                      >
+                        <span className={`font-oswald text-base sm:text-lg font-bold uppercase tracking-wide transition-colors ${
+                          isOpen ? 'text-[#8E1612]' : 'text-slate-900'
+                        }`}>
+                          {faqItem.question}
+                        </span>
+                        <span className={`w-7 h-7 shrink-0 flex items-center justify-center font-bold text-sm rounded-none transition-all ${
+                          isOpen ? 'bg-[#8E1612] text-[#FFD700] rotate-180' : 'bg-slate-100 text-slate-600'
+                        }`}>
+                          ▼
+                        </span>
+                      </button>
+
+                      {isOpen && (
+                        <div className="px-6 pb-6 pt-2 text-slate-700 text-xs sm:text-sm font-roboto leading-relaxed border-t border-slate-100 space-y-2 bg-slate-50/50">
+                          <p>{faqItem.answer}</p>
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
+
+              {/* Still have questions banner */}
+              <div className="bg-amber-50 border border-amber-300 p-6 text-center space-y-3 rounded-none">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#8E1612] font-roboto">
+                  ✦ Have a specific personal situation not covered here? ✦
+                </p>
+                <p className="text-xs sm:text-sm text-slate-700 font-roboto">
+                  Every human dilemma has unique astrological nuances. You are welcome to message or speak with Pandith Vikram directly in complete confidence.
+                </p>
+                <div className="pt-1 flex flex-wrap justify-center gap-3">
+                  <a
+                    href="tel:+447537121638"
+                    className="inline-flex items-center gap-2 bg-[#8E1612] hover:bg-[#680E0B] text-white font-roboto font-bold px-6 py-2.5 rounded-none text-xs uppercase tracking-wider transition-colors shadow cursor-pointer"
+                  >
+                    <span>Direct Helpline: +44 7537121638</span>
+                  </a>
+                  <button
+                    onClick={() => setActiveModal('question')}
+                    className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 font-roboto font-bold px-6 py-2.5 rounded-none text-xs uppercase tracking-wider transition-colors shadow-sm cursor-pointer"
+                  >
+                    <span>Send Private Confidential Note</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
         </>
       )}
 
@@ -2121,6 +2476,26 @@ export default function App() {
                   >
                     <span className="text-[#FFD700] font-bold group-hover:translate-x-0.5 transition-transform">›</span>
                     <span>Client Reviews</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#methodology"
+                    onClick={() => { if (activeDetailId) closeDedicatedService(false) }}
+                    className="text-amber-50/90 hover:text-[#FFD700] transition-colors flex items-center gap-2 group"
+                  >
+                    <span className="text-[#FFD700] font-bold group-hover:translate-x-0.5 transition-transform">›</span>
+                    <span>Methodology & Ethics</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#faq"
+                    onClick={() => { if (activeDetailId) closeDedicatedService(false) }}
+                    className="text-amber-50/90 hover:text-[#FFD700] transition-colors flex items-center gap-2 group"
+                  >
+                    <span className="text-[#FFD700] font-bold group-hover:translate-x-0.5 transition-transform">›</span>
+                    <span>Client FAQs</span>
                   </a>
                 </li>
                 <li>

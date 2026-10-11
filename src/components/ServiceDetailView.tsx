@@ -402,6 +402,43 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
                 </span>
               </div>
             </div>
+
+            {/* G. Dedicated Service FAQs (Realistic Client Questions & Honest Answers) */}
+            {service.faqs && service.faqs.length > 0 && (
+              <div
+                className="bg-white p-6 sm:p-8 rounded-none border border-slate-200 shadow-sm space-y-4"
+                style={{ borderTop: `4px solid ${theme.accentColor}` }}
+              >
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <h2 className="font-oswald text-2xl sm:text-3xl font-bold text-slate-900 uppercase">
+                    Frequently Asked{' '}
+                    <span style={{ color: theme.accentColor }}>
+                      Questions
+                    </span>
+                  </h2>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 font-roboto">
+                    ✦ Honest Expectations & Transparency
+                  </span>
+                </div>
+                <div
+                  className="w-16 h-1 rounded-none"
+                  style={{ backgroundColor: theme.accentColor }}
+                ></div>
+                <div className="divide-y divide-slate-100 pt-1">
+                  {service.faqs.map((faq, idx) => (
+                    <details key={idx} className="group py-3.5 cursor-pointer" open={idx === 0}>
+                      <summary className="font-oswald text-base sm:text-[17px] font-bold text-slate-900 group-hover:text-[#B91C1C] flex items-center justify-between list-none uppercase transition-colors">
+                        <span>{faq.question}</span>
+                        <span className="text-[#B91C1C] transition-transform duration-200 group-open:rotate-180 text-xs ml-2 shrink-0">▼</span>
+                      </summary>
+                      <p className="mt-2 text-xs sm:text-sm text-slate-600 font-roboto leading-relaxed pl-1">
+                        {faq.answer}
+                      </p>
+                    </details>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Right Column: Square Inquiry / Booking Form + Quick Service Links */}
