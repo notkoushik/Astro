@@ -3,7 +3,7 @@ import React from 'react'
 interface NotFoundViewProps {
   onGoHome: () => void
   onSelectService: (serviceId: string) => void
-  onOpenBooking: () => void
+  onBookNow: () => void
 }
 
 const quickServiceLinks = [
@@ -15,7 +15,7 @@ const quickServiceLinks = [
   { id: 'horoscope-reading', label: 'Birth Chart & Horoscope Reading', path: '/services/horoscope-reading' },
 ]
 
-export default function NotFoundView({ onGoHome, onSelectService, onOpenBooking }: NotFoundViewProps) {
+export default function NotFoundView({ onGoHome, onSelectService, onBookNow }: NotFoundViewProps) {
   return (
     <main className="min-h-[75vh] bg-[#060B28] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden cosmic-stars-bg flex items-center justify-center">
       <div className="max-w-4xl mx-auto w-full relative z-10 text-center space-y-8">
@@ -47,7 +47,7 @@ export default function NotFoundView({ onGoHome, onSelectService, onOpenBooking 
 
             <button
               type="button"
-              onClick={onOpenBooking}
+              onClick={onBookNow}
               className="bg-[#FFD700] hover:bg-amber-300 text-slate-950 font-oswald font-bold text-xs sm:text-sm uppercase tracking-wider px-7 py-3.5 transition-all cursor-pointer rounded-none shadow-lg"
             >
               ✦ Book a Reading
