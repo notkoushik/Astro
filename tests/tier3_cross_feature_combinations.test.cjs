@@ -107,23 +107,23 @@ function registerTier3Tests(harness) {
     // T3-10: Form Input Validation: Mandatory Fields
     harness.test('T3-10: Consultation Form Enforces Mandatory Fields (Name, Phone, Notes)', () => {
       const code = getSourceFile('src/components/ServiceDetailView.tsx');
-      assert.ok(code.includes('Your Full Name *'), 'Name field must be marked mandatory');
-      assert.ok(code.includes('Phone Number (with Country Code) *'), 'Phone field must be marked mandatory');
-      assert.ok(code.includes('Describe Your Situation *'), 'Situation/Notes field must be marked mandatory');
+      assert.ok(code.includes('Full Name *'), 'Name field must be marked mandatory');
+      assert.ok(code.includes('Phone Number (include area code) *'), 'Phone field must be marked mandatory');
+      assert.ok(code.includes('Tell Us What’s Happening *'), 'Situation/Notes field must be marked mandatory');
       assert.ok(code.includes('required'), 'HTML5 required attribute must be applied to mandatory inputs');
     });
 
-    // T3-11: Form Input Validation: Telephone Format & UK Code
-    harness.test('T3-11: Consultation Form Phone Field Supports UK Format', () => {
+    // T3-11: Form Input Validation: Telephone Format & US Code
+    harness.test('T3-11: Consultation Form Phone Field Supports US Format', () => {
       const code = getSourceFile('src/components/ServiceDetailView.tsx');
       assert.ok(code.includes('type="tel"'), 'Phone input must use type="tel"');
-      assert.ok(code.includes('+44 7537121638'), 'Phone input placeholder must demonstrate UK country code format');
+      assert.ok(code.includes('placeholder="+1 '), 'Phone input placeholder must demonstrate US country code format');
     });
 
     // T3-12: Form Optional Field: Date of Birth
     harness.test('T3-12: Date of Birth is Optional in Consultation Inquiry Form', () => {
       const code = getSourceFile('src/components/ServiceDetailView.tsx');
-      assert.ok(code.includes('Date of Birth (Optional)'), 'DOB field must be designated as Optional');
+      assert.ok(code.includes('Birth Date (optional)'), 'DOB field must be designated as Optional');
     });
 
     // T3-13: Form Submission Lifecycle: Feedback, Confetti & Reset
@@ -131,16 +131,16 @@ function registerTier3Tests(harness) {
       const code = getSourceFile('src/components/ServiceDetailView.tsx');
       assert.ok(code.includes('confetti({'), 'Form submit must invoke confetti animation');
       assert.ok(code.includes('setSubmitted(true)'), 'Form submit must transition to submitted=true state');
-      assert.ok(code.includes('Inquiry Sent!'), 'Success message "Inquiry Sent!" must be rendered');
+      assert.ok(code.includes('Inquiry Received!'), 'Success message "Inquiry Received!" must be rendered');
       assert.ok(code.includes('setTimeout'), 'Must schedule automatic form reset');
       assert.ok(code.includes('3000'), 'Auto-reset timer must be configured to 3000ms');
     });
 
     // T3-14: Direct Telephone Helpline Integrity
-    harness.test('T3-14: Direct Telephone Helpline Links Use Consistent UK Number', () => {
+    harness.test('T3-14: Direct Telephone Helpline Links Use Consistent Los Angeles Office Number', () => {
       const code = getSourceFile('src/components/ServiceDetailView.tsx');
-      assert.ok(code.includes('href="tel:+447537121638"'), 'Must render direct tel: link to +44 7537121638 in Hero');
-      assert.ok(code.includes('📞 +44 7537121638'), 'Must render visible helpline badge in Quick Helpline Box');
+      assert.ok(code.includes('href="tel:+15103714626"'), 'Must render direct tel: link to +1 510-371-4626 in Hero');
+      assert.ok(code.includes('📞 +1 510-371-4626'), 'Must render visible helpline badge in Quick Helpline Box');
     });
 
     // T3-15: Square UI Geometry: Container Cards Enforce rounded-none

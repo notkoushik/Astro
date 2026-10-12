@@ -32,7 +32,7 @@ npm test
 | **Tier 1** | Feature Coverage (12 Services × 5 Core Pillars) | 60 Tests | >= 60 Tests | **100% COMPLETE & PASSING** |
 | **Tier 2** | Boundary & Corner Cases (12 Services × 5 Boundaries) | 60 Tests | >= 60 Tests | **100% COMPLETE & PASSING** |
 | **Tier 3** | Cross-Feature Combinations & State Interactions | 18 Tests | Navigation & Modals | **100% COMPLETE & PASSING** |
-| **Tier 4** | Real-World UK Client Application Scenarios | 12 Tests | Realistic User Journeys | **100% COMPLETE & PASSING** |
+| **Tier 4** | Real-World California Client Application Scenarios | 12 Tests | Realistic User Journeys | **100% COMPLETE & PASSING** |
 | **TOTAL** | **Comprehensive E2E Verification Suite** | **158 Tests** | **>= 120 Tests** | **100% VERIFIED & READY** |
 
 ---
@@ -41,113 +41,113 @@ npm test
 
 ### 3.1 Twelve Dedicated Vedic Astrology Services
 
-- [x] **Service 1: Love & Relationship Problems (`love-relationship`)**
-  - Presiding Deity: Shukra (Venus) & Kamadeva
-  - Theme Atmosphere: Rose-gold / wine / romantic blush
-  - Vedic Root Cause: 7th house (Kalatra Bhava), Venus affliction by Rahu/Mars/Saturn
-  - 5 Square Symptoms: Emotional coldness, recurring disputes, third-party gossip, loss of intimacy, past grievances
-  - 4 Tailored Remedies: Shukra Graha Shanti Puja, Kamakhya & Radha-Krishna Mantras, Kundali Dosha Neutralization, Aura Cleansing
-  - Journey & Testimonial: 4 consultation steps; Sunita & Raj, Wembley, London, UK
-  - Concept Gallery: Diya & Rose Petal Altar, Sunset Reunion, Planet Venus Shukra
+- [x] **Service 1: Love & Relationship Healing (`love-relationship`)**
+  - Guiding Deity: Shukra Deva (Venus), Kamadeva & Rati
+  - Theme Atmosphere: Rose-gold / wine / romantic hues
+  - Category: Couples Harmony Reading
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Venus Strengthening Puja, Couple’s Harmony Mantra Plan, Joint Chart Dosha Balancing, Home Energy Refresh for Couples
+  - Journey & Example Client Journey: 4 consultation steps; Neha & Arjun S., Irvine, CA
+  - Concept Gallery: Venus Puja Altar with Rose Petals, Couple Reconnecting at Golden Hour, Venus, the Planet of Affection
 
-- [x] **Service 2: Marriage & Compatibility (`marriage-compatibility`)**
-  - Presiding Deity: Jupiter (Brihaspati) & Vivaha
-  - Theme Atmosphere: Auspicious saffron & sacred gold
-  - Vedic Root Cause: 2nd (Kutumba), 7th (Kalatra), 8th (Mangalya), Manglik Dosha, Nadi Dosha
-  - 5 Square Symptoms: Obstacles/delays, Mangal Dosha disputes, Nadi/Bhakoot incompatibility, estrangement, in-law friction
-  - 4 Tailored Remedies: Mangal Dosha & Kumbh Vivah, Gauri Shankar Puja & Rudrabhishek, Jupiter Yantra, Family Vastu
-  - Journey & Testimonial: 4 consultation steps; Pooja & Harpreet, Hounslow, London, UK
-  - Concept Gallery: Vivaha Homa Fire Kund, Regal Indian Wedding, Planet Jupiter Brihaspati
+- [x] **Service 2: Marriage & Kundali Matching (`marriage-compatibility`)**
+  - Guiding Deity: Guru Brihaspati (Jupiter) with Shiva & Parvati
+  - Theme Atmosphere: Saffron / sacred gold
+  - Category: Vivah Compatibility Analysis
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Manglik Dosha Shanti, Uma-Maheshwar Puja for Couples, Guru Graha Blessing & Yantra, Wedding Muhurat Selection
+  - Journey & Example Client Journey: 4 consultation steps; Riya & Karan M., Fremont, CA
+  - Concept Gallery: Sacred Fire for a Vedic Wedding, Bride and Groom in Traditional Attire, Jupiter, Planet of Wisdom and Marriage
 
-- [x] **Service 3: Career & Business (`career-business`)**
-  - Presiding Deity: 10th House Karma & Surya/Mercury
-  - Theme Atmosphere: Royal amber & solar radiance
-  - Vedic Root Cause: 10th House (Karma Bhava), Sun (authority), Mercury (commerce), Saturn (discipline), Vish Yoga
-  - 5 Square Symptoms: Career stagnation, passed over for promotions, collapsed deals, partnership disputes, enterprise dilemma
-  - 4 Tailored Remedies: Surya Arghya & Aditya Hridaya, Budha Vyapar Vriddhi, Shani Sade Sati pacification, Auspicious Muhurat
-  - Journey & Testimonial: 4 consultation steps; Amit Patel, Canary Wharf, London, UK
-  - Concept Gallery: Surya Arghya Altar, Executive Commercial Towers, Sun Solar Corona
+- [x] **Service 3: Career & Business Success (`career-business`)**
+  - Guiding Deity: Surya (Sun) & Budha (Mercury), Lords of Work and Commerce
+  - Theme Atmosphere: Royal amber / solar radiance
+  - Category: Career & Venture Timing
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Surya Arghya Morning Practice, Mercury Puja for Business Growth, Saturn Period Relief Remedies, Launch & Signing Muhurat
+  - Journey & Example Client Journey: 4 consultation steps; Rahul V., San Jose, CA
+  - Concept Gallery: Surya Offering for Career Growth, Skyline of Professional Growth, The Sun, Source of Authority
 
-- [x] **Service 4: Financial Problems (`financial-problems`)**
-  - Presiding Deity: Maha Lakshmi & Kuber
-  - Theme Atmosphere: Emerald-gold & treasury wealth
-  - Vedic Root Cause: 2nd house (Dhana Bhava), 11th house (Labha Bhava), Kemadruma Yoga, debt karma
-  - 5 Square Symptoms: Immediate money slip, mounting debt cycles, speculative losses, stalled debtors, energetic ceiling
-  - 4 Tailored Remedies: Maha Lakshmi & Kuber Yantra Sthapana, Dhanakaraka Jupiter, Rin Mukti Homa, Annadanam/Cow Seva
-  - Journey & Testimonial: 4 consultation steps; Ramesh K., Southall, London, UK
-  - Concept Gallery: Consecrated Copper Sri Yantra, Bountiful Golden Harvest, Golden Cosmic Nebula
+- [x] **Service 4: Money & Debt Relief (`financial-problems`)**
+  - Guiding Deity: Goddess Lakshmi & Kubera, Keeper of Treasures
+  - Theme Atmosphere: Emerald-gold / prosperity
+  - Category: Wealth & Abundance Astrology
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Lakshmi-Kubera Yantra Installation, Jupiter Abundance Prayers, Rina Mochana Debt-Relief Homa, Nakshatra-Based Charity Plan
+  - Journey & Example Client Journey: 4 consultation steps; Sunil P., Bakersfield, CA
+  - Concept Gallery: Copper Sri Yantra for Lakshmi, Open Hands Holding Abundance, Golden Star-Forming Cloud
 
-- [x] **Service 5: Black Magic Removal (`black-magic-removal`)**
-  - Presiding Deity: Maha Sudarshana & Pratyangira Devi
-  - Theme Atmosphere: Mystic crimson & obsidian dark contrast
-  - Vedic Root Cause: Rahu in 8th/12th, Saturn-Rahu conjunction (Shrapit Dosha), psychic intrusions
-  - 5 Square Symptoms: Chest heaviness & nightmares, simultaneous misfortune, dark presence, undiagnosable fatigue, sudden discord
-  - 4 Tailored Remedies: Maha Sudarshana & Narasimha Homa, Pratyangira Devi Kavach, Home Purification, Aura Sealing
-  - Journey & Testimonial: 4 consultation steps (100% confidential); Jaswinder & Family, Slough, UK
-  - Concept Gallery: Maha Sudarshana Homa Fire, Meditative Spiritual Freedom, Solar Eclipse Diamond Ring
+- [x] **Service 5: Black Magic Cleansing & Removal (`black-magic-removal`)**
+  - Guiding Deity: Lord Narasimha, Sudarshana Chakra & Goddess Pratyangira
+  - Theme Atmosphere: Mystic crimson / obsidian dark
+  - Category: Spiritual Protection & Purification
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Sudarshana & Narasimha Protection Homa, Pratyangira Raksha Kavach, Home & Workplace Purification, Aura Restoration Practice
+  - Journey & Example Client Journey: 4 consultation steps; Jaspreet K., Cerritos, CA
+  - Concept Gallery: Sacred Fire for Protection, Peace After Purification, Eclipse Diamond Ring
 
-- [x] **Service 6: Evil Eye Protection (`evil-eye-protection`)**
-  - Presiding Deity: Drishti Ganesha & Lord Hanuman
-  - Theme Atmosphere: Royal indigo & cobalt turquoise
-  - Vedic Root Cause: Buri Nazar, vulnerable Moon (Chandra), afflicted Lagna, jealousy vibration
-  - 5 Square Symptoms: Post-celebration headache/nausea, crying infants, dropped customers, broken items, restlessness
-  - 4 Tailored Remedies: Vedic Nazar Utarna & Salt Cleansing, Hanuman Chalisa Yantra, Drishti Ganesha Sthapana, Black Tourmaline
-  - Journey & Testimonial: 4 consultation steps; Priya Mehta, Ealing, London, UK
-  - Concept Gallery: Nazar Utarna Altar & Diya, Harmonious Shielded Home, Full Moon Chandra
+- [x] **Service 6: Evil Eye & Nazar Remedies (`evil-eye-protection`)**
+  - Guiding Deity: Lord Hanuman & Drishti Ganapati
+  - Theme Atmosphere: Indigo / turquoise / cobalt
+  - Category: Drishti Dosha Protection
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Traditional Nazar Utara Ritual, Hanuman Raksha Yantra, Drishti Ganapati at the Entrance, Raksha Sutra & Protective Stones
+  - Journey & Example Client Journey: 4 consultation steps; Pooja D., Artesia, CA
+  - Concept Gallery: Nazar Cleansing Thali, A Calm, Protected Home, The Full Moon, Guardian of the Mind
 
-- [x] **Service 7: Family & Child Problems (`family-child-problems`)**
-  - Presiding Deity: Santana Gopala & Matru Bhava
-  - Theme Atmosphere: Nurturing saffron & warm peach
-  - Vedic Root Cause: 4th house (Matru Bhava), 5th house (Putra Bhava), Putra Dosha, Jupiter afflictions
-  - 5 Square Symptoms: Parent-child conflict, youth defiance/lack of focus, conception delays, domestic disputes, tense home
-  - 4 Tailored Remedies: Santana Gopala Homa, Saraswati & Budha Medha Suktam, Matru-Pitru Shanti, North-East Vastu
-  - Journey & Testimonial: 4 consultation steps; Deepa Verma, Croydon, London, UK
-  - Concept Gallery: Santana Gopala Puja Offerings, Harmonious Multi-Generational Family, JWST Cosmic Cliffs
+- [x] **Service 7: Family & Children’s Harmony (`family-child-problems`)**
+  - Guiding Deity: Santana Gopala (Bala Krishna) & Goddess Saraswati
+  - Theme Atmosphere: Warm saffron / peach / harmony
+  - Category: Family Peace & Santana Yoga
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Santana Gopala Homa, Saraswati Vandana for Students, Generational Peace Puja, North-East Vastu Reset
+  - Journey & Example Client Journey: 4 consultation steps; Anjali R., Sacramento, CA
+  - Concept Gallery: Santana Gopala Altar, Parents and Child Together, Stellar Nursery in Carina
 
-- [x] **Service 8: Health & Wellness (`health-wellness`)**
-  - Presiding Deity: Ayur-Jyotish & Maha Mrityunjaya
-  - Theme Atmosphere: Revitalizing lunar silver & sacred herbs / jade green
-  - Vedic Root Cause: 6th house (Roga Bhava), 8th house, depleted Ojas, Saturn/Rahu debility
-  - 5 Square Symptoms: Chronic lethargy, sleep disorders/insomnia, cyclic illnesses, digestive imbalance, depression
-  - 4 Tailored Remedies: Maha Mrityunjaya Japa & Rudrabhishek, Surya Upasana, Chandra Shanti, Ayurvedic Dosha Balancing
-  - Journey & Testimonial: 4 consultation steps; Meera K., Ilford, London, UK
-  - Concept Gallery: Maha Mrityunjaya Altar, Sacred Herbal Wellness, Luminous Celestial Healing Light
+- [x] **Service 8: Wellness & Peace of Mind (`health-wellness`)**
+  - Guiding Deity: Lord Shiva as Mrityunjaya & Lord Dhanvantari
+  - Theme Atmosphere: Lunar silver / jade green / herbs
+  - Category: Ayur-Jyotish Wellbeing
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Mrityunjaya Japa & Abhishekam, Surya Namaskar & Sun Prayers, Moon Calming Remedies, Dosha-Balancing Lifestyle Tips
+  - Journey & Example Client Journey: 4 consultation steps; Meera J., Pasadena, CA
+  - Concept Gallery: Abhishekam Altar with Bilva Leaves, Sunrise Yoga and Renewal, The Helix Nebula
 
-- [x] **Service 9: Court Case Problems (`court-case-problems`)**
-  - Presiding Deity: Maa Baglamukhi
-  - Theme Atmosphere: Victorious haldi-yellow & judicial protection
-  - Vedic Root Cause: 6th house (Shatru Bhava), 8th house, 12th house, malefic Mars/Saturn transits
-  - 5 Square Symptoms: Drawn-out battles, false allegations, unexpected postponements, custody/divorce anxiety, unfair opponent advantages
-  - 4 Tailored Remedies: Maa Baglamukhi Shatru Nashak Puja, 6th House Shatru Shanti, Surya Judicial Favor, Auspicious Hearing Timing
-  - Journey & Testimonial: 4 consultation steps; Vikramjit Singh, Birmingham, UK
-  - Concept Gallery: Consecrated Haldi Altar, Scales of Justice, Piercing Sunlight Through Clouds
+- [x] **Service 9: Legal & Court Case Guidance (`court-case-problems`)**
+  - Guiding Deity: Goddess Baglamukhi (Pitambara Devi)
+  - Theme Atmosphere: Victorious haldi-yellow / justice
+  - Category: Legal Matters & Baglamukhi Worship
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Baglamukhi Victory Puja, Shatru Bhava Shanti, Sun Remedies for Truth & Fairness, Court Date Muhurat Guidance
+  - Journey & Example Client Journey: 4 consultation steps; Harjit S., Riverside, CA
+  - Concept Gallery: Baglamukhi Puja with Turmeric, Scales of Justice, Mars, Planet of Courage
 
-- [x] **Service 10: Property & Land Disputes (`property-land-disputes`)**
-  - Presiding Deity: Bhumi & Mars (Mangal)
-  - Theme Atmosphere: Earthy terracotta & Vastu Purusha mandala
-  - Vedic Root Cause: 4th house (Sukha/Land), Mars (Bhumi Karaka), Bhumi Dosha, Vastu misalignment
-  - 5 Square Symptoms: Stalled sales, ancestral disputes, planning/contractor conflicts, oppressive property feeling, lost deposits
-  - 4 Tailored Remedies: Bhumi & Mars Shanti Homa, Vastu Purusha Mandala Sthapana, Lord Varaha Prayers, Registry Muhurat
-  - Journey & Testimonial: 4 consultation steps; Tariq & Shreya, Stratford, London, UK
-  - Concept Gallery: Bhumi Puja Consecration, Harmonious Estate, Terrestrial Topography & Mars Planet
+- [x] **Service 10: Property & Real Estate Disputes (`property-land-disputes`)**
+  - Guiding Deity: Bhumi Devi, Lord Varaha & Mangal (Mars)
+  - Theme Atmosphere: Terracotta / Vastu Purusha mandala
+  - Category: Vastu & Property Astrology
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Bhumi Puja & Mangal Shanti, Vastu Correction Without Rebuilding, Varaha Prayers for Stalled Property, Closing & Griha Pravesh Muhurat
+  - Journey & Example Client Journey: 4 consultation steps; Tarun & Shreya B., Northridge, CA
+  - Concept Gallery: Vastu Purusha Mandala, Keys to a New Home, Earth from Apollo 17
 
-- [x] **Service 11: Get Ex Love Back (`get-ex-love-back`)**
-  - Presiding Deity: Kamadeva & Satvik Vashikaran
-  - Theme Atmosphere: Ruby velvet & deep passionate crimson
-  - Vedic Root Cause: Harsh Ketu/Rahu transit on Venus, Moon separation from 7th house, Rinanubandha karma
-  - 5 Square Symptoms: Abrupt breakup, full communication blackout, third-party interference, deep heartbreak/obsession, second-chance desire
-  - 4 Tailored Remedies: Satvik Vashikaran & Mohini Mantra, Shukra & Kamadeva Healing, Third-Party Clearance, Heart Chakra Prayers
-  - Journey & Testimonial: 4 consultation steps; Chloe & Arjun, Central London, UK
-  - Concept Gallery: Sacred Mohini & Kamadeva Lamp, Embracing Reunited Lovers, Passionate Rose Nebula
+- [x] **Service 11: Bring Back Lost Love (`get-ex-love-back`)**
+  - Guiding Deity: Radha-Krishna & Shukra (Venus)
+  - Theme Atmosphere: Ruby velvet / crimson
+  - Category: Love Reunion Guidance
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Sattvic Love Mantra Sadhana, Radha-Krishna Reunion Puja, Third-Party Influence Shield, Heart Healing & Forgiveness Prayers
+  - Journey & Example Client Journey: 4 consultation steps; Vikas T., Los Angeles, CA
+  - Concept Gallery: Lamps and Flowers for a Love Puja, Reunited at Sunset, The Heart Nebula
 
-- [x] **Service 12: Horoscope Reading (`horoscope-reading`)**
-  - Presiding Deity: Deep celestial cosmic & Navagraha
-  - Theme Atmosphere: Midnight cosmic indigo & astral gold
-  - Vedic Root Cause: 9 Grahas across 12 Bhavas & 27 Nakshatras, Janam Kundali blueprint, Shani Sade Sati
-  - 5 Square Symptoms: Indecision in major choices, destiny milestone timing, recurring failure patterns, Sade Sati cycle, spiritual purpose
-  - 4 Tailored Remedies: 12-House Astrological Breakdown, Vimshottari Dasha Timeline, Authentic Gemstone Ratna, Daily Mantra & Charity
-  - Journey & Testimonial: 4 consultation steps; Kavita Sharma, Richmond, London, UK
-  - Concept Gallery: Consecrated Vedic Horoscope Chart, Astrolabe & Navagraha Mandala, Cosmic Stellar Panorama
+- [x] **Service 12: Birth Chart & Horoscope Reading (`horoscope-reading`)**
+  - Guiding Deity: The Navagrahas & Surya Narayana
+  - Theme Atmosphere: Midnight indigo / astral gold
+  - Category: Complete Life Reading
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Full 12-House Life Analysis, Dasha Timeline for the Years Ahead, Personal Gemstone Guidance, Daily Mantra & Charity Routine
+  - Journey & Example Client Journey: 4 consultation steps; Kavya N., San Diego, CA
+  - Concept Gallery: Hand-Drawn Kundali Chart, Clarity Under a Starry Sky, Deep Space Star Field
 
 ---
 
@@ -161,7 +161,7 @@ npm test
 
 ### 3.3 Square UI Geometry Compliance
 - [x] Container Cards: Enforce `rounded-none` borders.
-- [x] Action Buttons: CTA buttons (`Call +44...`, `Book Private Session`, `Send Private Inquiry`) enforce `rounded-none`.
+- [x] Action Buttons: CTA buttons (`Call +1 510-371-4626`, `Book This Reading`, `Send My Inquiry`) enforce `rounded-none`.
 - [x] Badges: Concept tags, deity badges, step indicators enforce `rounded-none`.
 - [x] Form Elements: Text inputs, phone input, date picker, and textarea strictly enforce `rounded-none`.
 - [x] Zero Rogue Rounded Classes: Verified zero instances of `rounded-md`, `rounded-lg`, `rounded-xl` in `ServiceDetailView.tsx`.
@@ -173,4 +173,4 @@ npm test
 - [x] Hash Synchronization: Supports `#<service-id>` deep-linking.
 - [x] Modal Layering: Booking modal layers cleanly over dedicated service view without state loss.
 - [x] Consultation Form: Requires Name, Phone, Notes; supports optional DOB; triggers confetti animation, instant confirmation, and 3000ms auto-reset.
-- [x] Helplines: Consistent direct telephone link `tel:+447537121638` verified in hero and sticky sidebar.
+- [x] Helplines: Consistent Los Angeles office telephone link `tel:+15103714626` verified in hero and sticky sidebar.

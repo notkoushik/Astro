@@ -1,10 +1,12 @@
 # Project: Indian Astrologer Pandith Vikram Vedic Services Expansion
 
+**Business location:** 7001 Hollywood Blvd, Los Angeles, CA 90028, United States · **Phone/WhatsApp:** +1 510-371-4626
+
 ## Architecture
 The application is a high-performance single page application (SPA) built with React 19, Vite 8, TypeScript 5.7, and Tailwind CSS v4.
 The expansion introduces full dedicated Vedic astrology experiences for all 12 services:
 - **Data Layer (`src/data/servicesData.ts`)**: Strongly-typed data store containing deep Vedic astrology profiles, planetary deities, specific visual theme parameters (hex codes, gradients, accents), and a 36-image concept gallery matrix (3 verified royalty-free categories per service).
-- **Component Layer (`src/components/ServiceDetailView.tsx`, `src/components/ServiceConceptGallery.tsx`)**: Themed service detail view engine rendering distinctive visual atmospheres for each planetary deity, square-geometry cards (`rounded-none`), symptom indicators, tailored remedies, 4-step journey, UK client testimonials, and multi-image galleries.
+- **Component Layer (`src/components/ServiceDetailView.tsx`, `src/components/ServiceConceptGallery.tsx`)**: Themed service detail view engine rendering distinctive visual atmospheres for each planetary deity, square-geometry cards (`rounded-none`), symptom indicators, tailored remedies, 4-step journey, California example client journeys, and multi-image galleries.
 - **Application Shell & Navigation (`src/App.tsx`)**: Shell handling top banner, sticky navbar, hero slider, 12-card services grid, and hash-synchronized routing (`#<service-id>`) enabling seamless deep-linking, smooth scrolling, and browser history navigation.
 - **Visual Assets (`public/images/`)**: Curated royalty-free open-source image collection from NASA, Wikimedia Commons, and Unsplash with verified fallback safety.
 
@@ -26,7 +28,7 @@ The expansion introduces full dedicated Vedic astrology experiences for all 12 s
 │  ├────────────────────────────────────────────────────────┤ │
 │  │ ServiceConceptGallery (3 Royalty-Free Concept Images)  │ │
 │  ├────────────────────────────────────────────────────────┤ │
-│  │ 4-Step Consultation Journey & UK Client Testimonial    │ │
+│  │ 4-Step Consultation Journey & Example Client Journey   │ │
 │  ├────────────────────────────────────────────────────────┤ │
 │  │ Square Inquiry Form & Direct Telephone Helpline        │ │
 │  └────────────────────────────────────────────────────────┘ │
@@ -51,22 +53,22 @@ The expansion introduces full dedicated Vedic astrology experiences for all 12 s
 ## Feature Inventory
 | # | Feature | Description | Milestone | Source |
 |---|---------|-------------|-----------|--------|
-| 1 | Service 1: Love & Relationship | Shukra/Kamadeva theme, wine/rose-gold atmosphere, Kalatra Bhava analysis, 5 symptoms, 4 remedies | M1 | Survey / R1 |
-| 2 | Service 2: Marriage & Compatibility | Brihaspati/Vivaha theme, saffron/gold atmosphere, Kundali Milan, Ashtakoota, 5 symptoms, 4 remedies | M1 | Survey / R1 |
-| 3 | Service 3: Career & Business | 10th House Karma/Surya theme, royal amber atmosphere, D10 Dashamsha, 5 symptoms, 4 remedies | M1 | Survey / R1 |
-| 4 | Service 4: Financial Problems | Maha Lakshmi/Kuber theme, emerald-gold atmosphere, Dhana Bhava, Rin Mukti, 5 symptoms, 4 remedies | M1 | Survey / R1 |
-| 5 | Service 5: Black Magic Removal | Sudarshana/Pratyangira theme, crimson-obsidian atmosphere, Shrapit dosha, 5 symptoms, 4 remedies | M1 | Survey / R1 |
-| 6 | Service 6: Evil Eye Protection | Drishti Ganesha/Hanuman theme, indigo/turquoise atmosphere, Buri Nazar, 5 symptoms, 4 remedies | M1 | Survey / R1 |
-| 7 | Service 7: Family & Child Problems | Santana Gopala/Matru Bhava theme, warm saffron atmosphere, Putra dosha, 5 symptoms, 4 remedies | M1 | Survey / R1 |
-| 8 | Service 8: Health & Wellness | Ayur-Jyotish/Mrityunjaya theme, lunar silver/teal atmosphere, Roga Bhava, 5 symptoms, 4 remedies | M1 | Survey / R1 |
-| 9 | Service 9: Court Case Problems | Maa Baglamukhi theme, victorious haldi-yellow atmosphere, Shatru Bhava, 5 symptoms, 4 remedies | M1 | Survey / R1 |
-| 10 | Service 10: Property & Land Disputes | Bhumi/Mars theme, earthy terracotta atmosphere, Vastu Purusha, 5 symptoms, 4 remedies | M1 | Survey / R1 |
-| 11 | Service 11: Get Ex Love Back | Kamadeva/Satvik Vashikaran theme, ruby velvet atmosphere, Rinanubandha karma, 5 symptoms, 4 remedies | M1 | Survey / R1 |
-| 12 | Service 12: Horoscope Reading | Deep celestial/Navagraha theme, midnight indigo/astral gold atmosphere, Janam Kundali, 5 symptoms, 4 remedies | M1 | Survey / R1 |
+| 1 | Service 1: Love & Relationship Healing | Shukra/Kamadeva theme, wine/rose-gold atmosphere, Kalatra Bhava analysis, 5 symptoms, 4 remedies | M1 | Survey / R1 |
+| 2 | Service 2: Marriage & Kundali Matching | Brihaspati/Vivaha theme, saffron/gold atmosphere, Kundali Milan, Ashtakoota, 5 symptoms, 4 remedies | M1 | Survey / R1 |
+| 3 | Service 3: Career & Business Success | 10th House Karma/Surya theme, royal amber atmosphere, D10 Dashamsha, 5 symptoms, 4 remedies | M1 | Survey / R1 |
+| 4 | Service 4: Money & Debt Relief | Maha Lakshmi/Kuber theme, emerald-gold atmosphere, Dhana Bhava, Rin Mukti, 5 symptoms, 4 remedies | M1 | Survey / R1 |
+| 5 | Service 5: Black Magic Cleansing & Removal | Sudarshana/Pratyangira theme, crimson-obsidian atmosphere, Shrapit dosha, 5 symptoms, 4 remedies | M1 | Survey / R1 |
+| 6 | Service 6: Evil Eye & Nazar Remedies | Drishti Ganesha/Hanuman theme, indigo/turquoise atmosphere, Buri Nazar, 5 symptoms, 4 remedies | M1 | Survey / R1 |
+| 7 | Service 7: Family & Children’s Harmony | Santana Gopala/Matru Bhava theme, warm saffron atmosphere, Putra dosha, 5 symptoms, 4 remedies | M1 | Survey / R1 |
+| 8 | Service 8: Wellness & Peace of Mind | Ayur-Jyotish/Mrityunjaya theme, lunar silver/teal atmosphere, Roga Bhava, 5 symptoms, 4 remedies | M1 | Survey / R1 |
+| 9 | Service 9: Legal & Court Case Guidance | Maa Baglamukhi theme, victorious haldi-yellow atmosphere, Shatru Bhava, 5 symptoms, 4 remedies | M1 | Survey / R1 |
+| 10 | Service 10: Property & Real Estate Disputes | Bhumi/Mars theme, earthy terracotta atmosphere, Vastu Purusha, 5 symptoms, 4 remedies | M1 | Survey / R1 |
+| 11 | Service 11: Bring Back Lost Love | Kamadeva/Satvik Vashikaran theme, ruby velvet atmosphere, Rinanubandha karma, 5 symptoms, 4 remedies | M1 | Survey / R1 |
+| 12 | Service 12: Birth Chart & Horoscope Reading | Deep celestial/Navagraha theme, midnight indigo/astral gold atmosphere, Janam Kundali, 5 symptoms, 4 remedies | M1 | Survey / R1 |
 | 13 | Multi-Image Concept Galleries | 3 verified royalty-free images per service (Ritual, Transformation, Planetary Iconography) | M1, M2 | Survey / R2 |
 | 14 | Dynamic Service Theming Engine | Per-service color atmosphere (hero gradients, badges, accents, glow, testimonial card) | M2 | Survey / R1 |
 | 15 | Square UI Geometry Enforcement | Strict `rounded-none` borders, buttons, cards, image frames, and input fields | M2 | Survey / R4 |
-| 16 | Dedicated Consultation Form & Helpline | Square inquiry form with instant confirmation feedback, confetti, and UK helpline (+44 7537121638) | M2 | Survey / R3 |
+| 16 | Dedicated Consultation Form & Helpline | Square inquiry form with instant confirmation feedback, confetti, and Los Angeles office line (+1 510-371-4626) | M2 | Survey / R3 |
 | 17 | Hash-Sync Routing & Deep-Linking | Synchronize active service view with `window.location.hash` (`#<service-id>`) and back/forward navigation | M3 | Survey / R3 |
 | 18 | Breadcrumb & Back Navigation | Header breadcrumbs (`Home / Astrology Services / [Title]`) and "Back to All Services" with smooth scroll | M3 | Survey / R3 |
 | 19 | Homepage Read More Wiring | 12 service cards on homepage cleanly open corresponding dedicated service screen | M3 | Survey / R3 |

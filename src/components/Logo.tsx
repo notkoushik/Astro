@@ -106,7 +106,7 @@ export default function Logo({ className = "min-h-12 py-1", variant = "light" }:
           <span className={`text-[9px] sm:text-[9.5px] font-extrabold tracking-[0.18em] uppercase leading-none font-manrope whitespace-nowrap ${
             isLight ? 'text-[#B91C1C]' : 'text-amber-300/90'
           }`}>
-            VEDIC ASTROLOGER • LONDON UK
+            VEDIC ASTROLOGER • LOS ANGELES
           </span>
           <span className="text-[#B91C1C] text-[8px] leading-none shrink-0">✦</span>
         </div>

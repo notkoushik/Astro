@@ -5,7 +5,7 @@
  * 2. Presiding Vedic Deities (non-empty, matching canonical specs)
  * 3. ServiceTheme schema (10+ valid theme styling properties per service)
  * 4. 36 Concept Gallery Items (non-empty URLs, categories, titles, captions, licenses, alts, and verified local fallbacks on disk)
- * 5. Data integrity (symptoms count=5, remedies count=4, howItWorks count=4, UK testimonials)
+ * 5. Data integrity (symptoms count=5, remedies count=4, howItWorks count=4, California client journeys)
  */
 
 const fs = require('node:fs');
