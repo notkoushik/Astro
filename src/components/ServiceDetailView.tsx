@@ -112,7 +112,7 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
             <source srcSet={service.img} type="image/webp" />
             <img
               src={service.img}
-              alt={`${service.title} ${service.subtitle} - Vedic Astrology Consultation by Pandith Vikram`}
+              alt={`${service.title} ${service.subtitle} - Vedic astrology service with Pandith Vikram, Los Angeles`}
               width={1200}
               height={600}
               fetchPriority="high"
@@ -139,7 +139,7 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
                   className="inline-flex items-center gap-1.5 bg-black/60 backdrop-blur-sm text-xs font-semibold px-3 py-1 font-roboto tracking-wide rounded-none border shadow-sm"
                   style={{ borderColor: `${theme.accentColor}80`, color: '#FFF' }}
                 >
-                  <span style={{ color: theme.accentColor }}>🕉️ Presiding Deity:</span>
+                  <span style={{ color: theme.accentColor }}>🕉️ Guiding Deity:</span>
                   <span className="font-bold text-amber-200">{service.deity}</span>
                 </span>
               )}
@@ -156,17 +156,17 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
 
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <a
-                href="tel:+447537121638"
+                href="tel:+15103714626"
                 className="bg-[#D61B14] hover:bg-[#b5140e] text-white font-roboto font-bold px-6 py-3 rounded-none text-xs uppercase tracking-wider transition-all shadow-md flex items-center gap-2 cursor-pointer border border-red-500/30"
               >
-                <span>📞 Call +44 7537121638</span>
+                <span>📞 Call +1 510-371-4626</span>
               </a>
               <button
                 onClick={onBookNow}
                 className="text-slate-950 font-roboto font-bold px-6 py-3 rounded-none text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer hover:brightness-110"
                 style={{ backgroundColor: theme.accentColor }}
               >
-                Book Private Session
+                Book This Reading
               </button>
             </div>
           </div>
@@ -188,17 +188,17 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
                   className="font-oswald text-base font-bold uppercase tracking-wide"
                   style={{ color: theme.accentColor }}
                 >
-                  Vedic Cosmic Sanctuary
+                  Hollywood Blvd Office
                 </p>
                 <span className="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-none bg-amber-400/20 text-amber-300 border border-amber-400/30">
-                  London, UK
+                  Los Angeles, CA
                 </span>
               </div>
 
               {service.deity && (
                 <div className="text-xs space-y-1 font-roboto bg-white/5 p-2.5 rounded-none border border-white/10">
                   <p className="text-[11px] uppercase tracking-wider text-slate-300 font-bold">
-                    Divine Invocation
+                    Prayers Offered To
                   </p>
                   <p className="text-amber-200 font-serif italic text-xs leading-relaxed">
                     "{service.deity}"
@@ -207,15 +207,15 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
               )}
 
               <p className="text-xs text-slate-300 leading-relaxed font-roboto">
-                Pandith Vikram provides private, 100% confidential face-to-face and phone readings for clients in London, UK and internationally.
+                Meet Pandith Vikram at 7001 Hollywood Blvd, Los Angeles, CA 90028, or book a private phone or video reading from anywhere in the US.
               </p>
 
               <div
                 className="pt-2 border-t flex items-center justify-between text-xs font-bold"
                 style={{ borderColor: `${theme.accentColor}30`, color: theme.accentColor }}
               >
-                <span>⚡ 24/7 UK Availability</span>
-                <span className="text-white">Immediate Assistance</span>
+                <span>⚡ Open 7 Days a Week</span>
+                <span className="text-white">8 AM – 10 PM PT</span>
               </div>
             </div>
           </div>
@@ -233,9 +233,9 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
               style={{ borderTop: `4px solid ${theme.accentColor}` }}
             >
               <h2 className="font-oswald text-2xl sm:text-3xl font-bold text-slate-900 uppercase">
-                Vedic Astrological{' '}
+                What Your Chart Reveals{' '}
                 <span style={{ color: theme.accentColor }}>
-                  Root Cause & Planetary Analysis
+                  About This Problem
                 </span>
               </h2>
               <div
@@ -253,9 +253,9 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
               style={{ borderTop: `4px solid ${theme.accentColor}` }}
             >
               <h2 className="font-oswald text-2xl sm:text-3xl font-bold text-slate-900 uppercase">
-                Key Symptoms &{' '}
+                Signs This{' '}
                 <span style={{ color: theme.accentColor }}>
-                  Indicators You Need This Remedy
+                  May Be Affecting You
                 </span>
               </h2>
               <div
@@ -290,9 +290,9 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
               style={{ borderTop: `4px solid ${theme.accentColor}` }}
             >
               <h2 className="font-oswald text-2xl sm:text-3xl font-bold text-slate-900 uppercase">
-                Customized Vedic{' '}
+                Remedies Pandith Vikram{' '}
                 <span style={{ color: theme.accentColor }}>
-                  Remedies By Pandith Vikram
+                  May Recommend
                 </span>
               </h2>
               <div
@@ -343,9 +343,9 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
               style={{ borderTop: `4px solid ${theme.accentColor}` }}
             >
               <h2 className="font-oswald text-2xl sm:text-3xl font-bold text-slate-900 uppercase">
-                How Your{' '}
+                Your Consultation,{' '}
                 <span style={{ color: theme.accentColor }}>
-                  Consultation Works
+                  Step by Step
                 </span>
               </h2>
               <div
@@ -372,7 +372,7 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
               </div>
             </div>
 
-            {/* F. Verified Client Testimonial (Dynamically Styled) */}
+            {/* F. Example Client Journey (Illustrative story, names & details changed; Dynamically Styled) */}
             <div
               className={`${theme.testimonialBg} ${theme.testimonialBorder} border-2 text-white p-6 sm:p-8 rounded-none shadow-lg space-y-3 relative overflow-hidden`}
               style={{
@@ -386,9 +386,9 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
                   className="text-xs uppercase font-bold tracking-widest font-roboto"
                   style={{ color: theme.accentColor }}
                 >
-                  Client Experience
+                  Example Client Journey
                 </span>
-                <span className="text-amber-400 text-xs select-none">★★★★★</span>
+                <span className="text-amber-400 text-[11px] uppercase tracking-wider font-roboto select-none">✦ Names Changed</span>
               </div>
               <p className="font-serif italic text-sm sm:text-base leading-relaxed text-amber-100">
                 "{service.testimonial.quote}"
@@ -411,13 +411,13 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
               >
                 <div className="flex items-center justify-between flex-wrap gap-2">
                   <h2 className="font-oswald text-2xl sm:text-3xl font-bold text-slate-900 uppercase">
-                    Frequently Asked{' '}
+                    Questions Clients{' '}
                     <span style={{ color: theme.accentColor }}>
-                      Questions
+                      Often Ask
                     </span>
                   </h2>
                   <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 font-roboto">
-                    ✦ Honest Expectations & Transparency
+                    ✦ Straight, Honest Answers
                   </span>
                 </div>
                 <div
@@ -453,13 +453,13 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
                   className="text-[11px] font-bold uppercase tracking-widest font-roboto"
                   style={{ color: theme.accentColor }}
                 >
-                  Confidential Consultation
+                  Private Inquiry
                 </span>
                 <h3 className="font-oswald text-2xl font-bold text-slate-900 uppercase mt-1">
-                  Inquire For {service.title}
+                  Ask About {service.title} {service.subtitle}
                 </h3>
                 <p className="text-xs text-slate-500 font-roboto mt-0.5">
-                  Direct answers from Pandith Vikram
+                  Answered personally by Pandith Vikram
                 </p>
               </div>
 
@@ -469,45 +469,45 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
                     ✓
                   </div>
                   <h4 className="font-oswald text-xl font-bold text-slate-900 uppercase">
-                    Inquiry Sent!
+                    Inquiry Received!
                   </h4>
                   <p className="text-xs text-slate-600 font-roboto">
-                    Pandith Vikram's office will review your request and call your number within a few hours.
+                    Thank you. Pandith Vikram’s office will read your note and call you back soon.
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-3 font-roboto">
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 mb-1">
-                      Your Full Name *
+                      Full Name *
                     </label>
                     <input
                       type="text"
                       required
                       value={formData.name}
                       onChange={e => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="e.g. Anjali Sharma"
+                      placeholder="e.g. Meera Patel"
                       className="w-full text-xs px-3 py-2.5 rounded-none border border-slate-300 focus:outline-none focus:border-slate-800"
                     />
                   </div>
 
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 mb-1">
-                      Phone Number (with Country Code) *
+                      Phone Number (include area code) *
                     </label>
                     <input
                       type="tel"
                       required
                       value={formData.phone}
                       onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+44 7537121638"
+                      placeholder="+1 (310) 555-0123"
                       className="w-full text-xs px-3 py-2.5 rounded-none border border-slate-300 focus:outline-none focus:border-slate-800"
                     />
                   </div>
 
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 mb-1">
-                      Date of Birth (Optional)
+                      Birth Date (optional)
                     </label>
                     <input
                       type="date"
@@ -519,14 +519,14 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
 
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 mb-1">
-                      Describe Your Situation *
+                      Tell Us What’s Happening *
                     </label>
                     <textarea
                       required
                       rows={3}
                       value={formData.notes}
                       onChange={e => setFormData({ ...formData, notes: e.target.value })}
-                      placeholder="Please share details of your situation..."
+                      placeholder="A few lines about what you are facing..."
                       className="w-full text-xs px-3 py-2.5 rounded-none border border-slate-300 focus:outline-none focus:border-slate-800"
                     ></textarea>
                   </div>
@@ -536,23 +536,23 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
                     className="w-full text-white font-roboto font-bold py-3 rounded-none text-xs uppercase tracking-wider transition-all shadow cursor-pointer mt-1 hover:brightness-110"
                     style={{ backgroundColor: theme.accentColor }}
                   >
-                    Send Private Inquiry
+                    Send My Inquiry
                   </button>
                 </form>
               )}
 
               {/* Quick Helpline Box */}
               <div className="mt-6 pt-5 border-t border-slate-200 text-center space-y-2">
-                <p className="text-xs text-slate-500 font-roboto">Need Immediate Answers?</p>
+                <p className="text-xs text-slate-500 font-roboto">Prefer to Talk Now?</p>
                 <a
-                  href="tel:+447537121638"
+                  href="tel:+15103714626"
                   className="block font-oswald text-xl font-bold hover:text-black transition-colors rounded-none"
                   style={{ color: theme.accentColor }}
                 >
-                  📞 +44 7537121638
+                  📞 +1 510-371-4626
                 </a>
                 <p className="text-[11px] text-slate-400 font-roboto">
-                  Available 24/7 across USA, UK & Worldwide
+                  Daily 8 AM – 10 PM Pacific • Calls & WhatsApp
                 </p>
               </div>
             </div>
@@ -561,26 +561,26 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
             <div className="bg-white p-6 rounded-none border border-slate-200 shadow-sm space-y-3" style={{ borderTop: '4px solid #8E1612' }}>
               <div className="border-b border-slate-100 pb-2.5">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-[#B91C1C] font-roboto">
-                  ✦ Direct Service Links
+                  ✦ More Ways We Can Help
                 </span>
                 <h4 className="font-oswald text-lg font-bold text-slate-900 uppercase">
-                  Explore All 12 Vedic Services
+                  Browse Other Services
                 </h4>
               </div>
               <ul className="divide-y divide-slate-100 text-xs font-roboto">
                 {[
-                  { id: 'love-relationship', label: 'Love & Relationship Problems' },
-                  { id: 'get-ex-love-back', label: 'Get Ex Love Back Specialist' },
-                  { id: 'marriage-compatibility', label: 'Marriage & 36 Guna Compatibility' },
-                  { id: 'career-business', label: 'Career & Business Growth' },
-                  { id: 'financial-problems', label: 'Financial & Debt Relief' },
-                  { id: 'black-magic-removal', label: 'Black Magic & Negative Energy' },
-                  { id: 'evil-eye-protection', label: 'Evil Eye & Nazar Protection' },
-                  { id: 'family-child-problems', label: 'Family & Child Peace' },
-                  { id: 'health-wellness', label: 'Ayur-Jyotish Health & Wellness' },
-                  { id: 'court-case-problems', label: 'Court Case & Legal Victory' },
-                  { id: 'property-land-disputes', label: 'Property & Land Disputes' },
-                  { id: 'horoscope-reading', label: 'Horoscope & Janam Kundali' },
+                  { id: 'love-relationship', label: 'Love & Relationship Healing' },
+                  { id: 'get-ex-love-back', label: 'Bring Back Lost Love' },
+                  { id: 'marriage-compatibility', label: 'Marriage & Kundali Matching' },
+                  { id: 'career-business', label: 'Career & Business Success' },
+                  { id: 'financial-problems', label: 'Money & Debt Relief' },
+                  { id: 'black-magic-removal', label: 'Black Magic Cleansing & Removal' },
+                  { id: 'evil-eye-protection', label: 'Evil Eye & Nazar Remedies' },
+                  { id: 'family-child-problems', label: 'Family & Children’s Harmony' },
+                  { id: 'health-wellness', label: 'Wellness & Peace of Mind' },
+                  { id: 'court-case-problems', label: 'Legal & Court Case Guidance' },
+                  { id: 'property-land-disputes', label: 'Property & Real Estate Disputes' },
+                  { id: 'horoscope-reading', label: 'Birth Chart & Horoscope Reading' },
                 ].map((linkItem) => (
                   <li key={linkItem.id}>
                     <a

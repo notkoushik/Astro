@@ -31,7 +31,7 @@ The End-to-End (E2E) Test Suite for the Indian Astrologer Pandith Vikram web app
     ┌───────────────────────────────┴───────────────────────────────┐
     ▼                                                               ▼
 ┌──────────────────────────────────────┐┌──────────────────────────────┐
-│  Tier 3: Cross-Feature Combinations  ││  Tier 4: Real-World UK       │
+│  Tier 3: Cross-Feature Combinations  ││  Tier 4: Real-World CA       │
 │  & Navigation Flows (18 Tests)       ││  Client Scenarios (12 Tests) │
 └──────────────────────────────────────┘└──────────────────────────────┘
 ```
@@ -41,13 +41,13 @@ The End-to-End (E2E) Test Suite for the Indian Astrologer Pandith Vikram web app
 1. **Tier 0: Production Build & Asset Integrity**:
    Verifies compilation health, production distribution bundles (`dist/index.html`, JavaScript/CSS chunks), configuration validity (`tsconfig.json`, `package.json`, `vite.config.ts`), and static media availability.
 2. **Tier 1: Feature Coverage (>=60 Tests)**:
-   Exhaustively exercises the 5 core behavioral pillars of each of the 12 Vedic astrology services (Identity & Metadata, Planetary Cause & Bhavas, Square Warning Symptoms, Tailored Remedies, Consultation Journey & UK Testimonial).
+   Exhaustively exercises the 5 core behavioral pillars of each of the 12 Vedic astrology services (Identity & Metadata, Planetary Cause & Bhavas, Square Warning Symptoms, Tailored Remedies, Consultation Journey & California Client Journey).
 3. **Tier 2: Boundary & Corner Cases (>=60 Tests)**:
    Validates contracts, edge cases, string lengths, image triplet category schemas, missing fallback resilience, and the strict non-overlapping distinctiveness of color themes and deities.
 4. **Tier 3: Cross-Feature Combinations & State Interactions (18 Tests)**:
    Validates pairwise transitions, hash-synchronized URL deep-linking (`#<service-id>`), modal layering over dedicated screens, consultation form validation rules, telephone URI protocols, and strict square UI geometry (`rounded-none`).
-5. **Tier 4: Real-World UK Client Application Scenarios (12 Tests)**:
-   Simulates end-to-end user journeys from major UK metropolitan areas (London, Wembley, Hounslow, Slough, Croydon, Birmingham, Leicester, Southall, Stratford, Richmond) exercising full user lifecycle flows.
+5. **Tier 4: Real-World California Client Application Scenarios (12 Tests)**:
+   Simulates end-to-end user journeys from California communities (Los Angeles, San Jose, Irvine, Fremont, Cerritos, Artesia, Sacramento, Pasadena, Riverside, Northridge, Bakersfield, San Diego) exercising full user lifecycle flows.
 
 ---
 
@@ -75,81 +75,81 @@ Every service must pass 5 dedicated opaque-box feature coverage tests:
 - **Test .2: Astrological Root Cause & Afflicted Bhavas**: Verifies deep philosophical Vedic explanation referencing governing houses, planets, and doshas.
 - **Test .3: Square Warning Signs & Symptoms**: Verifies exactly 5 distinct, meaningful symptom indicators.
 - **Test .4: Tailored Vedic Remedies**: Verifies exactly 4 named Vedic remedies with detailed actionable descriptions.
-- **Test .5: 4-Step Consultation Journey & UK Testimonial**: Verifies 4 chronological consultation steps and an authentic UK client case study with quotation, client name, and UK borough/city.
+- **Test .5: 4-Step Consultation Journey & California Client Journey**: Verifies 4 chronological consultation steps and an illustrative example client journey with quotation, client initials, and a California city (`CA`).
 
 #### Service Coverage Inventory:
-1. **Service 1: Love & Relationship Problems (`love-relationship`)**
-   - Deity: Shukra (Venus) & Kamadeva
-   - Root Cause: 7th house (Kalatra Bhava), Venus affliction by Rahu/Mars/Saturn
-   - Symptoms: 5 items (emotional coldness, recurring disputes, third-party interference, intimacy loss, past grievances)
-   - Remedies: 4 items (Shukra Graha Shanti Puja, Kamakhya & Radha-Krishna Mantras, Kundali Dosha Neutralization, Aura Cleansing)
-   - Journey & Testimonial: 4 steps; Sunita & Raj, Wembley, London, UK
-2. **Service 2: Marriage & Compatibility (`marriage-compatibility`)**
-   - Deity: Jupiter (Brihaspati) & Vivaha
-   - Root Cause: 2nd (Kutumba), 7th (Kalatra), 8th (Mangalya), Manglik Dosha (Kuja Dosha), Nadi Dosha
-   - Symptoms: 5 items (pre-marital obstacles, Manglik disputes, Nadi/Bhakoot incompatibility, estrangement, in-law friction)
-   - Remedies: 4 items (Mangal Dosha & Kumbh Vivah, Gauri Shankar Puja & Rudrabhishek, Jupiter Yantra, Family Vastu)
-   - Journey & Testimonial: 4 steps; Pooja & Harpreet, Hounslow, London, UK
-3. **Service 3: Career & Business (`career-business`)**
-   - Deity: 10th House Karma & Surya/Mercury
-   - Root Cause: 10th House (Karma Bhava), Sun (authority), Mercury (commerce), Saturn (discipline), Vish Yoga
-   - Symptoms: 5 items (career stagnation, missed promotions, collapsed deals, partnership disputes, enterprise dilemma)
-   - Remedies: 4 items (Surya Arghya & Aditya Hridaya, Budha Vyapar Vriddhi, Shani Sade Sati pacification, Auspicious Muhurat)
-   - Journey & Testimonial: 4 steps; Amit Patel, Canary Wharf, London, UK
-4. **Service 4: Financial Problems (`financial-problems`)**
-   - Deity: Maha Lakshmi & Kuber
-   - Root Cause: 2nd house (Dhana Bhava), 11th house (Labha Bhava), Kemadruma Yoga, debt karma
-   - Symptoms: 5 items (immediate money slip, mounting debt cycles, speculative losses, stalled debtors, energetic ceiling)
-   - Remedies: 4 items (Maha Lakshmi & Kuber Yantra Sthapana, Dhanakaraka Jupiter, Rin Mukti Homa, Annadanam/Cow Seva)
-   - Journey & Testimonial: 4 steps; Ramesh K., Southall, London, UK
-5. **Service 5: Black Magic Removal (`black-magic-removal`)**
-   - Deity: Maha Sudarshana & Pratyangira Devi
-   - Root Cause: Rahu in 8th/12th, Saturn-Rahu conjunction (Shrapit Dosha), psychic intrusions
-   - Symptoms: 5 items (chest heaviness & nightmares, simultaneous misfortune, dark presence, undiagnosable fatigue, sudden discord)
-   - Remedies: 4 items (Maha Sudarshana & Narasimha Homa, Pratyangira Devi Kavach, Home Purification, Aura Sealing)
-   - Journey & Testimonial: 4 steps; Jaswinder & Family, Slough, UK
-6. **Service 6: Evil Eye Protection (`evil-eye-protection`)**
-   - Deity: Drishti Ganesha & Lord Hanuman
-   - Root Cause: Buri Nazar, vulnerable Moon (Chandra), afflicted Lagna, low-frequency envy vibration
-   - Symptoms: 5 items (post-celebration headache/nausea, crying infants, business drop, broken items, restlessness)
-   - Remedies: 4 items (Vedic Nazar Utarna & Salt Cleansing, Hanuman Chalisa Yantra, Drishti Ganesha Sthapana, Black Tourmaline)
-   - Journey & Testimonial: 4 steps; Priya Mehta, Ealing, London, UK
-7. **Service 7: Family & Child Problems (`family-child-problems`)**
-   - Deity: Santana Gopala & Matru Bhava
-   - Root Cause: 4th house (Matru Bhava), 5th house (Putra Bhava), Putra Dosha, Jupiter afflictions
-   - Symptoms: 5 items (parent-child conflict, youth defiance/lack of focus, conception delays, domestic disputes, tense home)
-   - Remedies: 4 items (Santana Gopala Homa, Saraswati & Budha Medha Suktam, Matru-Pitru Shanti, North-East Vastu)
-   - Journey & Testimonial: 4 steps; Deepa Verma, Croydon, London, UK
-8. **Service 8: Health & Wellness (`health-wellness`)**
-   - Deity: Ayur-Jyotish & Maha Mrityunjaya
-   - Root Cause: 6th house (Roga Bhava), 8th house, depleted Ojas, Saturn/Rahu afflictions
-   - Symptoms: 5 items (chronic lethargy, sleep disorders/insomnia, cyclic illnesses, digestive imbalance, depression)
-   - Remedies: 4 items (Maha Mrityunjaya Japa & Rudrabhishek, Surya Upasana, Chandra Shanti, Ayurvedic Dosha Balancing)
-   - Journey & Testimonial: 4 steps; Meera K., Ilford, London, UK
-9. **Service 9: Court Case Problems (`court-case-problems`)**
-   - Deity: Maa Baglamukhi
-   - Root Cause: 6th house (Shatru Bhava), 8th house, 12th house, malefic Mars/Saturn transits
-   - Symptoms: 5 items (drawn-out battles, false allegations, unexpected postponements, custody/divorce anxiety, unfair opponent advantages)
-   - Remedies: 4 items (Maa Baglamukhi Shatru Nashak Puja, 6th House Shatru Shanti, Surya Judicial Favor, Auspicious Hearing Timing)
-   - Journey & Testimonial: 4 steps; Vikramjit Singh, Birmingham, UK
-10. **Service 10: Property & Land Disputes (`property-land-disputes`)**
-    - Deity: Bhumi & Mars (Mangal)
-    - Root Cause: 4th house (Sukha/Land), Mars (Bhumi Karaka), Bhumi Dosha, Vastu misalignment
-    - Symptoms: 5 items (stalled sales, ancestral disputes, planning/contractor conflicts, oppressive property feeling, lost deposits)
-    - Remedies: 4 items (Bhumi & Mars Shanti Homa, Vastu Purusha Mandala Sthapana, Lord Varaha Prayers, Registry Muhurat)
-    - Journey & Testimonial: 4 steps; Tariq & Shreya, Stratford, London, UK
-11. **Service 11: Get Ex Love Back (`get-ex-love-back`)**
-    - Deity: Kamadeva & Satvik Vashikaran
-    - Root Cause: Harsh Ketu/Rahu transit on Venus, Moon separation from 7th house, Rinanubandha karma
-    - Symptoms: 5 items (abrupt breakup, full communication blackout, third-party interference, deep heartbreak/obsession, second-chance desire)
-    - Remedies: 4 items (Satvik Vashikaran & Mohini Mantra, Shukra & Kamadeva Healing, Third-Party Clearance, Heart Chakra Prayers)
-    - Journey & Testimonial: 4 steps; Chloe & Arjun, Central London, UK
-12. **Service 12: Horoscope Reading (`horoscope-reading`)**
-    - Deity: Deep celestial cosmic & Navagraha
-    - Root Cause: 9 Grahas across 12 Bhavas & 27 Nakshatras, Janam Kundali blueprint, Shani Sade Sati
-    - Symptoms: 5 items (indecision in major choices, destiny milestone timing, recurring failure patterns, Sade Sati cycle, spiritual purpose)
-    - Remedies: 4 items (12-House Astrological Breakdown, Vimshottari Dasha Timeline, Authentic Gemstone Ratna, Daily Mantra & Charity)
-    - Journey & Testimonial: 4 steps; Kavita Sharma, Richmond, London, UK
+1. **Service 1: Love & Relationship Healing (`love-relationship`)**
+   - Deity: Shukra Deva (Venus), Kamadeva & Rati
+   - Category: Couples Harmony Reading
+   - Symptoms: 5 items
+   - Remedies: 4 items (Venus Strengthening Puja, Couple’s Harmony Mantra Plan, Joint Chart Dosha Balancing, Home Energy Refresh for Couples)
+   - Journey & Example Client Journey: 4 steps; Neha & Arjun S., Irvine, CA
+2. **Service 2: Marriage & Kundali Matching (`marriage-compatibility`)**
+   - Deity: Guru Brihaspati (Jupiter) with Shiva & Parvati
+   - Category: Vivah Compatibility Analysis
+   - Symptoms: 5 items
+   - Remedies: 4 items (Manglik Dosha Shanti, Uma-Maheshwar Puja for Couples, Guru Graha Blessing & Yantra, Wedding Muhurat Selection)
+   - Journey & Example Client Journey: 4 steps; Riya & Karan M., Fremont, CA
+3. **Service 3: Career & Business Success (`career-business`)**
+   - Deity: Surya (Sun) & Budha (Mercury), Lords of Work and Commerce
+   - Category: Career & Venture Timing
+   - Symptoms: 5 items
+   - Remedies: 4 items (Surya Arghya Morning Practice, Mercury Puja for Business Growth, Saturn Period Relief Remedies, Launch & Signing Muhurat)
+   - Journey & Example Client Journey: 4 steps; Rahul V., San Jose, CA
+4. **Service 4: Money & Debt Relief (`financial-problems`)**
+   - Deity: Goddess Lakshmi & Kubera, Keeper of Treasures
+   - Category: Wealth & Abundance Astrology
+   - Symptoms: 5 items
+   - Remedies: 4 items (Lakshmi-Kubera Yantra Installation, Jupiter Abundance Prayers, Rina Mochana Debt-Relief Homa, Nakshatra-Based Charity Plan)
+   - Journey & Example Client Journey: 4 steps; Sunil P., Bakersfield, CA
+5. **Service 5: Black Magic Cleansing & Removal (`black-magic-removal`)**
+   - Deity: Lord Narasimha, Sudarshana Chakra & Goddess Pratyangira
+   - Category: Spiritual Protection & Purification
+   - Symptoms: 5 items
+   - Remedies: 4 items (Sudarshana & Narasimha Protection Homa, Pratyangira Raksha Kavach, Home & Workplace Purification, Aura Restoration Practice)
+   - Journey & Example Client Journey: 4 steps; Jaspreet K., Cerritos, CA
+6. **Service 6: Evil Eye & Nazar Remedies (`evil-eye-protection`)**
+   - Deity: Lord Hanuman & Drishti Ganapati
+   - Category: Drishti Dosha Protection
+   - Symptoms: 5 items
+   - Remedies: 4 items (Traditional Nazar Utara Ritual, Hanuman Raksha Yantra, Drishti Ganapati at the Entrance, Raksha Sutra & Protective Stones)
+   - Journey & Example Client Journey: 4 steps; Pooja D., Artesia, CA
+7. **Service 7: Family & Children’s Harmony (`family-child-problems`)**
+   - Deity: Santana Gopala (Bala Krishna) & Goddess Saraswati
+   - Category: Family Peace & Santana Yoga
+   - Symptoms: 5 items
+   - Remedies: 4 items (Santana Gopala Homa, Saraswati Vandana for Students, Generational Peace Puja, North-East Vastu Reset)
+   - Journey & Example Client Journey: 4 steps; Anjali R., Sacramento, CA
+8. **Service 8: Wellness & Peace of Mind (`health-wellness`)**
+   - Deity: Lord Shiva as Mrityunjaya & Lord Dhanvantari
+   - Category: Ayur-Jyotish Wellbeing
+   - Symptoms: 5 items
+   - Remedies: 4 items (Mrityunjaya Japa & Abhishekam, Surya Namaskar & Sun Prayers, Moon Calming Remedies, Dosha-Balancing Lifestyle Tips)
+   - Journey & Example Client Journey: 4 steps; Meera J., Pasadena, CA
+9. **Service 9: Legal & Court Case Guidance (`court-case-problems`)**
+   - Deity: Goddess Baglamukhi (Pitambara Devi)
+   - Category: Legal Matters & Baglamukhi Worship
+   - Symptoms: 5 items
+   - Remedies: 4 items (Baglamukhi Victory Puja, Shatru Bhava Shanti, Sun Remedies for Truth & Fairness, Court Date Muhurat Guidance)
+   - Journey & Example Client Journey: 4 steps; Harjit S., Riverside, CA
+10. **Service 10: Property & Real Estate Disputes (`property-land-disputes`)**
+    - Deity: Bhumi Devi, Lord Varaha & Mangal (Mars)
+    - Category: Vastu & Property Astrology
+    - Symptoms: 5 items
+    - Remedies: 4 items (Bhumi Puja & Mangal Shanti, Vastu Correction Without Rebuilding, Varaha Prayers for Stalled Property, Closing & Griha Pravesh Muhurat)
+    - Journey & Example Client Journey: 4 steps; Tarun & Shreya B., Northridge, CA
+11. **Service 11: Bring Back Lost Love (`get-ex-love-back`)**
+    - Deity: Radha-Krishna & Shukra (Venus)
+    - Category: Love Reunion Guidance
+    - Symptoms: 5 items
+    - Remedies: 4 items (Sattvic Love Mantra Sadhana, Radha-Krishna Reunion Puja, Third-Party Influence Shield, Heart Healing & Forgiveness Prayers)
+    - Journey & Example Client Journey: 4 steps; Vikas T., Los Angeles, CA
+12. **Service 12: Birth Chart & Horoscope Reading (`horoscope-reading`)**
+    - Deity: The Navagrahas & Surya Narayana
+    - Category: Complete Life Reading
+    - Symptoms: 5 items
+    - Remedies: 4 items (Full 12-House Life Analysis, Dasha Timeline for the Years Ahead, Personal Gemstone Guidance, Daily Mantra & Charity Routine)
+    - Journey & Example Client Journey: 4 steps; Kavya N., San Diego, CA
 
 ---
 
@@ -178,13 +178,13 @@ Every service must pass 5 boundary, contract, and edge-case tests:
 | `T3-05` | Hash Route Cleanup | Clicking back or home clears `window.location.hash` to empty string |
 | `T3-06` | Invalid Hash Fallback Safety | Malformed or unknown hash (e.g., `#invalid-service-xyz`) gracefully falls back to homepage grid without runtime exception |
 | `T3-07` | Homepage "Read More" Wiring | All 12 cards on the homepage grid contain click handlers mapped to their specific service ID |
-| `T3-08` | Modal Layering over Service View | Triggering "Book Private Session" (`onBookNow`) opens booking modal without destroying dedicated view state |
+| `T3-08` | Modal Layering over Service View | Triggering "Book This Reading" (`onBookNow`) opens booking modal without destroying dedicated view state |
 | `T3-09` | Modal Dismissal State Retention | Closing booking modal returns focus cleanly to the active service detail view |
 | `T3-10` | Form Input Validation: Required Fields | Submitting empty inquiry form triggers HTML5/React validation rejection on Name, Phone, and Notes |
-| `T3-11` | Form Input Validation: Phone Format | Form accepts valid UK numbers (`+44 7537121638`, `07537121638`) and rejects invalid input |
+| `T3-11` | Form Input Validation: Phone Format | Phone placeholder demonstrates US country-code format (`+1 (310) 555-0123`) |
 | `T3-12` | Form Optional Field: DOB | Submitting form without Date of Birth succeeds seamlessly |
 | `T3-13` | Form Submission Feedback | Successful submission triggers instant confirmation UI, fires confetti animation, and auto-resets after 3000ms |
-| `T3-14` | Direct Helpline URI Integrity | All phone links in Hero and Sidebar correctly use `tel:+447537121638` URI scheme |
+| `T3-14` | Direct Helpline URI Integrity | All phone links in Hero and Sidebar correctly use the Los Angeles office `tel:+15103714626` URI scheme |
 | `T3-15` | Square UI Geometry: Cards & Containers | Container cards in `ServiceDetailView.tsx` strictly utilize `rounded-none`, zero `rounded-md`/`rounded-lg` |
 | `T3-16` | Square UI Geometry: Buttons & Badges | All CTA buttons, badges, and symptom bullet badges enforce `rounded-none` |
 | `T3-17` | Square UI Geometry: Input Fields | Form `<input>` and `<textarea>` elements strictly enforce `rounded-none` borders |
@@ -192,34 +192,34 @@ Every service must pass 5 boundary, contract, and edge-case tests:
 
 ---
 
-### 2.5 Tier 4: Real-World UK Client Application Scenarios (12 Tests)
+### 2.5 Tier 4: Real-World California Client Application Scenarios (12 Tests)
 
-Simulates 12 complete end-to-end user journeys representing real UK community clients:
+Simulates 12 complete end-to-end user journeys representing California community clients:
 
-1. **Scenario 1 (`T4-01`) — London City Executive Career Guidance**:
-   London financial district client visits site, selects Career & Business, reviews 10th House Karma and Dashamsha analysis, inspects Vyapar Vriddhi remedies, verifies Canary Wharf testimonial, and submits consultation booking.
-2. **Scenario 2 (`T4-02`) — Wembley Couple Relationship Reconciliation**:
-   Wembley client lands via deep link `#love-relationship`, reads Shukra & Kamadeva healing methods, inspects 5 warning symptoms, reviews Radha-Krishna Samvada Mantras, and dials the direct telephone helpline.
-3. **Scenario 3 (`T4-03`) — Hounslow Family Marriage & Manglik Dosha Evaluation**:
-   Hounslow family evaluates Marriage & Compatibility, reads Ashtakoota Milan and Kumbh Vivah dosha pacification, inspects Vivaha Homa fire gallery image, and requests auspicious Muhurat guidance.
-4. **Scenario 4 (`T4-04`) — Slough Household Severe Negative Energy Removal**:
-   Slough client experiencing sudden multi-domain crises seeks Black Magic Removal, verifies Sudarshana & Pratyangira Devi cleansing, reads 100% confidentiality guarantee, and submits emergency inquiry.
-5. **Scenario 5 (`T4-05`) — Ealing Boutique Owner Evil Eye & Nazar Shielding**:
-   Ealing retailer facing sudden footfall drop reviews Evil Eye Protection, inspects Drishti Ganesha and Lord Hanuman remedies, verifies Ealing client review, and reserves an on-site business blessing.
-6. **Scenario 6 (`T4-06`) — Croydon Parents Domestic Harmony & Child Guidance**:
-   Croydon family struggling with teenage defiance and domestic tension evaluates Santana Gopala and Saraswati Medha Suktam prayers, reviews North-East Vastu balancing, and books private family counseling.
-7. **Scenario 7 (`T4-07`) — Ilford Resident Ayur-Jyotish Chronic Health Support**:
-   Ilford client suffering from insomnia and fatigue reads Health & Wellness planetary insights, verifies Maha Mrityunjaya and Chandra Shanti remedies, and requests birth chart analysis.
-8. **Scenario 8 (`T4-08`) — Birmingham Business Owner Litigation Victory**:
-   Birmingham merchant embroiled in unfair commercial court case reads Maa Baglamukhi Shatru Nashak Sadhana, checks 6th house judicial transits, and contacts Pandith Vikram for legal hearing timing.
-9. **Scenario 9 (`T4-09`) — Stratford Commercial Property Dispute Resolution**:
-   Stratford property owner with frozen commercial sale reads Property & Land Disputes, inspects Mars Bhumi Karaka analysis and Lord Varaha prayers, and schedules a remote Vastu review.
-10. **Scenario 10 (`T4-10`) — Southall Merchant Debt Clearance & Wealth Restoration**:
-    Southall resident overwhelmed by debts navigates to Financial Problems, reviews Maha Lakshmi & Kuber Yantra Sthapana and Rin Mukti Homa, and requests wealth unblocking puja.
-11. **Scenario 11 (`T4-11`) — Central London Separated Lover Urgent Reunion**:
-    Client in Central London dealing with sudden breakup uses `#get-ex-love-back`, reads Satvik Vashikaran and Rinanubandha karma principles, verifies instant reassurance, and calls direct 24/7 phone number.
-12. **Scenario 12 (`T4-12`) — Richmond Seeker Comprehensive Janam Kundali Reading**:
-    Richmond seeker books a full Horoscope Reading, exploring 12 Bhavas, Vimshottari Dasha roadmap, natural gemstone recommendation, and Ishta Devata daily mantra prescription.
+1. **Scenario 1 (`T4-01`) — San Jose Tech Professional Career Growth**:
+   Silicon Valley client selects Career & Business Success, reviews 10th House (Karma Bhava) analysis, inspects the Surya and Mercury remedies, and verifies the San Jose example journey.
+2. **Scenario 2 (`T4-02`) — Irvine Couple Relationship Healing**:
+   Orange County couple reads Love & Relationship Healing, inspects the warning signs of tension and silence, reviews the Venus Strengthening Puja, and verifies the Irvine example journey.
+3. **Scenario 3 (`T4-03`) — Fremont Family Kundali Matching & Manglik Dosha**:
+   Bay Area family reviews Manglik concerns, the Manglik Dosha Shanti and Uma-Maheshwar remedies, and verifies the Fremont example journey.
+4. **Scenario 4 (`T4-04`) — Cerritos Household Spiritual Cleansing**:
+   Household facing nightmares and simultaneous setbacks reviews the Sudarshana protection homa, confirms the confidential first consultation step, and verifies the Cerritos example journey.
+5. **Scenario 5 (`T4-05`) — Artesia Boutique Owner Evil Eye & Nazar Remedies**:
+   Little India shop owner facing a sudden loss of customers reviews Hanuman and Drishti Ganapati protection and verifies the Artesia example journey.
+6. **Scenario 6 (`T4-06`) — Sacramento Parents Family & Child Harmony**:
+   Parents of a teenager struggling with focus review Saraswati prayers and verify the Sacramento example journey.
+7. **Scenario 7 (`T4-07`) — Pasadena Resident Wellness & Ayur-Jyotish Support**:
+   Client with restless sleep reviews the Mrityunjaya japa, confirms remedies are framed alongside medical care, and verifies the Pasadena example journey.
+8. **Scenario 8 (`T4-08`) — Riverside Business Owner Legal Guidance**:
+   Client facing false claims reviews the Baglamukhi Victory Puja and verifies the Riverside example journey.
+9. **Scenario 9 (`T4-09`) — Northridge Owners Stalled Property Sale**:
+   San Fernando Valley owners with an unsold listing review Bhumi Puja and Vastu corrections and verify the Northridge example journey.
+10. **Scenario 10 (`T4-10`) — Bakersfield Restaurant Owner Debt Relief**:
+    Business owner with growing loans reviews the Rina Mochana Debt-Relief Homa and Lakshmi-Kubera yantra and verifies the Bakersfield example journey.
+11. **Scenario 11 (`T4-11`) — Los Angeles Separated Partner Love Reunion**:
+    Client blocked by a partner reviews Sattvic love mantras and the Radha-Krishna Reunion Puja and verifies the Los Angeles example journey.
+12. **Scenario 12 (`T4-12`) — San Diego Seeker Complete Janam Kundali Reading**:
+    Seeker unsure of life direction reviews the 12-House Life Analysis and Dasha timeline and verifies the San Diego example journey.
 
 ---
 
@@ -250,7 +250,7 @@ npm test
 | **Tier 1** | Feature Coverage (12 Services × 5 Core Pillars) | 60 | >= 60 tests | **DEFINED & READY** |
 | **Tier 2** | Boundary & Corner Cases (12 Services × 5 Boundaries) | 60 | >= 60 tests | **DEFINED & READY** |
 | **Tier 3** | Cross-Feature Interactions & Navigation Flows | 18 | Multi-feature coverage | **DEFINED & READY** |
-| **Tier 4** | Real-World UK Client End-to-End Scenarios | 12 | Realistic user journeys | **DEFINED & READY** |
+| **Tier 4** | Real-World California Client End-to-End Scenarios | 12 | Realistic user journeys | **DEFINED & READY** |
 | **TOTAL** | **Full End-to-End Test Suite** | **158** | **>= 120 tests** | **100% COMPLETE** |
 
 ---

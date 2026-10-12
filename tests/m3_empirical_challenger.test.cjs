@@ -78,7 +78,7 @@ function runM3EmpiricalVerification() {
 
   // C. Desktop Navbar Dropdown
   // Check that the hover dropdown iterates services.map and triggers openDedicatedService
-  assert.ok(appCode.includes('12 Vedic Services'), 'Desktop navbar must include 12 Vedic Services dropdown header');
+  assert.ok(appCode.includes('All 12 Services'), 'Desktop navbar must include 12 Vedic Services dropdown header');
   assert.ok(appCode.includes('group-hover:opacity-100'), 'Desktop navbar dropdown must support hover visibility');
   
   // D. Mobile Drawer Accordion
@@ -156,7 +156,7 @@ function runM3EmpiricalVerification() {
   report.adversarialEdgeCasesPassed++;
 
   // Test 5.2: In-page navigation anchors
-  const inPageAnchors = ['#services', '#about-london', '#contact', '#home'];
+  const inPageAnchors = ['#services', '#about-los-angeles', '#contact', '#home'];
   inPageAnchors.forEach(anchor => {
     const cleanAnchor = anchor.replace(/^#\/?/, '').trim();
     assert.strictEqual(servicesData[cleanAnchor] || null, null, `In-page anchor ${anchor} must not be matched as a service`);

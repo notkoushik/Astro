@@ -18,99 +18,99 @@ interface ServiceItem {
 const services: ServiceItem[] = [
   {
     id: 'love-relationship',
-    title: 'Love & Relationship',
-    subtitle: 'Problems',
+    title: 'Love &',
+    subtitle: 'Relationship Healing',
     img: '/images/couple.webp',
-    desc: 'Restore trust, communication and emotional harmony.',
-    details: 'Vedic astrological compatibility analysis to resolve misunderstandings, emotional distance, toxic relationship cycles, and restore affection and mutual devotion between partners.'
+    desc: 'Rebuild trust, kindness and honest conversation with your partner.',
+    details: 'Joint chart reading for couples, Venus remedies and simple daily practices to ease conflict and bring back closeness.'
   },
   {
     id: 'marriage-compatibility',
     title: 'Marriage &',
-    subtitle: 'Compatibility',
+    subtitle: 'Kundali Matching',
     img: '/images/wedding.webp',
-    desc: 'Understand compatibility and find a positive path forward.',
-    details: 'In-depth Kundali Milan (Guna Milan), dosha analysis (Mangal Dosha), resolving inter-caste marriage obstacles, and remedies for pre-marital delays or marital disputes.'
+    desc: 'Match charts with care and start married life on solid ground.',
+    details: '36 Guna matching, Manglik checks, family guidance and auspicious wedding dates for couples across California.'
   },
   {
     id: 'career-business',
     title: 'Career &',
-    subtitle: 'Business',
+    subtitle: 'Business Success',
     img: '/images/career.webp',
-    desc: 'Make confident decisions about work, growth and opportunity.',
-    details: 'Planetary alignments of the 10th house for promotions, job stability, business partnership luck, commercial venture success, and unlocking auspicious timing for ventures.'
+    desc: 'Time your next career move or business launch with confidence.',
+    details: '10th house and Dasha review for promotions, job changes, startups and small businesses, with launch timing.'
   },
   {
     id: 'financial-problems',
-    title: 'Financial',
-    subtitle: 'Problems',
+    title: 'Money &',
+    subtitle: 'Debt Relief',
     img: '/images/finance.webp',
-    desc: 'Astrological guidance for stability and financial obstacles.',
-    details: 'Analysis of Dhan Yoga and planetary blocks. Powerful Lakshmi Vedic pujas, gemstone recommendations, and remedies to overcome recurring debts and sudden losses.'
+    desc: 'Ease money worries and strengthen the wealth houses in your chart.',
+    details: 'Wealth house analysis, Lakshmi-Kubera yantra, debt-relief homa and guidance on timing money decisions.'
   },
   {
     id: 'black-magic-removal',
     title: 'Black Magic',
-    subtitle: 'Removal',
+    subtitle: 'Cleansing & Removal',
     img: '/images/fire.webp',
-    desc: 'Confidential spiritual support for negative influences.',
-    details: '100% confidential and safe spiritual cleansing. Neutralization of negative energies, unseen obstacles, chronic spiritual affliction, and protective kavach installation.'
+    desc: 'Discreet Vedic cleansing for homes and families under a dark cloud.',
+    details: 'Private spiritual assessment, Sudarshana protection homa, home cleansing and a consecrated Raksha Kavach.'
   },
   {
     id: 'evil-eye-protection',
-    title: 'Evil Eye',
-    subtitle: 'Protection',
+    title: 'Evil Eye &',
+    subtitle: 'Nazar Remedies',
     img: '/images/eye.webp',
-    desc: 'Traditional remedies for protection and peace of mind.',
-    details: 'Nazar dosha diagnosis, negative aura shielding, and ancient Vedic talisman remedies to safeguard your home, business, children, and personal energy field.'
+    desc: 'Shield your family, home and business from envy and Nazar.',
+    details: 'Nazar removal, Hanuman yantra, Drishti Ganapati at the entrance and protective threads for the whole family.'
   },
   {
     id: 'family-child-problems',
     title: 'Family &',
-    subtitle: 'Child Problems',
+    subtitle: 'Children’s Harmony',
     img: '/images/family.webp',
-    desc: 'Guidance for a more peaceful and united family life.',
-    details: 'Remedies for generational friction, parental discord, child concentration or behavioral difficulties, and astrological solutions for childless couples (Santana Gopala).'
+    desc: 'Bring calm, respect and closeness back to family life.',
+    details: 'Remedies for family tension, children’s focus and couples hoping to conceive, including Santana Gopala prayers.'
   },
   {
     id: 'health-wellness',
-    title: 'Health &',
-    subtitle: 'Wellness',
+    title: 'Wellness &',
+    subtitle: 'Peace of Mind',
     img: '/images/wellness.webp',
-    desc: 'Spiritual insight to support balance and positive energy.',
-    details: 'Ayur-Jyotish planetary insights into chronic physical and mental fatigue, chakra realignment guidance, and auspicious timing for medical recovery.'
+    desc: 'Spiritual support for better energy, rest and a steadier mind.',
+    details: 'Ayur-Jyotish insight into energy, sleep and stress, offered alongside the care of your own doctor.'
   },
   {
     id: 'court-case-problems',
-    title: 'Court Case',
-    subtitle: 'Problems',
+    title: 'Legal &',
+    subtitle: 'Court Case Guidance',
     img: '/images/court.webp',
-    desc: 'Clear guidance when navigating disputes and legal concerns.',
-    details: 'Astrological analysis of 6th and 8th house transit afflictions, special Baglamukhi mantras and rituals for favorable legal outcomes, settlements, and peace.'
+    desc: 'Steady guidance and Baglamukhi remedies through legal battles.',
+    details: '6th house review, Baglamukhi puja and timing guidance for hearings, mediation and settlement talks.'
   },
   {
     id: 'property-land-disputes',
     title: 'Property &',
-    subtitle: 'Land Disputes',
+    subtitle: 'Real Estate Disputes',
     img: '/images/home.webp',
-    desc: 'Astrological insight for property decisions and conflicts.',
-    details: 'Bhumi Dosha and Mars (Mangal) pacification for delayed property sales, inheritance disputes, boundary conflicts, and Vastu astrological harmony.'
+    desc: 'Clarity on buying, selling and inheritance, plus Vastu balance.',
+    details: 'Bhumi puja, Mars remedies and Vastu corrections for stalled sales, escrow delays and inheritance disputes.'
   },
   {
     id: 'get-ex-love-back',
-    title: 'Get Ex Love',
-    subtitle: 'Back',
+    title: 'Bring Back',
+    subtitle: 'Lost Love',
     img: '/images/love-couple-reunion.webp',
-    desc: 'Understand relationship patterns and possibilities for reunion.',
-    details: 'Specialized Vedic Vashikaran and Venus (Shukra) attraction remedies to clear third-party interference, heal past hurt, and reignite warmth with your lost love.'
+    desc: 'Heal a painful breakup and learn whether reconnection is possible.',
+    details: 'Sattvic love mantras, Radha-Krishna puja and honest timing advice for reconnecting after a breakup.'
   },
   {
     id: 'horoscope-reading',
-    title: 'Horoscope',
-    subtitle: 'Reading',
+    title: 'Birth Chart &',
+    subtitle: 'Horoscope Reading',
     img: '/images/vedic-zodiac-wheel-orange.webp',
-    desc: 'A personalized reading based on your birth details.',
-    details: 'Comprehensive Janam Kundali breakdown including Mahadasha, Antardasha, Sade Sati analysis, past life karma indicators, and detailed 12-month future forecast.'
+    desc: 'A personal reading of your birth chart and the year ahead.',
+    details: 'Full Janam Kundali reading with Dasha timeline, Sade Sati review and a personal outlook for the year ahead.'
   },
 ]
 
@@ -133,72 +133,72 @@ interface HeroSlide {
 const heroSlides: HeroSlide[] = [
   {
     id: 'horoscope',
-    category: 'Vedic Horoscope & Astronomical Jyotish',
+    category: 'Vedic Astrology & Jyotish Readings',
     bgImage: '/images/astronomical-red-nebula.webp',
     isBrightRedOrange: true,
     hasWheel: true,
-    classicKicker: '✦ 7TH GENERATION VEDIC PARAMPARA • LONDON UK ✦',
+    classicKicker: '✦ HOLLYWOOD BLVD • LOS ANGELES, CALIFORNIA ✦',
     line1: 'PANDITH VIKRAM',
-    line2: 'TOP INDIAN ASTROLOGER IN LONDON UK',
+    line2: 'INDIAN ASTROLOGER IN LOS ANGELES',
     line2Color: 'text-[#FFD700]',
-    subtitle: 'Over 35 Years of Classical Scriptural Mastery. Unravel the planetary karmic blueprints behind persistent love heartbreak, career stalls, marital discord, and sudden life crises with precision Ganita calculations.',
-    buttonText: 'BOOK PRIVATE READING NOW',
+    subtitle: 'More than 35 years of traditional Jyotish practice, now serving California from Hollywood Boulevard. Get clear, honest answers about love, marriage, career and family, grounded in careful birth chart calculation.',
+    buttonText: 'BOOK YOUR READING',
     modalType: 'question'
   },
   {
     id: 'love-marriage',
-    category: 'Relationship Reunion & Shukra Vashikaran',
+    category: 'Love Reunion & Venus Remedies',
     bgImage: '/images/love-couple-reunion.webp',
     isBrightRedOrange: false,
     hasWheel: true,
-    classicKicker: '✦ SACRED VEDIC SHUKRA RECONCILIATION ✦',
-    line1: 'REKINDLE BROKEN LOVE',
-    line2: 'REUNITE BROKEN RELATIONSHIPS',
+    classicKicker: '✦ DEVOTIONAL REMEDIES FOR MATTERS OF THE HEART ✦',
+    line1: 'HEAL A BROKEN HEART',
+    line2: 'RECONNECT WITH THE ONE YOU LOVE',
     line2Color: 'text-[#FFD700]',
-    subtitle: 'Clear third-party interference, dissolve ego-driven bitterness, and restore genuine emotional devotion. Pure Sattvic remedies to bring your ex partner back with mutual respect and enduring affection.',
-    buttonText: 'REUNITE WITH LOVE NOW',
+    subtitle: 'Ease the anger, pride and outside interference that pulled you apart. Gentle Sattvic remedies help create the calm and goodwill needed for an honest second chance.',
+    buttonText: 'TALK ABOUT YOUR RELATIONSHIP',
     modalType: 'booking'
   },
   {
     id: 'career-wealth',
-    category: '10th House Karma & Business Prosperity',
+    category: 'Career Timing & Business Growth',
     bgImage: '/images/career.webp',
     isBrightRedOrange: false,
     hasWheel: true,
-    classicKicker: '✦ 10TH HOUSE KARMA & FINANCIAL TIMING ✦',
-    line1: 'CAREER ELEVATION',
-    line2: 'UNLOCK BLOCKED BUSINESS GROWTH',
+    classicKicker: '✦ 10TH HOUSE CAREER & WEALTH TIMING ✦',
+    line1: 'CAREER BREAKTHROUGH',
+    line2: 'GROW YOUR BUSINESS WITH CLARITY',
     line2Color: 'text-[#FFD700]',
-    subtitle: 'Overcome protracted career stagnation, dissolve sudden financial bottlenecks, and identify exact planetary Muhurthas for enterprise expansion and foreign relocation.',
-    buttonText: 'CONSULT FOR CAREER',
+    subtitle: 'From Silicon Valley tech to Hollywood studios to family businesses in Artesia, learn which planetary periods favor a job change, a new venture or a move, and choose auspicious dates for every launch.',
+    buttonText: 'ASK ABOUT YOUR CAREER',
     modalType: 'question'
   },
   {
     id: 'protection',
-    category: 'Maha Sudarshana & Pratyangira Shield',
+    category: 'Sudarshana & Pratyangira Protection',
     bgImage: '/images/fire.webp',
     isBrightRedOrange: true,
     hasWheel: true,
-    classicKicker: '✦ 100% STRICT CONFIDENTIALITY & SPIRITUAL SHIELDING ✦',
-    line1: 'NEGATIVE ENERGY REMOVAL',
-    line2: 'MAHA SUDARSHANA & EVIL EYE CLEANSING',
+    classicKicker: '✦ PRIVATE, DISCREET SPIRITUAL PROTECTION ✦',
+    line1: 'NEGATIVE ENERGY CLEANSING',
+    line2: 'EVIL EYE & BLACK MAGIC PROTECTION',
     line2Color: 'text-[#FFD700]',
-    subtitle: 'Purge persistent domestic heaviness, unexplained physical fatigue, and malevolent jealousy through consecrated Vedic Homas and impervious Kavach protections.',
-    buttonText: 'REQUEST PROTECTION',
+    subtitle: 'Lift the heaviness from your home, your health and your work. Consecrated Vedic homas and a protective kavach help restore peace for you and the people you love.',
+    buttonText: 'REQUEST A CLEANSING',
     modalType: 'booking'
   },
   {
     id: 'family-health',
-    category: 'Vivaha & Kundali Milan Compatibility',
+    category: 'Kundali Matching & Marriage Harmony',
     bgImage: '/images/indian_wedding_regal.webp',
     isBrightRedOrange: false,
     hasWheel: true,
-    classicKicker: '✦ 36 GUNA MILAN & MARITAL CRISIS SHANTI ✦',
-    line1: 'MARRIAGE & COMPATIBILITY',
-    line2: 'DISSOLVE IN-LAW & DIVORCE CONFLICTS',
+    classicKicker: '✦ 36 GUNA MATCHING & MARRIAGE PEACE ✦',
+    line1: 'MARRIAGE HARMONY',
+    line2: 'EASE FAMILY & IN-LAW TENSIONS',
     line2Color: 'text-[#FFD700]',
-    subtitle: 'Deep horoscopic root-cause diagnosis for Manglik Dosha, Nadi Kuta discord, and emotional distance. Scriptural pacification rituals that transform contentious homes into sanctuaries of warmth.',
-    buttonText: 'CHECK COMPATIBILITY',
+    subtitle: 'Understand your Manglik, Nadi and Bhakoot results properly, and find practical remedies that bring warmth back to married life and peace between families.',
+    buttonText: 'MATCH YOUR KUNDALIS',
     modalType: 'question'
   }
 ]
@@ -217,113 +217,113 @@ const movingPhotos: MovingPhotoItem[] = [
   {
     id: 'm1',
     img: '/images/shiva-divine-blessing.webp',
-    title: 'Lord Shiva Sacred Grace',
-    subtitle: 'Cosmic Blessings & Inner Peace',
-    category: 'Divine Healing',
+    title: 'Blessings of Lord Shiva',
+    subtitle: 'Calm, Protection & Inner Strength',
+    category: 'Divine Grace',
     serviceId: 'health-wellness'
   },
   {
     id: 'm2',
     img: '/images/love-couple-reunion.webp',
-    title: 'Get Ex Love Back',
-    subtitle: 'Vashikaran & Love Reunion',
-    category: 'Relationship',
+    title: 'Bring Back Lost Love',
+    subtitle: 'Devotional Love Reunion Remedies',
+    category: 'Love Reunion',
     serviceId: 'get-ex-love-back'
   },
   {
     id: 'm3',
     img: '/images/vedic-zodiac-wheel-orange-nobg.webp',
-    title: 'Horoscope & Kundali',
-    subtitle: '35+ Years Accurate Foretelling',
-    category: 'Janam Kundali',
+    title: 'Janam Kundali Reading',
+    subtitle: 'Over Three Decades of Chart Reading',
+    category: 'Birth Chart',
     serviceId: 'horoscope-reading'
   },
   {
     id: 'm4',
     img: '/images/indian_wedding_regal.webp',
-    title: 'Marriage & Compatibility',
-    subtitle: '36 Guna Milan & Mangal Shanti',
-    category: 'Vivaha Jyotish',
+    title: 'Marriage & Kundali Matching',
+    subtitle: '36 Guna Matching & Manglik Checks',
+    category: 'Marriage',
     serviceId: 'marriage-compatibility'
   },
   {
     id: 'm5',
     img: '/images/career.webp',
-    title: 'Career & Business Growth',
-    subtitle: '10th House Karma & Success',
-    category: 'Career Prosperity',
+    title: 'Career & Business Success',
+    subtitle: 'Timing for Promotions & Launches',
+    category: 'Career',
     serviceId: 'career-business'
   },
   {
     id: 'm6',
     img: '/images/finance.webp',
-    title: 'Financial Problem Relief',
-    subtitle: 'Maha Lakshmi Puja & Debt Removal',
-    category: 'Dhan Yoga',
+    title: 'Money & Debt Relief',
+    subtitle: 'Lakshmi-Kubera Prosperity Remedies',
+    category: 'Wealth',
     serviceId: 'financial-problems'
   },
   {
     id: 'm7',
     img: '/images/fire.webp',
-    title: 'Black Magic Removal',
-    subtitle: '100% Confidential Cleansing',
-    category: 'Maha Sudarshana',
+    title: 'Black Magic Cleansing',
+    subtitle: 'Private Protection Homa',
+    category: 'Protection',
     serviceId: 'black-magic-removal'
   },
   {
     id: 'm8',
     img: '/images/eye.webp',
-    title: 'Evil Eye & Nazar Nivaran',
-    subtitle: 'Protective Kavach & Shield',
-    category: 'Aura Shield',
+    title: 'Evil Eye & Nazar Remedies',
+    subtitle: 'Hanuman Yantra & Raksha Sutra',
+    category: 'Nazar Shield',
     serviceId: 'evil-eye-protection'
   },
   {
     id: 'm9',
     img: '/images/family.webp',
-    title: 'Family & Child Peace',
-    subtitle: 'Santana Gopala Remedies',
-    category: 'Domestic Peace',
+    title: 'Family & Children’s Harmony',
+    subtitle: 'Santana Gopala & Saraswati Prayers',
+    category: 'Family Peace',
     serviceId: 'family-child-problems'
   },
   {
     id: 'm10',
     img: '/images/wellness.webp',
-    title: 'Ayur-Jyotish & Health',
-    subtitle: 'Chakra Realignment & Vigor',
-    category: 'Holistic Health',
+    title: 'Wellness & Peace of Mind',
+    subtitle: 'Ayur-Jyotish & Healing Mantras',
+    category: 'Wellbeing',
     serviceId: 'health-wellness'
   },
   {
     id: 'm11',
     img: '/images/court.webp',
-    title: 'Court Case & Legal Relief',
-    subtitle: 'Maa Baglamukhi Yantra Remedies',
-    category: 'Legal Victory',
+    title: 'Legal & Court Case Guidance',
+    subtitle: 'Baglamukhi Puja & Court Dates',
+    category: 'Legal Matters',
     serviceId: 'court-case-problems'
   },
   {
     id: 'm12',
     img: '/images/home.webp',
-    title: 'Property & Land Disputes',
-    subtitle: 'Bhumi Dosha & Vastu Harmony',
-    category: 'Vastu Shastra',
+    title: 'Property & Real Estate',
+    subtitle: 'Vastu & Bhumi Puja Remedies',
+    category: 'Vastu',
     serviceId: 'property-land-disputes'
   },
   {
     id: 'm13',
     img: '/images/shiva-meditating-rishikesh.webp',
-    title: 'Spiritual Meditation',
-    subtitle: 'Inner Calm & Karma Cleansing',
-    category: 'Vedic Peace',
+    title: 'Meditation & Inner Calm',
+    subtitle: 'Gently Clearing Old Karma',
+    category: 'Spiritual Calm',
     serviceId: 'health-wellness'
   },
   {
     id: 'm14',
     img: '/images/astrology-chart.webp',
-    title: 'Planetary Dasha Analysis',
-    subtitle: 'Mahadasha & Sade Sati Insights',
-    category: 'Ganita Jyotish',
+    title: 'Dasha & Transit Forecast',
+    subtitle: 'Mahadasha & Sade Sati Timing',
+    category: 'Planetary Periods',
     serviceId: 'horoscope-reading'
   }
 ]
@@ -336,108 +336,99 @@ interface ClientReview {
   service: string
   serviceId: string
   img: string
-  rating: number
   review: string
   tag: string
 }
 
-// 8 Distinct Client Reviews with Unseen Candid Everyday Portraits & Realistic Ratings (5, 4, and 3 Stars)
+// 8 Illustrative Client Journeys (Example stories based on common consultations; names and details changed)
 const clientReviews: ClientReview[] = [
   {
     id: 'r1',
-    name: 'Aarav M.',
-    city: 'Queens & Manhattan',
-    state: 'New York, USA',
-    service: 'Get Ex Love Back & Reconciliation',
+    name: 'Rohan K.',
+    city: 'Artesia & Cerritos',
+    state: 'California',
+    service: 'Love Reunion After a Breakup',
     serviceId: 'get-ex-love-back',
     img: '/images/client-1.webp',
-    rating: 5,
-    tag: 'Verified Client • New York',
-    review: 'After a painful 7-month silence following a broken engagement, every astrologer in Jackson Heights promised instant 24-hour miracles that never worked. Pandith Vikram was the first to tell me the hard truth: my partner had an intense Venus-Rahu transit affliction and needed a 28-day Sattvic pacification cycle. He never asked for absurd sums or made fairy-tale claims. On day 23, she reached out to meet for coffee. We sat down, talked through the family misunderstandings without anger, and have steadily rebuilt our bond. His honesty and spiritual groundedness are rare.'
+    tag: 'Example Journey • Southern California',
+    review: 'My fiancée called off our engagement and stopped answering for almost six months. Other astrologers I spoke with promised she would be back within days. Panditji was different. He explained that her Venus was under a Rahu transit, gave me a 28-day prayer routine and asked me to stay patient. Near the end of that cycle she sent a message asking to meet. We talked calmly for the first time in months and are slowly rebuilding.'
   },
   {
     id: 'r2',
-    name: 'Priya & Rohan S.',
-    city: 'Edison & Jersey City',
-    state: 'New Jersey, USA',
-    service: 'Marriage & Kundali Compatibility',
+    name: 'Divya & Nikhil R.',
+    city: 'Fremont & Milpitas',
+    state: 'California',
+    service: 'Kundali Matching & Family Approval',
     serviceId: 'marriage-compatibility',
     img: '/images/client-2.webp',
-    rating: 4,
-    tag: 'Verified Client • New Jersey',
-    review: 'Both families were deadlocked because our traditional kundali match scored only 14 Gunas, with prominent Nadi Dosha and Bhakoot mismatch. Rohan’s mother was terrified of bad health outcomes. Pandith Vikram did a deep Navamsha (D9) and Prashna analysis showing that Jupiter’s mutual aspect cancelled the primary planetary flaws. He performed a dedicated Maha Mrityunjaya and Brihaspati shanti in our presence over video. Scheduling the exact auspicious hour across London and Eastern Time took some back-and-forth, but the marriage took place peacefully and our homes are now united.'
+    tag: 'Example Journey • Bay Area',
+    review: 'Our Kundali match came back with 15 Gunas and a Nadi Dosha, and my mother was firmly against the wedding. Panditji went through the Navamsha charts with both families on a video call and showed how Jupiter softened the concerns. He performed a shanti puja and picked a Muhurat that worked for relatives in India and in California. The wedding went ahead peacefully, with both sides there.'
   },
   {
     id: 'r3',
-    name: 'Vikramaditya K.',
-    city: 'San Jose & Sunnyvale',
-    state: 'California, USA',
-    service: 'Career & Tech Venture Prosperity',
+    name: 'Siddharth A.',
+    city: 'Santa Clara & Cupertino',
+    state: 'California',
+    service: 'Career Timing in Tech',
     serviceId: 'career-business',
     img: '/images/client-3.webp',
-    rating: 5,
-    tag: 'Verified Client • Bay Area CA',
-    review: 'As a director at a tech enterprise in Silicon Valley, I was skeptical of astrology. But after surviving two corporate layoffs only to face a blocked promotion and a freeze on my startup’s term sheet, I needed clarity. Pandith Vikram analyzed my 10th Karma house and immediately pointed out that my Sade Sati peak transit was triggering hidden rivals and delayed recognition. He gave me strict daily Surya mantras and a recommended gemstone protocol. Within two months, our executive reorganization cleared my path and our seed round closed at full valuation.'
+    tag: 'Example Journey • Silicon Valley',
+    review: 'I work in tech and was never sure about astrology, but after a layoff, a stalled promotion and a startup idea going nowhere, I wanted another perspective. Panditji read my 10th house, explained that Sade Sati was at its peak for me, and gave me a strict morning Surya routine plus a gemstone suggestion. A few months later a reorganization opened up the role I had been waiting for.'
   },
   {
     id: 'r4',
-    name: 'Harpreet & Jasleen K.',
-    city: 'Southall & Wembley',
-    state: 'London, UK',
-    service: 'Family & Generational Harmony',
+    name: 'Gurpreet & Simran B.',
+    city: 'Bakersfield',
+    state: 'California',
+    service: 'Family Peace Across Generations',
     serviceId: 'family-child-problems',
     img: '/images/client-4.webp',
-    rating: 5,
-    tag: 'Verified Client • London UK',
-    review: 'Severe hostility between my wife and my parents had turned our family home in Southall into a warzone. We couldn’t go three days without someone threatening to pack bags or speak of lawyers. Pandith Vikram visited our home, pointed out negative spatial energy in the northeast corner affecting the Matru Bhava, and conducted a Navagraha Shanti homam. The shift in domestic atmosphere was noticeable within two weeks. My mother and wife now communicate calmly without hostility. He saved our family unity.'
+    tag: 'Example Journey • Central Valley',
+    review: 'Arguments between my wife and my parents had made our home exhausting. Everyone was on edge all the time. Panditji visited, pointed out problems in the north-east of the house, and performed a Navagraha Shanti. Within a few weeks the tension eased. My mother and my wife now cook together on weekends, something I never thought I would see.'
   },
   {
     id: 'r5',
-    name: 'Sandeep D.',
-    city: 'Naperville & Chicago',
-    state: 'Illinois, USA',
-    service: 'Financial Block & Commercial Relief',
+    name: 'Manoj T.',
+    city: 'Irvine & Anaheim',
+    state: 'California',
+    service: 'Business Cash-Flow Relief',
     serviceId: 'financial-problems',
     img: '/images/client-5.webp',
-    rating: 3,
-    tag: 'Verified Client • Chicago IL',
-    review: 'I’m giving 3 stars solely because securing an initial phone slot with Guruji took nearly five days due to his heavy schedule, and his remedies require strict personal discipline—I had to wake before sunrise for 41 days for the Lakshmi-Kuber japa, which was challenging with my commute. That being said, his astrological calculation regarding my stalled commercial property sale was 100% accurate. The escrow dispute that had trapped my capital for 14 months finally resolved in the exact month he predicted.'
+    tag: 'Example Journey • Orange County',
+    review: 'Fair warning: Panditji is busy, and it took me almost a week to get a phone appointment. His remedies also take commitment. I chanted before sunrise for 41 days, which was not easy with my commute. But his reading of my stuck commercial property sale was spot on. The escrow problem that had frozen my money for more than a year cleared in the very month he named.'
   },
   {
     id: 'r6',
-    name: 'Ananya & Tarun B.',
-    city: 'Harrow & Richmond',
-    state: 'London, UK',
-    service: 'Husband & Wife Dispute Resolution',
+    name: 'Lavanya & Prakash N.',
+    city: 'San Diego & Carlsbad',
+    state: 'California',
+    service: 'Marriage Reconciliation',
     serviceId: 'marriage-compatibility',
     img: '/images/client-6.webp',
-    rating: 4,
-    tag: 'Verified Client • London UK',
-    review: 'We were three weeks away from filing mutual divorce papers at Uxbridge Family Court after two years of toxic misunderstandings. A colleague in Harrow insisted I speak with Pandith Vikram before signing. He looked at both our palm prints and horoscopes, explaining that neither of us was inherently at fault—we were simply caught in clashing Saturn-Mars dasha transitions. His Shukra healing rituals and honest relationship counsel gave us the emotional breathing room we desperately needed. It took honest effort, but we have withdrawn the filings and are living peacefully.'
+    tag: 'Example Journey • San Diego',
+    review: 'We were weeks away from filing for divorce after two hard years. A friend insisted we see Panditji first. He looked at both our charts and our palms and told us neither of us was to blame; we were simply in clashing Saturn and Mars periods. His Venus remedies and honest advice gave us the breathing room we needed. It took real effort, but we are still together and happier.'
   },
   {
     id: 'r7',
-    name: 'Rajeshwar P.',
-    city: 'Dallas & Plano',
-    state: 'Texas, USA',
-    service: 'Court Case & Legal Dispute Shanti',
+    name: 'Ajay M.',
+    city: 'Henderson & Las Vegas',
+    state: 'Nevada',
+    service: 'Business Lawsuit Support',
     serviceId: 'court-case-problems',
     img: '/images/client-7.webp',
-    rating: 4,
-    tag: 'Verified Client • Dallas TX',
-    review: 'I had spent over $45,000 in attorney fees on a protracted partnership lawsuit where false breach-of-contract accusations were made against me. Pandith Vikram’s Maa Baglamukhi yantra and court-hearing muhurtha guidance kept me grounded during harrowing depositions. The legal resolution took 4 months longer than I had hoped, but the opposition eventually approached us for an out-of-court settlement entirely on our terms. His predictions on the opposing party’s weaknesses were uncanny.'
+    tag: 'Example Journey • Las Vegas',
+    review: 'I had spent tens of thousands of dollars on attorneys fighting a partnership lawsuit built on false claims. Panditji’s Baglamukhi yantra and his advice on hearing dates kept me steady through some very stressful depositions. It took longer than I hoped, but the other side eventually offered a settlement on fair terms. His read on their weak points was remarkably accurate.'
   },
   {
     id: 'r8',
-    name: 'Kavita T.',
-    city: 'Wembley & Alperton',
-    state: 'London, UK',
-    service: 'Black Magic & Negative Energy Cleansing',
+    name: 'Sunita G.',
+    city: 'Hollywood & Burbank',
+    state: 'California',
+    service: 'Home Cleansing & Protection',
     serviceId: 'black-magic-removal',
     img: '/images/client-8.webp',
-    rating: 5,
-    tag: 'Verified Client • London UK',
-    review: 'After returning from a family trip abroad, my home felt physically cold and oppressive. My daughter suffered nightly panic attacks and our catering business experienced unexplained equipment failures and abrupt contract cancellations. Pandith Vikram identified an intentional evil-eye and negative envy projection directed at our family. He performed a consecrated Maha Sudarshana protection homa and tied sacred protective threads. The heavy cloud lifted from our household within 72 hours. He is a genuine protector of families.'
+    tag: 'Example Journey • Los Angeles',
+    review: 'After a trip abroad, our home felt cold and heavy. My daughter could not sleep, and our catering business lost two big contracts for no clear reason. Panditji sensed strong envy directed at our family, performed a Sudarshana protection homa and tied protective threads for each of us. Within a few days the house felt light again, and the rest of the year was calm.'
   }
 ]
 
@@ -449,36 +440,36 @@ interface HomeFaq {
 // 8 Core Practical Client FAQs for the Homepage Accordion
 const homeFaqs: HomeFaq[] = [
   {
-    question: 'What if I do not know my exact time of birth?',
-    answer: 'Many clients, especially those born outside of hospital records or inquiring about a partner, do not have their exact birth minute. Pandith Vikram utilizes classical Prashna Kundali (Horary Astrology)—casting the celestial chart for the exact second you ask your question—alongside Hasta Rekha (Vedic Palmistry) and Face Reading. These time-tested Vedic disciplines reveal your planetary coordinates with remarkable precision even without a birth certificate.'
+    question: 'I don’t know my exact birth time. Can I still get a reading?',
+    answer: 'Yes. Many people have no exact time on record, especially for a partner or an older relative. Pandith Vikram can cast a Prashna chart for the moment you ask your question and combine it with palm and face reading. Together these give reliable insight even without a birth certificate.'
   },
   {
-    question: 'Can a consultation be conducted remotely via Phone or WhatsApp video?',
-    answer: 'Yes, absolutely. Pandith Vikram conducts daily telephone and WhatsApp video consultations for clients across London, Manchester, Birmingham, New York, California, Texas, Toronto, and worldwide. In classical Vedic science, planetary vibrations and Prashna charts are linked to the consciousness of the seeker, not physical distance. Remote sessions are just as precise and effective as in-person sittings.'
+    question: 'Do you offer phone and video consultations?',
+    answer: 'Yes. Along with in-person sessions at the Hollywood Boulevard office, Pandith Vikram holds daily phone, WhatsApp and video readings for clients throughout California, from San Diego to Sacramento, and for those living in other states. In Vedic astrology the chart belongs to the person, not the place, so remote readings are just as detailed.'
   },
   {
-    question: 'Are the remedies and rituals safe? Is there any negative karmic backfire?',
-    answer: '100% safe. Pandith Vikram practices strictly Sattvic Vedic remedies derived from the ancient Rigveda, Atharvaveda, and Parashara Hora Shastra. Every ritual consists of sacred Vedic fire oblations (homams), certified natural gemstones, consecrated yantras, and divine mantra recitations dedicated to benign deities (Maha Lakshmi, Lord Shiva, Brihaspati, Maa Durga). There is zero black magic, zero forceful manipulation, and zero risk of karmic backlash.'
+    question: 'Are the remedies safe? Could they backfire?',
+    answer: 'They are safe. Pandith Vikram uses only Sattvic remedies drawn from the Vedas and the Brihat Parashara Hora Shastra: fire rituals (homas), mantras, consecrated yantras and natural gemstones, offered to benevolent deities such as Lakshmi, Shiva, Jupiter and Durga. There is no black magic and nothing that could harm you or anyone else.'
   },
   {
-    question: 'How long does it take to see positive shifts after remedies begin?',
-    answer: 'In authentic Vedic Jyotish, spiritual remedies follow natural cosmic cycles known as a Mandala—typically ranging between 21 to 41 days. While many clients report an immediate sense of mental calm and emotional lightness within the first 72 hours, tangible outer shifts (partner reaching out, court settlements, financial approvals) unfold steadily as planetary doshas pacify. Pandith Vikram is candid: real spiritual transformation requires genuine karmic realignment, not gimmicky overnight tricks.'
+    question: 'How long before I notice a difference?',
+    answer: 'Remedies follow natural cycles called a Mandala, usually 21 to 41 days. Many people feel calmer within the first few days. Outward changes, such as a partner reaching out, a case settling or a loan being approved, tend to unfold gradually as the planetary pressure eases. You will always get an honest timeline, never a promise of overnight miracles.'
   },
   {
-    question: 'How is my privacy and personal story safeguarded?',
-    answer: 'Discretion is sacred to Pandith Vikram. Whether you are a corporate executive, business owner, public figure, or navigating a private domestic heartbreak, your consultations, birth details, and private conversations are protected by an ironclad oath of confidentiality. Your information is never logged into third-party databases, shared with family members, or publicized.'
+    question: 'Will my personal information be kept private?',
+    answer: 'Completely. Whether you work in entertainment or tech, run a family business, or are going through a private heartbreak, your birth details and everything you share stay confidential. Nothing is passed on to family members, entered into outside databases or published.'
   },
   {
-    question: 'How does Pandith Vikram resolve complex love and marital estrangements?',
-    answer: 'Rather than superficial advice, Pandith Vikram diagnoses the exact astrological culprit—such as Venus afflicted by Rahu, severe Manglik friction in the 7th or 8th house, or destructive third-party planetary influences. Through tailored Shukra Preeti pujas, Kamadeva-Rati mantras, and aura-harmonizing remedies, he softens hardened egos, clears negative miscommunications, and gently re-attracts your partner’s genuine affection.'
+    question: 'How do you approach broken relationships and marriages?',
+    answer: 'Instead of general advice, Pandith Vikram looks for the specific cause in the chart, such as Venus afflicted by Rahu, a strong Manglik influence on the 7th or 8th house, or outside interference. He then recommends Venus pujas, devotional mantras and calming remedies that ease pride, clear up misunderstandings and help genuine affection return.'
   },
   {
-    question: 'What happens during a typical consultation?',
-    answer: 'During your private session, Pandith Vikram first listens attentively to your current life situation without judgment. He then examines your birth chart (or casts a Prashna chart), analyzes your current planetary Mahadasha/Antardasha cycles, and explains why the challenge arose. Finally, he outlines clear, actionable guidance alongside personalized, easy-to-follow Vedic remedies to neutralize the planetary blockages.'
+    question: 'What happens during a consultation?',
+    answer: 'First, Pandith Vikram listens to what is happening in your life, without judgment. He then studies your birth chart or a Prashna chart, explains which planetary periods are active and why the problem has appeared, and finishes with clear guidance and simple, personal remedies you can start right away.'
   },
   {
-    question: 'How do I prepare for my session and what information should I bring?',
-    answer: 'If available, have your full date of birth, place of birth (city/country), and approximate time of birth ready. If inquiring about a partner, spouse, or business partner, having their birth details or clear photographs of their face and palms is beneficial. Most importantly, bring an open mind and a list of your most pressing questions.'
+    question: 'What should I have ready before my session?',
+    answer: 'Your date of birth, place of birth and birth time if you know it. If your question involves a partner, spouse or business associate, their details or a clear photo of their face and palms will help. Most of all, write down the questions that matter most to you.'
   }
 ]
 
@@ -488,67 +479,67 @@ interface UsaLocationItem {
   suburbs: string
 }
 
-// 12 Major USA Metropolitan Hubs & Surrounding Satellite Cities (Strictly USA Cities Only)
+// 12 Service Areas: Greater Los Angeles & California Regions, Plus Phone Readings Nationwide
 const usaLocations: UsaLocationItem[] = [
   {
-    id: 'ny',
-    hub: 'NEW YORK',
-    suburbs: 'Manhattan, Queens, Brooklyn, Hicksville, Jackson Heights, Flushing, Bronx, Long Island, Yonkers'
-  },
-  {
-    id: 'nj',
-    hub: 'NEW JERSEY',
-    suburbs: 'Edison, Jersey City, Iselin, Newark, Princeton, Paterson, Woodbridge, Cherry Hill, Hoboken'
-  },
-  {
-    id: 'sf',
-    hub: 'SAN FRANCISCO BAY',
-    suburbs: 'San Francisco, San Jose, Fremont, Sunnyvale, Santa Clara, Cupertino, Oakland, Palo Alto'
-  },
-  {
     id: 'la',
-    hub: 'LOS ANGELES',
-    suburbs: 'Los Angeles, Beverly Hills, Santa Monica, Pasadena, Anaheim, Irvine, Long Beach, Artesia'
+    hub: 'LOS ANGELES & HOLLYWOOD',
+    suburbs: 'Hollywood, West Hollywood, Beverly Hills, Santa Monica, Culver City, Downtown LA, Koreatown, Silver Lake'
   },
   {
-    id: 'dal',
-    hub: 'DALLAS & FORT WORTH',
-    suburbs: 'Dallas, Plano, Frisco, Irving, Richardson, Arlington, Fort Worth, McKinney, Garland'
+    id: 'sfv',
+    hub: 'SAN FERNANDO VALLEY',
+    suburbs: 'Burbank, Glendale, Northridge, Van Nuys, Sherman Oaks, Encino, Chatsworth, North Hollywood'
   },
   {
-    id: 'hou',
-    hub: 'HOUSTON METRO',
-    suburbs: 'Houston, Sugar Land, Pearland, Katy, The Woodlands, Stafford, Pasadena, Cypress'
+    id: 'sgv',
+    hub: 'SAN GABRIEL VALLEY',
+    suburbs: 'Pasadena, Arcadia, Diamond Bar, Walnut, West Covina, Alhambra, Pomona'
   },
   {
-    id: 'chi',
-    hub: 'CHICAGO METRO',
-    suburbs: 'Chicago, Naperville, Schaumburg, Evanston, Oak Brook, Skokie, Aurora, Des Plaines'
+    id: 'art',
+    hub: 'ARTESIA & GATEWAY CITIES',
+    suburbs: 'Artesia, Cerritos, Norwalk, Lakewood, Downey, Bellflower, Long Beach'
   },
   {
-    id: 'atl',
-    hub: 'ATLANTA METRO',
-    suburbs: 'Atlanta, Alpharetta, Marietta, Decatur, Johns Creek, Duluth, Sandy Springs, Roswell'
+    id: 'oc',
+    hub: 'ORANGE COUNTY',
+    suburbs: 'Irvine, Anaheim, Tustin, Fullerton, Santa Ana, Buena Park, Huntington Beach'
   },
   {
-    id: 'dc',
-    hub: 'WASHINGTON DC & VA',
-    suburbs: 'Washington DC, Ashburn, Fairfax, Reston, Arlington, Alexandria, Herndon, Bethesda'
+    id: 'ie',
+    hub: 'INLAND EMPIRE',
+    suburbs: 'Riverside, Ontario, Rancho Cucamonga, Corona, Chino Hills, Fontana, Temecula'
   },
   {
-    id: 'sea',
-    hub: 'SEATTLE METRO',
-    suburbs: 'Seattle, Bellevue, Redmond, Kirkland, Tacoma, Bothell, Sammamish, Renton'
+    id: 'sd',
+    hub: 'SAN DIEGO COUNTY',
+    suburbs: 'San Diego, Carlsbad, Chula Vista, Escondido, Oceanside, Poway, La Jolla'
   },
   {
-    id: 'bos',
-    hub: 'BOSTON METRO',
-    suburbs: 'Boston, Cambridge, Quincy, Lowell, Framingham, Somerville, Waltham, Brookline'
+    id: 'cc',
+    hub: 'VENTURA & CENTRAL COAST',
+    suburbs: 'Thousand Oaks, Simi Valley, Oxnard, Ventura, Santa Barbara, San Luis Obispo'
   },
   {
-    id: 'fl',
-    hub: 'FLORIDA CITIES',
-    suburbs: 'Miami, Orlando, Tampa, Fort Lauderdale, Jacksonville, Boca Raton, Coral Springs, Kissimmee'
+    id: 'bay',
+    hub: 'SILICON VALLEY & BAY AREA',
+    suburbs: 'San Jose, Fremont, Sunnyvale, Santa Clara, Cupertino, Milpitas, Oakland, San Francisco'
+  },
+  {
+    id: 'sac',
+    hub: 'SACRAMENTO REGION',
+    suburbs: 'Sacramento, Elk Grove, Roseville, Folsom, Davis, Yuba City'
+  },
+  {
+    id: 'cv',
+    hub: 'CENTRAL VALLEY',
+    suburbs: 'Fresno, Bakersfield, Stockton, Modesto, Tracy, Merced, Visalia'
+  },
+  {
+    id: 'us',
+    hub: 'PHONE & VIDEO ACROSS THE USA',
+    suburbs: 'Las Vegas, Phoenix, Seattle, Portland, Denver, Dallas, Houston, Chicago, Atlanta, New Jersey, New York'
   }
 ]
 
@@ -623,7 +614,7 @@ export default function App() {
     let dynamicSchemaEl = document.getElementById('dynamic-service-schema') as HTMLScriptElement | null
 
     if (isNotFound) {
-      document.title = '404 Page Not Found | Indian Astrologer Pandith Vikram'
+      document.title = 'Page Not Found (404) | Pandith Vikram, Vedic Astrologer in Los Angeles'
       if (canonicalEl) canonicalEl.href = `${baseUrl}/404`
       if (dynamicSchemaEl) dynamicSchemaEl.remove()
       return
@@ -632,9 +623,9 @@ export default function App() {
     if (activeDetailId && Object.prototype.hasOwnProperty.call(detailedServicesData, activeDetailId)) {
       const srv = detailedServicesData[activeDetailId]
       const cleanServiceUrl = `${baseUrl}/services/${srv.id}`
-      document.title = `${srv.title} ${srv.subtitle} | Indian Vedic Astrologer Pandith Vikram`
+      document.title = `${srv.title} ${srv.subtitle} | Pandith Vikram, Vedic Astrologer in Los Angeles`
       if (canonicalEl) canonicalEl.href = cleanServiceUrl
-      if (metaDescEl) metaDescEl.content = `${srv.desc} Consult Master Vedic Astrologer Pandith Vikram for 100% confidential remedies. Call +44 7537121638.`
+      if (metaDescEl) metaDescEl.content = `${srv.desc} Book a private reading with Pandith Vikram on Hollywood Blvd, Los Angeles. Call +1 510-371-4626.`
 
       if (!dynamicSchemaEl) {
         dynamicSchemaEl = document.createElement('script')
@@ -655,7 +646,7 @@ export default function App() {
             provider: {
               '@id': `${baseUrl}/#astrologer`
             },
-            areaServed: ['United Kingdom', 'United States', 'Canada']
+            areaServed: ['Los Angeles', 'California', 'United States']
           },
           {
             '@type': 'BreadcrumbList',
@@ -668,11 +659,11 @@ export default function App() {
         ]
       })
     } else {
-      document.title = 'Indian Astrologer Pandith Vikram | Premier Vedic Astrologer in London UK & USA'
+      document.title = 'Indian Astrologer Pandith Vikram | Vedic Astrologer in Los Angeles, California'
       if (canonicalEl) canonicalEl.href = `${baseUrl}/`
       if (metaDescEl) {
         metaDescEl.content =
-          'Consult Master Indian Vedic Astrologer Pandith Vikram — 35+ years of experience in Get Ex Love Back, Marriage Compatibility, Black Magic Removal, Evil Eye Protection, Career & Horoscope Readings across London UK & USA. Call +44 7537121638.'
+          'Indian Vedic astrologer Pandith Vikram, 7001 Hollywood Blvd, Los Angeles, CA. 35+ years helping with love, marriage matching, career, money, family and negative energy. In-person, phone and video readings. Call +1 510-371-4626.'
       }
       if (dynamicSchemaEl) dynamicSchemaEl.remove()
     }
@@ -719,7 +710,7 @@ export default function App() {
     phone: '',
     email: '',
     dob: '',
-    service: 'Love & Relationship Problems',
+    service: 'Love & Relationship Healing',
     question: '',
   })
 
@@ -743,7 +734,7 @@ export default function App() {
         phone: '',
         email: '',
         dob: '',
-        service: 'Love & Relationship Problems',
+        service: 'Love & Relationship Healing',
         question: '',
       })
     }, 2800)
@@ -788,10 +779,15 @@ export default function App() {
         <div className="max-w-[1600px] mx-auto px-2 sm:px-4 lg:px-6 xl:px-8 flex flex-col md:flex-row items-center justify-between gap-2 font-roboto whitespace-nowrap">
           {/* Left: Location & Direct Email */}
           <div className="flex items-center gap-3 text-xs whitespace-nowrap">
-            <span className="flex items-center gap-1.5 text-amber-200 font-semibold tracking-wide text-[11px] whitespace-nowrap">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=7001+Hollywood+Blvd,+Los+Angeles,+CA+90028"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-amber-200 hover:text-white font-semibold tracking-wide text-[11px] whitespace-nowrap transition-colors"
+            >
               <span className="text-amber-400">📍</span>
-              London, UK • Consultations Across UK & Worldwide
-            </span>
+              7001 Hollywood Blvd, Los Angeles, CA 90028
+            </a>
             <span className="text-red-300/60 hidden sm:inline">|</span>
             <a href="mailto:pandithvikram@gmail.com" className="hidden sm:flex items-center gap-1.5 text-white hover:text-amber-200 transition-colors text-[11px] whitespace-nowrap">
               <svg className="w-3.5 h-3.5 text-amber-300 fill-amber-300 shrink-0" viewBox="0 0 24 24">
@@ -805,14 +801,14 @@ export default function App() {
           <div className="flex items-center gap-3.5 text-xs whitespace-nowrap">
             <div className="flex items-center gap-1.5 whitespace-nowrap">
               <span className="text-amber-300">📞</span>
-              <span className="text-red-200 text-[11px] hidden sm:inline whitespace-nowrap">24/7 UK Confidential:</span>
-              <a href="tel:+447537121638" className="text-white hover:text-amber-200 font-extrabold tracking-wide transition-colors whitespace-nowrap">
-                +44 7537121638
+              <span className="text-red-200 text-[11px] hidden sm:inline whitespace-nowrap">Call or Text:</span>
+              <a href="tel:+15103714626" className="text-white hover:text-amber-200 font-extrabold tracking-wide transition-colors whitespace-nowrap">
+                +1 510-371-4626
               </a>
             </div>
             <span className="text-red-300/60">|</span>
             <a
-              href="https://wa.me/447537121638"
+              href="https://wa.me/15103714626"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-2.5 py-0.5 rounded-none transition-colors text-[11px] font-semibold whitespace-nowrap shrink-0"
@@ -820,7 +816,7 @@ export default function App() {
               <svg className="w-3 h-3 fill-[#25D366] shrink-0" viewBox="0 0 24 24">
                 <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.59 20.16 12.04 20.16C10.64 20.16 9.27 19.8 8.08 19.09L7.79 18.92L4.69 19.73L5.52 16.71L5.33 16.41C4.55 15.17 4.14 13.56 4.14 11.91C4.14 7.37 7.83 3.67 12.04 3.67ZM16.57 14.39C16.32 14.26 15.1 13.66 14.87 13.58C14.65 13.49 14.48 13.45 14.32 13.7C14.15 13.95 13.68 14.51 13.54 14.67C13.39 14.84 13.25 14.86 13 14.73C12.75 14.61 11.95 14.35 11 13.5C10.26 12.84 9.76 12.03 9.61 11.78C9.47 11.53 9.59 11.4 9.72 11.27C9.83 11.16 9.97 10.98 10.1 10.83C10.22 10.69 10.27 10.58 10.35 10.41C10.43 10.25 10.39 10.1 10.33 9.98C10.27 9.85 9.77 8.63 9.57 8.13C9.37 7.65 9.17 7.71 9.02 7.71C8.88 7.7 8.71 7.7 8.55 7.7C8.38 7.7 8.11 7.76 7.88 8.01C7.65 8.26 7 8.87 7 10.09C7 11.31 7.89 12.49 8.01 12.65C8.14 12.82 9.77 15.32 12.26 16.39C12.85 16.65 13.31 16.8 13.67 16.92C14.26 17.11 14.8 17.08 15.23 17.02C15.71 16.95 16.71 16.42 16.92 15.84C17.12 15.26 17.12 14.77 17.06 14.67C17 14.56 16.82 14.51 16.57 14.39Z" />
               </svg>
-              <span>Chat on WhatsApp</span>
+              <span>WhatsApp Us</span>
             </a>
           </div>
         </div>
@@ -845,7 +841,7 @@ export default function App() {
               Home
             </button>
             <a
-              href="#about-london"
+              href="#about-los-angeles"
               onClick={() => { if (activeDetailId) closeDedicatedService(false) }}
               className="hover:text-[#B91C1C] transition-colors py-1 border-b-2 border-transparent hover:border-[#B91C1C] whitespace-nowrap"
             >
@@ -869,7 +865,7 @@ export default function App() {
               <div className="absolute left-0 top-full pt-1.5 w-76 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50 shadow-2xl">
                 <div className="bg-white border-t-2 border-[#B91C1C] border-x border-b border-slate-200 rounded-none py-1.5 divide-y divide-slate-100 shadow-2xl">
                   <div className="px-4 py-2 bg-slate-50 text-[10px] uppercase font-bold tracking-wider text-slate-600 flex justify-between items-center whitespace-nowrap">
-                    <span>12 Vedic Services</span>
+                    <span>All 12 Services</span>
                     <span className="text-[#B91C1C]">Pandith Vikram</span>
                   </div>
                   <div className="max-h-80 overflow-y-auto py-1 divide-y divide-slate-50">
@@ -892,7 +888,7 @@ export default function App() {
                       onClick={() => { if (activeDetailId) closeDedicatedService(false) }}
                       className="text-[11px] font-bold text-[#B91C1C] hover:underline uppercase tracking-wider block whitespace-nowrap"
                     >
-                      View All 12 Services Grid ↓
+                      See Every Service ↓
                     </a>
                   </div>
                 </div>
@@ -903,14 +899,14 @@ export default function App() {
               onClick={() => openDedicatedService('get-ex-love-back')}
               className="hover:text-[#B91C1C] transition-colors py-1 border-b-2 border-transparent hover:border-[#B91C1C] cursor-pointer whitespace-nowrap"
             >
-              Get Ex Love Back
+              Love Reunion
             </button>
             <a
               href="#methodology"
               onClick={() => { if (activeDetailId) closeDedicatedService(false) }}
               className="hover:text-[#B91C1C] transition-colors py-1 border-b-2 border-transparent hover:border-[#B91C1C] whitespace-nowrap"
             >
-              Methodology
+              Our Approach
             </a>
             <a
               href="#faq"
@@ -920,11 +916,11 @@ export default function App() {
               FAQs
             </a>
             <a
-              href="#about-london"
+              href="#usa-locations"
               onClick={() => { if (activeDetailId) closeDedicatedService(false) }}
               className="hover:text-[#B91C1C] transition-colors py-1 border-b-2 border-transparent hover:border-[#B91C1C] whitespace-nowrap"
             >
-              UK Reach
+              Locations
             </a>
             <button
               onClick={() => setActiveModal('question')}
@@ -937,13 +933,13 @@ export default function App() {
           {/* Right Action Buttons: Helpline Pill + Consultation Button (Always strictly on ONE Line) */}
           <div className="hidden sm:flex items-center gap-2.5 xl:gap-3 shrink-0 whitespace-nowrap">
             <a
-              href="tel:+447537121638"
+              href="tel:+15103714626"
               className="bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 px-3 xl:px-3.5 py-1.5 xl:py-2 rounded-none transition-all flex items-center gap-2 group whitespace-nowrap shrink-0"
             >
               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></div>
               <div className="text-left leading-none font-roboto whitespace-nowrap">
-                <span className="text-[9px] uppercase font-bold text-slate-500 block leading-none whitespace-nowrap">24/7 Helpline</span>
-                <span className="text-xs font-black text-slate-900 group-hover:text-[#B91C1C] leading-tight font-roboto whitespace-nowrap">+44 7537121638</span>
+                <span className="text-[9px] uppercase font-bold text-slate-500 block leading-none whitespace-nowrap">Call Today</span>
+                <span className="text-xs font-black text-slate-900 group-hover:text-[#B91C1C] leading-tight font-roboto whitespace-nowrap">+1 510-371-4626</span>
               </div>
             </a>
 
@@ -952,7 +948,7 @@ export default function App() {
               className="bg-[#B91C1C] hover:bg-[#991B1B] text-white px-3.5 xl:px-5 py-2.5 rounded-none font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer flex items-center gap-1.5 whitespace-nowrap shrink-0"
             >
               <span>✦</span>
-              <span className="whitespace-nowrap">BOOK CONSULTATION</span>
+              <span className="whitespace-nowrap">BOOK A READING</span>
             </button>
           </div>
 
@@ -982,7 +978,7 @@ export default function App() {
               Home
             </button>
             <a
-              href="#about-london"
+              href="#about-los-angeles"
               onClick={() => { if (activeDetailId) closeDedicatedService(false); setMobileMenuOpen(false); }}
               className="block py-2 text-slate-800 hover:text-[#B91C1C] font-semibold border-b border-slate-100"
             >
@@ -1003,7 +999,7 @@ export default function App() {
                   className="p-1 text-[#B91C1C] text-xs font-bold rounded-none cursor-pointer"
                   aria-label="Toggle all services"
                 >
-                  {mobileServicesOpen ? '▲ Close' : '▼ (12 Services)'}
+                  {mobileServicesOpen ? '▲ Close' : '▼ (All 12)'}
                 </button>
               </div>
               {mobileServicesOpen && (
@@ -1024,28 +1020,28 @@ export default function App() {
               onClick={() => { openDedicatedService('get-ex-love-back'); setMobileMenuOpen(false); }}
               className="block w-full text-left py-2 text-slate-800 hover:text-[#B91C1C] font-semibold border-b border-slate-100"
             >
-              Get Ex Love Back
+              Love Reunion
             </button>
             <a
               href="#methodology"
               onClick={() => { if (activeDetailId) closeDedicatedService(false); setMobileMenuOpen(false); }}
               className="block py-2 text-slate-800 hover:text-[#B91C1C] font-semibold border-b border-slate-100"
             >
-              Methodology & Ethics
+              Our Approach & Promises
             </a>
             <a
               href="#faq"
               onClick={() => { if (activeDetailId) closeDedicatedService(false); setMobileMenuOpen(false); }}
               className="block py-2 text-slate-800 hover:text-[#B91C1C] font-semibold border-b border-slate-100"
             >
-              Client FAQs
+              Common Questions
             </a>
             <a
-              href="#about-london"
+              href="#usa-locations"
               onClick={() => { if (activeDetailId) closeDedicatedService(false); setMobileMenuOpen(false); }}
               className="block py-2 text-slate-800 hover:text-[#B91C1C] font-semibold border-b border-slate-100"
             >
-              UK Reach
+              Service Locations
             </a>
             <button
               onClick={() => { setActiveModal('question'); setMobileMenuOpen(false); }}
@@ -1057,16 +1053,16 @@ export default function App() {
             {/* Mobile Actions: Call & Book Consultation */}
             <div className="pt-2 grid grid-cols-2 gap-2">
               <a
-                href="tel:+447537121638"
+                href="tel:+15103714626"
                 className="text-center bg-slate-100 text-slate-900 border border-slate-300 py-2.5 rounded-none font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5"
               >
-                <span>📞 Call Helpline</span>
+                <span>📞 Call Now</span>
               </a>
               <button
                 onClick={() => { setActiveModal('booking'); setMobileMenuOpen(false); }}
                 className="text-center bg-[#B91C1C] text-white py-2.5 rounded-none font-bold text-xs uppercase tracking-wider"
               >
-                ✦ Book Consultation
+                ✦ Book a Reading
               </button>
             </div>
           </div>
@@ -1164,21 +1160,21 @@ export default function App() {
                           onClick={() => setActiveModal(slide.modalType)}
                           className="bg-black/65 hover:bg-black/85 border border-[#E5A000]/80 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-[4px] transition-colors cursor-pointer"
                         >
-                          ✦ 100% CONFIDENTIAL
+                          ✦ STRICTLY PRIVATE
                         </button>
                         <button
                           type="button"
                           onClick={() => setActiveModal(slide.modalType)}
                           className="bg-black/65 hover:bg-black/85 border border-[#E5A000]/80 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-[4px] transition-colors cursor-pointer"
                         >
-                          ✦ 35+ YEARS MASTERY
+                          ✦ 35+ YEARS OF PRACTICE
                         </button>
                         <button
                           type="button"
                           onClick={() => setActiveModal(slide.modalType)}
                           className="bg-black/65 hover:bg-black/85 border border-[#E5A000]/80 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-[4px] transition-colors cursor-pointer"
                         >
-                          ✦ 45K+ SATISFIED CLIENTS
+                          ✦ 45,000+ CLIENTS GUIDED
                         </button>
                       </div>
                     </div>
@@ -1234,7 +1230,7 @@ export default function App() {
           {/* Astronomical Navagraha Ephemeris Ribbon */}
           <div className="w-full bg-[#060A1F] border-b border-amber-500/30 text-amber-200/90 py-2.5 px-4 text-[11px] sm:text-xs font-roboto font-semibold tracking-wider uppercase overflow-x-auto whitespace-nowrap shadow-inner flex items-center justify-center gap-4 sm:gap-6 select-none">
             <span className="text-[#FFD700] flex items-center gap-1 font-bold">
-              <span>✦</span> NAVAGRAHA CELESTIAL EPHEMERIS <span>✦</span>
+              <span>✦</span> THE NINE PLANETS OF VEDIC ASTROLOGY <span>✦</span>
             </span>
             <span className="text-slate-500">•</span>
             <span>☉ Surya (Sun)</span>
@@ -1263,11 +1259,11 @@ export default function App() {
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 bg-[#D61B14] inline-block animate-pulse"></span>
                 <h2 className="font-serif text-sm sm:text-base font-bold uppercase tracking-wider text-amber-300">
-                  ✦ Sacred Vedic Remedies & Visual Showcase
+                  ✦ Explore Our Vedic Remedies
                 </h2>
               </div>
               <p className="text-[11px] sm:text-xs text-slate-400 font-roboto">
-                Moving simultaneously • Click any image to explore full dedicated screen
+                Tap any card to open the full service page
               </p>
             </div>
 
@@ -1316,7 +1312,7 @@ export default function App() {
                         {item.subtitle}
                       </p>
                       <div className="pt-1.5 flex items-center gap-1 text-[11px] font-bold text-amber-400 group-hover:text-white uppercase tracking-wider">
-                        <span>Read More</span>
+                        <span>Learn More</span>
                         <span className="group-hover:translate-x-1 transition-transform">→</span>
                       </div>
                     </div>
@@ -1359,8 +1355,8 @@ export default function App() {
                       <circle cx="32" cy="32" r="1.5" fill="#FFD700" />
                     </svg>
                   </div>
-                  <h4 className="font-serif text-sm sm:text-base font-bold uppercase tracking-wider text-amber-300 group-hover:text-amber-200 transition-colors">Lifetime Protection</h4>
-                  <p className="text-[11px] text-slate-300 mt-1 font-roboto">Vedic Shield Assured</p>
+                  <h4 className="font-serif text-sm sm:text-base font-bold uppercase tracking-wider text-amber-300 group-hover:text-amber-200 transition-colors">Protective Remedies</h4>
+                  <p className="text-[11px] text-slate-300 mt-1 font-roboto">Kavach, Yantra & Mantra</p>
                 </div>
 
                 {/* 2. Accurate Readings (Sacred Astronomical Astrolabe & Vedic Compass Logo) */}
@@ -1399,8 +1395,8 @@ export default function App() {
                       <circle cx="32" cy="32" r="2" fill="#FFF" />
                     </svg>
                   </div>
-                  <h4 className="font-serif text-sm sm:text-base font-bold uppercase tracking-wider text-amber-300 group-hover:text-amber-200 transition-colors">Accurate Readings</h4>
-                  <p className="text-[11px] text-slate-300 mt-1 font-roboto">Vedic Ephemeris Charts</p>
+                  <h4 className="font-serif text-sm sm:text-base font-bold uppercase tracking-wider text-amber-300 group-hover:text-amber-200 transition-colors">Careful Calculations</h4>
+                  <p className="text-[11px] text-slate-300 mt-1 font-roboto">Hand-Checked Birth Charts</p>
                 </div>
 
                 {/* 3. 100% Confidentiality (Sacred Royal Vault Padlock Logo) */}
@@ -1441,8 +1437,8 @@ export default function App() {
                       <circle cx="32" cy="39.5" r="0.8" fill="#080E24" />
                     </svg>
                   </div>
-                  <h4 className="font-serif text-sm sm:text-base font-bold uppercase tracking-wider text-amber-300 group-hover:text-amber-200 transition-colors">100% Confidentiality</h4>
-                  <p className="text-[11px] text-slate-300 mt-1 font-roboto">Privacy Sacredly Guarded</p>
+                  <h4 className="font-serif text-sm sm:text-base font-bold uppercase tracking-wider text-amber-300 group-hover:text-amber-200 transition-colors">Complete Privacy</h4>
+                  <p className="text-[11px] text-slate-300 mt-1 font-roboto">Your Story Stays With Us</p>
                 </div>
 
                 {/* 4. Experienced Astrologer (Prestigious Vedic Master Laureate Seal Logo) */}
@@ -1483,8 +1479,8 @@ export default function App() {
                       <path d="M26 53L32 49L38 53L35 46H29L26 53Z" fill="url(#guruGoldLogo)" />
                     </svg>
                   </div>
-                  <h4 className="font-serif text-sm sm:text-base font-bold uppercase tracking-wider text-amber-300 group-hover:text-amber-200 transition-colors">Experienced Astrologer</h4>
-                  <p className="text-[11px] text-slate-300 mt-1 font-roboto">35+ Years of Mastery</p>
+                  <h4 className="font-serif text-sm sm:text-base font-bold uppercase tracking-wider text-amber-300 group-hover:text-amber-200 transition-colors">Seasoned Jyotishi</h4>
+                  <p className="text-[11px] text-slate-300 mt-1 font-roboto">35+ Years of Practice</p>
                 </div>
 
                 {/* 5. Worldwide Clients (Global Celestial Armillary Sphere Logo) */}
@@ -1513,7 +1509,7 @@ export default function App() {
                       <path d="M7 40C12 47 48 22 57 24" stroke="url(#globeGoldLogo)" strokeWidth="1.2" strokeDasharray="2 3" opacity="0.6" />
                       {/* Tilted Celestial Orbital Ring (Front Sweeping Arc) */}
                       <path d="M57 24C53 19 22 38 7 40" stroke="url(#globeGoldLogo)" strokeWidth="2" strokeLinecap="round" />
-                      {/* UK / London Coordinate Diamond Star */}
+                      {/* Los Angeles Coordinate Diamond Star */}
                       <polygon points="32,20 33.5,23 36,23.5 33.5,24.5 32,27 30.5,24.5 28,23.5 30.5,23" fill="#FFF8B0" />
                       <circle cx="32" cy="23.5" r="1" fill="#FFD700" />
                       {/* Global Orbit Satellites */}
@@ -1522,89 +1518,89 @@ export default function App() {
                       <circle cx="43" cy="36" r="1.5" fill="#FFEAA7" />
                     </svg>
                   </div>
-                  <h4 className="font-serif text-sm sm:text-base font-bold uppercase tracking-wider text-amber-300 group-hover:text-amber-200 transition-colors">Worldwide Clients</h4>
-                  <p className="text-[11px] text-slate-300 mt-1 font-roboto">UK, USA, Canada, India</p>
+                  <h4 className="font-serif text-sm sm:text-base font-bold uppercase tracking-wider text-amber-300 group-hover:text-amber-200 transition-colors">Trusted in California</h4>
+                  <p className="text-[11px] text-slate-300 mt-1 font-roboto">LA, Bay Area & Beyond</p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* 5. LONDON UK PREMIER ASTROLOGER SECTION (REORDERED TO TOP: Placed Right Below Hero & Trust Badges) */}
-          <section id="about-london" className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#FBFBFC] border-b border-slate-200 relative overflow-hidden">
+          {/* 5. LOS ANGELES ASTROLOGER SECTION (Placed Right Below Hero & Trust Badges) */}
+          <section id="about-los-angeles" className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#FBFBFC] border-b border-slate-200 relative overflow-hidden">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
               {/* Left Column: Prestigious Alternative Headings & Authentic Vedic Narrative */}
               <div className="lg:col-span-7 space-y-8 font-roboto text-slate-700">
                 {/* Main Heading Block with Prestigious Alternative Headline */}
                 <div className="space-y-3">
                   <div className="inline-flex items-center gap-2 bg-[#D61B14]/10 text-[#D61B14] border border-[#D61B14]/30 px-3 py-1 text-xs font-bold uppercase tracking-widest font-roboto">
-                    <span>✦</span> SACRED VEDIC JYOTISH & ASTRONOMICAL GUIDANCE IN THE UK <span>✦</span>
+                    <span>✦</span> AUTHENTIC VEDIC ASTROLOGY ON HOLLYWOOD BOULEVARD <span>✦</span>
                   </div>
                   <h2 className="font-oswald text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 uppercase tracking-tight">
-                    London’s Premier Indian Vedic Astrologer – <span className="text-[#D61B14]">Pandith Vikram</span>
+                    Indian Vedic Astrologer in Los Angeles, California – <span className="text-[#D61B14]">Pandith Vikram</span>
                   </h2>
                   <div className="w-20 h-1 bg-gradient-to-r from-[#D61B14] to-amber-500"></div>
                   <p className="text-sm sm:text-base leading-relaxed text-slate-700">
-                    Navigating severe life upheaval alone—whether it is a sudden romantic desertion, an acrimonious marital dispute, or prolonged career stagnation—takes an immense emotional toll. Pandith Vikram brings over 35 years of classical scriptural lineage to distressed individuals and families across London, the UK, the United States, and worldwide. Rather than offering empty platitudes or superstitious claims, Guruji applies rigorous Parashara Jyotish mathematics, D9 Navamsha analysis, and sacred Prashna Shastra to diagnose the exact planetary transits afflicting your life, prescribing purely positive, Sattvic remedies that restore equilibrium, dignity, and peace of mind.
+                    When life suddenly turns upside down, through a breakup, a marriage under strain, a job that stalls or a family that stops talking, it helps to have someone steady to turn to. From his office on Hollywood Boulevard, Pandith Vikram brings more than 35 years of traditional Jyotish practice to individuals and families across Los Angeles, Southern California and the rest of the Golden State. He reads each chart by hand, using Parashara methods, the Navamsha (D9) chart and Prashna Shastra to find what is really driving the problem, then recommends gentle Sattvic remedies that help restore balance, confidence and peace of mind.
                   </p>
                 </div>
 
-                {/* Sub-Block 1: Alternative Heading for "Meet The Best Indian Vedic Astrologer In London Uk" */}
+                {/* Sub-Block 1: Life Crossroads */}
                 <div className="space-y-3">
                   <h3 className="font-oswald text-xl sm:text-2xl font-bold text-slate-900 uppercase flex items-center gap-2">
                     <span className="text-[#D61B14]">✦</span>
-                    <span>Celestial Guidance for Life's Critical Turning Points</span>
+                    <span>Clear Answers When Life Reaches a Crossroads</span>
                   </h3>
                   <p className="text-sm sm:text-base leading-relaxed text-slate-700">
-                    When negative planetary configurations—such as Sade Sati, Rahu-Ketu axis shifts, or 7th house afflictions—cast shadows over your relationships or livelihood, life can feel inexplicably heavy. Understanding your Janam Kundali is not about fatalism; it is about discovering the precise astrological root cause and recognizing that difficult transits have definitive beginnings and ends. With the right scriptural pacification rituals, even the most turbulent chapters can be navigated with clarity and grace.
+                    Periods such as Sade Sati, a shift in the Rahu–Ketu axis or pressure on the 7th house can make ordinary life feel unusually hard. Your Janam Kundali does not seal your fate. It shows why a difficult chapter has arrived and, just as importantly, when it is likely to ease. With that knowledge and the right remedies, you can move through it with a clear head instead of fear.
                   </p>
                 </div>
 
-                {/* Sub-Block 2: Alternative Heading for "Reputed Indian Astrologer In London, UK" */}
+                {/* Sub-Block 2: Spiritual Healing & Protection */}
                 <div className="space-y-3">
                   <h3 className="font-oswald text-xl sm:text-2xl font-bold text-slate-900 uppercase flex items-center gap-2">
                     <span className="text-[#D61B14]">✦</span>
-                    <span>Renowned Vedic Master & Spiritual Energy Healer in Central London</span>
+                    <span>Spiritual Healing & Protection for Southern California Families</span>
                   </h3>
                   <p className="text-sm sm:text-base leading-relaxed text-slate-700">
-                    Unexplained domestic friction, recurring setbacks right before financial breakthroughs, or persistent emotional exhaustion often indicate deep energetic imbalances or hostile external envy (Nazar / Drishti Dosha). Pandith Vikram specializes in authentic Vedic spiritual cleansing through consecrated Maha Sudarshana homams and protective Kavach safeguards. Every remedy is non-invasive, purely devotional, and designed to re-establish a fortress of sacred light around your household.
+                    Constant tension at home, setbacks that strike right before a breakthrough, or a tiredness that never seems to lift can point to an energetic imbalance or the weight of other people’s envy (Nazar). Pandith Vikram offers traditional Vedic cleansing through Sudarshana homas and protective kavach. Every remedy is devotional and non-invasive, and focused on bringing light and calm back into your home.
                   </p>
                 </div>
 
-                {/* Sub-Block 3: Alternative Heading for "Vedic Astrologer In London, UK Astrologer Near Me" */}
+                {/* Sub-Block 3: Horoscope Readings Across California */}
                 <div className="space-y-3">
                   <h3 className="font-oswald text-xl sm:text-2xl font-bold text-slate-900 uppercase flex items-center gap-2">
                     <span className="text-[#D61B14]">✦</span>
-                    <span>Trusted Vedic Horoscope Consultations Across Greater London</span>
+                    <span>Horoscope Readings from Hollywood to the Bay Area</span>
                   </h3>
                   <p className="text-sm sm:text-base leading-relaxed text-slate-700">
-                    From Wembley, Harrow, and Southall to Richmond, Central London, and overseas clients across New York and California, Pandith Vikram is sought after for his unsparing honesty and compassionate precision. He conducts thorough mathematical calculations (Ganita Jyotish) to time critical life decisions, evaluate business partnerships, and neutralize doshas (such as Manglik, Kaal Sarp, or Pitra Dosha) that impede marital stability and personal joy.
+                    Clients visit from Hollywood, Artesia, Cerritos, Irvine and the San Fernando Valley, and call in from San Jose, Fremont, San Diego, Sacramento and beyond. They come for honest, compassionate readings: careful Ganita calculations to time big decisions, weigh up business partnerships and address doshas such as Manglik, Kaal Sarp or Pitra Dosha that can affect marriage and happiness.
                   </p>
                 </div>
 
-                {/* Sub-Block 4: Alternative Heading for "Indian Psychic In London, UK Psychic Near Me" */}
+                {/* Sub-Block 4: Prashna & Palmistry */}
                 <div className="space-y-3">
                   <h3 className="font-oswald text-xl sm:text-2xl font-bold text-slate-900 uppercase flex items-center gap-2">
                     <span className="text-[#D61B14]">✦</span>
-                    <span>Intuitive Prashna Shastra & Aura Shielding in the UK</span>
+                    <span>Prashna Readings & Palmistry for Urgent Questions</span>
                   </h3>
                   <p className="text-sm sm:text-base leading-relaxed text-slate-700">
-                    Not every burning question can wait for an elaborate birth chart calculation. When urgent decisions demand immediate answers—such as "Will my partner reconcile?" or "Should I sign this agreement?"—Pandith Vikram utilizes Prashna Horary Jyotish and Hasta Rekha (Palmistry). This ancient horary discipline captures the exact cosmic signature of your inquiry, providing immediate, unvarnished truth and actionable clarity.
+                    Some questions cannot wait for a full chart study. When you need to know “Is this relationship worth saving?” or “Should I accept this offer?”, Pandith Vikram casts a Prashna chart for the moment you ask and can combine it with palm reading (Hasta Rekha). The result is a quick, honest answer you can act on.
                   </p>
                 </div>
 
                 <div className="pt-2 flex flex-wrap gap-4">
                   <a
-                    href="tel:+447537121638"
+                    href="tel:+15103714626"
                     className="bg-[#D61B14] hover:bg-[#b5140e] text-white font-roboto font-bold px-7 py-3.5 rounded-none text-xs uppercase tracking-wider transition-colors shadow flex items-center gap-2 cursor-pointer"
                   >
-                    <span>Consult Pandith Vikram Today</span>
+                    <span>Call Pandith Vikram Now</span>
                     <span>→</span>
                   </a>
                   <button
                     onClick={() => setActiveModal('booking')}
                     className="bg-[#FFD700] hover:bg-amber-300 text-slate-950 font-roboto font-bold px-7 py-3.5 rounded-none text-xs uppercase tracking-wider transition-colors shadow cursor-pointer"
                   >
-                    Book Private Reading
+                    Schedule a Private Reading
                   </button>
                 </div>
               </div>
@@ -1619,7 +1615,7 @@ export default function App() {
                       <source srcSet="/images/shiva-divine-blessing.webp" type="image/webp" />
                       <img
                         src="/images/shiva-divine-blessing.webp"
-                        alt="Lord Shiva Sacred Divine Blessing and Cosmic Protection by Indian Astrologer Pandith Vikram"
+                        alt="Painting of Lord Shiva offering blessings, representing peace and protection, Pandith Vikram Los Angeles"
                         width={640}
                         height={480}
                         loading="lazy"
@@ -1630,10 +1626,10 @@ export default function App() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
                     <div className="absolute bottom-3 left-3 right-3 text-white">
                       <span className="text-[11px] font-bold uppercase tracking-widest text-[#FFD700] font-roboto block">
-                        ✦ DIVINE VEDIC GRACE & COSMIC HEALING ✦
+                        ✦ BLESSINGS FOR PEACE & PROTECTION ✦
                       </span>
                       <p className="font-oswald text-base sm:text-lg font-bold uppercase text-white drop-shadow">
-                        Lord Shiva Sacred Blessings & Planetary Peace
+                        Seek Lord Shiva’s Grace for Planetary Peace
                       </p>
                     </div>
                   </div>
@@ -1647,7 +1643,7 @@ export default function App() {
                       <source srcSet="/images/love-couple-reunion.webp" type="image/webp" />
                       <img
                         src="/images/love-couple-reunion.webp"
-                        alt="Get Ex Love Back & Relationship Reconciliation Consultation by Pandith Vikram"
+                        alt="Couple reconciling after a breakup, love reunion guidance by Pandith Vikram in Los Angeles"
                         width={640}
                         height={400}
                         loading="lazy"
@@ -1660,37 +1656,46 @@ export default function App() {
                     {/* Prominent Square Yellow Badge */}
                     <div className="absolute top-4 right-4 sm:top-5 sm:right-5 bg-[#FFD700] border-2 border-amber-400 text-slate-950 px-4 py-3 sm:px-5 sm:py-3.5 shadow-2xl rounded-none text-center">
                       <p className="font-oswald text-xl sm:text-2xl lg:text-3xl font-extrabold uppercase tracking-tight text-slate-950 leading-tight">
-                        WILL HE <br />
-                        <span className="text-[#D61B14]">COME BACK?</span>
+                        MISSING <br />
+                        <span className="text-[#D61B14]">YOUR LOVE?</span>
                       </p>
                     </div>
                   </div>
 
                   {/* Sharp Square Phone Call Strip */}
                   <a
-                    href="tel:+447539818985"
+                    href="tel:+15103714626"
                     className="block bg-[#D61B14] hover:bg-[#b5140e] text-white py-3.5 px-4 text-center transition-colors cursor-pointer rounded-none border-t border-red-700"
                   >
                     <span className="font-oswald text-base sm:text-lg lg:text-xl font-black uppercase tracking-wider flex items-center justify-center gap-2">
                       <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                         <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z" />
                       </svg>
-                      <span>CALL US: +44 7539818985</span>
+                      <span>CALL NOW: +1 510-371-4626</span>
                     </span>
                   </a>
                 </div>
 
-                {/* 3. Direct UK Office Information Card */}
+                {/* 3. Los Angeles Office Information Card */}
                 <div className="bg-white p-6 border border-slate-200 shadow-sm rounded-none space-y-3 font-roboto">
                   <h4 className="font-oswald text-lg font-bold text-slate-900 uppercase">
-                    London Consultations & Appointments
+                    Visit Our Los Angeles Office
                   </h4>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    Available for confidential in-person readings across Central London, Wembley, Ilford, Southall, and telephone/WhatsApp readings worldwide.
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=7001+Hollywood+Blvd,+Los+Angeles,+CA+90028"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-slate-900 hover:text-[#D61B14] transition-colors"
+                    >
+                      📍 7001 Hollywood Blvd, Los Angeles, CA 90028, United States
+                    </a>
+                    <br />
+                    In-person readings by appointment, plus private phone, WhatsApp and video sessions for clients anywhere in California and beyond.
                   </p>
                   <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#D61B14]">
-                    <span>Mon - Sun: 8:00 AM - 10:00 PM</span>
-                    <span>100% Guaranteed Privacy</span>
+                    <span>Open Daily: 8 AM – 10 PM (PT)</span>
+                    <span>Strictly Confidential</span>
                   </div>
                 </div>
               </div>
@@ -1701,57 +1706,57 @@ export default function App() {
           <section className="relative bg-[#D61B14] text-white py-14 px-4 sm:px-6 lg:px-8 overflow-hidden shadow-inner">
             <div className="relative max-w-5xl mx-auto text-center space-y-4">
               <p className="text-amber-200 text-xs sm:text-sm font-bold tracking-widest uppercase font-roboto">
-                ✦ SACRED CONFIDENTIAL GUIDANCE WHEN YOU NEED IT ✦
+                ✦ PRIVATE GUIDANCE, ONE PHONE CALL AWAY ✦
               </p>
 
               <h2 className="font-oswald text-3xl sm:text-5xl font-bold tracking-tight text-white uppercase leading-tight">
-                Speak Directly With Pandith Vikram
+                Talk to Pandith Vikram Today
               </h2>
 
               <p className="text-white/90 text-sm sm:text-base max-w-2xl mx-auto font-roboto">
-                Share your concern in complete confidence and receive clear, personalized astrological guidance and Vedic remedies.
+                Whether you live in Los Angeles or call from another state, tell him what you are going through in complete confidence and come away with clear guidance and remedies chosen for your chart.
               </p>
 
               <div className="pt-2">
                 <p className="text-xs font-semibold text-amber-200 tracking-wider uppercase mb-1 font-roboto">
-                  Available 24 Hours, 7 Days a Week in UK
+                  Open 7 Days a Week • 8 AM – 10 PM Pacific Time
                 </p>
                 <a
-                  href="tel:+447537121638"
+                  href="tel:+15103714626"
                   className="inline-block font-oswald text-3xl sm:text-5xl font-bold text-[#FFD700] hover:text-white transition-colors tracking-wider"
                 >
-                  +44 7537121638
+                  +1 510-371-4626
                 </a>
               </div>
 
               <div className="pt-3">
                 <a
-                  href="tel:+447537121638"
+                  href="tel:+15103714626"
                   className="inline-flex items-center gap-2 bg-[#FFD700] hover:bg-amber-300 text-slate-950 font-bold px-8 py-3.5 rounded-none text-xs sm:text-sm uppercase tracking-wider transition-all shadow-xl active:scale-95 cursor-pointer font-roboto"
                 >
                   <svg className="w-4 h-4 text-slate-950" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z" />
                   </svg>
-                  <span>Call For a Consultation</span>
+                  <span>Call to Book Your Reading</span>
                   <span>→</span>
                 </a>
               </div>
             </div>
           </section>
 
-          {/* 7. OUR ASTROLOGY SERVICES CATEGORIES (REORDERED DOWN: Placed Below London Section, Full Astronomical Observatory Atmosphere) */}
+          {/* 7. OUR ASTROLOGY SERVICES CATEGORIES (REORDERED DOWN: Placed Below Los Angeles Section, Full Astronomical Observatory Atmosphere) */}
           <section id="services" className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#0B0F2A] text-white relative overflow-hidden cosmic-stars-bg border-b border-slate-800">
             <div className="max-w-7xl mx-auto relative z-10">
               <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
                 <div className="inline-block bg-amber-500/20 text-[#FFD700] border border-[#FFD700]/40 px-3.5 py-1 text-[11px] font-bold uppercase tracking-widest font-roboto mb-3 rounded-none">
-                  ✦ 12 SACRED BHAVAS & CELESTIAL PLANETARY PATHWAYS ✦
+                  ✦ GUIDANCE FOR EVERY AREA OF LIFE ✦
                 </div>
                 <h2 className="font-oswald text-3xl sm:text-5xl font-bold text-white tracking-wide uppercase">
-                  Our 12 Sacred Vedic Astrology <span className="text-[#FFD700]">Services</span>
+                  Vedic Astrology Services in <span className="text-[#FFD700]">Los Angeles</span>
                 </h2>
                 <div className="w-24 h-1 bg-[#FFD700] mx-auto my-3.5"></div>
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-roboto">
-                  Explore our 12 dedicated Jyotish consultation areas — combining ancient cosmic planetary science with bespoke Vedic homams and remedies. Click "Read More" for each service's dedicated screen.
+                  Twelve focused consultations for families across Los Angeles and California, pairing careful birth chart analysis with traditional pujas, mantras and remedies. Choose a topic and tap “Read More” to see how Pandith Vikram can help.
                 </p>
               </div>
 
@@ -1774,7 +1779,7 @@ export default function App() {
                         <source srcSet={item.img} type="image/webp" />
                         <img
                           src={item.img}
-                          alt={`${item.title} ${item.subtitle} - Vedic Astrology Consultation by Pandith Vikram`}
+                          alt={`${item.title} ${item.subtitle} - Vedic astrology service with Pandith Vikram, Los Angeles`}
                           width={640}
                           height={400}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
@@ -1830,16 +1835,16 @@ export default function App() {
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               <div className="lg:col-span-7 space-y-5">
                 <h2 className="font-oswald text-3xl sm:text-4xl font-bold text-slate-900 uppercase tracking-tight">
-                  About <span className="text-[#D61B14]">Pandith Vikram</span>
+                  Meet <span className="text-[#D61B14]">Pandith Vikram</span>
                 </h2>
                 <div className="w-20 h-1 bg-amber-500"></div>
 
                 <p className="text-slate-700 text-sm sm:text-base leading-relaxed font-roboto">
-                  Pandith Vikram represents a revered 7th-generation lineage of Vedic masters rooted in the sacred classical Jyotish traditions of ancient India. For over three and a half decades, he has guided distressed souls through life's most painful trials—restoring severed relationships, resolving acrimonious divorces, reversing commercial stagnation, and dissolving unseen spiritual blockages.
+                  Pandith Vikram comes from seven generations of Vedic scholars and began learning classical Jyotish as a child. For more than 35 years he has helped people through some of the hardest moments of their lives, from separations and family rifts to business losses and long, unexplained runs of bad luck. Today he serves the Indian community and clients of every background across Los Angeles from his office on Hollywood Boulevard.
                 </p>
 
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-roboto">
-                  Unlike commercial practitioners who rely on generic computer software or fear tactics, Pandith Vikram conducts rigorous astronomical calculations by hand, cross-examining your natal chart with D9 Navamsha and Prashna coordinates. Every remedy is 100% Sattvic, non-harmful, and held under sacred discretion.
+                  He does not rely on generic software printouts or frighten clients into expensive rituals. Each chart is calculated and checked by hand, then compared with your Navamsha and, where useful, a Prashna chart. Every remedy is Sattvic, safe and kept completely private.
                 </p>
 
                 <div className="pt-2">
@@ -1847,7 +1852,7 @@ export default function App() {
                     onClick={() => setActiveModal('booking')}
                     className="bg-[#D61B14] hover:bg-[#b5140e] text-white font-roboto font-bold px-7 py-3.5 rounded-none text-xs uppercase tracking-wider transition-all shadow-md flex items-center gap-2 cursor-pointer"
                   >
-                    <span>Know More About Pandith Vikram</span>
+                    <span>Book a Session With Pandith Vikram</span>
                     <span>→</span>
                   </button>
                 </div>
@@ -1862,7 +1867,7 @@ export default function App() {
                   </div>
                   <div>
                     <p className="font-oswald text-2xl font-bold text-slate-900">35+</p>
-                    <p className="text-xs text-slate-600 font-medium">Years of Experience</p>
+                    <p className="text-xs text-slate-600 font-medium">Years Reading Charts</p>
                   </div>
                 </div>
 
@@ -1874,7 +1879,7 @@ export default function App() {
                   </div>
                   <div>
                     <p className="font-oswald text-2xl font-bold text-slate-900">45k+</p>
-                    <p className="text-xs text-slate-600 font-medium">Happy Clients in UK & Worldwide</p>
+                    <p className="text-xs text-slate-600 font-medium">Clients Guided in California & Beyond</p>
                   </div>
                 </div>
 
@@ -1886,7 +1891,7 @@ export default function App() {
                   </div>
                   <div>
                     <p className="font-oswald text-2xl font-bold text-slate-900">100%</p>
-                    <p className="text-xs text-slate-600 font-medium">Confidentiality Assured</p>
+                    <p className="text-xs text-slate-600 font-medium">Private & Confidential</p>
                   </div>
                 </div>
 
@@ -1897,8 +1902,8 @@ export default function App() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-oswald text-base font-bold text-slate-900 leading-snug uppercase">Powerful Vedic</p>
-                    <p className="text-xs text-slate-600">Remedies & Spiritual Healing</p>
+                    <p className="font-oswald text-base font-bold text-slate-900 leading-snug uppercase">Authentic Vedic</p>
+                    <p className="text-xs text-slate-600">Pujas, Mantras & Remedies</p>
                   </div>
                 </div>
               </div>
@@ -1915,14 +1920,14 @@ export default function App() {
               {/* Header */}
               <div className="text-center max-w-3xl mx-auto space-y-3">
                 <div className="inline-block bg-[#8E1612] text-[#FFD700] border border-[#FFD700]/40 px-3.5 py-1 text-[11px] font-bold uppercase tracking-widest font-roboto">
-                  ✦ SCRIPTURAL PARAMPARA • RIGOROUS DIAGNOSTIC EXCELLENCE ✦
+                  ✦ TRADITIONAL TRAINING • CAREFUL, HONEST PRACTICE ✦
                 </div>
                 <h2 className="font-oswald text-3xl sm:text-5xl font-bold uppercase tracking-tight text-white">
-                  The Vedic Methodology & <span className="text-[#FFD700]">Ethical Code</span>
+                  How Pandith Vikram Works & <span className="text-[#FFD700]">What He Promises</span>
                 </h2>
                 <div className="w-24 h-1 bg-[#FFD700] mx-auto my-3"></div>
                 <p className="text-slate-300 text-sm sm:text-base font-roboto leading-relaxed">
-                  How Pandith Vikram unearths karmic origins with ancient astronomical calculations, sacred horary shastras, and an unbending moral commitment to client protection.
+                  A look at the classical methods behind every reading, and the principles that protect every client who calls.
                 </p>
               </div>
 
@@ -1932,7 +1937,7 @@ export default function App() {
                   <span className="text-[#FFD700] text-lg font-bold font-oswald tracking-wider uppercase">PART 1</span>
                   <span className="text-slate-400">|</span>
                   <h3 className="font-oswald text-xl sm:text-2xl font-bold uppercase tracking-wide text-white">
-                    The Tri-Fold Diagnostic System (The Vedic Triad)
+                    Three Ways He Reads Your Situation
                   </h3>
                 </div>
 
@@ -1945,18 +1950,18 @@ export default function App() {
                       </div>
                       <div>
                         <h4 className="font-oswald text-xl font-bold uppercase tracking-wide text-[#FFD700] group-hover:text-amber-300 transition-colors">
-                          Janam Kundali & D9 Navamsha
+                          Birth Chart & Navamsha Study
                         </h4>
                         <p className="text-xs font-bold uppercase tracking-wider text-amber-200/80 font-roboto mt-1">
-                          Mathematical Birth Chart Calculation
+                          Hand-Calculated Natal Chart
                         </p>
                       </div>
                       <p className="text-slate-300 text-xs sm:text-sm font-roboto leading-relaxed">
-                        Ganita Jyotish analysis of the 12 astrological Bhavas, precise planetary longitudes, Vimshottari Mahadashas, and Antardashas. Unearths the root karmic origin of emotional distance, repeated business setbacks, and health vulnerabilities.
+                        A careful study of all 12 houses, exact planetary degrees and your Vimshottari Mahadasha and Antardasha periods. It reveals why a relationship has cooled, why business keeps stalling and where your vulnerabilities lie.
                       </p>
                     </div>
                     <div className="pt-4 border-t border-slate-700/60 mt-4 text-[11px] text-amber-300 font-semibold font-roboto flex items-center gap-1.5">
-                      <span>✓ Identifies Dasha transitions & planetary blockages</span>
+                      <span>✓ Shows which period you are in and what comes next</span>
                     </div>
                   </div>
 
@@ -1968,18 +1973,18 @@ export default function App() {
                       </div>
                       <div>
                         <h4 className="font-oswald text-xl font-bold uppercase tracking-wide text-[#FFD700] group-hover:text-amber-300 transition-colors">
-                          Hasta Rekha Shastra
+                          Vedic Palm Reading
                         </h4>
                         <p className="text-xs font-bold uppercase tracking-wider text-amber-200/80 font-roboto mt-1">
-                          Classical Vedic Palmistry Analysis
+                          Hasta Rekha Shastra
                         </p>
                       </div>
                       <p className="text-slate-300 text-xs sm:text-sm font-roboto leading-relaxed">
-                        When hospital birth times are uncertain, unrecorded, or unavailable for an estranged partner, the micro-mounts, line intersections, and sacred markings on both palms corroborate planetary vitality, marriage timing, and longevity.
+                        When a birth time is missing or a partner’s details are unknown, the lines, mounts and markings of both hands help confirm planetary strength, marriage timing and major life events.
                       </p>
                     </div>
                     <div className="pt-4 border-t border-slate-700/60 mt-4 text-[11px] text-amber-300 font-semibold font-roboto flex items-center gap-1.5">
-                      <span>✓ Overcomes missing or estimated birth times</span>
+                      <span>✓ Works even without an exact birth time</span>
                     </div>
                   </div>
 
@@ -1991,18 +1996,18 @@ export default function App() {
                       </div>
                       <div>
                         <h4 className="font-oswald text-xl font-bold uppercase tracking-wide text-[#FFD700] group-hover:text-amber-300 transition-colors">
-                          Prashna Shastra
+                          Question-Moment Chart
                         </h4>
                         <p className="text-xs font-bold uppercase tracking-wider text-amber-200/80 font-roboto mt-1">
-                          Horary Moment-of-Inquiry Chart
+                          Prashna Shastra
                         </p>
                       </div>
                       <p className="text-slate-300 text-xs sm:text-sm font-roboto leading-relaxed">
-                        Casting the celestial chart for the exact second a client voices an urgent inquiry. Provides immediate, unassailable clarity on high-stakes dilemmas: "Will my partner contact me?", "Will the court case settle?", or "Should I switch careers?".
+                        A chart cast for the exact moment you ask an urgent question, giving a direct answer to concerns like “Will we reconcile?”, “Will this case settle?” or “Is now the time to change jobs?”
                       </p>
                     </div>
                     <div className="pt-4 border-t border-slate-700/60 mt-4 text-[11px] text-amber-300 font-semibold font-roboto flex items-center gap-1.5">
-                      <span>✓ Immediate answers to pressing life decisions</span>
+                      <span>✓ Fast answers for pressing decisions</span>
                     </div>
                   </div>
                 </div>
@@ -2014,7 +2019,7 @@ export default function App() {
                   <span className="text-[#FFD700] text-lg font-bold font-oswald tracking-wider uppercase">PART 2</span>
                   <span className="text-slate-400">|</span>
                   <h3 className="font-oswald text-xl sm:text-2xl font-bold uppercase tracking-wide text-white">
-                    The 5 Sacred Promises of Pandith Vikram (Ethical Astrologer's Code)
+                    Five Promises Every Client Can Count On
                   </h3>
                 </div>
 
@@ -2023,60 +2028,60 @@ export default function App() {
                   <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
                     <div className="space-y-2">
                       <span className="text-xl">🚫</span>
-                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Zero Fear-Mongering</h4>
+                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">No Scare Tactics</h4>
                       <p className="text-xs text-slate-300 font-roboto leading-relaxed">
-                        We never exploit emotional vulnerability with fabricated claims of "generational curses" or "imminent tragedy" to force high-fee rituals.
+                        You will never be told about invented curses or looming disasters to push you into costly rituals.
                       </p>
                     </div>
-                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">100% Honest Truth</span>
+                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">Honest Advice</span>
                   </div>
 
                   {/* Promise 2 */}
                   <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
                     <div className="space-y-2">
                       <span className="text-xl">🔒</span>
-                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Strict Discretion</h4>
+                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Total Privacy</h4>
                       <p className="text-xs text-slate-300 font-roboto leading-relaxed">
-                        Your identity, marital dilemmas, and family affairs are treated as sacred confidences. Never disclosed, archived with third parties, or publicized.
+                        Your name, your marriage, your family matters: all of it stays private. Nothing is shared, sold or published.
                       </p>
                     </div>
-                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">Guaranteed Privacy</span>
+                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">Always Confidential</span>
                   </div>
 
                   {/* Promise 3 */}
                   <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
                     <div className="space-y-2">
                       <span className="text-xl">🪔</span>
-                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Purely Sattvic Rituals</h4>
+                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Only Positive Remedies</h4>
                       <p className="text-xs text-slate-300 font-roboto leading-relaxed">
-                        Solely positive, scriptural remedies: authentic Vedic homams, sacred mantras, certified gemstones, and divine yantras. Zero black magic or negative karma.
+                        Pujas, homas, mantras, genuine gemstones and yantras, all rooted in scripture. No black magic, and nothing that could harm anyone.
                       </p>
                     </div>
-                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">Zero Karmic Backfire</span>
+                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">Safe & Devotional</span>
                   </div>
 
                   {/* Promise 4 */}
                   <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
                     <div className="space-y-2">
                       <span className="text-xl">⏳</span>
-                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Realistic 21-41 Day Mandala</h4>
+                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Honest Timelines</h4>
                       <p className="text-xs text-slate-300 font-roboto leading-relaxed">
-                        Planetary balancing respects cosmic biological cycles. We provide truthful timeframes and refuse to make deceptive "2-hour instant miracle" claims.
+                        Remedies follow natural cycles, usually 21 to 41 days. You get a realistic timeframe, never a promise of overnight miracles.
                       </p>
                     </div>
-                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">Authentic Cycles</span>
+                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">No False Promises</span>
                   </div>
 
                   {/* Promise 5 */}
                   <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
                     <div className="space-y-2">
                       <span className="text-xl">👤</span>
-                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Direct Master Access</h4>
+                      <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Speak With Him Directly</h4>
                       <p className="text-xs text-slate-300 font-roboto leading-relaxed">
-                        You speak and consult directly with Pandith Vikram himself, receiving his undivided attention, personalized prayers, and genuine spiritual guidance.
+                        Your consultation is with Pandith Vikram himself, not an assistant, and comes with his full attention and personal prayers for you.
                       </p>
                     </div>
-                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">No Middlemen</span>
+                    <span className="text-[10px] text-amber-400/90 font-bold uppercase tracking-wider font-roboto mt-4 block">One-on-One</span>
                   </div>
                 </div>
               </div>
@@ -2085,31 +2090,31 @@ export default function App() {
               <div className="bg-gradient-to-r from-[#8E1612] via-[#A61914] to-[#8E1612] p-8 border-2 border-[#FFD700] rounded-none flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
                 <div className="space-y-1 text-center sm:text-left">
                   <h4 className="font-oswald text-2xl font-bold uppercase text-white">
-                    Need Unvarnished Truth & Authentic Vedic Direction?
+                    Ready for Honest Answers About Your Future?
                   </h4>
                   <p className="text-xs sm:text-sm text-amber-100 font-roboto">
-                    Speak directly with Pandith Vikram. In-person London appointments and confidential remote worldwide sessions available.
+                    Meet Pandith Vikram in person on Hollywood Boulevard, or book a private phone or video reading from anywhere in the United States.
                   </p>
                 </div>
                 <div className="flex flex-wrap items-center gap-3 shrink-0">
                   <a
-                    href="tel:+447537121638"
+                    href="tel:+15103714626"
                     className="bg-[#FFD700] hover:bg-amber-300 text-slate-950 font-roboto font-bold px-6 py-3 rounded-none text-xs uppercase tracking-wider transition-colors shadow-md"
                   >
-                    Call: +44 7537121638
+                    Call: +1 510-371-4626
                   </a>
                   <button
                     onClick={() => setActiveModal('booking')}
                     className="bg-black/40 hover:bg-black/60 text-white border border-amber-300 px-6 py-3 rounded-none text-xs font-bold uppercase tracking-wider font-roboto transition-colors"
                   >
-                    Book Private Reading
+                    Reserve Your Session
                   </button>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* 9. WHAT PEOPLE SAY / OUR HAPPY CLIENTS (With Different Blurred User Portrait Images for 100% Privacy) */}
+          {/* 9. EXAMPLE CLIENT JOURNEYS (Illustrative stories, names & details changed; blurred portraits for privacy) */}
           <section id="reviews" className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#F4F3EF] border-y border-slate-200 relative overflow-hidden">
             {/* Subtle ornamental background glow */}
             <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#8E1612]/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -2119,10 +2124,10 @@ export default function App() {
               {/* Section Heading matching Reference 2 */}
               <div className="text-center mb-14">
                 <p className="text-[#B91C1C] text-xs sm:text-sm font-bold tracking-widest uppercase font-roboto mb-1.5">
-                  ✦ What People Say • 100% Confidential Client Feedback ✦
+                  ✦ Example Client Journeys • Names & Details Changed for Privacy ✦
                 </p>
                 <h2 className="font-oswald text-3xl sm:text-5xl font-bold text-slate-900 uppercase tracking-tight">
-                  Our Happy <span className="text-[#8E1612]">Clients</span>
+                  Stories of <span className="text-[#8E1612]">Hope & Healing</span>
                 </h2>
                 <div className="w-24 h-1 bg-[#FFD700] mx-auto mt-3"></div>
               </div>
@@ -2144,7 +2149,7 @@ export default function App() {
                             <source srcSet={reviewItem.img} type="image/webp" />
                             <img
                               src={reviewItem.img}
-                              alt={`${reviewItem.name} from ${reviewItem.city}, ${reviewItem.state} - Privacy Protected Vedic Astrology Client Review`}
+                              alt={`Blurred portrait for an illustrative client story from ${reviewItem.city}, ${reviewItem.state}`}
                               width={112}
                               height={112}
                               loading="lazy"
@@ -2187,19 +2192,9 @@ export default function App() {
                               <span>✦ {reviewItem.service}</span>
                             </button>
 
-                            <div className="flex items-center gap-0.5 text-sm tracking-widest" aria-label={`${reviewItem.rating} out of 5 stars`}>
-                              {[1, 2, 3, 4, 5].map((starNum) => (
-                                <span
-                                  key={starNum}
-                                  className={starNum <= reviewItem.rating ? 'text-amber-500' : 'text-slate-300'}
-                                >
-                                  ★
-                                </span>
-                              ))}
-                              <span className="text-[11px] font-bold text-slate-600 ml-1.5 font-roboto">
-                                ({reviewItem.rating}.0 / 5.0)
-                              </span>
-                            </div>
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-amber-600 font-roboto">
+                              ✦ Illustrative Story
+                            </span>
                           </div>
 
                           {/* Client Quote Text */}
@@ -2216,7 +2211,7 @@ export default function App() {
                                 <span className="text-sm font-semibold text-[#8E1612]">{reviewItem.city}, {reviewItem.state}</span>
                               </h4>
                               <p className="text-[11px] text-slate-500 font-roboto">
-                                Identity blurred to honor our 100% Client Confidentiality Guarantee
+                                Example based on common consultations • not an individual review
                               </p>
                             </div>
 
@@ -2233,7 +2228,7 @@ export default function App() {
             </div>
           </section>
 
-          {/* 10. ASTROLOGY USA LOCATIONS DIRECTORY (Strictly USA Cities Only + Golden Constellation Backdrop) */}
+          {/* 10. SERVICE AREAS DIRECTORY (Los Angeles & California Regions + Golden Constellation Backdrop) */}
           <section id="usa-locations" className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden border-b border-slate-200">
             {/* Subtle Golden Astrological Constellation Line Network SVG Backdrop (Matching Reference 3) */}
             <svg
@@ -2285,18 +2280,18 @@ export default function App() {
               {/* Heading */}
               <div className="text-center max-w-3xl mx-auto mb-12">
                 <div className="inline-block bg-red-50 text-[#8E1612] border border-[#8E1612]/25 px-3.5 py-1 text-[11px] font-bold uppercase tracking-widest font-roboto mb-3">
-                  ✦ COAST-TO-COAST VEDIC JYOTISH REACH ACROSS AMERICA ✦
+                  ✦ BASED IN LOS ANGELES • SERVING CLIENTS ACROSS CALIFORNIA ✦
                 </div>
                 <h2 className="font-oswald text-3xl sm:text-5xl font-bold text-slate-900 uppercase tracking-tight">
-                  Astrology <span className="text-[#B91C1C]">USA Locations</span>
+                  Where We <span className="text-[#B91C1C]">Serve Clients</span>
                 </h2>
                 <div className="w-24 h-1 bg-[#FFD700] mx-auto my-3.5"></div>
                 <p className="text-slate-600 text-xs sm:text-sm font-roboto leading-relaxed">
-                  Confidential phone, WhatsApp, and one-on-one Vedic astrology consultations serving clients across every major United States metropolitan center and surrounding suburbs.
+                  In-person readings at our Hollywood office, plus private phone, WhatsApp and video consultations for clients in every corner of California, from San Diego to Sacramento.
                 </p>
               </div>
 
-              {/* 2-Column USA Cities & Suburbs Directory Grid (Matching Reference 3 Layout) */}
+              {/* 2-Column California Regions & Cities Directory Grid (Matching Reference 3 Layout) */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4">
                 {usaLocations.map((loc) => (
                   <div
@@ -2323,14 +2318,14 @@ export default function App() {
               {/* Heading */}
               <div className="text-center max-w-3xl mx-auto space-y-3">
                 <div className="inline-block bg-[#D61B14]/10 text-[#D61B14] border border-[#D61B14]/30 px-3.5 py-1 text-[11px] font-bold uppercase tracking-widest font-roboto">
-                  ✦ CLIENT QUESTIONS ANSWERED • COMPLETE CLARITY ✦
+                  ✦ YOUR QUESTIONS, ANSWERED HONESTLY ✦
                 </div>
                 <h2 className="font-oswald text-3xl sm:text-5xl font-bold uppercase tracking-tight text-slate-900">
-                  Frequently Asked <span className="text-[#8E1612]">Questions</span>
+                  Common <span className="text-[#8E1612]">Questions</span> Before a Reading
                 </h2>
                 <div className="w-24 h-1 bg-[#FFD700] mx-auto my-3"></div>
                 <p className="text-slate-600 text-xs sm:text-sm font-roboto leading-relaxed">
-                  Clear, honest answers about our consultation process, missing birth data, distance readings, and pure Sattvic Vedic remedies.
+                  Straight answers about how consultations work, missing birth times, remote readings and the remedies Pandith Vikram uses.
                 </p>
               </div>
 
@@ -2375,23 +2370,23 @@ export default function App() {
               {/* Still have questions banner */}
               <div className="bg-amber-50 border border-amber-300 p-6 text-center space-y-3 rounded-none">
                 <p className="text-xs font-bold uppercase tracking-wider text-[#8E1612] font-roboto">
-                  ✦ Have a specific personal situation not covered here? ✦
+                  ✦ Don’t see your question here? ✦
                 </p>
                 <p className="text-xs sm:text-sm text-slate-700 font-roboto">
-                  Every human dilemma has unique astrological nuances. You are welcome to message or speak with Pandith Vikram directly in complete confidence.
+                  Every situation is different, and so is every chart. Call or message Pandith Vikram directly and talk it through in complete confidence.
                 </p>
                 <div className="pt-1 flex flex-wrap justify-center gap-3">
                   <a
-                    href="tel:+447537121638"
+                    href="tel:+15103714626"
                     className="inline-flex items-center gap-2 bg-[#8E1612] hover:bg-[#680E0B] text-white font-roboto font-bold px-6 py-2.5 rounded-none text-xs uppercase tracking-wider transition-colors shadow cursor-pointer"
                   >
-                    <span>Direct Helpline: +44 7537121638</span>
+                    <span>Call Now: +1 510-371-4626</span>
                   </a>
                   <button
                     onClick={() => setActiveModal('question')}
                     className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 font-roboto font-bold px-6 py-2.5 rounded-none text-xs uppercase tracking-wider transition-colors shadow-sm cursor-pointer"
                   >
-                    <span>Send Private Confidential Note</span>
+                    <span>Send a Private Message</span>
                   </button>
                 </div>
               </div>
@@ -2422,11 +2417,11 @@ export default function App() {
                 <Logo variant="gold" />
               </button>
               <p className="text-xs sm:text-[13px] text-amber-50/90 leading-relaxed font-roboto">
-                Feel free to reach out to Astrologer <strong className="text-[#FFD700]">Pandith Vikram</strong> whenever you need dependable Vedic guidance and effective spiritual solutions for your toughest life challenges. With over 35+ years of scriptural mastery, we are always here to help you.
+                Whenever life feels uncertain, reach out to Astrologer <strong className="text-[#FFD700]">Pandith Vikram</strong> for honest Vedic guidance and remedies that fit your situation. With more than 35 years of experience and an office on Hollywood Boulevard, he is here to help you find your way forward, in Los Angeles or anywhere in the USA.
               </p>
               <div className="pt-1 flex items-center gap-2 text-[11px] text-[#FFD700] font-bold uppercase tracking-wider font-roboto">
                 <span className="inline-block w-2 h-2 bg-[#FFD700]"></span>
-                <span>100% Confidential & Guaranteed Privacy</span>
+                <span>Private, Respectful & Confidential</span>
               </div>
             </div>
 
@@ -2434,7 +2429,7 @@ export default function App() {
             <div className="lg:col-span-3 space-y-4 lg:pl-4">
               <div>
                 <h4 className="font-oswald text-lg sm:text-xl font-bold uppercase tracking-wider text-white">
-                  Home
+                  Quick Links
                 </h4>
                 <div className="w-10 h-0.5 bg-[#FFD700] mt-1"></div>
               </div>
@@ -2450,7 +2445,7 @@ export default function App() {
                 </li>
                 <li>
                   <a
-                    href="#about-london"
+                    href="#about-los-angeles"
                     onClick={() => { if (activeDetailId) closeDedicatedService(false) }}
                     className="text-amber-50/90 hover:text-[#FFD700] transition-colors flex items-center gap-2 group"
                   >
@@ -2475,7 +2470,7 @@ export default function App() {
                     className="text-amber-50/90 hover:text-[#FFD700] transition-colors flex items-center gap-2 group"
                   >
                     <span className="text-[#FFD700] font-bold group-hover:translate-x-0.5 transition-transform">›</span>
-                    <span>Client Reviews</span>
+                    <span>Client Stories</span>
                   </a>
                 </li>
                 <li>
@@ -2485,7 +2480,7 @@ export default function App() {
                     className="text-amber-50/90 hover:text-[#FFD700] transition-colors flex items-center gap-2 group"
                   >
                     <span className="text-[#FFD700] font-bold group-hover:translate-x-0.5 transition-transform">›</span>
-                    <span>Methodology & Ethics</span>
+                    <span>Our Approach</span>
                   </a>
                 </li>
                 <li>
@@ -2495,7 +2490,7 @@ export default function App() {
                     className="text-amber-50/90 hover:text-[#FFD700] transition-colors flex items-center gap-2 group"
                   >
                     <span className="text-[#FFD700] font-bold group-hover:translate-x-0.5 transition-transform">›</span>
-                    <span>Client FAQs</span>
+                    <span>Common Questions</span>
                   </a>
                 </li>
                 <li>
@@ -2505,7 +2500,7 @@ export default function App() {
                     className="text-amber-50/90 hover:text-[#FFD700] transition-colors flex items-center gap-2 group"
                   >
                     <span className="text-[#FFD700] font-bold group-hover:translate-x-0.5 transition-transform">›</span>
-                    <span>Astrology USA Locations</span>
+                    <span>Service Areas</span>
                   </a>
                 </li>
                 <li>
@@ -2551,24 +2546,24 @@ export default function App() {
             <div className="lg:col-span-3 space-y-4">
               <div>
                 <h4 className="font-oswald text-lg sm:text-xl font-bold uppercase tracking-wider text-white">
-                  Services
+                  Our Services
                 </h4>
                 <div className="w-10 h-0.5 bg-[#FFD700] mt-1"></div>
               </div>
               <ul className="space-y-2.5 text-xs sm:text-[13px] font-roboto">
                 {[
-                  { label: 'Remove Black Magic', id: 'black-magic-removal' },
-                  { label: 'Remove Evil Spirits & Eye', id: 'evil-eye-protection' },
-                  { label: 'Career Problems Solution', id: 'career-business' },
-                  { label: 'Husband & Wife Problem', id: 'marriage-compatibility' },
-                  { label: 'Get Your Love Back', id: 'get-ex-love-back' },
-                  { label: 'Love Marriage Specialist', id: 'love-relationship' },
-                  { label: 'Match Making For Lovers', id: 'marriage-compatibility' },
-                  { label: 'Palmistry & Horoscope Specialist', id: 'horoscope-reading' },
-                  { label: 'Vashikaran Mantra For Love', id: 'get-ex-love-back' },
-                  { label: 'Family & Child Peace', id: 'family-child-problems' },
-                  { label: 'Financial & Business Wealth', id: 'financial-problems' },
-                  { label: 'Court Case & Property Dispute', id: 'court-case-problems' },
+                  { label: 'Black Magic Removal', id: 'black-magic-removal' },
+                  { label: 'Evil Eye & Nazar Remedies', id: 'evil-eye-protection' },
+                  { label: 'Career & Job Guidance', id: 'career-business' },
+                  { label: 'Husband–Wife Disputes', id: 'marriage-compatibility' },
+                  { label: 'Bring Back Lost Love', id: 'get-ex-love-back' },
+                  { label: 'Love Marriage Guidance', id: 'love-relationship' },
+                  { label: 'Kundali Matching', id: 'marriage-compatibility' },
+                  { label: 'Palm & Horoscope Reading', id: 'horoscope-reading' },
+                  { label: 'Love Reunion Mantras', id: 'get-ex-love-back' },
+                  { label: 'Family & Children', id: 'family-child-problems' },
+                  { label: 'Money & Business Growth', id: 'financial-problems' },
+                  { label: 'Court Case & Property Help', id: 'court-case-problems' },
                 ].map((srv, i) => (
                   <li key={i}>
                     <button
@@ -2587,13 +2582,13 @@ export default function App() {
             <div className="lg:col-span-3 space-y-4 text-xs sm:text-[13px] font-roboto">
               <div>
                 <h4 className="font-oswald text-lg sm:text-xl font-bold uppercase tracking-wider text-white">
-                  Contact Us
+                  Get in Touch
                 </h4>
                 <div className="w-10 h-0.5 bg-[#FFD700] mt-1"></div>
               </div>
 
               <div className="space-y-3.5 pt-1">
-                {/* Address / Hubs */}
+                {/* Office Address */}
                 <div className="flex items-start gap-3 text-amber-50/90">
                   <div className="w-8 h-8 bg-[#060B28]/80 border border-[#FFD700]/50 text-[#FFD700] flex items-center justify-center shrink-0 mt-0.5">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2602,8 +2597,15 @@ export default function App() {
                     </svg>
                   </div>
                   <div className="leading-relaxed">
-                    <p className="font-bold text-white uppercase text-xs">USA & Global Centers:</p>
-                    <p>New York, New Jersey, California, Texas, Chicago, Atlanta & London UK</p>
+                    <p className="font-bold text-white uppercase text-xs">Office Address:</p>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=7001+Hollywood+Blvd,+Los+Angeles,+CA+90028"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-[#FFD700] transition-colors"
+                    >
+                      7001 Hollywood Blvd, Los Angeles, CA 90028, United States
+                    </a>
                   </div>
                 </div>
 
@@ -2615,9 +2617,9 @@ export default function App() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase tracking-wider text-amber-200 font-bold">24/7 Direct Helpline</p>
-                    <a href="tel:+447537121638" className="text-white hover:text-[#FFD700] font-oswald font-bold text-base sm:text-lg tracking-wider transition-colors">
-                      +44 7537121638
+                    <p className="text-[10px] uppercase tracking-wider text-amber-200 font-bold">Call or WhatsApp</p>
+                    <a href="tel:+15103714626" className="text-white hover:text-[#FFD700] font-oswald font-bold text-base sm:text-lg tracking-wider transition-colors">
+                      +1 510-371-4626
                     </a>
                   </div>
                 </div>
@@ -2630,7 +2632,7 @@ export default function App() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase tracking-wider text-amber-200 font-bold">Email Support</p>
+                    <p className="text-[10px] uppercase tracking-wider text-amber-200 font-bold">Email</p>
                     <a href="mailto:pandithvikram@gmail.com" className="hover:text-[#FFD700] transition-colors font-medium break-all">
                       pandithvikram@gmail.com
                     </a>
@@ -2640,13 +2642,13 @@ export default function App() {
                 {/* Hours & CTA */}
                 <div className="pt-2 space-y-3">
                   <p className="text-[11px] text-amber-200/90 font-medium">
-                    ✦ Consultation Hours: Mon - Sun (8:00 AM - 10:00 PM)
+                    ✦ Open Daily: 8:00 AM – 10:00 PM Pacific Time
                   </p>
                   <button
                     onClick={() => setActiveModal('booking')}
                     className="w-full bg-[#FFD700] hover:bg-amber-300 text-slate-950 font-oswald font-bold py-2.5 px-4 rounded-none text-xs uppercase tracking-wider transition-all shadow-lg cursor-pointer flex items-center justify-center gap-2"
                   >
-                    <span>✦ Book Confidential Session</span>
+                    <span>✦ Book Your Private Reading</span>
                     <span>→</span>
                   </button>
                 </div>
@@ -2672,11 +2674,11 @@ export default function App() {
       <aside aria-label="WhatsApp Quick Contact" className="fixed bottom-6 right-6 z-50 flex items-center gap-2 group select-none">
         {/* Tooltip on Hover */}
         <span className="hidden sm:inline-block bg-[#0A102E] text-amber-200 border border-amber-400/40 text-xs font-bold font-roboto px-3 py-1.5 shadow-2xl rounded-none opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-          Chat on WhatsApp • Pandith Vikram
+          Message Pandith Vikram on WhatsApp
         </span>
 
         <a
-          href="https://wa.me/447537121638"
+          href="https://wa.me/15103714626"
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white p-2.5 shadow-[0_4px_25px_rgba(37,211,102,0.6)] hover:shadow-[0_6px_30px_rgba(37,211,102,0.85)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-200 rounded-none border-2 border-white cursor-pointer"
@@ -2705,48 +2707,48 @@ export default function App() {
                 <div className="w-16 h-16 bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center text-3xl font-bold">
                   ✓
                 </div>
-                <h3 className="font-oswald text-2xl font-bold text-slate-900 uppercase">Message Received!</h3>
+                <h3 className="font-oswald text-2xl font-bold text-slate-900 uppercase">Thank You, Message Received</h3>
                 <p className="text-sm text-slate-600 font-roboto">
-                  Pandith Vikram will review your birth chart details and contact your UK/international phone number shortly.
+                  Pandith Vikram will look over your details and call you back shortly at the number you provided.
                 </p>
               </div>
             ) : (
               <div>
                 <div className="text-center mb-6">
-                  <span className="text-[11px] uppercase tracking-widest font-bold text-[#D61B14] font-roboto">Trusted UK Astrologer</span>
-                  <h3 className="font-oswald text-2xl sm:text-3xl font-bold text-slate-900 mt-1 uppercase">Contact Pandith Vikram</h3>
-                  <p className="text-xs text-slate-500 mt-1 font-roboto">Confidential & 100% Accurate Vedic Solutions</p>
+                  <span className="text-[11px] uppercase tracking-widest font-bold text-[#D61B14] font-roboto">Los Angeles Vedic Astrologer</span>
+                  <h3 className="font-oswald text-2xl sm:text-3xl font-bold text-slate-900 mt-1 uppercase">Send Pandith Vikram a Message</h3>
+                  <p className="text-xs text-slate-500 mt-1 font-roboto">Private, confidential and answered personally</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4 font-roboto">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1">Your Full Name *</label>
+                    <label className="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
                     <input
                       type="text"
                       name="name"
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="e.g. John Smith"
+                      placeholder="e.g. Priya Sharma"
                       className="w-full text-xs px-3.5 py-2.5 rounded-none border border-slate-300 focus:outline-none focus:border-[#D61B14] focus:ring-1 focus:ring-[#D61B14]"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-xs font-semibold text-slate-700 mb-1">Phone Number (with Country Code) *</label>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1">Phone Number (include area code) *</label>
                       <input
                         type="tel"
                         name="phone"
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="+44 7537121638"
+                        placeholder="+1 (310) 555-0123"
                         className="w-full text-xs px-3.5 py-2.5 rounded-none border border-slate-300 focus:outline-none focus:border-[#D61B14] focus:ring-1 focus:ring-[#D61B14]"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-slate-700 mb-1">Date of Birth (Optional)</label>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1">Birth Date (optional)</label>
                       <input
                         type="date"
                         name="dob"
@@ -2758,7 +2760,7 @@ export default function App() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1">Problem Area</label>
+                    <label className="block text-xs font-semibold text-slate-700 mb-1">What Can We Help With?</label>
                     <select
                       name="service"
                       value={formData.service}
@@ -2772,14 +2774,14 @@ export default function App() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1">Your Message / Query *</label>
+                    <label className="block text-xs font-semibold text-slate-700 mb-1">Your Question *</label>
                     <textarea
                       name="question"
                       required
                       rows={3}
                       value={formData.question}
                       onChange={handleInputChange}
-                      placeholder="Please describe your problem or inquiry..."
+                      placeholder="Briefly tell us what is happening..."
                       className="w-full text-xs px-3.5 py-2.5 rounded-none border border-slate-300 focus:outline-none focus:border-[#D61B14] focus:ring-1 focus:ring-[#D61B14]"
                     ></textarea>
                   </div>
@@ -2788,7 +2790,7 @@ export default function App() {
                     type="submit"
                     className="w-full bg-[#D61B14] hover:bg-[#b5140e] text-white font-bold py-3 rounded-none text-xs uppercase tracking-wider transition-all shadow-md mt-2 cursor-pointer font-roboto"
                   >
-                    Send Message Now
+                    Send My Message
                   </button>
                 </form>
               </div>
@@ -2813,65 +2815,65 @@ export default function App() {
                 <div className="w-16 h-16 bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center text-3xl font-bold">
                   ✓
                 </div>
-                <h3 className="font-oswald text-2xl font-bold text-slate-900 uppercase">Appointment Reserved!</h3>
+                <h3 className="font-oswald text-2xl font-bold text-slate-900 uppercase">Request Received!</h3>
                 <p className="text-sm text-slate-600 font-roboto">
-                  Pandith Vikram's team will contact you on +44 7537121638 or your phone to confirm your consultation slot.
+                  We will call you shortly to confirm your appointment time. You can also reach us directly at +1 510-371-4626.
                 </p>
               </div>
             ) : (
               <div>
                 <div className="text-center mb-6">
-                  <span className="text-[11px] uppercase tracking-widest font-bold text-[#D61B14] font-roboto">UK Consultation</span>
+                  <span className="text-[11px] uppercase tracking-widest font-bold text-[#D61B14] font-roboto">Private Consultation</span>
                   <h3 className="font-oswald text-2xl font-bold text-slate-900 mt-1 uppercase">
-                    {currentDetailedService ? `${currentDetailedService.title} ${currentDetailedService.subtitle}` : 'Get Your Love Ex Back'}
+                    {currentDetailedService ? `${currentDetailedService.title} ${currentDetailedService.subtitle}` : 'Book Your Personal Reading'}
                   </h3>
                   <p className="text-xs text-slate-500 mt-1 font-roboto">
-                    {currentDetailedService ? 'One-on-One Personalized Vedic Consultation' : 'One-on-One Spiritual & Astrological Healing'}
+                    {currentDetailedService ? 'A one-on-one session focused on your question' : 'In person in Hollywood, or by phone and video'}
                   </p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4 font-roboto">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1">Your Full Name *</label>
+                    <label className="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
                     <input
                       type="text"
                       name="name"
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="e.g. David Brown"
+                      placeholder="e.g. Rahul Mehta"
                       className="w-full text-xs px-3.5 py-2.5 rounded-none border border-slate-300 focus:outline-none focus:border-[#D61B14] focus:ring-1 focus:ring-[#D61B14]"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-xs font-semibold text-slate-700 mb-1">Phone Number *</label>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1">Best Phone Number *</label>
                       <input
                         type="tel"
                         name="phone"
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="+44 7537121638"
+                        placeholder="+1 (310) 555-0123"
                         className="w-full text-xs px-3.5 py-2.5 rounded-none border border-slate-300 focus:outline-none focus:border-[#D61B14] focus:ring-1 focus:ring-[#D61B14]"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-slate-700 mb-1">Email Address</label>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1">Email (optional)</label>
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="yourname@gmail.com"
+                        placeholder="you@example.com"
                         className="w-full text-xs px-3.5 py-2.5 rounded-none border border-slate-300 focus:outline-none focus:border-[#D61B14] focus:ring-1 focus:ring-[#D61B14]"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1">Select Consultation Focus</label>
+                    <label className="block text-xs font-semibold text-slate-700 mb-1">Choose a Topic</label>
                     <select
                       name="service"
                       value={formData.service}
@@ -2890,7 +2892,7 @@ export default function App() {
                     type="submit"
                     className="w-full bg-[#D61B14] hover:bg-[#b5140e] text-white font-bold py-3 rounded-none text-xs uppercase tracking-wider transition-all shadow-md mt-2 cursor-pointer font-roboto"
                   >
-                    Confirm Consultation Request
+                    Request My Appointment
                   </button>
                 </form>
               </div>
@@ -2913,22 +2915,22 @@ export default function App() {
             <div className="space-y-4 font-roboto">
               <div className="border-b border-slate-200 pb-3">
                 <span className="text-[11px] uppercase tracking-widest font-bold text-[#B91C1C]">
-                  ✦ Official Legal & Client Protection Notice
+                  ✦ Policies & Important Information
                 </span>
                 <h3 className="font-oswald text-2xl font-bold text-slate-900 mt-1 uppercase">
-                  {activeModal === 'privacy' && 'Privacy Policy & 100% Confidentiality'}
-                  {activeModal === 'terms' && 'Terms & Conditions of Service'}
-                  {activeModal === 'disclaimer' && 'Astrological Consultation Disclaimer'}
+                  {activeModal === 'privacy' && 'Privacy Policy'}
+                  {activeModal === 'terms' && 'Terms & Conditions'}
+                  {activeModal === 'disclaimer' && 'Disclaimer'}
                 </h3>
               </div>
 
               {activeModal === 'privacy' && (
                 <div className="space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
                   <p>
-                    <strong className="text-slate-900">100% Client Anonymity & Data Protection:</strong> All birth details (date, time, place of birth), personal photographs, palm readings, and relationship or family concerns shared with Astrologer Pandith Vikram are held in strict spiritual and legal confidence.
+                    <strong className="text-slate-900">How we handle your information:</strong> Your birth details, photos, palm images and anything you tell us about your relationships or family are kept strictly confidential by Astrologer Pandith Vikram.
                   </p>
                   <p>
-                    We never sell, rent, or disclose your personal identity, phone number, or consultation history to any third party. Client testimonials displayed on our website use blurred portraits and abbreviated initials to protect client privacy.
+                    We do not sell, rent or share your personal information, phone number or consultation history with anyone. The client stories on this website are illustrative examples based on common consultations; names, photos and details have been changed or blurred to protect privacy.
                   </p>
                 </div>
               )}
@@ -2936,10 +2938,10 @@ export default function App() {
               {activeModal === 'terms' && (
                 <div className="space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
                   <p>
-                    <strong className="text-slate-900">Consultation & Vedic Remedy Guidelines:</strong> Consultations are scheduled by appointment via phone, WhatsApp, or in-person sessions across our USA and UK hubs.
+                    <strong className="text-slate-900">Appointments & remedies:</strong> Consultations are booked by appointment, in person at 7001 Hollywood Blvd, Los Angeles, CA 90028, or by phone, WhatsApp or video call.
                   </p>
                   <p>
-                    Personalized Vedic rituals, Homams, Yantras, and planetary pacification remedies are prepared specifically according to the individual’s Janam Kundali (natal chart) and require sincere adherence to the prescribed spiritual guidelines.
+                    Pujas, homas, yantras and other remedies are prepared for each client’s individual birth chart and work best when the recommended practices are followed sincerely and consistently.
                   </p>
                 </div>
               )}
@@ -2947,10 +2949,10 @@ export default function App() {
               {activeModal === 'disclaimer' && (
                 <div className="space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
                   <p>
-                    <strong className="text-slate-900">Traditional Vedic Jyotish Guidance:</strong> Astrological readings, horoscopic predictions, and spiritual remedies provided by Pandith Vikram are based on ancient Indian Vedic scriptures (Parashara & Jaimini Jyotish).
+                    <strong className="text-slate-900">About astrological guidance:</strong> Readings, predictions and remedies offered by Pandith Vikram are based on traditional Indian Vedic texts, including the Parashara and Jaimini systems of Jyotish.
                   </p>
                   <p>
-                    While tens of thousands of clients across the USA, UK, and worldwide have experienced transformative results, individual outcomes depend on planetary dashas, karmic factors, and personal effort. Astrological guidance is spiritual in nature and does not replace licensed medical, legal, or psychological advice.
+                    Every chart is unique, so outcomes vary between individuals and depend on many factors, including planetary periods, karma and personal effort. Astrology is spiritual guidance and is not a substitute for advice from a licensed doctor, attorney, therapist or financial professional.
                   </p>
                 </div>
               )}
@@ -2960,7 +2962,7 @@ export default function App() {
                   onClick={() => setActiveModal(null)}
                   className="bg-[#8E1612] hover:bg-[#B91C1C] text-white font-oswald font-bold px-6 py-2.5 text-xs uppercase tracking-wider cursor-pointer rounded-none"
                 >
-                  Close Window
+                  Close
                 </button>
               </div>
             </div>

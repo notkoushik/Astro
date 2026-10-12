@@ -32,11 +32,11 @@ function getCategoryBadgeConfig(
         badgeText: 'text-[#FFD700]',
         badgeBorder: 'border-[#FFD700]/60',
         icon: '🔥',
-        shortLabel: 'Vedic Ritual & Remedy',
-        pillarTag: `PILLAR 0${index + 1} • SACRED KRIYA`,
-        keyHighlightLabel: 'Spiritual Method',
-        keyHighlightValue: 'Energized Homam, Yantra & Mantra Siddhi',
-        ctaText: 'Book This Sacred Ritual',
+        shortLabel: 'Ritual & Remedy',
+        pillarTag: `PILLAR 0${index + 1} • THE REMEDY`,
+        keyHighlightLabel: 'How It Is Done',
+        keyHighlightValue: 'Homa, Yantra & Daily Mantra Practice',
+        ctaText: 'Ask About This Ritual',
       }
     case 'Real-Life Transformation':
       return {
@@ -44,11 +44,11 @@ function getCategoryBadgeConfig(
         badgeText: 'text-emerald-200',
         badgeBorder: 'border-emerald-400/60',
         icon: '🌿',
-        shortLabel: 'Life Transformation',
-        pillarTag: `PILLAR 0${index + 1} • POSITIVE OUTCOME`,
-        keyHighlightLabel: 'Expected Result',
-        keyHighlightValue: 'Lasting Peace, Reunion & Obstacle Relief',
-        ctaText: 'Consult For This Outcome',
+        shortLabel: 'Life After Remedies',
+        pillarTag: `PILLAR 0${index + 1} • THE GOAL`,
+        keyHighlightLabel: 'What We Work Toward',
+        keyHighlightValue: 'Peace, Reconnection & Fewer Obstacles',
+        ctaText: 'Talk About Your Situation',
       }
     case 'Astrological & Planetary Iconography':
       return {
@@ -56,11 +56,11 @@ function getCategoryBadgeConfig(
         badgeText: 'text-amber-200',
         badgeBorder: 'border-amber-400/60',
         icon: '🪐',
-        shortLabel: 'Planetary Alignment',
-        pillarTag: `PILLAR 0${index + 1} • JYOTISH SCIENCE`,
-        keyHighlightLabel: 'Planetary Focus',
-        keyHighlightValue: 'Janam Kundali, Dasha & Transit Alignment',
-        ctaText: 'Check Your Birth Chart',
+        shortLabel: 'Planetary Influence',
+        pillarTag: `PILLAR 0${index + 1} • THE PLANETS`,
+        keyHighlightLabel: 'What We Study',
+        keyHighlightValue: 'Birth Chart, Dashas & Transits',
+        ctaText: 'Get Your Chart Read',
       }
     default:
       return {
@@ -68,11 +68,11 @@ function getCategoryBadgeConfig(
         badgeText: 'text-amber-200',
         badgeBorder: 'border-amber-400/50',
         icon: '✦',
-        shortLabel: 'Vedic Guidance',
-        pillarTag: `PILLAR 0${index + 1} • VEDIC INSIGHT`,
-        keyHighlightLabel: 'Consultation Mode',
-        keyHighlightValue: '100% Confidential 1-on-1 Session',
-        ctaText: 'Request Consultation',
+        shortLabel: 'Personal Guidance',
+        pillarTag: `PILLAR 0${index + 1} • GUIDANCE`,
+        keyHighlightLabel: 'Session Type',
+        keyHighlightValue: 'Private One-on-One Reading',
+        ctaText: 'Request a Reading',
       }
   }
 }
@@ -161,7 +161,7 @@ function GalleryCard({
             <source srcSet={imgSrc} type="image/webp" />
             <img
               src={imgSrc}
-              alt={item.alt || `${item.title} - Vedic Astrology Remedy by Pandith Vikram`}
+              alt={item.alt || `${item.title} - Vedic astrology service with Pandith Vikram, Los Angeles`}
               width={640}
               height={440}
               loading="lazy"
@@ -225,23 +225,23 @@ function GalleryCard({
 
           <div className="flex items-center justify-between gap-2 pt-0.5 text-[11px] font-roboto font-bold">
             <a
-              href="tel:+447537121638"
+              href="tel:+15103714626"
               className="text-slate-700 hover:text-[#B91C1C] transition-colors flex items-center gap-1"
             >
               <span className="text-[#B91C1C]">📞</span>
-              <span>Call Astrologer</span>
+              <span>Call Now</span>
             </a>
 
             <span className="text-slate-300">|</span>
 
             <a
-              href="https://wa.me/447537121638"
+              href="https://wa.me/15103714626"
               target="_blank"
               rel="noopener noreferrer"
               className="text-emerald-700 hover:text-emerald-800 transition-colors flex items-center gap-1"
             >
               <span>💬</span>
-              <span>WhatsApp Chat</span>
+              <span>WhatsApp</span>
             </a>
           </div>
         </div>
@@ -253,7 +253,7 @@ function GalleryCard({
 export default function ServiceConceptGallery({
   gallery,
   theme,
-  subtitle = 'Explore the three sacred pillars of this service — authentic Vedic ritual remedies, real-life spiritual transformation, and planetary birth chart alignment.',
+  subtitle = 'Three parts of how this service works: the traditional remedy, the change we work toward, and the planetary influence behind it.',
   onActionClick,
 }: ServiceConceptGalleryProps) {
   if (!gallery || gallery.length === 0) {
@@ -276,13 +276,13 @@ export default function ServiceConceptGallery({
               style={{ backgroundColor: accentColor }}
             />
             <span className="text-xs uppercase font-bold tracking-widest text-[#8E1612] font-roboto">
-              Three Sacred Pillars of Resolution
+              How This Service Works
             </span>
           </div>
 
           <h2 className="font-oswald text-2xl sm:text-3xl font-bold text-slate-900 uppercase">
-            Sacred Vedic Process &{' '}
-            <span style={{ color: accentColor }}>Spiritual Alignment</span>
+            Remedy, Outcome &{' '}
+            <span style={{ color: accentColor }}>Planetary Insight</span>
           </h2>
 
           <p className="text-slate-600 text-xs sm:text-sm font-roboto leading-relaxed max-w-2xl">
@@ -294,7 +294,7 @@ export default function ServiceConceptGallery({
           href="#service-inquiry-form"
           className="self-start sm:self-auto shrink-0 inline-flex items-center gap-1.5 bg-red-50 hover:bg-red-100 text-[#8E1612] border border-[#8E1612]/30 px-3.5 py-2 text-xs font-oswald font-bold uppercase tracking-wider transition-colors"
         >
-          <span>✦ Inquire Now</span>
+          <span>✦ Ask a Question</span>
           <span>↓</span>
         </a>
       </div>
@@ -316,27 +316,27 @@ export default function ServiceConceptGallery({
       <div className="bg-gradient-to-r from-[#060B28] via-[#121A42] to-[#8E1612] text-white p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-l-4 border-[#FFD700]">
         <div className="space-y-0.5">
           <p className="text-[11px] font-bold uppercase tracking-widest text-[#FFD700] font-roboto">
-            ✦ Need Personalized Guidance For Your Birth Chart?
+            ✦ Want a Reading Focused on Your Own Chart?
           </p>
           <p className="text-xs sm:text-sm text-slate-200 font-roboto">
-            Speak directly with Pandith Vikram for a 100% confidential kundali diagnosis and custom remedy plan.
+            Call Pandith Vikram for a private Kundali review and a remedy plan made just for you.
           </p>
         </div>
 
         <div className="flex flex-wrap items-center gap-2.5 shrink-0 w-full sm:w-auto">
           <a
-            href="tel:+447537121638"
+            href="tel:+15103714626"
             className="flex-1 sm:flex-initial text-center bg-[#FFD700] hover:bg-amber-300 text-slate-950 font-oswald font-bold text-xs uppercase tracking-wider px-4 py-2.5 transition-colors"
           >
-            📞 Call +44 7537121638
+            📞 Call +1 510-371-4626
           </a>
           <a
-            href="https://wa.me/447537121638"
+            href="https://wa.me/15103714626"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 sm:flex-initial text-center bg-[#25D366] hover:bg-[#20bd5a] text-white font-oswald font-bold text-xs uppercase tracking-wider px-4 py-2.5 transition-colors"
           >
-            💬 WhatsApp Now
+            💬 WhatsApp Us
           </a>
         </div>
       </div>

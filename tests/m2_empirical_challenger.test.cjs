@@ -189,12 +189,12 @@ function runM2EmpiricalVerification() {
   assert.ok(detailCode.includes('theme.testimonialBg'), 'Must apply theme.testimonialBg');
 
   // 5. Form validation and mechanics
-  assert.ok(detailCode.includes('Your Full Name *'), 'Name must be marked mandatory');
-  assert.ok(detailCode.includes('Phone Number (with Country Code) *'), 'Phone must be marked mandatory');
-  assert.ok(detailCode.includes('Date of Birth (Optional)'), 'DOB must be marked optional');
-  assert.ok(detailCode.includes('Describe Your Situation *'), 'Situation must be marked mandatory');
+  assert.ok(detailCode.includes('Full Name *'), 'Name must be marked mandatory');
+  assert.ok(detailCode.includes('Phone Number (include area code) *'), 'Phone must be marked mandatory');
+  assert.ok(detailCode.includes('Birth Date (optional)'), 'DOB must be marked optional');
+  assert.ok(detailCode.includes('Tell Us What’s Happening *'), 'Situation must be marked mandatory');
   assert.ok(detailCode.includes('type="tel"'), 'Phone input must use type="tel"');
-  assert.ok(detailCode.includes('+44 7537121638'), 'Phone placeholder must be UK format');
+  assert.ok(detailCode.includes('placeholder="+1 '), 'Phone placeholder must be US format');
   assert.ok(detailCode.includes('confetti('), 'Form submit must trigger confetti');
   assert.ok(detailCode.includes('setSubmitted(true)'), 'Form submit must set submitted=true');
   assert.ok(detailCode.includes('3000'), 'Auto-reset timer must be configured to 3000ms');

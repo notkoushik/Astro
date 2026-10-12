@@ -89,8 +89,8 @@ function registerTier1Tests(harness) {
         });
       });
 
-      // Pillar 5: 4-Step Consultation Journey & UK Testimonial
-      harness.test(`T1-${serviceNum}.5 [${serviceId}] Consultation Journey & UK Testimonial`, () => {
+      // Pillar 5: 4-Step Consultation Journey & California Client Journey
+      harness.test(`T1-${serviceNum}.5 [${serviceId}] Consultation Journey & California Client Journey`, () => {
         const service = servicesData[serviceId];
         assert.ok(service, `Service ${serviceId} must exist`);
         assert.ok(Array.isArray(service.howItWorks), 'howItWorks must be an array');
@@ -103,7 +103,7 @@ function registerTier1Tests(harness) {
         assert.ok(service.testimonial, 'testimonial object must be defined');
         assert.ok(service.testimonial.quote && service.testimonial.quote.trim().length >= 40, 'Testimonial quote must be meaningful (>=40 chars)');
         assert.ok(service.testimonial.client && service.testimonial.client.trim().length >= 3, 'Client name must be valid');
-        assert.ok(service.testimonial.location && service.testimonial.location.includes(canonical.ukLocationKeyword), `Location must be in UK (${canonical.ukLocationKeyword})`);
+        assert.ok(service.testimonial.location && service.testimonial.location.includes(canonical.locationKeyword), `Location must be in California (${canonical.locationKeyword})`);
       });
     });
   });
