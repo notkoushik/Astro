@@ -17,7 +17,7 @@ function registerTier2Tests(harness) {
   const servicesData = loadServicesData();
   const serviceKeys = Object.keys(CANONICAL_SERVICES_SPEC);
 
-  harness.describe('Tier 2: Boundary & Corner Cases (12 Services × 5 Boundaries)', () => {
+  harness.describe('Tier 2: Boundary & Corner Cases (15 Services × 5 Boundaries)', () => {
     serviceKeys.forEach((serviceId, index) => {
       const canonical = CANONICAL_SERVICES_SPEC[serviceId];
       const serviceNum = (index + 1).toString().padStart(2, '0');

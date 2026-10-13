@@ -22,8 +22,8 @@ The End-to-End (E2E) Test Suite for the Indian Astrologer Pandith Vikram web app
     ▼                               ▼                               ▼
 ┌──────────────────────┐┌──────────────────────┐┌──────────────────────┐
 │  Tier 0: Build &     ││  Tier 1: Feature     ││  Tier 2: Boundary &  │
-│  Asset Integrity     ││  Coverage (60 Tests) ││  Corner Cases (60)   │
-│  (8 Tests)           ││  12 Services × 5     ││  12 Services × 5     │
+│  Asset Integrity     ││  Coverage (75 Tests) ││  Corner Cases (75)   │
+│  (8 Tests)           ││  15 Services × 5     ││  15 Services × 5     │
 └──────────────────────┘└──────────────────────┘└──────────────────────┘
     │                               │                               │
     └───────────────────────────────┼───────────────────────────────┘
@@ -32,7 +32,7 @@ The End-to-End (E2E) Test Suite for the Indian Astrologer Pandith Vikram web app
     ▼                                                               ▼
 ┌──────────────────────────────────────┐┌──────────────────────────────┐
 │  Tier 3: Cross-Feature Combinations  ││  Tier 4: Real-World CA       │
-│  & Navigation Flows (18 Tests)       ││  Client Scenarios (12 Tests) │
+│  & Navigation Flows (18 Tests)       ││  Client Scenarios (15 Tests) │
 └──────────────────────────────────────┘└──────────────────────────────┘
 ```
 
@@ -40,14 +40,14 @@ The End-to-End (E2E) Test Suite for the Indian Astrologer Pandith Vikram web app
 
 1. **Tier 0: Production Build & Asset Integrity**:
    Verifies compilation health, production distribution bundles (`dist/index.html`, JavaScript/CSS chunks), configuration validity (`tsconfig.json`, `package.json`, `vite.config.ts`), and static media availability.
-2. **Tier 1: Feature Coverage (>=60 Tests)**:
-   Exhaustively exercises the 5 core behavioral pillars of each of the 12 Vedic astrology services (Identity & Metadata, Planetary Cause & Bhavas, Square Warning Symptoms, Tailored Remedies, Consultation Journey & California Client Journey).
-3. **Tier 2: Boundary & Corner Cases (>=60 Tests)**:
+2. **Tier 1: Feature Coverage (>=75 Tests)**:
+   Exhaustively exercises the 5 core behavioral pillars of each of the 15 astrology services (Identity & Metadata, Planetary Cause & Bhavas, Square Warning Symptoms, Tailored Remedies, Consultation Journey & California Client Journey).
+3. **Tier 2: Boundary & Corner Cases (>=75 Tests)**:
    Validates contracts, edge cases, string lengths, image triplet category schemas, missing fallback resilience, and the strict non-overlapping distinctiveness of color themes and deities.
 4. **Tier 3: Cross-Feature Combinations & State Interactions (18 Tests)**:
    Validates pairwise transitions, hash-synchronized URL deep-linking (`#<service-id>`), modal layering over dedicated screens, consultation form validation rules, telephone URI protocols, and strict square UI geometry (`rounded-none`).
-5. **Tier 4: Real-World California Client Application Scenarios (12 Tests)**:
-   Simulates end-to-end user journeys from California communities (Los Angeles, San Jose, Irvine, Fremont, Cerritos, Artesia, Sacramento, Pasadena, Riverside, Northridge, Bakersfield, San Diego) exercising full user lifecycle flows.
+5. **Tier 4: Real-World California Client Application Scenarios (15 Tests)**:
+   Simulates end-to-end user journeys from California communities (Los Angeles, San Jose, Irvine, Fremont, Cerritos, Artesia, Sacramento, Pasadena, Riverside, Northridge, Bakersfield, San Diego, Santa Monica, West Hollywood, Anaheim) exercising full user lifecycle flows.
 
 ---
 
@@ -68,7 +68,7 @@ The End-to-End (E2E) Test Suite for the Indian Astrologer Pandith Vikram web app
 
 ---
 
-### 2.2 Tier 1: Feature Coverage (60 Tests: 12 Services × 5 Tests)
+### 2.2 Tier 1: Feature Coverage (75 Tests: 15 Services × 5 Tests)
 
 Every service must pass 5 dedicated opaque-box feature coverage tests:
 - **Test .1: Identity & Presiding Vedic Deity**: Verifies service ID, title, category, and presiding planetary deity.
@@ -150,10 +150,28 @@ Every service must pass 5 dedicated opaque-box feature coverage tests:
     - Symptoms: 5 items
     - Remedies: 4 items (Full 12-House Life Analysis, Dasha Timeline for the Years Ahead, Personal Gemstone Guidance, Daily Mantra & Charity Routine)
     - Journey & Example Client Journey: 4 steps; Kavya N., San Diego, CA
+13. **Service 13: Psychic & Intuitive Reading (`psychic-reading`)**
+    - Deity: Ketu & Chandra (the Moon), Lords of Intuition
+    - Category: Intuitive & Prashna Guidance
+    - Symptoms: 5 items
+    - Remedies: 4 items (Intuitive Prashna Session, Dream & Sign Interpretation, Third-Eye (Ajna) Meditation Practice, Moon & Ketu Balancing Prayers)
+    - Journey & Example Client Journey: 4 steps; Leena M., Santa Monica, CA
+14. **Service 14: Tarot Card Reading (`tarot-reading`)**
+    - Deity: Lord Ganesha & Budha (Mercury)
+    - Category: Tarot & Vedic Insight
+    - Symptoms: 5 items
+    - Remedies: 4 items (Three-Card Clarity Spread, Ten-Card Life Spread, Love & Relationship Spread, Year-Ahead Tarot & Transit Forecast)
+    - Journey & Example Client Journey: 4 steps; Aisha K., West Hollywood, CA
+15. **Service 15: Love Spells & Sacred Rituals (`love-spells`)**
+    - Deity: Swayamvara Parvati & Kamadeva
+    - Category: Positive Love Rituals
+    - Symptoms: 5 items
+    - Remedies: 4 items (Swayamvara Parvati Mantra, Kamadeva Attraction Puja, Friday Rose & Venus Ritual, Couple’s Bond Blessing)
+    - Journey & Example Client Journey: 4 steps; Kiran S., Anaheim, CA
 
 ---
 
-### 2.3 Tier 2: Boundary & Corner Cases (60 Tests: 12 Services × 5 Tests)
+### 2.3 Tier 2: Boundary & Corner Cases (75 Tests: 15 Services × 5 Tests)
 
 Every service must pass 5 boundary, contract, and edge-case tests:
 - **Test .1: Visual Theme Parameters & Color Atmosphere Contract**: Validates presence and formatting of color themes (hex format `#RRGGBB`, gradient strings, non-empty contrast values).
@@ -177,7 +195,7 @@ Every service must pass 5 boundary, contract, and edge-case tests:
 | `T3-04` | Hash-Synchronized Deep Linking | Setting `window.location.hash = '#career-business'` accurately targets and resolves the career service |
 | `T3-05` | Hash Route Cleanup | Clicking back or home clears `window.location.hash` to empty string |
 | `T3-06` | Invalid Hash Fallback Safety | Malformed or unknown hash (e.g., `#invalid-service-xyz`) gracefully falls back to homepage grid without runtime exception |
-| `T3-07` | Homepage "Read More" Wiring | All 12 cards on the homepage grid contain click handlers mapped to their specific service ID |
+| `T3-07` | Homepage "Read More" Wiring | All 15 cards on the homepage grid contain click handlers mapped to their specific service ID |
 | `T3-08` | Modal Layering over Service View | Triggering "Book This Reading" (`onBookNow`) opens booking modal without destroying dedicated view state |
 | `T3-09` | Modal Dismissal State Retention | Closing booking modal returns focus cleanly to the active service detail view |
 | `T3-10` | Form Input Validation: Required Fields | Submitting empty inquiry form triggers HTML5/React validation rejection on Name, Phone, and Notes |
@@ -192,9 +210,9 @@ Every service must pass 5 boundary, contract, and edge-case tests:
 
 ---
 
-### 2.5 Tier 4: Real-World California Client Application Scenarios (12 Tests)
+### 2.5 Tier 4: Real-World California Client Application Scenarios (15 Tests)
 
-Simulates 12 complete end-to-end user journeys representing California community clients:
+Simulates 15 complete end-to-end user journeys representing California community clients:
 
 1. **Scenario 1 (`T4-01`) — San Jose Tech Professional Career Growth**:
    Silicon Valley client selects Career & Business Success, reviews 10th House (Karma Bhava) analysis, inspects the Surya and Mercury remedies, and verifies the San Jose example journey.
@@ -220,6 +238,12 @@ Simulates 12 complete end-to-end user journeys representing California community
     Client blocked by a partner reviews Sattvic love mantras and the Radha-Krishna Reunion Puja and verifies the Los Angeles example journey.
 12. **Scenario 12 (`T4-12`) — San Diego Seeker Complete Janam Kundali Reading**:
     Seeker unsure of life direction reviews the 12-House Life Analysis and Dasha timeline and verifies the San Diego example journey.
+13. **Scenario 13 (`T4-13`) — Santa Monica Professional Urgent Psychic Reading**:
+    Client at a career crossroads reviews the Moon and Ketu explanation, selects the Intuitive Prashna Session, and verifies the Santa Monica example journey.
+14. **Scenario 14 (`T4-14`) — West Hollywood Seeker Tarot & Vedic Chart Reading**:
+    Client torn between two choices reviews how tarot is read alongside Dasha and transits, selects a tarot spread, and verifies the West Hollywood example journey.
+15. **Scenario 15 (`T4-15`) — Anaheim Single Professional Positive Love Spell**:
+    Single client reviews the Swayamvara Parvati mantra, confirms the page states love spells never force another person’s feelings, and verifies the Anaheim example journey.
 
 ---
 
@@ -247,11 +271,11 @@ npm test
 | Tier | Focus Area | Test Count | Minimum Requirement | Status |
 |---|---|---|---|---|
 | **Tier 0** | Production Build & Static Asset Integrity | 8 | All core artifacts | **DEFINED & READY** |
-| **Tier 1** | Feature Coverage (12 Services × 5 Core Pillars) | 60 | >= 60 tests | **DEFINED & READY** |
-| **Tier 2** | Boundary & Corner Cases (12 Services × 5 Boundaries) | 60 | >= 60 tests | **DEFINED & READY** |
+| **Tier 1** | Feature Coverage (15 Services × 5 Core Pillars) | 75 | >= 75 tests | **DEFINED & READY** |
+| **Tier 2** | Boundary & Corner Cases (15 Services × 5 Boundaries) | 75 | >= 75 tests | **DEFINED & READY** |
 | **Tier 3** | Cross-Feature Interactions & Navigation Flows | 18 | Multi-feature coverage | **DEFINED & READY** |
-| **Tier 4** | Real-World California Client End-to-End Scenarios | 12 | Realistic user journeys | **DEFINED & READY** |
-| **TOTAL** | **Full End-to-End Test Suite** | **158** | **>= 120 tests** | **100% COMPLETE** |
+| **Tier 4** | Real-World California Client End-to-End Scenarios | 15 | Realistic user journeys | **DEFINED & READY** |
+| **TOTAL** | **Full End-to-End Test Suite** | **191** | **>= 120 tests** | **100% COMPLETE** |
 
 ---
 

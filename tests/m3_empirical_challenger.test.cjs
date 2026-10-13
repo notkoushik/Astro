@@ -2,7 +2,7 @@
  * Master Empirical Challenger Verification Suite for Milestone M3
  * 
  * Verifies:
- * 1. All 12 services can be opened via hash, homepage cards, navbar dropdown, mobile drawer, and footer links.
+ * 1. All 15 services can be opened via hash, homepage cards, navbar dropdown, mobile drawer, and footer links.
  * 2. Invalid hash fallback handling, including adversarial prototype collision edge cases.
  * 3. hashchange and popstate event listeners registration and clean unmount removal.
  * 4. Modal layering isolation and contextual dynamic adaptation.
@@ -44,7 +44,7 @@ function runM3EmpiricalVerification() {
   };
 
   // -------------------------------------------------------------
-  // PILLAR 1: Service Navigation Access Across All 12 Services
+  // PILLAR 1: Service Navigation Access Across All 15 Services
   // -------------------------------------------------------------
   // A. Hash-based opening
   // App.tsx logic: hash.replace(/^#\/?/, '').trim()
@@ -70,7 +70,7 @@ function runM3EmpiricalVerification() {
   assert.ok(appCode.includes('onClick={() => openDedicatedService(item.id)}'), 'Read More button must trigger openDedicatedService(item.id)');
   assert.ok(appCode.includes('Read More'), 'Homepage cards must render Read More action');
   
-  // Verify services array inside App.tsx contains all 12 service IDs
+  // Verify services array inside App.tsx contains all 15 service IDs
   serviceKeys.forEach(id => {
     assert.ok(appCode.includes(`id: '${id}'`), `App.tsx services list must define id '${id}'`);
     report.homepageCardsTested++;
@@ -78,12 +78,12 @@ function runM3EmpiricalVerification() {
 
   // C. Desktop Navbar Dropdown
   // Check that the hover dropdown iterates services.map and triggers openDedicatedService
-  assert.ok(appCode.includes('All 12 Services'), 'Desktop navbar must include 12 Vedic Services dropdown header');
+  assert.ok(appCode.includes('All 15 Services'), 'Desktop navbar must include the All 15 Services dropdown header');
   assert.ok(appCode.includes('group-hover:opacity-100'), 'Desktop navbar dropdown must support hover visibility');
   
   // D. Mobile Drawer Accordion
   assert.ok(appCode.includes('mobileServicesOpen'), 'Mobile drawer must manage mobileServicesOpen state');
-  assert.ok(appCode.includes('12 Services'), 'Mobile drawer must indicate 12 Services in toggle');
+  assert.ok(appCode.includes('(All 15)'), 'Mobile drawer must indicate all 15 services in toggle');
   assert.ok(appCode.includes('openDedicatedService(item.id); setMobileMenuOpen(false);'), 'Mobile drawer service selection must close mobile menu');
   report.navbarDropdownTested = 12;
   report.mobileDrawerTested = 12;

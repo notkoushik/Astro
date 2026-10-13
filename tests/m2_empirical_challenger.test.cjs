@@ -4,7 +4,7 @@
  * Verifies:
  * 1. src/components/ServiceConceptGallery.tsx implementation, badge configs, fallbacks, square geometry.
  * 2. src/components/ServiceDetailView.tsx dynamic theming, deity rendering, gallery embedding, consultation form, square geometry.
- * 3. All 12 services in src/data/servicesData.ts have valid themes, deities, and 3-image concept galleries.
+ * 3. All 15 services in src/data/servicesData.ts have valid themes, deities, and 3-image concept galleries.
  * 4. All 3 categories map to non-empty badge labels and icons.
  * 5. Stress tests with edge cases and adversarial inputs.
  */
@@ -42,7 +42,7 @@ function runM2EmpiricalVerification() {
   };
 
   // -------------------------------------------------------------
-  // PILLAR 1: Data Contract & Theme Integrity for All 12 Services
+  // PILLAR 1: Data Contract & Theme Integrity for All 15 Services
   // -------------------------------------------------------------
   const requiredThemeProps = [
     'primaryGradient',
@@ -58,7 +58,7 @@ function runM2EmpiricalVerification() {
     'glowColor',
   ];
 
-  assert.strictEqual(serviceKeys.length, 12, 'Must contain exactly 12 services in detailedServicesData');
+  assert.strictEqual(serviceKeys.length, 15, 'Must contain exactly 15 services in detailedServicesData');
 
   const seenAccents = new Set();
   const seenGradients = new Set();
@@ -128,7 +128,7 @@ function runM2EmpiricalVerification() {
     }
   }
 
-  // Verify visual diversity: at least 7 distinct accent colors and 10 distinct gradients across 12 services
+  // Verify visual diversity: at least 7 distinct accent colors and 10 distinct gradients across 15 services
   assert.ok(seenAccents.size >= 7, `Expected at least 7 distinct accent colors, found ${seenAccents.size}`);
   assert.ok(seenGradients.size >= 10, `Expected at least 10 distinct primary gradients, found ${seenGradients.size}`);
 
@@ -209,7 +209,7 @@ function runM2EmpiricalVerification() {
   // -------------------------------------------------------------
   // PILLAR 4: Simulated JSX/DOM Render Oracle
   // -------------------------------------------------------------
-  // Test simulated rendering for all 12 services
+  // Test simulated rendering for all 15 services
   for (const slug of serviceKeys) {
     const svc = services[slug];
 
@@ -312,10 +312,10 @@ if (require.main === module) {
   try {
     const report = runM2EmpiricalVerification();
     console.log('=== Milestone M2 Master Empirical Verification Report ===');
-    console.log(`Services Tested: ${report.servicesTested}/12`);
-    console.log(`Themes Validated (11 properties each): ${report.themesValidated}/12`);
-    console.log(`Presiding Deities Verified in Output: ${report.deitiesRendered}/12`);
-    console.log(`Concept Galleries Verified (3 per service): ${report.conceptGalleriesRendered}/12`);
+    console.log(`Services Tested: ${report.servicesTested}/15`);
+    console.log(`Themes Validated (11 properties each): ${report.themesValidated}/15`);
+    console.log(`Presiding Deities Verified in Output: ${report.deitiesRendered}/15`);
+    console.log(`Concept Galleries Verified (3 per service): ${report.conceptGalleriesRendered}/15`);
     console.log(`Category Badge Configurations Verified: ${report.categoryBadgeConfigsValidated}/3`);
     console.log(`Fallback Assets Physically Confirmed on Disk: ${report.fallbackAssetsVerified}/36`);
     console.log(`Strict Square Geometry Checks Passed: ${report.squareGeometryChecksPassed}/2`);

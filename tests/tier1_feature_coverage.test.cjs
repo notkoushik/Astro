@@ -1,6 +1,6 @@
 /**
  * Tier 1: Feature Coverage Tests
- * Verifies all 12 Vedic astrology services against 5 core behavioral pillars (60 tests total).
+ * Verifies all 15 astrology services against 5 core behavioral pillars (75 tests total).
  */
 
 const { assert } = require('./utils/testHarness.cjs');
@@ -10,7 +10,7 @@ function registerTier1Tests(harness) {
   const servicesData = loadServicesData();
   const serviceKeys = Object.keys(CANONICAL_SERVICES_SPEC);
 
-  harness.describe('Tier 1: Feature Coverage (12 Services × 5 Core Pillars)', () => {
+  harness.describe('Tier 1: Feature Coverage (15 Services × 5 Core Pillars)', () => {
     serviceKeys.forEach((serviceId, index) => {
       const canonical = CANONICAL_SERVICES_SPEC[serviceId];
       const serviceNum = (index + 1).toString().padStart(2, '0');

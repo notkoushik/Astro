@@ -112,6 +112,30 @@ const services: ServiceItem[] = [
     desc: 'A personal reading of your birth chart and the year ahead.',
     details: 'Full Janam Kundali reading with Dasha timeline, Sade Sati review and a personal outlook for the year ahead.'
   },
+  {
+    id: 'psychic-reading',
+    title: 'Psychic &',
+    subtitle: 'Intuitive Reading',
+    img: '/images/moon-phases.webp',
+    desc: 'Intuitive answers to urgent questions about love, work and life.',
+    details: 'Intuitive insight checked against a Prashna chart cast for the moment you ask, by phone, video or in person.'
+  },
+  {
+    id: 'tarot-reading',
+    title: 'Tarot Card',
+    subtitle: 'Reading',
+    img: '/images/tarot.webp',
+    desc: 'A tarot spread read alongside your birth chart for clear direction.',
+    details: 'Three-card, ten-card, love and year-ahead tarot spreads, each matched with your Dasha and transits.'
+  },
+  {
+    id: 'love-spells',
+    title: 'Love Spells',
+    subtitle: '& Sacred Rituals',
+    img: '/images/candles.webp',
+    desc: 'Positive love rituals to attract the right partner and deepen a bond.',
+    details: 'Sattvic love spells, Swayamvara Parvati mantra and Venus rituals that always respect free will.'
+  },
 ]
 
 interface HeroSlide {
@@ -325,6 +349,30 @@ const movingPhotos: MovingPhotoItem[] = [
     subtitle: 'Mahadasha & Sade Sati Timing',
     category: 'Planetary Periods',
     serviceId: 'horoscope-reading'
+  },
+  {
+    id: 'm15',
+    img: '/images/moon-phases.webp',
+    title: 'Psychic & Intuitive Reading',
+    subtitle: 'Quick Answers to Urgent Questions',
+    category: 'Psychic',
+    serviceId: 'psychic-reading'
+  },
+  {
+    id: 'm16',
+    img: '/images/tarot.webp',
+    title: 'Tarot Card Reading',
+    subtitle: 'Tarot Read With Your Birth Chart',
+    category: 'Tarot',
+    serviceId: 'tarot-reading'
+  },
+  {
+    id: 'm17',
+    img: '/images/candles.webp',
+    title: 'Love Spells & Sacred Rituals',
+    subtitle: 'Positive Rituals That Respect Free Will',
+    category: 'Love Spells',
+    serviceId: 'love-spells'
   }
 ]
 
@@ -468,8 +516,16 @@ const homeFaqs: HomeFaq[] = [
     answer: 'First, Pandith Vikram listens to what is happening in your life, without judgment. He then studies your birth chart or a Prashna chart, explains which planetary periods are active and why the problem has appeared, and finishes with clear guidance and simple, personal remedies you can start right away.'
   },
   {
+    question: 'Do you offer psychic and tarot readings as well as astrology?',
+    answer: 'Yes. Alongside Vedic birth chart readings, Pandith Vikram offers psychic readings for urgent questions and tarot card readings for a clear picture of the present moment. Both are checked against your chart, so you get the insight of the cards or of intuition together with the timing of the planets.'
+  },
+  {
+    question: 'Will a love spell force someone to love me?',
+    answer: 'No. Pandith Vikram’s love spells are positive, Sattvic rituals that respect free will. They work on the planetary blocks in your own chart, strengthen Venus and your natural attraction, and support a bond where real feelings already exist. He never performs spells meant to control another person.'
+  },
+  {
     question: 'What should I have ready before my session?',
-    answer: 'Your date of birth, place of birth and birth time if you know it. If your question involves a partner, spouse or business associate, their details or a clear photo of their face and palms will help. Most of all, write down the questions that matter most to you.'
+    answer: 'The day you were born, the city you were born in, and the time if you know it. If your question involves a partner, spouse or business associate, their details or a clear photo of their face and palms will help. Most of all, write down the questions that matter most to you.'
   }
 ]
 
@@ -663,7 +719,7 @@ export default function App() {
       if (canonicalEl) canonicalEl.href = `${baseUrl}/`
       if (metaDescEl) {
         metaDescEl.content =
-          'Indian Vedic astrologer Pandith Vikram, 7001 Hollywood Blvd, Los Angeles, CA. 35+ years helping with love, marriage matching, career, money, family and negative energy. In-person, phone and video readings. Call +1 510-371-4626.'
+          'Indian Vedic astrologer Pandith Vikram, 7001 Hollywood Blvd, Los Angeles, CA. 35+ years of horoscope, psychic and tarot readings, love spells, marriage matching, career and family guidance. In person, by phone or video. Call +1 510-371-4626.'
       }
       if (dynamicSchemaEl) dynamicSchemaEl.remove()
     }
@@ -865,7 +921,7 @@ export default function App() {
               <div className="absolute left-0 top-full pt-1.5 w-76 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50 shadow-2xl">
                 <div className="bg-white border-t-2 border-[#B91C1C] border-x border-b border-slate-200 rounded-none py-1.5 divide-y divide-slate-100 shadow-2xl">
                   <div className="px-4 py-2 bg-slate-50 text-[10px] uppercase font-bold tracking-wider text-slate-600 flex justify-between items-center whitespace-nowrap">
-                    <span>All 12 Services</span>
+                    <span>All 15 Services</span>
                     <span className="text-[#B91C1C]">Pandith Vikram</span>
                   </div>
                   <div className="max-h-80 overflow-y-auto py-1 divide-y divide-slate-50">
@@ -999,7 +1055,7 @@ export default function App() {
                   className="p-1 text-[#B91C1C] text-xs font-bold rounded-none cursor-pointer"
                   aria-label="Toggle all services"
                 >
-                  {mobileServicesOpen ? '▲ Close' : '▼ (All 12)'}
+                  {mobileServicesOpen ? '▲ Close' : '▼ (All 15)'}
                 </button>
               </div>
               {mobileServicesOpen && (
@@ -1581,10 +1637,10 @@ export default function App() {
                 <div className="space-y-3">
                   <h3 className="font-oswald text-xl sm:text-2xl font-bold text-slate-900 uppercase flex items-center gap-2">
                     <span className="text-[#D61B14]">✦</span>
-                    <span>Prashna Readings & Palmistry for Urgent Questions</span>
+                    <span>Psychic, Tarot & Prashna Readings for Urgent Questions</span>
                   </h3>
                   <p className="text-sm sm:text-base leading-relaxed text-slate-700">
-                    Some questions cannot wait for a full chart study. When you need to know “Is this relationship worth saving?” or “Should I accept this offer?”, Pandith Vikram casts a Prashna chart for the moment you ask and can combine it with palm reading (Hasta Rekha). The result is a quick, honest answer you can act on.
+                    Some questions cannot wait for a full chart study. When you need to know “Is this relationship worth saving?” or “Should I accept this offer?”, Pandith Vikram combines intuitive psychic insight with a Prashna chart cast for the moment you ask, and can add a tarot spread or palm reading (Hasta Rekha). The result is a quick, honest answer you can act on.
                   </p>
                 </div>
 
@@ -1756,7 +1812,7 @@ export default function App() {
                 </h2>
                 <div className="w-24 h-1 bg-[#FFD700] mx-auto my-3.5"></div>
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-roboto">
-                  Twelve focused consultations for families across Los Angeles and California, pairing careful birth chart analysis with traditional pujas, mantras and remedies. Choose a topic and tap “Read More” to see how Pandith Vikram can help.
+                  Fifteen focused consultations for families across Los Angeles and California, from birth charts and Kundali matching to psychic readings, tarot and positive love spells, each backed by traditional pujas, mantras and remedies. Choose a topic and tap “Read More” to see how Pandith Vikram can help.
                 </p>
               </div>
 
@@ -2417,7 +2473,7 @@ export default function App() {
                 <Logo variant="gold" />
               </button>
               <p className="text-xs sm:text-[13px] text-amber-50/90 leading-relaxed font-roboto">
-                Whenever life feels uncertain, reach out to Astrologer <strong className="text-[#FFD700]">Pandith Vikram</strong> for honest Vedic guidance and remedies that fit your situation. With more than 35 years of experience and an office on Hollywood Boulevard, he is here to help you find your way forward, in Los Angeles or anywhere in the USA.
+                Whenever life feels uncertain, reach out to Astrologer <strong className="text-[#FFD700]">Pandith Vikram</strong> for honest Vedic guidance and remedies that fit your situation. With more than 35 years of experience and an office on Hollywood Boulevard, he is here to guide you forward, in Los Angeles or anywhere in the USA.
               </p>
               <div className="pt-1 flex items-center gap-2 text-[11px] text-[#FFD700] font-bold uppercase tracking-wider font-roboto">
                 <span className="inline-block w-2 h-2 bg-[#FFD700]"></span>
@@ -2558,9 +2614,10 @@ export default function App() {
                   { label: 'Husband–Wife Disputes', id: 'marriage-compatibility' },
                   { label: 'Bring Back Lost Love', id: 'get-ex-love-back' },
                   { label: 'Love Marriage Guidance', id: 'love-relationship' },
-                  { label: 'Kundali Matching', id: 'marriage-compatibility' },
+                  { label: 'Psychic Reading', id: 'psychic-reading' },
                   { label: 'Palm & Horoscope Reading', id: 'horoscope-reading' },
-                  { label: 'Love Reunion Mantras', id: 'get-ex-love-back' },
+                  { label: 'Tarot Card Reading', id: 'tarot-reading' },
+                  { label: 'Love Spells', id: 'love-spells' },
                   { label: 'Family & Children', id: 'family-child-problems' },
                   { label: 'Money & Business Growth', id: 'financial-problems' },
                   { label: 'Court Case & Property Help', id: 'court-case-problems' },

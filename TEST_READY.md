@@ -4,7 +4,7 @@
 **Working Directory**: `d:\New_project\astro_v2`  
 **Test Suite Location**: `d:\New_project\astro_v2\tests\`  
 **Status**: **TEST SUITE READY FOR EXECUTION**  
-**Total Automated Tests**: **158 Tests Across 5 Tiers** (Tiers 0–4)  
+**Total Automated Tests**: **191 Tests Across 5 Tiers** (Tiers 0–4)  
 
 ---
 
@@ -29,17 +29,17 @@ npm test
 | Tier | Focus Area | Automated Test Count | Requirement Threshold | Readiness Status |
 |---|---|---|---|---|
 | **Tier 0** | Production Build & Static Asset Integrity | 8 Tests | Core Artifacts | **100% COMPLETE & PASSING** |
-| **Tier 1** | Feature Coverage (12 Services × 5 Core Pillars) | 60 Tests | >= 60 Tests | **100% COMPLETE & PASSING** |
-| **Tier 2** | Boundary & Corner Cases (12 Services × 5 Boundaries) | 60 Tests | >= 60 Tests | **100% COMPLETE & PASSING** |
+| **Tier 1** | Feature Coverage (15 Services × 5 Core Pillars) | 75 Tests | >= 75 Tests | **100% COMPLETE & PASSING** |
+| **Tier 2** | Boundary & Corner Cases (15 Services × 5 Boundaries) | 75 Tests | >= 75 Tests | **100% COMPLETE & PASSING** |
 | **Tier 3** | Cross-Feature Combinations & State Interactions | 18 Tests | Navigation & Modals | **100% COMPLETE & PASSING** |
-| **Tier 4** | Real-World California Client Application Scenarios | 12 Tests | Realistic User Journeys | **100% COMPLETE & PASSING** |
-| **TOTAL** | **Comprehensive E2E Verification Suite** | **158 Tests** | **>= 120 Tests** | **100% VERIFIED & READY** |
+| **Tier 4** | Real-World California Client Application Scenarios | 15 Tests | Realistic User Journeys | **100% COMPLETE & PASSING** |
+| **TOTAL** | **Comprehensive E2E Verification Suite** | **191 Tests** | **>= 120 Tests** | **100% VERIFIED & READY** |
 
 ---
 
 ## 3. Comprehensive Feature Checklist
 
-### 3.1 Twelve Dedicated Vedic Astrology Services
+### 3.1 Fifteen Dedicated Astrology Services
 
 - [x] **Service 1: Love & Relationship Healing (`love-relationship`)**
   - Guiding Deity: Shukra Deva (Venus), Kamadeva & Rati
@@ -149,6 +149,33 @@ npm test
   - Journey & Example Client Journey: 4 consultation steps; Kavya N., San Diego, CA
   - Concept Gallery: Hand-Drawn Kundali Chart, Clarity Under a Starry Sky, Deep Space Star Field
 
+- [x] **Service 13: Psychic & Intuitive Reading (`psychic-reading`)**
+  - Guiding Deity: Ketu & Chandra (the Moon), Lords of Intuition
+  - Theme Atmosphere: Mystic violet / moonlit purple
+  - Category: Intuitive & Prashna Guidance
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Intuitive Prashna Session, Dream & Sign Interpretation, Third-Eye (Ajna) Meditation Practice, Moon & Ketu Balancing Prayers
+  - Journey & Example Client Journey: 4 consultation steps; Leena M., Santa Monica, CA
+  - Concept Gallery: Incense to Settle the Mind, Clarity After the Fog Lifts, The Moon, Ruler of Intuition
+
+- [x] **Service 14: Tarot Card Reading (`tarot-reading`)**
+  - Guiding Deity: Lord Ganesha & Budha (Mercury)
+  - Theme Atmosphere: Midnight indigo / lavender
+  - Category: Tarot & Vedic Insight
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Three-Card Clarity Spread, Ten-Card Life Spread, Love & Relationship Spread, Year-Ahead Tarot & Transit Forecast
+  - Journey & Example Client Journey: 4 consultation steps; Aisha K., West Hollywood, CA
+  - Concept Gallery: A Three-Card Spread by Candlelight, Finding Your Way Forward, The High Priestess and the Moon
+
+- [x] **Service 15: Love Spells & Sacred Rituals (`love-spells`)**
+  - Guiding Deity: Swayamvara Parvati & Kamadeva
+  - Theme Atmosphere: Rose pink / fuchsia
+  - Category: Positive Love Rituals
+  - 5 Square Symptoms: 5 items
+  - 4 Tailored Remedies: Swayamvara Parvati Mantra, Kamadeva Attraction Puja, Friday Rose & Venus Ritual, Couple’s Bond Blessing
+  - Journey & Example Client Journey: 4 consultation steps; Kiran S., Anaheim, CA
+  - Concept Gallery: Kamakshi Lamp for a Love Ritual, Walking Forward Together, Venus, Planet of Romance
+
 ---
 
 ### 3.2 Visual Distinction & Concept Galleries
@@ -167,7 +194,7 @@ npm test
 - [x] Zero Rogue Rounded Classes: Verified zero instances of `rounded-md`, `rounded-lg`, `rounded-xl` in `ServiceDetailView.tsx`.
 
 ### 3.4 Navigation & Form Integrity
-- [x] Read More Triggers: All 12 homepage service cards invoke `openDedicatedService(id)`.
+- [x] Read More Triggers: All 15 homepage service cards invoke `openDedicatedService(id)`.
 - [x] Breadcrumbs: Top navigation renders `Home / Astrology Services / [Service Title]`.
 - [x] Back Navigation: "Back to All Services" cleanly returns to homepage services grid with smooth scroll.
 - [x] Hash Synchronization: Supports `#<service-id>` deep-linking.
