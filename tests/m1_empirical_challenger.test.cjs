@@ -1,10 +1,10 @@
 /**
  * Empirical Challenger Verification Suite for Milestone M1
  * Probes src/data/servicesData.ts for strict compliance with M1 requirements:
- * 1. Service IDs & slug uniqueness (12 services, 0 duplicates)
+ * 1. Service IDs & slug uniqueness (15 services, 0 duplicates)
  * 2. Presiding Vedic Deities (non-empty, matching canonical specs)
  * 3. ServiceTheme schema (10+ valid theme styling properties per service)
- * 4. 36 Concept Gallery Items (non-empty URLs, categories, titles, captions, licenses, alts, and verified local fallbacks on disk)
+ * 4. 45 Concept Gallery Items (non-empty URLs, categories, titles, captions, licenses, alts, and verified local fallbacks on disk)
  * 5. Data integrity (symptoms count=5, remedies count=4, howItWorks count=4, California client journeys)
  */
 
@@ -29,7 +29,7 @@ function runM1EmpiricalVerification() {
   };
 
   // 1. Verify Service IDs & Slug Uniqueness
-  assert.strictEqual(serviceKeys.length, 12, 'Must contain exactly 12 services in detailedServicesData');
+  assert.strictEqual(serviceKeys.length, 15, 'Must contain exactly 15 services in detailedServicesData');
   const seenIds = new Set();
 
   for (const slug of expectedSlugs) {
@@ -45,7 +45,7 @@ function runM1EmpiricalVerification() {
     assert.strictEqual(svc.id, slug, `Service key and internal id must match for ${slug}`);
     report.slugsVerified++;
   }
-  assert.strictEqual(seenIds.size, 12, 'All 12 service slugs must be distinct with 0 duplicates');
+  assert.strictEqual(seenIds.size, 15, 'All 15 service slugs must be distinct with 0 duplicates');
 
   // 2. Verify Presiding Deities & Theme Properties
   const requiredThemeProps = [
@@ -95,7 +95,7 @@ function runM1EmpiricalVerification() {
     assert.strictEqual(svc.howItWorks.length, 4, `Service ${slug} must have exactly 4 howItWorks steps`);
     assert.ok(svc.testimonial && svc.testimonial.quote && svc.testimonial.client && svc.testimonial.location, `Service ${slug} must have full testimonial`);
 
-    // 3. Verify Gallery Items (3 per service = 36 total)
+    // 3. Verify Gallery Items (3 per service = 45 total)
     if (!Array.isArray(svc.gallery) || svc.gallery.length !== 3) {
       report.errors.push(`Service ${slug} gallery does not contain exactly 3 items`);
       continue;
@@ -144,11 +144,11 @@ if (require.main === module) {
     const report = runM1EmpiricalVerification();
     console.log('=== Milestone M1 Empirical Verification Report ===');
     console.log(`Total Services: ${report.totalServices}`);
-    console.log(`Slugs Verified (0 duplicates): ${report.slugsVerified}/12`);
-    console.log(`Deities Verified: ${report.deitiesVerified}/12`);
-    console.log(`Themes Verified (11 properties each): ${report.themesVerified}/12`);
-    console.log(`Gallery Items Verified: ${report.galleryItemsVerified}/36`);
-    console.log(`Fallbacks Confirmed on Disk: ${report.fallbacksVerifiedOnDisk}/36`);
+    console.log(`Slugs Verified (0 duplicates): ${report.slugsVerified}/15`);
+    console.log(`Deities Verified: ${report.deitiesVerified}/15`);
+    console.log(`Themes Verified (11 properties each): ${report.themesVerified}/15`);
+    console.log(`Gallery Items Verified: ${report.galleryItemsVerified}/45`);
+    console.log(`Fallbacks Confirmed on Disk: ${report.fallbacksVerifiedOnDisk}/45`);
     console.log(`Errors: ${report.errors.length}`);
     if (report.errors.length > 0) {
       console.error(report.errors);

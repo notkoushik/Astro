@@ -4,10 +4,10 @@
 
 ## Architecture
 The application is a high-performance single page application (SPA) built with React 19, Vite 8, TypeScript 5.7, and Tailwind CSS v4.
-The expansion introduces full dedicated Vedic astrology experiences for all 12 services:
+The expansion introduces full dedicated Vedic astrology experiences for all 15 services:
 - **Data Layer (`src/data/servicesData.ts`)**: Strongly-typed data store containing deep Vedic astrology profiles, planetary deities, specific visual theme parameters (hex codes, gradients, accents), and a 36-image concept gallery matrix (3 verified royalty-free categories per service).
 - **Component Layer (`src/components/ServiceDetailView.tsx`, `src/components/ServiceConceptGallery.tsx`)**: Themed service detail view engine rendering distinctive visual atmospheres for each planetary deity, square-geometry cards (`rounded-none`), symptom indicators, tailored remedies, 4-step journey, California example client journeys, and multi-image galleries.
-- **Application Shell & Navigation (`src/App.tsx`)**: Shell handling top banner, sticky navbar, hero slider, 12-card services grid, and hash-synchronized routing (`#<service-id>`) enabling seamless deep-linking, smooth scrolling, and browser history navigation.
+- **Application Shell & Navigation (`src/App.tsx`)**: Shell handling top banner, sticky navbar, hero slider, 15-card services grid, and hash-synchronized routing (`#<service-id>`) enabling seamless deep-linking, smooth scrolling, and browser history navigation.
 - **Visual Assets (`public/images/`)**: Curated royalty-free open-source image collection from NASA, Wikimedia Commons, and Unsplash with verified fallback safety.
 
 ```
@@ -36,13 +36,13 @@ The expansion introduces full dedicated Vedic astrology experiences for all 12 s
                                │
                ┌───────────────┴───────────────┐
                │     src/data/servicesData.ts  │
-               │ (12 Vedic Services & Gallery) │
+               │ (15 Services & Galleries)     │
                └───────────────────────────────┘
 ```
 
 ## Code Layout
 - `src/App.tsx`: Main application shell, state management, hash route synchronization, modal triggers.
-- `src/data/servicesData.ts`: Data definitions for all 12 services, visual themes, planetary deities, and galleries.
+- `src/data/servicesData.ts`: Data definitions for all 15 services, visual themes, planetary deities, and galleries.
 - `src/components/ServiceDetailView.tsx`: Dedicated full-page service view with dynamic Vedic theming.
 - `src/components/ServiceConceptGallery.tsx`: Subcomponent rendering the 3-tier square concept gallery.
 - `src/components/Logo.tsx`: SVG Vedic Surya Mandala logo.
@@ -65,20 +65,23 @@ The expansion introduces full dedicated Vedic astrology experiences for all 12 s
 | 10 | Service 10: Property & Real Estate Disputes | Bhumi/Mars theme, earthy terracotta atmosphere, Vastu Purusha, 5 symptoms, 4 remedies | M1 | Survey / R1 |
 | 11 | Service 11: Bring Back Lost Love | Kamadeva/Satvik Vashikaran theme, ruby velvet atmosphere, Rinanubandha karma, 5 symptoms, 4 remedies | M1 | Survey / R1 |
 | 12 | Service 12: Birth Chart & Horoscope Reading | Deep celestial/Navagraha theme, midnight indigo/astral gold atmosphere, Janam Kundali, 5 symptoms, 4 remedies | M1 | Survey / R1 |
+| 12a | Service 13: Psychic & Intuitive Reading | Ketu/Moon theme, mystic violet atmosphere, Prashna + intuitive insight, 5 symptoms, 4 remedies | M5 | Client request |
+| 12b | Service 14: Tarot Card Reading | Ganesha/Mercury theme, midnight indigo/lavender atmosphere, tarot read with Dasha and transits, 5 symptoms, 4 remedies | M5 | Client request |
+| 12c | Service 15: Love Spells & Sacred Rituals | Swayamvara Parvati/Kamadeva theme, rose-pink atmosphere, Sattvic free-will-respecting rituals, 5 symptoms, 4 remedies | M5 | Client request |
 | 13 | Multi-Image Concept Galleries | 3 verified royalty-free images per service (Ritual, Transformation, Planetary Iconography) | M1, M2 | Survey / R2 |
 | 14 | Dynamic Service Theming Engine | Per-service color atmosphere (hero gradients, badges, accents, glow, testimonial card) | M2 | Survey / R1 |
 | 15 | Square UI Geometry Enforcement | Strict `rounded-none` borders, buttons, cards, image frames, and input fields | M2 | Survey / R4 |
 | 16 | Dedicated Consultation Form & Helpline | Square inquiry form with instant confirmation feedback, confetti, and Los Angeles office line (+1 510-371-4626) | M2 | Survey / R3 |
 | 17 | Hash-Sync Routing & Deep-Linking | Synchronize active service view with `window.location.hash` (`#<service-id>`) and back/forward navigation | M3 | Survey / R3 |
 | 18 | Breadcrumb & Back Navigation | Header breadcrumbs (`Home / Astrology Services / [Title]`) and "Back to All Services" with smooth scroll | M3 | Survey / R3 |
-| 19 | Homepage Read More Wiring | 12 service cards on homepage cleanly open corresponding dedicated service screen | M3 | Survey / R3 |
-| 20 | E2E Testing Suite (Tiers 1-4) | Comprehensive opaque-box test suite verifying all 12 services, theming, navigation, and assets | M4 | Survey / Acceptance Criteria |
+| 19 | Homepage Read More Wiring | 15 service cards on homepage cleanly open corresponding dedicated service screen | M3 | Survey / R3 |
+| 20 | E2E Testing Suite (Tiers 1-4) | Comprehensive opaque-box test suite verifying all 15 services, theming, navigation, and assets | M4 | Survey / Acceptance Criteria |
 | 21 | Adversarial Coverage Hardening (Tier 5) | White-box edge case testing, broken link resilience, and error state hardening | M4 | Survey / Quality |
 
 ## Milestones
 | # | Name | Scope | Dependencies | Status |
 |---|------|-------|-------------|--------|
-| M1 | Vedic Service Data & Asset Catalog | Implement enriched `DetailedService` schema, complete Vedic profiles, visual theme parameters, and 36-image royalty-free catalog in `src/data/servicesData.ts` | none | DONE |
+| M1 | Vedic Service Data & Asset Catalog | Implement enriched `DetailedService` schema, complete Vedic profiles, visual theme parameters, and 45-image royalty-free catalog in `src/data/servicesData.ts` | none | DONE |
 | M2 | Themed Service Views & Concept Galleries | Upgrade `ServiceDetailView.tsx` with dynamic visual theming engine, Vedic deity badges, square-geometry concept gallery, and consultation inquiry form | M1 | DONE |
 | M3 | Navigation & Application Shell Integration | Wire hash routing synchronization (`#<service-id>`), smooth scroll-to-top, breadcrumb navigation, homepage Read More triggers, and footer service links in `src/App.tsx` | M2 | IN_PROGRESS |
 | M4 | Final Milestone: E2E Test Suite & Adversarial Hardening | Phase 1: Pass 100% of E2E tests (Tiers 1-4) created by E2E Testing Track. Phase 2: Adversarial coverage hardening (Tier 5) | M3 | PLANNED |

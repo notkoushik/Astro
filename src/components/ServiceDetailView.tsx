@@ -557,7 +557,7 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
               </div>
             </div>
 
-            {/* Quick Navigation Directory to All 12 Vedic Services */}
+            {/* Quick Navigation Directory to All 15 Services */}
             <div className="bg-white p-6 rounded-none border border-slate-200 shadow-sm space-y-3" style={{ borderTop: '4px solid #8E1612' }}>
               <div className="border-b border-slate-100 pb-2.5">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-[#B91C1C] font-roboto">
@@ -581,6 +581,9 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
                   { id: 'court-case-problems', label: 'Legal & Court Case Guidance' },
                   { id: 'property-land-disputes', label: 'Property & Real Estate Disputes' },
                   { id: 'horoscope-reading', label: 'Birth Chart & Horoscope Reading' },
+                  { id: 'psychic-reading', label: 'Psychic & Intuitive Reading' },
+                  { id: 'tarot-reading', label: 'Tarot Card Reading' },
+                  { id: 'love-spells', label: 'Love Spells & Sacred Rituals' },
                 ].map((linkItem) => (
                   <li key={linkItem.id}>
                     <a

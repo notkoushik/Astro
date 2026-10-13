@@ -59,7 +59,7 @@ function registerTier3Tests(harness) {
 
     // T3-04: Hash-Synchronized Routing Logic
     harness.test('T3-04: Hash-Synchronized Routing and Deep-Link Compatibility', () => {
-      // Test that all 12 service IDs form valid URL hash fragments
+      // Test that all 15 service IDs form valid URL hash fragments
       serviceKeys.forEach(id => {
         const hash = `#${id}`;
         const targetId = hash.replace(/^#/, '');
@@ -83,7 +83,7 @@ function registerTier3Tests(harness) {
       assert.strictEqual(resolved, null, 'Unmatched hash must resolve to null and not throw');
     });
 
-    // T3-07: Homepage "Read More" Wiring for All 12 Services
+    // T3-07: Homepage "Read More" Wiring for All 15 Services
     harness.test('T3-07: Homepage Services Grid "Read More" Wiring', () => {
       const appCode = getSourceFile('src/App.tsx');
       assert.ok(appCode.includes('openDedicatedService'), 'App.tsx must define openDedicatedService');

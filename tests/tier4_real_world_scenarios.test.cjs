@@ -1,6 +1,6 @@
 /**
  * Tier 4: Real-World California Client Application Scenarios Tests
- * Simulates 12 realistic end-to-end user journeys from California communities.
+ * Simulates 15 realistic end-to-end user journeys from California communities.
  */
 
 const { assert } = require('./utils/testHarness.cjs');
@@ -232,6 +232,69 @@ function registerTier4Tests(harness) {
       // 3. Verifies San Diego example client journey
       assert.strictEqual(service.testimonial.client, 'Kavya N.');
       assert.ok(service.testimonial.location.includes('San Diego'));
+    });
+    // Scenario 13: Santa Monica Professional Psychic Reading Journey
+    harness.test('T4-13: Santa Monica Professional Urgent Psychic Reading Journey', () => {
+      const service = servicesData['psychic-reading'];
+      assert.ok(service, 'Psychic reading service must be accessible');
+
+      // 1. Identifies an urgent crossroads decision
+      const symptom = service.symptoms.find(s => s.toLowerCase().includes('crossroads') || s.toLowerCase().includes('decision'));
+      assert.ok(symptom, 'Must address an urgent decision or crossroads');
+
+      // 2. Reading is anchored in the Moon and Ketu, not a hunch alone
+      assert.ok(service.planetaryCause.includes('Moon') && service.planetaryCause.includes('Ketu'), 'Must explain the Moon and Ketu link to intuition');
+
+      // 3. Selects the Intuitive Prashna Session
+      const remedy = service.remedies.find(r => r.name.includes('Prashna'));
+      assert.ok(remedy, 'Must offer an intuitive Prashna session');
+
+      // 4. Verifies Santa Monica example client journey
+      assert.strictEqual(service.testimonial.client, 'Leena M.');
+      assert.ok(service.testimonial.location.includes('Santa Monica'));
+    });
+
+    // Scenario 14: West Hollywood Seeker Tarot Card Reading Journey
+    harness.test('T4-14: West Hollywood Seeker Tarot & Vedic Chart Reading Journey', () => {
+      const service = servicesData['tarot-reading'];
+      assert.ok(service, 'Tarot reading service must be accessible');
+
+      // 1. Identifies being torn between two choices
+      const symptom = service.symptoms.find(s => s.toLowerCase().includes('torn between'));
+      assert.ok(symptom, 'Must address being torn between two choices');
+
+      // 2. Tarot is read alongside the Vedic chart (Dasha / transits)
+      assert.ok(service.planetaryCause.includes('Dasha') || service.planetaryCause.includes('transits'), 'Must connect tarot to Dasha and transits');
+
+      // 3. Selects a tarot spread
+      const remedy = service.remedies.find(r => r.name.toLowerCase().includes('spread'));
+      assert.ok(remedy, 'Must offer a tarot spread');
+
+      // 4. Verifies West Hollywood example client journey
+      assert.strictEqual(service.testimonial.client, 'Aisha K.');
+      assert.ok(service.testimonial.location.includes('West Hollywood'));
+    });
+
+    // Scenario 15: Anaheim Single Professional Positive Love Spell Journey
+    harness.test('T4-15: Anaheim Single Professional Positive Love Spell Journey', () => {
+      const service = servicesData['love-spells'];
+      assert.ok(service, 'Love spells service must be accessible');
+
+      // 1. Identifies a long period of being single
+      const symptom = service.symptoms.find(s => s.toLowerCase().includes('single'));
+      assert.ok(symptom, 'Must address being single and wanting the right partner');
+
+      // 2. Selects the Swayamvara Parvati mantra
+      const remedy = service.remedies.find(r => r.name.includes('Swayamvara Parvati'));
+      assert.ok(remedy, 'Must offer the Swayamvara Parvati mantra');
+
+      // 3. Love spells must respect free will and never claim to control another person
+      assert.ok(service.planetaryCause.toLowerCase().includes('never try to force'), 'Root cause must state spells never force feelings');
+      assert.ok(service.faqs.some(f => f.answer.startsWith('No') && f.question.toLowerCase().includes('specific person')), 'FAQ must honestly answer that spells cannot make a specific person fall in love');
+
+      // 4. Verifies Anaheim example client journey
+      assert.strictEqual(service.testimonial.client, 'Kiran S.');
+      assert.ok(service.testimonial.location.includes('Anaheim'));
     });
   });
 }
