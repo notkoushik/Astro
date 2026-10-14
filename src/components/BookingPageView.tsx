@@ -525,110 +525,88 @@ export default function BookingPageView({ onBack, initialService }: BookingPageV
 
           </div>
         </div>
+      </main>
 
-        {/* 4. Google Maps Location Section (Square Block Focusing 7001 Hollywood Blvd, Los Angeles) */}
-        <section className="mt-12 lg:mt-16 pt-10 border-t-2 border-slate-200">
-          <div className="bg-[#FAF9F5] border-2 border-slate-300 p-6 sm:p-8 lg:p-10 shadow-sm rounded-none">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              {/* Left Column: Location & Consultation Details */}
-              <div className="lg:col-span-6 space-y-5">
-                <div className="inline-block bg-[#8E1612] text-[#FFD700] border border-[#FFD700]/50 px-3.5 py-1 text-xs font-bold uppercase tracking-wider font-roboto">
-                  ✦ In-Person Hollywood Consultations ✦
-                </div>
-                <h3 className="font-oswald text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-slate-900 leading-tight">
-                  Our Los Angeles Consultation Center
-                </h3>
-                <p className="text-slate-700 text-sm sm:text-base font-roboto leading-relaxed">
-                  In addition to worldwide private phone and WhatsApp readings, Pandith Vikram welcomes clients for confidential in-person astrological readings and specialized Vedic remedial pujas at our Hollywood Boulevard office in Los Angeles, California.
-                </p>
+      {/* 4. Full-Width End-to-End Google Maps Location Section (No Boxed Border) */}
+      <section className="w-full bg-[#FAF9F5] border-t border-slate-200 pt-10 sm:pt-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 sm:mb-8">
+          <div className="max-w-3xl space-y-3">
+            <div className="inline-block bg-[#8E1612] text-[#FFD700] border border-[#FFD700]/50 px-3.5 py-1 text-xs font-bold uppercase tracking-wider font-roboto">
+              ✦ In-Person Hollywood Consultations ✦
+            </div>
+            <h3 className="font-oswald text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-slate-900 leading-tight">
+              Our Los Angeles Consultation Center
+            </h3>
+            <p className="text-slate-700 text-xs sm:text-sm font-roboto leading-relaxed">
+              In addition to worldwide private phone and WhatsApp readings, Pandith Vikram welcomes clients for confidential in-person astrological readings and specialized Vedic remedial pujas at our Hollywood Boulevard office in Los Angeles, California.
+            </p>
 
-                <div className="space-y-3 pt-2 text-xs sm:text-sm font-roboto text-slate-800">
-                  <div className="flex items-start gap-3 p-3.5 bg-white border border-slate-300 shadow-xs">
-                    <svg className="w-5 h-5 text-[#8E1612] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <div>
-                      <strong className="block text-slate-900 font-oswald uppercase text-sm tracking-wide">
-                        Office Address:
-                      </strong>
-                      <span className="font-medium text-slate-800">
-                        7001 Hollywood Blvd, Los Angeles, CA 90028, United States
-                      </span>
-                    </div>
-                  </div>
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4 pt-1 text-xs font-roboto text-slate-800">
+              <span className="font-bold text-slate-900">Address:</span>
+              <span className="text-slate-700">7001 Hollywood Blvd, Los Angeles, CA 90028</span>
+              <span className="text-slate-300 hidden sm:inline">|</span>
+              <span className="font-bold text-slate-900">Hours:</span>
+              <span className="text-[#8E1612] font-bold">Daily: 8:00 AM – 10:00 PM (PT)</span>
+              <span className="text-slate-300 hidden sm:inline">|</span>
+              <span className="text-emerald-700 font-bold">By Appointment</span>
+            </div>
 
-                  <div className="flex items-center justify-between p-3.5 bg-white border border-slate-300 shadow-xs">
-                    <span className="font-bold text-slate-900">Consultation Hours:</span>
-                    <span className="text-[#8E1612] font-bold">Daily: 8:00 AM – 10:00 PM (PT)</span>
-                  </div>
+            <div className="pt-2 flex flex-wrap gap-3">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=7001+Hollywood+Blvd,+Los+Angeles,+CA+90028"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#8E1612] hover:bg-[#b5140e] text-white px-5 py-2.5 font-oswald font-bold text-xs uppercase tracking-wider transition-colors shadow"
+              >
+                <svg className="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                <span>Get Directions on Google Maps</span>
+              </a>
 
-                  <div className="flex items-center justify-between p-3.5 bg-white border border-slate-300 shadow-xs">
-                    <span className="font-bold text-slate-900">In-Person Sessions:</span>
-                    <span className="text-emerald-700 font-bold">By Prior Appointment / Walk-ins Subject to Slot</span>
-                  </div>
-                </div>
-
-                <div className="pt-2 flex flex-wrap gap-3">
-                  <a
-                    href="https://www.google.com/maps/search/?api=1&query=7001+Hollywood+Blvd,+Los+Angeles,+CA+90028"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[#8E1612] hover:bg-[#b5140e] text-white px-5 py-3 font-oswald font-bold text-xs uppercase tracking-wider transition-colors shadow"
-                  >
-                    <svg className="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                    <span>Get Directions on Google Maps</span>
-                  </a>
-
-                  <a
-                    href="tel:+15103714626"
-                    className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 px-5 py-3 font-oswald font-bold text-xs uppercase tracking-wider transition-colors shadow-xs"
-                  >
-                    <svg className="w-4 h-4 text-[#8E1612] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <span>Call Office: +1 510-371-4626</span>
-                  </a>
-                </div>
-              </div>
-
-              {/* Right Column: Square Google Maps Block */}
-              <div className="lg:col-span-6 flex justify-center">
-                <div className="w-full max-w-md sm:max-w-lg aspect-square bg-slate-100 border-4 border-[#8E1612] shadow-2xl relative overflow-hidden">
-                  <iframe
-                    title="Pandith Vikram Vedic Astrology - 7001 Hollywood Blvd, Los Angeles, CA 90028"
-                    src="https://maps.google.com/maps?q=7001+Hollywood+Blvd,+Los+Angeles,+CA+90028&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="w-full h-full object-cover"
-                  />
-                  {/* Address Badge Overlay on Map */}
-                  <div className="absolute bottom-3 left-3 right-3 bg-black/90 backdrop-blur-sm text-white p-2.5 border border-[#FFD700]/70 text-xs font-roboto flex items-center justify-between gap-2 shadow-xl">
-                    <div className="flex items-center gap-2 truncate">
-                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
-                      <span className="font-semibold truncate">7001 Hollywood Blvd, Los Angeles, CA 90028</span>
-                    </div>
-                    <a
-                      href="https://www.google.com/maps/search/?api=1&query=7001+Hollywood+Blvd,+Los+Angeles,+CA+90028"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#FFD700] hover:text-amber-200 font-bold shrink-0 text-[11px] uppercase tracking-wider"
-                    >
-                      View Map →
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <a
+                href="tel:+15103714626"
+                className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 px-5 py-2.5 font-oswald font-bold text-xs uppercase tracking-wider transition-colors shadow-xs"
+              >
+                <svg className="w-4 h-4 text-[#8E1612] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>Call Office: +1 510-371-4626</span>
+              </a>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+
+        {/* End-to-End Full-Width Google Maps Screen (Zero Border) */}
+        <div className="w-full h-[380px] sm:h-[460px] lg:h-[540px] relative overflow-hidden bg-slate-200">
+          <iframe
+            title="Pandith Vikram Vedic Astrology - 7001 Hollywood Blvd, Los Angeles, CA 90028"
+            src="https://maps.google.com/maps?q=7001+Hollywood+Blvd,+Los+Angeles,+CA+90028&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full border-0 block"
+          />
+          {/* Subtle Floating Address Badge on Map */}
+          <div className="absolute bottom-4 left-4 sm:left-8 bg-black/90 backdrop-blur-sm text-white px-4 py-2.5 border border-[#FFD700]/70 text-xs font-roboto flex items-center gap-3 shadow-2xl">
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
+              <span className="font-semibold">7001 Hollywood Blvd, Los Angeles, CA 90028</span>
+            </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=7001+Hollywood+Blvd,+Los+Angeles,+CA+90028"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FFD700] hover:text-amber-200 font-bold uppercase tracking-wider text-[11px] underline underline-offset-2 shrink-0"
+            >
+              Open in Maps →
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
