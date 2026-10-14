@@ -613,15 +613,22 @@ export default function App() {
     const pathname = window.location.pathname.replace(/\/+$/, '') || '/'
     const hash = window.location.hash.replace(/^#\/?/, '').trim().toLowerCase()
 
-    // 0. Dedicated Booking Route: /book-reading, /book-appointment, /consultation, or #book-reading
+    // 0. Dedicated Booking & Contact Route: /book-reading, /book-session, /contact, /contact-us, etc.
     if (
       pathname === '/book-reading' ||
+      pathname === '/book-session' ||
+      pathname === '/book-a-session' ||
       pathname === '/book-appointment' ||
       pathname === '/consultation' ||
       pathname === '/contact' ||
+      pathname === '/contact-us' ||
       hash === 'book-reading' ||
+      hash === 'book-session' ||
+      hash === 'book-a-session' ||
       hash === 'book-appointment' ||
-      hash === 'consultation'
+      hash === 'consultation' ||
+      hash === 'contact' ||
+      hash === 'contact-us'
     ) {
       return { serviceId: null, notFound: false, isBooking: true }
     }
@@ -630,7 +637,15 @@ export default function App() {
     const cleanMatch = pathname.match(/^\/services\/([a-z0-9-]+)$/i) || pathname.match(/^\/([a-z0-9-]+)$/i)
     if (cleanMatch) {
       const candidate = cleanMatch[1].toLowerCase()
-      if (candidate === 'book-reading' || candidate === 'book-appointment' || candidate === 'consultation' || candidate === 'contact') {
+      if (
+        candidate === 'book-reading' ||
+        candidate === 'book-session' ||
+        candidate === 'book-a-session' ||
+        candidate === 'book-appointment' ||
+        candidate === 'consultation' ||
+        candidate === 'contact' ||
+        candidate === 'contact-us'
+      ) {
         return { serviceId: null, notFound: false, isBooking: true }
       }
       if (Object.prototype.hasOwnProperty.call(detailedServicesData, candidate)) {
@@ -1119,6 +1134,12 @@ export default function App() {
             >
               Locations
             </a>
+            <button
+              onClick={() => navigateToBooking()}
+              className="hover:text-[#B91C1C] transition-colors py-1 border-b-2 border-transparent hover:border-[#B91C1C] whitespace-nowrap cursor-pointer"
+            >
+              Contact Us
+            </button>
           </nav>
 
           {/* Right Action Buttons: Helpline Pill + Consultation Button (Always strictly on ONE Line) */}
@@ -1230,10 +1251,16 @@ export default function App() {
             <a
               href="#usa-locations"
               onClick={() => { if (activeDetailId || isBookingPage) closeDedicatedService(false); setMobileMenuOpen(false); }}
-              className="block py-2 text-slate-800 hover:text-[#B91C1C] font-semibold"
+              className="block py-2 text-slate-800 hover:text-[#B91C1C] font-semibold border-b border-slate-100"
             >
               Service Locations
             </a>
+            <button
+              onClick={() => { navigateToBooking(); setMobileMenuOpen(false); }}
+              className="block w-full text-left py-2 text-slate-800 hover:text-[#B91C1C] font-semibold cursor-pointer"
+            >
+              Contact Us
+            </button>
 
             {/* Mobile Actions: Call & Book Consultation */}
             <div className="pt-2 grid grid-cols-2 gap-2">
@@ -1790,7 +1817,7 @@ export default function App() {
                     <span>→</span>
                   </a>
                   <button
-                    onClick={() => setActiveModal('booking')}
+                    onClick={() => navigateToBooking()}
                     className="bg-[#FFD700] hover:bg-amber-300 text-slate-950 font-roboto font-bold px-7 py-3.5 rounded-none text-xs uppercase tracking-wider transition-colors shadow cursor-pointer"
                   >
                     Schedule a Private Reading
@@ -2313,8 +2340,8 @@ export default function App() {
                     Call: +1 510-371-4626
                   </a>
                   <button
-                    onClick={() => setActiveModal('booking')}
-                    className="bg-black/40 hover:bg-black/60 text-white border border-amber-300 px-6 py-3 rounded-none text-xs font-bold uppercase tracking-wider font-roboto transition-colors"
+                    onClick={() => navigateToBooking()}
+                    className="bg-black/40 hover:bg-black/60 text-white border border-amber-300 px-6 py-3 rounded-none text-xs font-bold uppercase tracking-wider font-roboto transition-colors cursor-pointer"
                   >
                     Reserve Your Session
                   </button>
@@ -2507,7 +2534,7 @@ export default function App() {
                 {usaLocations.map((loc) => (
                   <div
                     key={loc.id}
-                    onClick={() => setActiveModal('question')}
+                    onClick={() => navigateToBooking()}
                     className="border-b border-dashed border-slate-300 pb-3.5 pt-1 flex flex-wrap sm:flex-nowrap items-baseline gap-2.5 group hover:bg-amber-50/50 px-2 transition-colors cursor-pointer"
                   >
                     <span className="inline-block bg-[#B91C1C] group-hover:bg-[#8E1612] text-white font-oswald font-bold text-xs sm:text-[13px] px-3 py-1 uppercase tracking-wider shrink-0 border-l-3 border-[#FFD700] shadow-xs transition-colors">
@@ -2594,7 +2621,7 @@ export default function App() {
                     <span>Call Now: +1 510-371-4626</span>
                   </a>
                   <button
-                    onClick={() => setActiveModal('question')}
+                    onClick={() => navigateToBooking()}
                     className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 font-roboto font-bold px-6 py-2.5 rounded-none text-xs uppercase tracking-wider transition-colors shadow-sm cursor-pointer"
                   >
                     <span>Send a Private Message</span>
@@ -2716,7 +2743,7 @@ export default function App() {
                 </li>
                 <li>
                   <button
-                    onClick={() => setActiveModal('question')}
+                    onClick={() => navigateToBooking()}
                     className="text-amber-50/90 hover:text-[#FFD700] transition-colors cursor-pointer flex items-center gap-2 group"
                   >
                     <span className="text-[#FFD700] font-bold group-hover:translate-x-0.5 transition-transform">›</span>

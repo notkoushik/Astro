@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import confetti from 'canvas-confetti'
 
 export interface BookingPageViewProps {
@@ -26,6 +26,14 @@ export const servicesList = [
 ]
 
 export default function BookingPageView({ onBack, initialService }: BookingPageViewProps) {
+  useEffect(() => {
+    const originalTitle = document.title
+    document.title = 'Book a Session & Contact Pandith Vikram | Indian Astrologer in Los Angeles'
+    return () => {
+      document.title = originalTitle
+    }
+  }, [])
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -97,7 +105,7 @@ export default function BookingPageView({ onBack, initialService }: BookingPageV
               <span>← Return to Home</span>
             </button>
             <span>/</span>
-            <span className="text-slate-800 font-bold">Book a Personal Reading</span>
+            <span className="text-slate-800 font-bold">Book a Session & Contact</span>
           </div>
 
           <div className="flex items-center gap-4">
@@ -122,7 +130,7 @@ export default function BookingPageView({ onBack, initialService }: BookingPageV
             ✦ PRIVATE & CONFIDENTIAL VEDIC CONSULTATION ✦
           </div>
           <h1 className="font-oswald text-3xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-white leading-tight">
-            Book Your Reading With <span className="text-[#FFD700]">Pandith Vikram</span>
+            Book a Session & Contact <span className="text-[#FFD700]">Pandith Vikram</span>
           </h1>
           <p className="text-slate-200 text-sm sm:text-base max-w-2xl mx-auto font-roboto leading-relaxed">
             Personalized chart calculation, Prashna analysis, and Sattvic remedies. Consult in person on Hollywood Boulevard, Los Angeles, or via phone and WhatsApp worldwide.
