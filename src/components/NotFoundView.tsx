@@ -55,9 +55,12 @@ export default function NotFoundView({ onGoHome, onSelectService, onBookNow }: N
 
             <a
               href="tel:+15103714626"
-              className="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-oswald font-bold text-xs sm:text-sm uppercase tracking-wider px-6 py-3.5 transition-all rounded-none"
+              className="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-oswald font-bold text-xs sm:text-sm uppercase tracking-wider px-6 py-3.5 transition-all rounded-none inline-flex items-center gap-2"
             >
-              📞 Call +1 510-371-4626
+              <svg className="w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span>Call +1 510-371-4626</span>
             </a>
           </div>
         </div>

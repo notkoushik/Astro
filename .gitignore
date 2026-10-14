@@ -31,3 +31,5 @@ lerna-debug.log*
 
 # Agent / internal workspace folders
 .agents/
+.astro/
+

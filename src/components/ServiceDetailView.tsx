@@ -48,6 +48,26 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
     e.preventDefault()
     confetti({ particleCount: 70, spread: 60, origin: { y: 0.6 } })
     setSubmitted(true)
+
+    // Redirect user details directly to Pandith Vikram's WhatsApp (+1 510-371-4626)
+    const formattedDetails = [
+      `*✦ NEW DEDICATED SERVICE INQUIRY ✦*`,
+      `*Service:* ${service.title} ${service.subtitle}`,
+      `*Name:* ${formData.name || 'Not provided'}`,
+      `*Phone:* ${formData.phone || 'Not provided'}`,
+      formData.dob ? `*Date of Birth:* ${formData.dob}` : null,
+      formData.notes ? `*Client Notes:* ${formData.notes}` : null,
+      `*Source:* pandith-vikram.vercel.app`
+    ].filter(Boolean).join('\n')
+
+    const whatsappUrl = `https://wa.me/15103714626?text=${encodeURIComponent(formattedDetails)}`
+
+    try {
+      window.open(whatsappUrl, '_blank')
+    } catch {
+      window.location.href = whatsappUrl
+    }
+
     setTimeout(() => {
       setSubmitted(false)
       setFormData({ name: '', phone: '', dob: '', notes: '' })
@@ -139,7 +159,7 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
                   className="inline-flex items-center gap-1.5 bg-black/60 backdrop-blur-sm text-xs font-semibold px-3 py-1 font-roboto tracking-wide rounded-none border shadow-sm"
                   style={{ borderColor: `${theme.accentColor}80`, color: '#FFF' }}
                 >
-                  <span style={{ color: theme.accentColor }}>🕉️ Guiding Deity:</span>
+                  <span style={{ color: theme.accentColor }}>✦ Guiding Deity:</span>
                   <span className="font-bold text-amber-200">{service.deity}</span>
                 </span>
               )}
@@ -159,7 +179,10 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
                 href="tel:+15103714626"
                 className="bg-[#D61B14] hover:bg-[#b5140e] text-white font-roboto font-bold px-6 py-3 rounded-none text-xs uppercase tracking-wider transition-all shadow-md flex items-center gap-2 cursor-pointer border border-red-500/30"
               >
-                <span>📞 Call +1 510-371-4626</span>
+                <svg className="w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>Call +1 510-371-4626</span>
               </a>
               <button
                 onClick={onBookNow}
@@ -469,11 +492,24 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
                     ✓
                   </div>
                   <h4 className="font-oswald text-xl font-bold text-slate-900 uppercase">
-                    Inquiry Received!
+                    Inquiry Forwarded to WhatsApp!
                   </h4>
                   <p className="text-xs text-slate-600 font-roboto">
-                    Thank you. Pandith Vikram’s office will read your note and call you back soon.
+                    Thank you. Your request for {service.title} {service.subtitle} has been sent to Pandith Vikram’s WhatsApp (+1 510-371-4626).
                   </p>
+                  <div className="pt-2">
+                    <a
+                      href="https://wa.me/15103714626"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-5 py-2.5 rounded-none font-bold text-xs uppercase tracking-wider transition-colors shadow-md"
+                    >
+                      <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
+                      </svg>
+                      <span>Open WhatsApp Directly</span>
+                    </a>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-3 font-roboto">
@@ -546,10 +582,13 @@ export default function ServiceDetailView({ service, onBack, onBookNow, onSelect
                 <p className="text-xs text-slate-500 font-roboto">Prefer to Talk Now?</p>
                 <a
                   href="tel:+15103714626"
-                  className="block font-oswald text-xl font-bold hover:text-black transition-colors rounded-none"
+                  className="inline-flex items-center justify-center gap-2 font-oswald text-xl font-bold hover:text-black transition-colors rounded-none"
                   style={{ color: theme.accentColor }}
                 >
-                  📞 +1 510-371-4626
+                  <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <span>+1 510-371-4626</span>
                 </a>
                 <p className="text-[11px] text-slate-400 font-roboto">
                   Daily 8 AM – 10 PM Pacific • Calls & WhatsApp

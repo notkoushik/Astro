@@ -5,6 +5,8 @@ import ZodiacWheel from './components/ZodiacWheel'
 import ServiceDetailView from './components/ServiceDetailView'
 import NotFoundView from './components/NotFoundView'
 import { detailedServicesData } from './data/servicesData'
+import AnimatedCounter from './components/AnimatedCounter'
+import BookingPageView from './components/BookingPageView'
 
 interface ServiceItem {
   id: string
@@ -605,49 +607,68 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0)
   const [activeModal, setActiveModal] = useState<'question' | 'booking' | 'privacy' | 'terms' | 'disclaimer' | null>(null)
-  // Helper to resolve current route (Clean URL /services/<id>, root /<id>, or legacy #<id>) and 404 status
-  const parseCurrentUrl = (): { serviceId: string | null; notFound: boolean } => {
-    if (typeof window === 'undefined') return { serviceId: null, notFound: false }
+  // Helper to resolve current route (Clean URL /services/<id>, /book-reading, root /<id>, or legacy #<id>) and 404 status
+  const parseCurrentUrl = (): { serviceId: string | null; notFound: boolean; isBooking: boolean } => {
+    if (typeof window === 'undefined') return { serviceId: null, notFound: false, isBooking: false }
     const pathname = window.location.pathname.replace(/\/+$/, '') || '/'
-    const hash = window.location.hash.replace(/^#\/?/, '').trim()
+    const hash = window.location.hash.replace(/^#\/?/, '').trim().toLowerCase()
+
+    // 0. Dedicated Booking Route: /book-reading, /book-appointment, /consultation, or #book-reading
+    if (
+      pathname === '/book-reading' ||
+      pathname === '/book-appointment' ||
+      pathname === '/consultation' ||
+      pathname === '/contact' ||
+      hash === 'book-reading' ||
+      hash === 'book-appointment' ||
+      hash === 'consultation'
+    ) {
+      return { serviceId: null, notFound: false, isBooking: true }
+    }
 
     // 1. Check Clean Path: /services/<serviceId> or /<serviceId>
     const cleanMatch = pathname.match(/^\/services\/([a-z0-9-]+)$/i) || pathname.match(/^\/([a-z0-9-]+)$/i)
     if (cleanMatch) {
       const candidate = cleanMatch[1].toLowerCase()
+      if (candidate === 'book-reading' || candidate === 'book-appointment' || candidate === 'consultation' || candidate === 'contact') {
+        return { serviceId: null, notFound: false, isBooking: true }
+      }
       if (Object.prototype.hasOwnProperty.call(detailedServicesData, candidate)) {
-        return { serviceId: candidate, notFound: false }
+        return { serviceId: candidate, notFound: false, isBooking: false }
       }
       if (candidate !== 'index.html') {
-        return { serviceId: null, notFound: true }
+        return { serviceId: null, notFound: true, isBooking: false }
       }
     }
 
     // 2. Check legacy hash: #<serviceId>
     if (hash && Object.prototype.hasOwnProperty.call(detailedServicesData, hash)) {
-      return { serviceId: hash, notFound: false }
+      return { serviceId: hash, notFound: false, isBooking: false }
     }
 
     // 3. Any unrecognized multi-segment path triggers 404 view
     if (pathname !== '/' && pathname !== '/index.html') {
-      return { serviceId: null, notFound: true }
+      return { serviceId: null, notFound: true, isBooking: false }
     }
 
-    return { serviceId: null, notFound: false }
+    return { serviceId: null, notFound: false, isBooking: false }
   }
 
   const [activeDetailId, setActiveDetailId] = useState<string | null>(() => parseCurrentUrl().serviceId)
   const [isNotFound, setIsNotFound] = useState<boolean>(() => parseCurrentUrl().notFound)
+  const [isBookingPage, setIsBookingPage] = useState<boolean>(() => parseCurrentUrl().isBooking)
+  const [bookingInitialService, setBookingInitialService] = useState<string>('')
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const [formSubmitted, setFormSubmitted] = useState(false)
 
   // Clean URL + History API routing synchronization
   useEffect(() => {
     const syncFromLocation = () => {
-      const { serviceId, notFound } = parseCurrentUrl()
+      const { serviceId, notFound, isBooking } = parseCurrentUrl()
       setIsNotFound(notFound)
       setActiveDetailId(serviceId)
-      if (serviceId || notFound) {
+      setIsBookingPage(isBooking)
+      if (serviceId || notFound || isBooking) {
         window.scrollTo({ top: 0, behavior: 'smooth' })
       }
     }
@@ -672,6 +693,16 @@ export default function App() {
     if (isNotFound) {
       document.title = 'Page Not Found (404) | Pandith Vikram, Vedic Astrologer in Los Angeles'
       if (canonicalEl) canonicalEl.href = `${baseUrl}/404`
+      if (dynamicSchemaEl) dynamicSchemaEl.remove()
+      return
+    }
+
+    if (isBookingPage) {
+      document.title = 'Book a Personal Reading | Pandith Vikram, Indian Vedic Astrologer in Los Angeles'
+      if (canonicalEl) canonicalEl.href = `${baseUrl}/book-reading`
+      if (metaDescEl) {
+        metaDescEl.content = 'Book a private, 100% confidential Vedic astrology reading with Pandith Vikram. In person on Hollywood Blvd, Los Angeles, or via phone and WhatsApp. Call +1 510-371-4626.'
+      }
       if (dynamicSchemaEl) dynamicSchemaEl.remove()
       return
     }
@@ -723,25 +754,25 @@ export default function App() {
       }
       if (dynamicSchemaEl) dynamicSchemaEl.remove()
     }
-  }, [activeDetailId, isNotFound])
+  }, [activeDetailId, isNotFound, isBookingPage])
 
   // Auto-advance slides every 6 seconds when on home page
   useEffect(() => {
-    if (activeDetailId || isNotFound) return
+    if (activeDetailId || isNotFound || isBookingPage) return
     const timer = setInterval(() => {
       setCurrentSlide(prev => (prev + 1) % heroSlides.length)
     }, 6000)
     return () => clearInterval(timer)
-  }, [activeDetailId, isNotFound])
+  }, [activeDetailId, isNotFound, isBookingPage])
 
   // Auto-slide client reviews automatically every 4 seconds when on home page
   useEffect(() => {
-    if (activeDetailId || isNotFound) return
+    if (activeDetailId || isNotFound || isBookingPage) return
     const reviewTimer = setInterval(() => {
       setCurrentReviewIndex(prev => (prev + 1) % clientReviews.length)
     }, 4000)
     return () => clearInterval(reviewTimer)
-  }, [activeDetailId, isNotFound])
+  }, [activeDetailId, isNotFound, isBookingPage])
 
   // Force browser tab to immediately refresh the favicon with our exact logo SVG
   useEffect(() => {
@@ -760,6 +791,16 @@ export default function App() {
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + heroSlides.length) % heroSlides.length)
   }
+
+  const [showScrollTop, setShowScrollTop] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 280)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const [formData, setFormData] = useState({
     name: '',
@@ -782,6 +823,27 @@ export default function App() {
       origin: { y: 0.6 }
     })
     setFormSubmitted(true)
+
+    // Redirect every detail the user entered directly to the client's WhatsApp (+1 510-371-4626)
+    const formattedDetails = [
+      `*✦ NEW CONSULTATION / READING INQUIRY ✦*`,
+      `*Name:* ${formData.name || 'Not provided'}`,
+      `*Phone:* ${formData.phone || 'Not provided'}`,
+      formData.email ? `*Email:* ${formData.email}` : null,
+      formData.dob ? `*Date of Birth:* ${formData.dob}` : null,
+      `*Service Required:* ${formData.service || 'Vedic Astrology Consultation'}`,
+      formData.question ? `*Inquiry / Details:* ${formData.question}` : null,
+      `*Source:* pandith-vikram.vercel.app`
+    ].filter(Boolean).join('\n')
+
+    const whatsappUrl = `https://wa.me/15103714626?text=${encodeURIComponent(formattedDetails)}`
+
+    try {
+      window.open(whatsappUrl, '_blank')
+    } catch {
+      window.location.href = whatsappUrl
+    }
+
     setTimeout(() => {
       setFormSubmitted(false)
       setActiveModal(null)
@@ -796,10 +858,38 @@ export default function App() {
     }, 2800)
   }
 
+  // Open dedicated screen for booking
+  const navigateToBooking = (initialService?: string) => {
+    setIsNotFound(false)
+    setActiveDetailId(null)
+    setIsBookingPage(true)
+    if (initialService) setBookingInitialService(initialService)
+    if (typeof window !== 'undefined' && window.history?.pushState) {
+      if (window.location.pathname !== '/book-reading') {
+        window.history.pushState({ isBooking: true }, '', '/book-reading')
+      }
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const closeBookingPage = (scrollToTop = true) => {
+    setIsNotFound(false)
+    setIsBookingPage(false)
+    if (typeof window !== 'undefined' && window.history?.pushState) {
+      if (window.location.pathname !== '/' || window.location.hash) {
+        window.history.pushState(null, '', '/')
+      }
+    }
+    if (scrollToTop) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
   // Open dedicated screen for any service using clean SEO URL (/services/<serviceId>)
   const openDedicatedService = (serviceId: string) => {
     if (Object.prototype.hasOwnProperty.call(detailedServicesData, serviceId)) {
       setIsNotFound(false)
+      setIsBookingPage(false)
       setActiveDetailId(serviceId)
       if (typeof window !== 'undefined' && window.history?.pushState) {
         const targetPath = `/services/${serviceId}`
@@ -813,6 +903,7 @@ export default function App() {
 
   const closeDedicatedService = (scrollToTop = true) => {
     setIsNotFound(false)
+    setIsBookingPage(false)
     setActiveDetailId(null)
     if (typeof window !== 'undefined' && window.history?.pushState) {
       if (window.location.pathname !== '/' || window.location.hash) {
@@ -830,50 +921,100 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans relative">
-      {/* 1. TOP UTILITY HEADER (Deep Regal Maroon Strip with Direct Contacts) */}
-      <div className="w-full bg-[#8E1612] text-white text-xs select-none py-2 px-4 border-b border-red-900/60 shadow-sm relative z-50">
-        <div className="max-w-[1600px] mx-auto px-2 sm:px-4 lg:px-6 xl:px-8 flex flex-col md:flex-row items-center justify-between gap-2 font-roboto whitespace-nowrap">
-          {/* Left: Location & Direct Email */}
-          <div className="flex items-center gap-3 text-xs whitespace-nowrap">
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=7001+Hollywood+Blvd,+Los+Angeles,+CA+90028"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-amber-200 hover:text-white font-semibold tracking-wide text-[11px] whitespace-nowrap transition-colors"
-            >
-              <span className="text-amber-400">📍</span>
-              7001 Hollywood Blvd, Los Angeles, CA 90028
-            </a>
-            <span className="text-red-300/60 hidden sm:inline">|</span>
-            <a href="mailto:pandithvikram@gmail.com" className="hidden sm:flex items-center gap-1.5 text-white hover:text-amber-200 transition-colors text-[11px] whitespace-nowrap">
-              <svg className="w-3.5 h-3.5 text-amber-300 fill-amber-300 shrink-0" viewBox="0 0 24 24">
-                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>
-              <span>pandithvikram@gmail.com</span>
-            </a>
-          </div>
-
-          {/* Right: Direct Helpline & WhatsApp Quick Connect */}
-          <div className="flex items-center gap-3.5 text-xs whitespace-nowrap">
-            <div className="flex items-center gap-1.5 whitespace-nowrap">
-              <span className="text-amber-300">📞</span>
-              <span className="text-red-200 text-[11px] hidden sm:inline whitespace-nowrap">Call or Text:</span>
-              <a href="tel:+15103714626" className="text-white hover:text-amber-200 font-extrabold tracking-wide transition-colors whitespace-nowrap">
-                +1 510-371-4626
+      {/* 1. TOP UTILITY HEADER (Regal Maroon Strip with Continuous Scrolling Ticker - Location Removed, Extra Height, Zero Emojis) */}
+      <div className="w-full bg-[#8E1612] text-white select-none py-2.5 sm:py-3.5 border-b border-red-900/80 shadow-md relative z-50 overflow-hidden">
+        <div className="relative w-full overflow-hidden flex items-center">
+          {/* Continuous Infinite Scrolling Marquee */}
+          <div className="animate-marquee-topbar flex items-center gap-8 sm:gap-12 whitespace-nowrap text-xs sm:text-sm font-roboto tracking-wide select-none">
+            {/* Ticker Content Segment 1 */}
+            <div className="flex items-center gap-8 sm:gap-12 whitespace-nowrap">
+              <span className="text-amber-300 font-bold flex items-center gap-1.5">
+                <span className="text-[#FFD700]">✦</span> Most Renowned Indian Vedic Astrologer Pandith Vikram
+              </span>
+              <span className="text-amber-400 font-black">✦</span>
+              <span className="text-white font-semibold flex items-center gap-1.5">
+                <span>✦</span> 24x7 Available for 100% Confidential Consultations
+              </span>
+              <span className="text-amber-400 font-black">✦</span>
+              <a href="tel:+15103714626" className="text-amber-200 hover:text-white font-bold flex items-center gap-2 transition-colors">
+                <svg className="w-3.5 h-3.5 text-amber-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>Call or Text: <strong className="text-white underline underline-offset-2">+1 510-371-4626</strong></span>
               </a>
+              <span className="text-amber-400 font-black">✦</span>
+              <a
+                href="https://wa.me/15103714626"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1 font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-sm border border-emerald-400/50 transition-colors"
+              >
+                <svg className="w-3.5 h-3.5 fill-white shrink-0" viewBox="0 0 24 24">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.59 20.16 12.04 20.16C10.64 20.16 9.27 19.8 8.08 19.09L7.79 18.92L4.69 19.73L5.52 16.71L5.33 16.41C4.55 15.17 4.14 13.56 4.14 11.91C4.14 7.37 7.83 3.67 12.04 3.67ZM16.57 14.39C16.32 14.26 15.1 13.66 14.87 13.58C14.65 13.49 14.48 13.45 14.32 13.7C14.15 13.95 13.68 14.51 13.54 14.67C13.39 14.84 13.25 14.86 13 14.73C12.75 14.61 11.95 14.35 11 13.5C10.26 12.84 9.76 12.03 9.61 11.78C9.47 11.53 9.59 11.4 9.72 11.27C9.83 11.16 9.97 10.98 10.1 10.83C10.22 10.69 10.27 10.58 10.35 10.41C10.43 10.25 10.39 10.1 10.33 9.98C10.27 9.85 9.77 8.63 9.57 8.13C9.37 7.65 9.17 7.71 9.02 7.71C8.88 7.7 8.71 7.7 8.55 7.7C8.38 7.7 8.11 7.76 7.88 8.01C7.65 8.26 7 8.87 7 10.09C7 11.31 7.89 12.49 8.01 12.65C8.14 12.82 9.77 15.32 12.26 16.39C12.85 16.65 13.31 16.8 13.67 16.92C14.26 17.11 14.8 17.08 15.23 17.02C15.71 16.95 16.71 16.42 16.92 15.84C17.12 15.26 17.12 14.77 17.06 14.67C17 14.56 16.82 14.51 16.57 14.39Z" />
+                </svg>
+                <span>WhatsApp Us: +1 510-371-4626</span>
+              </a>
+              <span className="text-amber-400 font-black">✦</span>
+              <a href="mailto:pandithvikram@gmail.com" className="text-white hover:text-amber-200 flex items-center gap-1.5 transition-colors">
+                <svg className="w-3.5 h-3.5 text-amber-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span>pandithvikram@gmail.com</span>
+              </a>
+              <span className="text-amber-400 font-black">✦</span>
+              <span className="text-amber-100 font-medium">
+                ✦ 35+ Years of Ancestral Vedic Mastery • 45,000+ Clients Guided • 100% Private & Confidential
+              </span>
+              <span className="text-amber-400 font-black">✦</span>
+              <span className="text-white font-semibold">
+                Specializing in Ex Love Reunion • Marriage Matching • Black Magic Removal • Business Growth
+              </span>
             </div>
-            <span className="text-red-300/60">|</span>
-            <a
-              href="https://wa.me/15103714626"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-2.5 py-0.5 rounded-none transition-colors text-[11px] font-semibold whitespace-nowrap shrink-0"
-            >
-              <svg className="w-3 h-3 fill-[#25D366] shrink-0" viewBox="0 0 24 24">
-                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.59 20.16 12.04 20.16C10.64 20.16 9.27 19.8 8.08 19.09L7.79 18.92L4.69 19.73L5.52 16.71L5.33 16.41C4.55 15.17 4.14 13.56 4.14 11.91C4.14 7.37 7.83 3.67 12.04 3.67ZM16.57 14.39C16.32 14.26 15.1 13.66 14.87 13.58C14.65 13.49 14.48 13.45 14.32 13.7C14.15 13.95 13.68 14.51 13.54 14.67C13.39 14.84 13.25 14.86 13 14.73C12.75 14.61 11.95 14.35 11 13.5C10.26 12.84 9.76 12.03 9.61 11.78C9.47 11.53 9.59 11.4 9.72 11.27C9.83 11.16 9.97 10.98 10.1 10.83C10.22 10.69 10.27 10.58 10.35 10.41C10.43 10.25 10.39 10.1 10.33 9.98C10.27 9.85 9.77 8.63 9.57 8.13C9.37 7.65 9.17 7.71 9.02 7.71C8.88 7.7 8.71 7.7 8.55 7.7C8.38 7.7 8.11 7.76 7.88 8.01C7.65 8.26 7 8.87 7 10.09C7 11.31 7.89 12.49 8.01 12.65C8.14 12.82 9.77 15.32 12.26 16.39C12.85 16.65 13.31 16.8 13.67 16.92C14.26 17.11 14.8 17.08 15.23 17.02C15.71 16.95 16.71 16.42 16.92 15.84C17.12 15.26 17.12 14.77 17.06 14.67C17 14.56 16.82 14.51 16.57 14.39Z" />
-              </svg>
-              <span>WhatsApp Us</span>
-            </a>
+
+            {/* Ticker Content Segment 2 (Duplicate for Seamless Loop) */}
+            <div className="flex items-center gap-8 sm:gap-12 whitespace-nowrap" aria-hidden="true">
+              <span className="text-amber-300 font-bold flex items-center gap-1.5">
+                <span className="text-[#FFD700]">✦</span> Most Renowned Indian Vedic Astrologer Pandith Vikram
+              </span>
+              <span className="text-amber-400 font-black">✦</span>
+              <span className="text-white font-semibold flex items-center gap-1.5">
+                <span>✦</span> 24x7 Available for 100% Confidential Consultations
+              </span>
+              <span className="text-amber-400 font-black">✦</span>
+              <a href="tel:+15103714626" className="text-amber-200 hover:text-white font-bold flex items-center gap-2 transition-colors">
+                <svg className="w-3.5 h-3.5 text-amber-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>Call or Text: <strong className="text-white underline underline-offset-2">+1 510-371-4626</strong></span>
+              </a>
+              <span className="text-amber-400 font-black">✦</span>
+              <a
+                href="https://wa.me/15103714626"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1 font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-sm border border-emerald-400/50 transition-colors"
+              >
+                <svg className="w-3.5 h-3.5 fill-white shrink-0" viewBox="0 0 24 24">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.59 20.16 12.04 20.16C10.64 20.16 9.27 19.8 8.08 19.09L7.79 18.92L4.69 19.73L5.52 16.71L5.33 16.41C4.55 15.17 4.14 13.56 4.14 11.91C4.14 7.37 7.83 3.67 12.04 3.67ZM16.57 14.39C16.32 14.26 15.1 13.66 14.87 13.58C14.65 13.49 14.48 13.45 14.32 13.7C14.15 13.95 13.68 14.51 13.54 14.67C13.39 14.84 13.25 14.86 13 14.73C12.75 14.61 11.95 14.35 11 13.5C10.26 12.84 9.76 12.03 9.61 11.78C9.47 11.53 9.59 11.4 9.72 11.27C9.83 11.16 9.97 10.98 10.1 10.83C10.22 10.69 10.27 10.58 10.35 10.41C10.43 10.25 10.39 10.1 10.33 9.98C10.27 9.85 9.77 8.63 9.57 8.13C9.37 7.65 9.17 7.71 9.02 7.71C8.88 7.7 8.71 7.7 8.55 7.7C8.38 7.7 8.11 7.76 7.88 8.01C7.65 8.26 7 8.87 7 10.09C7 11.31 7.89 12.49 8.01 12.65C8.14 12.82 9.77 15.32 12.26 16.39C12.85 16.65 13.31 16.8 13.67 16.92C14.26 17.11 14.8 17.08 15.23 17.02C15.71 16.95 16.71 16.42 16.92 15.84C17.12 15.26 17.12 14.77 17.06 14.67C17 14.56 16.82 14.51 16.57 14.39Z" />
+                </svg>
+                <span>WhatsApp Us: +1 510-371-4626</span>
+              </a>
+              <span className="text-amber-400 font-black">✦</span>
+              <a href="mailto:pandithvikram@gmail.com" className="text-white hover:text-amber-200 flex items-center gap-1.5 transition-colors">
+                <svg className="w-3.5 h-3.5 text-amber-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span>pandithvikram@gmail.com</span>
+              </a>
+              <span className="text-amber-400 font-black">✦</span>
+              <span className="text-amber-100 font-medium">
+                ✦ 35+ Years of Ancestral Vedic Mastery • 45,000+ Clients Guided • 100% Private & Confidential
+              </span>
+              <span className="text-amber-400 font-black">✦</span>
+              <span className="text-white font-semibold">
+                Specializing in Ex Love Reunion • Marriage Matching • Black Magic Removal • Business Growth
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -978,12 +1119,6 @@ export default function App() {
             >
               Locations
             </a>
-            <button
-              onClick={() => setActiveModal('question')}
-              className="hover:text-[#B91C1C] transition-colors py-1 border-b-2 border-transparent hover:border-[#B91C1C] cursor-pointer whitespace-nowrap"
-            >
-              Contact Us
-            </button>
           </nav>
 
           {/* Right Action Buttons: Helpline Pill + Consultation Button (Always strictly on ONE Line) */}
@@ -1000,7 +1135,7 @@ export default function App() {
             </a>
 
             <button
-              onClick={() => setActiveModal('booking')}
+              onClick={() => navigateToBooking()}
               className="bg-[#B91C1C] hover:bg-[#991B1B] text-white px-3.5 xl:px-5 py-2.5 rounded-none font-bold text-xs uppercase tracking-wider shadow-sm hover:shadow transition-all active:scale-95 cursor-pointer flex items-center gap-1.5 whitespace-nowrap shrink-0"
             >
               <span>✦</span>
@@ -1035,7 +1170,7 @@ export default function App() {
             </button>
             <a
               href="#about-los-angeles"
-              onClick={() => { if (activeDetailId) closeDedicatedService(false); setMobileMenuOpen(false); }}
+              onClick={() => { if (activeDetailId || isBookingPage) closeDedicatedService(false); setMobileMenuOpen(false); }}
               className="block py-2 text-slate-800 hover:text-[#B91C1C] font-semibold border-b border-slate-100"
             >
               About Us
@@ -1044,7 +1179,7 @@ export default function App() {
               <div className="flex items-center justify-between border-b border-slate-100 py-2">
                 <a
                   href="#services"
-                  onClick={() => { if (activeDetailId) closeDedicatedService(false); setMobileMenuOpen(false); }}
+                  onClick={() => { if (activeDetailId || isBookingPage) closeDedicatedService(false); setMobileMenuOpen(false); }}
                   className="text-slate-800 hover:text-[#B91C1C] font-semibold"
                 >
                   Astrology Services
@@ -1080,31 +1215,25 @@ export default function App() {
             </button>
             <a
               href="#methodology"
-              onClick={() => { if (activeDetailId) closeDedicatedService(false); setMobileMenuOpen(false); }}
+              onClick={() => { if (activeDetailId || isBookingPage) closeDedicatedService(false); setMobileMenuOpen(false); }}
               className="block py-2 text-slate-800 hover:text-[#B91C1C] font-semibold border-b border-slate-100"
             >
               Our Approach & Promises
             </a>
             <a
               href="#faq"
-              onClick={() => { if (activeDetailId) closeDedicatedService(false); setMobileMenuOpen(false); }}
+              onClick={() => { if (activeDetailId || isBookingPage) closeDedicatedService(false); setMobileMenuOpen(false); }}
               className="block py-2 text-slate-800 hover:text-[#B91C1C] font-semibold border-b border-slate-100"
             >
               Common Questions
             </a>
             <a
               href="#usa-locations"
-              onClick={() => { if (activeDetailId) closeDedicatedService(false); setMobileMenuOpen(false); }}
-              className="block py-2 text-slate-800 hover:text-[#B91C1C] font-semibold border-b border-slate-100"
+              onClick={() => { if (activeDetailId || isBookingPage) closeDedicatedService(false); setMobileMenuOpen(false); }}
+              className="block py-2 text-slate-800 hover:text-[#B91C1C] font-semibold"
             >
               Service Locations
             </a>
-            <button
-              onClick={() => { setActiveModal('question'); setMobileMenuOpen(false); }}
-              className="block w-full text-left py-2 text-slate-800 hover:text-[#B91C1C] font-semibold"
-            >
-              Contact Us
-            </button>
 
             {/* Mobile Actions: Call & Book Consultation */}
             <div className="pt-2 grid grid-cols-2 gap-2">
@@ -1112,11 +1241,14 @@ export default function App() {
                 href="tel:+15103714626"
                 className="text-center bg-slate-100 text-slate-900 border border-slate-300 py-2.5 rounded-none font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5"
               >
-                <span>📞 Call Now</span>
+                <svg className="w-3.5 h-3.5 text-[#B91C1C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>Call Now</span>
               </a>
               <button
-                onClick={() => { setActiveModal('booking'); setMobileMenuOpen(false); }}
-                className="text-center bg-[#B91C1C] text-white py-2.5 rounded-none font-bold text-xs uppercase tracking-wider"
+                onClick={() => { navigateToBooking(); setMobileMenuOpen(false); }}
+                className="text-center bg-[#B91C1C] text-white py-2.5 rounded-none font-bold text-xs uppercase tracking-wider cursor-pointer"
               >
                 ✦ Book a Reading
               </button>
@@ -1125,18 +1257,23 @@ export default function App() {
         )}
       </header>
 
-      {/* DEDICATED SCREEN ROUTING: Render 404 NotFoundView, Full In-Depth Service Screen, or Home View */}
+      {/* DEDICATED SCREEN ROUTING: Render 404 NotFoundView, Dedicated BookingPageView, Full In-Depth Service Screen, or Home View */}
       {isNotFound ? (
         <NotFoundView
           onGoHome={() => closeDedicatedService(true)}
           onSelectService={(serviceId) => openDedicatedService(serviceId)}
-          onBookNow={() => setActiveModal('booking')}
+          onBookNow={() => navigateToBooking()}
+        />
+      ) : isBookingPage ? (
+        <BookingPageView
+          onBack={() => closeBookingPage(true)}
+          initialService={bookingInitialService}
         />
       ) : currentDetailedService ? (
         <ServiceDetailView
           service={currentDetailedService}
           onBack={closeDedicatedService}
-          onBookNow={() => setActiveModal('booking')}
+          onBookNow={() => navigateToBooking(`${currentDetailedService.title} ${currentDetailedService.subtitle}`)}
           onSelectService={openDedicatedService}
         />
       ) : (
@@ -1213,21 +1350,21 @@ export default function App() {
                       <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-0.5 sm:pt-1 text-[10px] sm:text-[11px] font-manrope font-bold uppercase tracking-[0.06em] text-[#F5B800]">
                         <button
                           type="button"
-                          onClick={() => setActiveModal(slide.modalType)}
+                          onClick={() => navigateToBooking()}
                           className="bg-black/65 hover:bg-black/85 border border-[#E5A000]/80 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-[4px] transition-colors cursor-pointer"
                         >
                           ✦ STRICTLY PRIVATE
                         </button>
                         <button
                           type="button"
-                          onClick={() => setActiveModal(slide.modalType)}
+                          onClick={() => navigateToBooking()}
                           className="bg-black/65 hover:bg-black/85 border border-[#E5A000]/80 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-[4px] transition-colors cursor-pointer"
                         >
                           ✦ 35+ YEARS OF PRACTICE
                         </button>
                         <button
                           type="button"
-                          onClick={() => setActiveModal(slide.modalType)}
+                          onClick={() => navigateToBooking()}
                           className="bg-black/65 hover:bg-black/85 border border-[#E5A000]/80 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-[4px] transition-colors cursor-pointer"
                         >
                           ✦ 45,000+ CLIENTS GUIDED
@@ -1742,9 +1879,13 @@ export default function App() {
                       href="https://www.google.com/maps/search/?api=1&query=7001+Hollywood+Blvd,+Los+Angeles,+CA+90028"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-bold text-slate-900 hover:text-[#D61B14] transition-colors"
+                      className="font-bold text-slate-900 hover:text-[#D61B14] transition-colors inline-flex items-center gap-1.5"
                     >
-                      📍 7001 Hollywood Blvd, Los Angeles, CA 90028, United States
+                      <svg className="w-3.5 h-3.5 text-[#D61B14] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      <span>7001 Hollywood Blvd, Los Angeles, CA 90028, United States</span>
                     </a>
                     <br />
                     In-person readings by appointment, plus private phone, WhatsApp and video sessions for clients anywhere in California and beyond.
@@ -1905,7 +2046,7 @@ export default function App() {
 
                 <div className="pt-2">
                   <button
-                    onClick={() => setActiveModal('booking')}
+                    onClick={() => navigateToBooking()}
                     className="bg-[#D61B14] hover:bg-[#b5140e] text-white font-roboto font-bold px-7 py-3.5 rounded-none text-xs uppercase tracking-wider transition-all shadow-md flex items-center gap-2 cursor-pointer"
                   >
                     <span>Book a Session With Pandith Vikram</span>
@@ -1915,51 +2056,43 @@ export default function App() {
               </div>
 
               <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-white p-6 rounded-none border border-slate-200 shadow-sm flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-none bg-red-100 text-[#D61B14] flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                <div className="bg-white p-6 rounded-none border border-slate-200 shadow-sm flex flex-col justify-between hover:border-[#8E1612] hover:shadow-md transition-all">
+                  <div className="font-oswald text-4xl sm:text-5xl font-black text-[#8E1612] tracking-tight">
+                    <AnimatedCounter target={35} suffix="+" duration={1800} />
                   </div>
-                  <div>
-                    <p className="font-oswald text-2xl font-bold text-slate-900">35+</p>
-                    <p className="text-xs text-slate-600 font-medium">Years Reading Charts</p>
+                  <div className="mt-3 pt-3 border-t border-slate-100">
+                    <p className="text-xs sm:text-sm text-slate-800 font-bold font-roboto">Years Reading Charts</p>
+                    <p className="text-[11px] text-slate-500 font-roboto mt-0.5">Ancestral Jyotish Mastery</p>
                   </div>
                 </div>
 
-                <div className="bg-white p-6 rounded-none border border-slate-200 shadow-sm flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-none bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                <div className="bg-white p-6 rounded-none border border-slate-200 shadow-sm flex flex-col justify-between hover:border-[#D97706] hover:shadow-md transition-all">
+                  <div className="font-oswald text-4xl sm:text-5xl font-black text-[#D97706] tracking-tight">
+                    <AnimatedCounter target={45} suffix="k+" duration={2000} />
                   </div>
-                  <div>
-                    <p className="font-oswald text-2xl font-bold text-slate-900">45k+</p>
-                    <p className="text-xs text-slate-600 font-medium">Clients Guided in California & Beyond</p>
+                  <div className="mt-3 pt-3 border-t border-slate-100">
+                    <p className="text-xs sm:text-sm text-slate-800 font-bold font-roboto">Clients Guided</p>
+                    <p className="text-[11px] text-slate-500 font-roboto mt-0.5">California & Across the World</p>
                   </div>
                 </div>
 
-                <div className="bg-white p-6 rounded-none border border-slate-200 shadow-sm flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-none bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
+                <div className="bg-white p-6 rounded-none border border-slate-200 shadow-sm flex flex-col justify-between hover:border-emerald-600 hover:shadow-md transition-all">
+                  <div className="font-oswald text-4xl sm:text-5xl font-black text-emerald-600 tracking-tight">
+                    <AnimatedCounter target={100} suffix="%" duration={2200} />
                   </div>
-                  <div>
-                    <p className="font-oswald text-2xl font-bold text-slate-900">100%</p>
-                    <p className="text-xs text-slate-600 font-medium">Private & Confidential</p>
+                  <div className="mt-3 pt-3 border-t border-slate-100">
+                    <p className="text-xs sm:text-sm text-slate-800 font-bold font-roboto">Private & Confidential</p>
+                    <p className="text-[11px] text-slate-500 font-roboto mt-0.5">Strict Discretion Guaranteed</p>
                   </div>
                 </div>
 
-                <div className="bg-white p-6 rounded-none border border-slate-200 shadow-sm flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-none bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                    </svg>
+                <div className="bg-white p-6 rounded-none border border-slate-200 shadow-sm flex flex-col justify-between hover:border-blue-700 hover:shadow-md transition-all">
+                  <div className="font-oswald text-4xl sm:text-5xl font-black text-blue-700 tracking-tight">
+                    <AnimatedCounter target={100} suffix="%" duration={2200} />
                   </div>
-                  <div>
-                    <p className="font-oswald text-base font-bold text-slate-900 leading-snug uppercase">Authentic Vedic</p>
-                    <p className="text-xs text-slate-600">Pujas, Mantras & Remedies</p>
+                  <div className="mt-3 pt-3 border-t border-slate-100">
+                    <p className="text-xs sm:text-sm text-slate-800 font-bold font-roboto uppercase">Authentic Vedic</p>
+                    <p className="text-[11px] text-slate-500 font-roboto mt-0.5">Sattvic Pujas, Mantras & Remedies</p>
                   </div>
                 </div>
               </div>
@@ -2083,7 +2216,11 @@ export default function App() {
                   {/* Promise 1 */}
                   <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
                     <div className="space-y-2">
-                      <span className="text-xl">🚫</span>
+                      <div className="w-8 h-8 rounded-none bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                      </div>
                       <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">No Scare Tactics</h4>
                       <p className="text-xs text-slate-300 font-roboto leading-relaxed">
                         You will never be told about invented curses or looming disasters to push you into costly rituals.
@@ -2095,7 +2232,11 @@ export default function App() {
                   {/* Promise 2 */}
                   <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
                     <div className="space-y-2">
-                      <span className="text-xl">🔒</span>
+                      <div className="w-8 h-8 rounded-none bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                      </div>
                       <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Total Privacy</h4>
                       <p className="text-xs text-slate-300 font-roboto leading-relaxed">
                         Your name, your marriage, your family matters: all of it stays private. Nothing is shared, sold or published.
@@ -2107,7 +2248,11 @@ export default function App() {
                   {/* Promise 3 */}
                   <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
                     <div className="space-y-2">
-                      <span className="text-xl">🪔</span>
+                      <div className="w-8 h-8 rounded-none bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                      </div>
                       <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Only Positive Remedies</h4>
                       <p className="text-xs text-slate-300 font-roboto leading-relaxed">
                         Pujas, homas, mantras, genuine gemstones and yantras, all rooted in scripture. No black magic, and nothing that could harm anyone.
@@ -2119,7 +2264,11 @@ export default function App() {
                   {/* Promise 4 */}
                   <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
                     <div className="space-y-2">
-                      <span className="text-xl">⏳</span>
+                      <div className="w-8 h-8 rounded-none bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
                       <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Honest Timelines</h4>
                       <p className="text-xs text-slate-300 font-roboto leading-relaxed">
                         Remedies follow natural cycles, usually 21 to 41 days. You get a realistic timeframe, never a promise of overnight miracles.
@@ -2131,7 +2280,11 @@ export default function App() {
                   {/* Promise 5 */}
                   <div className="bg-[#0C1236]/90 border border-slate-700 hover:border-amber-400 p-5 rounded-none flex flex-col justify-between transition-colors">
                     <div className="space-y-2">
-                      <span className="text-xl">👤</span>
+                      <div className="w-8 h-8 rounded-none bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                      </div>
                       <h4 className="font-oswald text-base font-bold uppercase text-[#FFD700]">Speak With Him Directly</h4>
                       <p className="text-xs text-slate-300 font-roboto leading-relaxed">
                         Your consultation is with Pandith Vikram himself, not an assistant, and comes with his full attention and personal prayers for you.
@@ -2227,8 +2380,10 @@ export default function App() {
                             />
                           </picture>
                           {/* Privacy Shield Overlay Badge */}
-                          <div className="absolute bottom-1 right-1 bg-[#8E1612]/95 text-[#FFD700] text-[8px] font-bold px-1.5 py-0.5 tracking-wider uppercase shadow-sm font-roboto flex items-center gap-0.5">
-                            <span>🔒</span>
+                          <div className="absolute bottom-1 right-1 bg-[#8E1612]/95 text-[#FFD700] text-[8px] font-bold px-1.5 py-0.5 tracking-wider uppercase shadow-sm font-roboto flex items-center gap-1">
+                            <svg className="w-2.5 h-2.5 text-[#FFD700]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
                             <span>Private</span>
                           </div>
                         </div>
@@ -2702,7 +2857,7 @@ export default function App() {
                     ✦ Open Daily: 8:00 AM – 10:00 PM Pacific Time
                   </p>
                   <button
-                    onClick={() => setActiveModal('booking')}
+                    onClick={() => navigateToBooking()}
                     className="w-full bg-[#FFD700] hover:bg-amber-300 text-slate-950 font-oswald font-bold py-2.5 px-4 rounded-none text-xs uppercase tracking-wider transition-all shadow-lg cursor-pointer flex items-center justify-center gap-2"
                   >
                     <span>✦ Book Your Private Reading</span>
@@ -2727,25 +2882,45 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Floating WhatsApp Widget - High Quality Official Vector Logo */}
-      <aside aria-label="WhatsApp Quick Contact" className="fixed bottom-6 right-6 z-50 flex items-center gap-2 group select-none">
-        {/* Tooltip on Hover */}
-        <span className="hidden sm:inline-block bg-[#0A102E] text-amber-200 border border-amber-400/40 text-xs font-bold font-roboto px-3 py-1.5 shadow-2xl rounded-none opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-          Message Pandith Vikram on WhatsApp
-        </span>
+      {/* Floating Action Hub (WhatsApp + Scroll to Top) */}
+      <aside aria-label="Quick Actions" className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 select-none">
+        {/* Floating WhatsApp Widget - Elevated Position */}
+        <div className="flex items-center gap-2 group">
+          <span className="hidden sm:inline-block bg-[#0A102E] text-amber-200 border border-amber-400/40 text-xs font-bold font-roboto px-3 py-1.5 shadow-2xl rounded-none opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            Message Pandith Vikram on WhatsApp
+          </span>
 
-        <a
-          href="https://wa.me/15103714626"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white p-2.5 shadow-[0_4px_25px_rgba(37,211,102,0.6)] hover:shadow-[0_6px_30px_rgba(37,211,102,0.85)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-200 rounded-none border-2 border-white cursor-pointer"
-          aria-label="Chat with Pandith Vikram on WhatsApp"
-        >
-          {/* Official Crisp High-Quality WhatsApp Vector SVG */}
-          <svg className="w-9 h-9 fill-white" viewBox="0 0 24 24">
-            <path fillRule="evenodd" clipRule="evenodd" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.59 20.16 12.04 20.16C10.64 20.16 9.27 19.8 8.08 19.09L7.79 18.92L4.69 19.73L5.52 16.71L5.33 16.41C4.55 15.17 4.14 13.56 4.14 11.91C4.14 7.37 7.83 3.67 12.04 3.67ZM16.57 14.39C16.32 14.26 15.1 13.66 14.87 13.58C14.65 13.49 14.48 13.45 14.32 13.7C14.15 13.95 13.68 14.51 13.54 14.67C13.39 14.84 13.25 14.86 13 14.73C12.75 14.61 11.95 14.35 11 13.5C10.26 12.84 9.76 12.03 9.61 11.78C9.47 11.53 9.59 11.4 9.72 11.27C9.83 11.16 9.97 10.98 10.1 10.83C10.22 10.69 10.27 10.58 10.35 10.41C10.43 10.25 10.39 10.1 10.33 9.98C10.27 9.85 9.77 8.63 9.57 8.13C9.37 7.65 9.17 7.71 9.02 7.71C8.88 7.7 8.71 7.7 8.55 7.7C8.38 7.7 8.11 7.76 7.88 8.01C7.65 8.26 7 8.87 7 10.09C7 11.31 7.89 12.49 8.01 12.65C8.14 12.82 9.77 15.32 12.26 16.39C12.85 16.65 13.31 16.8 13.67 16.92C14.26 17.11 14.8 17.08 15.23 17.02C15.71 16.95 16.71 16.42 16.92 15.84C17.12 15.26 17.12 14.77 17.06 14.67C17 14.56 16.82 14.51 16.57 14.39Z" />
-          </svg>
-        </a>
+          <a
+            href="https://wa.me/15103714626"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-13 h-13 sm:w-14 sm:h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white p-2.5 shadow-[0_4px_25px_rgba(37,211,102,0.6)] hover:shadow-[0_6px_30px_rgba(37,211,102,0.85)] flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-200 rounded-none border-2 border-white cursor-pointer"
+            aria-label="Chat with Pandith Vikram on WhatsApp"
+          >
+            {/* Official Crisp High-Quality WhatsApp Vector SVG */}
+            <svg className="w-8 h-8 sm:w-9 sm:h-9 fill-white" viewBox="0 0 24 24">
+              <path fillRule="evenodd" clipRule="evenodd" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.59 20.16 12.04 20.16C10.64 20.16 9.27 19.8 8.08 19.09L7.79 18.92L4.69 19.73L5.52 16.71L5.33 16.41C4.55 15.17 4.14 13.56 4.14 11.91C4.14 7.37 7.83 3.67 12.04 3.67ZM16.57 14.39C16.32 14.26 15.1 13.66 14.87 13.58C14.65 13.49 14.48 13.45 14.32 13.7C14.15 13.95 13.68 14.51 13.54 14.67C13.39 14.84 13.25 14.86 13 14.73C12.75 14.61 11.95 14.35 11 13.5C10.26 12.84 9.76 12.03 9.61 11.78C9.47 11.53 9.59 11.4 9.72 11.27C9.83 11.16 9.97 10.98 10.1 10.83C10.22 10.69 10.27 10.58 10.35 10.41C10.43 10.25 10.39 10.1 10.33 9.98C10.27 9.85 9.77 8.63 9.57 8.13C9.37 7.65 9.17 7.71 9.02 7.71C8.88 7.7 8.71 7.7 8.55 7.7C8.38 7.7 8.11 7.76 7.88 8.01C7.65 8.26 7 8.87 7 10.09C7 11.31 7.89 12.49 8.01 12.65C8.14 12.82 9.77 15.32 12.26 16.39C12.85 16.65 13.31 16.8 13.67 16.92C14.26 17.11 14.8 17.08 15.23 17.02C15.71 16.95 16.71 16.42 16.92 15.84C17.12 15.26 17.12 14.77 17.06 14.67C17 14.56 16.82 14.51 16.57 14.39Z" />
+            </svg>
+          </a>
+        </div>
+
+        {/* Scroll To Top Button - Placed directly below WhatsApp */}
+        {showScrollTop && (
+          <div className="flex items-center gap-2 group">
+            <span className="hidden sm:inline-block bg-[#0A102E] text-amber-200 border border-amber-400/40 text-xs font-bold font-roboto px-3 py-1.5 shadow-2xl rounded-none opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              Scroll to Top
+            </span>
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="w-11 h-11 sm:w-12 sm:h-12 bg-[#8E1612] hover:bg-[#A91D18] text-white p-2 shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-200 rounded-none border-2 border-[#FFD700] cursor-pointer"
+              aria-label="Scroll to top of page"
+            >
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 stroke-white fill-none" viewBox="0 0 24 24" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+              </svg>
+            </button>
+          </div>
+        )}
       </aside>
 
       {/* Interactive Modal: Contact Us */}
@@ -2764,10 +2939,23 @@ export default function App() {
                 <div className="w-16 h-16 bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center text-3xl font-bold">
                   ✓
                 </div>
-                <h3 className="font-oswald text-2xl font-bold text-slate-900 uppercase">Thank You, Message Received</h3>
+                <h3 className="font-oswald text-2xl font-bold text-slate-900 uppercase">Inquiry Forwarded to WhatsApp!</h3>
                 <p className="text-sm text-slate-600 font-roboto">
-                  Pandith Vikram will look over your details and call you back shortly at the number you provided.
+                  Your message and details have been directed to Pandith Vikram’s WhatsApp (+1 510-371-4626). We will reply promptly.
                 </p>
+                <div className="pt-2">
+                  <a
+                    href="https://wa.me/15103714626"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-5 py-2.5 rounded-none font-bold text-xs uppercase tracking-wider transition-colors shadow-md"
+                  >
+                    <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
+                    </svg>
+                    <span>Open WhatsApp Chat</span>
+                  </a>
+                </div>
               </div>
             ) : (
               <div>
@@ -2872,10 +3060,23 @@ export default function App() {
                 <div className="w-16 h-16 bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center text-3xl font-bold">
                   ✓
                 </div>
-                <h3 className="font-oswald text-2xl font-bold text-slate-900 uppercase">Request Received!</h3>
+                <h3 className="font-oswald text-2xl font-bold text-slate-900 uppercase">Consultation Inquiry Sent!</h3>
                 <p className="text-sm text-slate-600 font-roboto">
-                  We will call you shortly to confirm your appointment time. You can also reach us directly at +1 510-371-4626.
+                  Your booking request has been forwarded to Pandith Vikram’s WhatsApp (+1 510-371-4626). We will confirm your reading time shortly.
                 </p>
+                <div className="pt-2">
+                  <a
+                    href="https://wa.me/15103714626"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-5 py-2.5 rounded-none font-bold text-xs uppercase tracking-wider transition-colors shadow-md"
+                  >
+                    <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
+                    </svg>
+                    <span>Open WhatsApp Chat</span>
+                  </a>
+                </div>
               </div>
             ) : (
               <div>
