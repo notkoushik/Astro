@@ -936,37 +936,37 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans relative">
-      {/* 1. TOP UTILITY HEADER (Static Maroon Bar - Direct Call & WhatsApp Helpline, Zero Scrolling) */}
-      <div className="w-full bg-[#8E1612] text-white select-none py-2 sm:py-2.5 border-b border-red-900/80 shadow-xs relative z-50">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm font-roboto tracking-wide">
+      {/* 1. TOP UTILITY HEADER (Static Maroon Bar - One-Liner Call Helpline & WhatsApp Direct) */}
+      <div className="w-full bg-[#8E1612] text-white select-none py-2 border-b border-red-900/80 shadow-xs relative z-50">
+        <div className="max-w-[1600px] mx-auto px-3 sm:px-6 flex items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-roboto whitespace-nowrap">
           {/* Direct Phone Call Helpline */}
           <a
             href="tel:+15103714626"
-            className="text-white hover:text-amber-200 font-semibold flex items-center gap-2 transition-colors group"
+            className="text-white hover:text-amber-200 font-semibold flex items-center gap-1.5 transition-colors whitespace-nowrap shrink-0"
           >
-            <div className="w-6 h-6 rounded-none bg-white/10 border border-white/20 flex items-center justify-center shrink-0">
-              <svg className="w-3.5 h-3.5 text-amber-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+            <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-none bg-white/10 border border-white/20 flex items-center justify-center shrink-0">
+              <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
             </div>
-            <span>Call: <strong className="font-bold underline underline-offset-2 text-amber-200 group-hover:text-white">+1 510-371-4626</strong></span>
+            <span className="text-[11px] sm:text-xs">Call: <strong className="font-bold underline underline-offset-2 text-amber-200">+1 510-371-4626</strong></span>
           </a>
 
-          <span className="text-amber-400/60 font-thin text-base">|</span>
+          <span className="text-amber-400/60 font-thin text-xs sm:text-sm shrink-0">|</span>
 
-          {/* WhatsApp Direct Helpline */}
+          {/* WhatsApp Link without Number */}
           <a
             href="https://wa.me/15103714626"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-amber-200 font-semibold flex items-center gap-2 transition-colors group"
+            className="text-white hover:text-amber-200 font-semibold flex items-center gap-1.5 transition-colors whitespace-nowrap shrink-0 group"
           >
-            <div className="w-6 h-6 rounded-none bg-emerald-600/80 border border-emerald-400/40 flex items-center justify-center shrink-0">
-              <svg className="w-3.5 h-3.5 fill-white group-hover:fill-amber-200 transition-colors" viewBox="0 0 24 24">
+            <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-none bg-emerald-600/80 border border-emerald-400/40 flex items-center justify-center shrink-0">
+              <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-white group-hover:fill-amber-200 transition-colors" viewBox="0 0 24 24">
                 <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.59 20.16 12.04 20.16C10.64 20.16 9.27 19.8 8.08 19.09L7.79 18.92L4.69 19.73L5.52 16.71L5.33 16.41C4.55 15.17 4.14 13.56 4.14 11.91C4.14 7.37 7.83 3.67 12.04 3.67ZM16.57 14.39C16.32 14.26 15.1 13.66 14.87 13.58C14.65 13.49 14.48 13.45 14.32 13.7C14.15 13.95 13.68 14.51 13.54 14.67C13.39 14.84 13.25 14.86 13 14.73C12.75 14.61 11.95 14.35 11 13.5C10.26 12.84 9.76 12.03 9.61 11.78C9.47 11.53 9.59 11.4 9.72 11.27C9.83 11.16 9.97 10.98 10.1 10.83C10.22 10.69 10.27 10.58 10.35 10.41C10.43 10.25 10.39 10.1 10.33 9.98C10.27 9.85 9.77 8.63 9.57 8.13C9.37 7.65 9.17 7.71 9.02 7.71C8.88 7.7 8.71 7.7 8.55 7.7C8.38 7.7 8.11 7.76 7.88 8.01C7.65 8.26 7 8.87 7 10.09C7 11.31 7.89 12.49 8.01 12.65C8.14 12.82 9.77 15.32 12.26 16.39C12.85 16.65 13.31 16.8 13.67 16.92C14.26 17.11 14.8 17.08 15.23 17.02C15.71 16.95 16.71 16.42 16.92 15.84C17.12 15.26 17.12 14.77 17.06 14.67C17 14.56 16.82 14.51 16.57 14.39Z" />
               </svg>
             </div>
-            <span>WhatsApp: <strong className="font-bold underline underline-offset-2 text-amber-200 group-hover:text-white">+1 510-371-4626</strong></span>
+            <span className="text-[11px] sm:text-xs font-bold text-emerald-200 group-hover:text-white underline underline-offset-2">WhatsApp</span>
           </a>
         </div>
       </div>
