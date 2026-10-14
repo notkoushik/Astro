@@ -936,101 +936,29 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans relative">
-      {/* 1. TOP UTILITY HEADER (Regal Maroon Strip with Continuous Scrolling Ticker - Location Removed, Extra Height, Zero Emojis) */}
-      <div className="w-full bg-[#8E1612] text-white select-none py-2.5 sm:py-3.5 border-b border-red-900/80 shadow-md relative z-50 overflow-hidden">
-        <div className="relative w-full overflow-hidden flex items-center">
-          {/* Continuous Infinite Scrolling Marquee */}
-          <div className="animate-marquee-topbar flex items-center gap-8 sm:gap-12 whitespace-nowrap text-xs sm:text-sm font-roboto tracking-wide select-none">
-            {/* Ticker Content Segment 1 */}
-            <div className="flex items-center gap-8 sm:gap-12 whitespace-nowrap">
-              <span className="text-amber-300 font-bold flex items-center gap-1.5">
-                <span className="text-[#FFD700]">✦</span> Most Renowned Indian Vedic Astrologer Pandith Vikram
-              </span>
-              <span className="text-amber-400 font-black">✦</span>
-              <span className="text-white font-semibold flex items-center gap-1.5">
-                <span>✦</span> 24x7 Available for 100% Confidential Consultations
-              </span>
-              <span className="text-amber-400 font-black">✦</span>
-              <a href="tel:+15103714626" className="text-amber-200 hover:text-white font-bold flex items-center gap-2 transition-colors">
-                <svg className="w-3.5 h-3.5 text-amber-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <span>Call or Text: <strong className="text-white underline underline-offset-2">+1 510-371-4626</strong></span>
-              </a>
-              <span className="text-amber-400 font-black">✦</span>
-              <a
-                href="https://wa.me/15103714626"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1 font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-sm border border-emerald-400/50 transition-colors"
-              >
-                <svg className="w-3.5 h-3.5 fill-white shrink-0" viewBox="0 0 24 24">
-                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.59 20.16 12.04 20.16C10.64 20.16 9.27 19.8 8.08 19.09L7.79 18.92L4.69 19.73L5.52 16.71L5.33 16.41C4.55 15.17 4.14 13.56 4.14 11.91C4.14 7.37 7.83 3.67 12.04 3.67ZM16.57 14.39C16.32 14.26 15.1 13.66 14.87 13.58C14.65 13.49 14.48 13.45 14.32 13.7C14.15 13.95 13.68 14.51 13.54 14.67C13.39 14.84 13.25 14.86 13 14.73C12.75 14.61 11.95 14.35 11 13.5C10.26 12.84 9.76 12.03 9.61 11.78C9.47 11.53 9.59 11.4 9.72 11.27C9.83 11.16 9.97 10.98 10.1 10.83C10.22 10.69 10.27 10.58 10.35 10.41C10.43 10.25 10.39 10.1 10.33 9.98C10.27 9.85 9.77 8.63 9.57 8.13C9.37 7.65 9.17 7.71 9.02 7.71C8.88 7.7 8.71 7.7 8.55 7.7C8.38 7.7 8.11 7.76 7.88 8.01C7.65 8.26 7 8.87 7 10.09C7 11.31 7.89 12.49 8.01 12.65C8.14 12.82 9.77 15.32 12.26 16.39C12.85 16.65 13.31 16.8 13.67 16.92C14.26 17.11 14.8 17.08 15.23 17.02C15.71 16.95 16.71 16.42 16.92 15.84C17.12 15.26 17.12 14.77 17.06 14.67C17 14.56 16.82 14.51 16.57 14.39Z" />
-                </svg>
-                <span>WhatsApp Us: +1 510-371-4626</span>
-              </a>
-              <span className="text-amber-400 font-black">✦</span>
-              <a href="mailto:pandithvikram@gmail.com" className="text-white hover:text-amber-200 flex items-center gap-1.5 transition-colors">
-                <svg className="w-3.5 h-3.5 text-amber-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <span>pandithvikram@gmail.com</span>
-              </a>
-              <span className="text-amber-400 font-black">✦</span>
-              <span className="text-amber-100 font-medium">
-                ✦ 35+ Years of Ancestral Vedic Mastery • 45,000+ Clients Guided • 100% Private & Confidential
-              </span>
-              <span className="text-amber-400 font-black">✦</span>
-              <span className="text-white font-semibold">
-                Specializing in Ex Love Reunion • Marriage Matching • Black Magic Removal • Business Growth
-              </span>
-            </div>
-
-            {/* Ticker Content Segment 2 (Duplicate for Seamless Loop) */}
-            <div className="flex items-center gap-8 sm:gap-12 whitespace-nowrap" aria-hidden="true">
-              <span className="text-amber-300 font-bold flex items-center gap-1.5">
-                <span className="text-[#FFD700]">✦</span> Most Renowned Indian Vedic Astrologer Pandith Vikram
-              </span>
-              <span className="text-amber-400 font-black">✦</span>
-              <span className="text-white font-semibold flex items-center gap-1.5">
-                <span>✦</span> 24x7 Available for 100% Confidential Consultations
-              </span>
-              <span className="text-amber-400 font-black">✦</span>
-              <a href="tel:+15103714626" className="text-amber-200 hover:text-white font-bold flex items-center gap-2 transition-colors">
-                <svg className="w-3.5 h-3.5 text-amber-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <span>Call or Text: <strong className="text-white underline underline-offset-2">+1 510-371-4626</strong></span>
-              </a>
-              <span className="text-amber-400 font-black">✦</span>
-              <a
-                href="https://wa.me/15103714626"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1 font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-sm border border-emerald-400/50 transition-colors"
-              >
-                <svg className="w-3.5 h-3.5 fill-white shrink-0" viewBox="0 0 24 24">
-                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.59 20.16 12.04 20.16C10.64 20.16 9.27 19.8 8.08 19.09L7.79 18.92L4.69 19.73L5.52 16.71L5.33 16.41C4.55 15.17 4.14 13.56 4.14 11.91C4.14 7.37 7.83 3.67 12.04 3.67ZM16.57 14.39C16.32 14.26 15.1 13.66 14.87 13.58C14.65 13.49 14.48 13.45 14.32 13.7C14.15 13.95 13.68 14.51 13.54 14.67C13.39 14.84 13.25 14.86 13 14.73C12.75 14.61 11.95 14.35 11 13.5C10.26 12.84 9.76 12.03 9.61 11.78C9.47 11.53 9.59 11.4 9.72 11.27C9.83 11.16 9.97 10.98 10.1 10.83C10.22 10.69 10.27 10.58 10.35 10.41C10.43 10.25 10.39 10.1 10.33 9.98C10.27 9.85 9.77 8.63 9.57 8.13C9.37 7.65 9.17 7.71 9.02 7.71C8.88 7.7 8.71 7.7 8.55 7.7C8.38 7.7 8.11 7.76 7.88 8.01C7.65 8.26 7 8.87 7 10.09C7 11.31 7.89 12.49 8.01 12.65C8.14 12.82 9.77 15.32 12.26 16.39C12.85 16.65 13.31 16.8 13.67 16.92C14.26 17.11 14.8 17.08 15.23 17.02C15.71 16.95 16.71 16.42 16.92 15.84C17.12 15.26 17.12 14.77 17.06 14.67C17 14.56 16.82 14.51 16.57 14.39Z" />
-                </svg>
-                <span>WhatsApp Us: +1 510-371-4626</span>
-              </a>
-              <span className="text-amber-400 font-black">✦</span>
-              <a href="mailto:pandithvikram@gmail.com" className="text-white hover:text-amber-200 flex items-center gap-1.5 transition-colors">
-                <svg className="w-3.5 h-3.5 text-amber-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <span>pandithvikram@gmail.com</span>
-              </a>
-              <span className="text-amber-400 font-black">✦</span>
-              <span className="text-amber-100 font-medium">
-                ✦ 35+ Years of Ancestral Vedic Mastery • 45,000+ Clients Guided • 100% Private & Confidential
-              </span>
-              <span className="text-amber-400 font-black">✦</span>
-              <span className="text-white font-semibold">
-                Specializing in Ex Love Reunion • Marriage Matching • Black Magic Removal • Business Growth
-              </span>
-            </div>
+      {/* 1. TOP UTILITY HEADER (Static Maroon Bar - Contact Name & WhatsApp Only, Zero Scrolling) */}
+      <div className="w-full bg-[#8E1612] text-white select-none py-2.5 sm:py-3 border-b border-red-900/80 shadow-sm relative z-50">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between sm:justify-center gap-4 sm:gap-8 text-xs sm:text-sm font-roboto tracking-wide">
+          <div className="flex items-center gap-2">
+            <span className="text-[#FFD700] text-sm">✦</span>
+            <span className="font-bold uppercase tracking-wider text-amber-200">
+              Pandith Vikram
+            </span>
           </div>
+
+          <span className="text-amber-400/60 hidden sm:inline">|</span>
+
+          <a
+            href="https://wa.me/15103714626"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-amber-200 font-semibold flex items-center gap-2 transition-colors group"
+          >
+            <svg className="w-4 h-4 fill-white group-hover:fill-amber-200 transition-colors shrink-0" viewBox="0 0 24 24">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.59 20.16 12.04 20.16C10.64 20.16 9.27 19.8 8.08 19.09L7.79 18.92L4.69 19.73L5.52 16.71L5.33 16.41C4.55 15.17 4.14 13.56 4.14 11.91C4.14 7.37 7.83 3.67 12.04 3.67ZM16.57 14.39C16.32 14.26 15.1 13.66 14.87 13.58C14.65 13.49 14.48 13.45 14.32 13.7C14.15 13.95 13.68 14.51 13.54 14.67C13.39 14.84 13.25 14.86 13 14.73C12.75 14.61 11.95 14.35 11 13.5C10.26 12.84 9.76 12.03 9.61 11.78C9.47 11.53 9.59 11.4 9.72 11.27C9.83 11.16 9.97 10.98 10.1 10.83C10.22 10.69 10.27 10.58 10.35 10.41C10.43 10.25 10.39 10.1 10.33 9.98C10.27 9.85 9.77 8.63 9.57 8.13C9.37 7.65 9.17 7.71 9.02 7.71C8.88 7.7 8.71 7.7 8.55 7.7C8.38 7.7 8.11 7.76 7.88 8.01C7.65 8.26 7 8.87 7 10.09C7 11.31 7.89 12.49 8.01 12.65C8.14 12.82 9.77 15.32 12.26 16.39C12.85 16.65 13.31 16.8 13.67 16.92C14.26 17.11 14.8 17.08 15.23 17.02C15.71 16.95 16.71 16.42 16.92 15.84C17.12 15.26 17.12 14.77 17.06 14.67C17 14.56 16.82 14.51 16.57 14.39Z" />
+            </svg>
+            <span>WhatsApp: <strong className="font-bold underline underline-offset-2 text-amber-200 group-hover:text-white">+1 510-371-4626</strong></span>
+          </a>
         </div>
       </div>
 
