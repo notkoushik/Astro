@@ -470,7 +470,7 @@ export default function BookingPageView({ onBack, initialService }: BookingPageV
                   <p className="text-slate-400 mt-0.5">Emergency readings available upon request.</p>
                 </div>
 
-                {/* Google Map Block (Focused on 7001 Hollywood Blvd, Los Angeles, CA 90028) */}
+                {/* Google Map Block (Focused on Indian Astrologer - 7001 Hollywood Blvd, Los Angeles, CA 90028) */}
                 <div className="space-y-1.5 pt-1 font-roboto">
                   <div className="flex items-center justify-between text-[11px]">
                     <span className="font-bold text-amber-300 flex items-center gap-1.5">
@@ -481,7 +481,7 @@ export default function BookingPageView({ onBack, initialService }: BookingPageV
                       Consultation Center Map:
                     </span>
                     <a
-                      href="https://www.google.com/maps/search/?api=1&query=7001+Hollywood+Blvd,+Los+Angeles,+CA+90028"
+                      href="https://maps.google.com?q=Indian%20Astrologer,%207001%20Hollywood%20Blvd,%20Los%20Angeles,%20CA%2090028,%20United%20States&ftid=0x80c2bf003e569f33:0x14bf83fe85d0f8d5&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,100821555,47071704,94218641,94282134,100835694,94286869,100820247,100822504,100838877,121816461&g_st=ic"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-amber-300 hover:text-white underline text-[10px] uppercase font-bold tracking-wider transition-colors"
@@ -489,10 +489,23 @@ export default function BookingPageView({ onBack, initialService }: BookingPageV
                       Open in Maps ↗
                     </a>
                   </div>
-                  <div className="w-full h-56 sm:h-64 bg-slate-950 border border-[#FFD700]/40 overflow-hidden shadow-md">
+                  <div className="relative w-full h-64 sm:h-72 bg-slate-950 border border-[#FFD700]/40 overflow-hidden shadow-md">
+                    {/* Minimal Version Header Badge - Assures 'Indian Astrologer' is Prominently Visible */}
+                    <div className="absolute top-2.5 left-2.5 z-10 bg-slate-900/95 backdrop-blur-xs border border-[#FFD700]/70 px-3 py-1.5 shadow-lg max-w-[85%] text-left pointer-events-none">
+                      <div className="flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+                        <span className="font-oswald text-xs sm:text-[13px] font-bold text-[#FFD700] uppercase tracking-wide truncate">
+                          Indian Astrologer
+                        </span>
+                      </div>
+                      <p className="text-[10px] text-slate-300 font-roboto truncate mt-0.5">
+                        7001 Hollywood Blvd, Los Angeles, CA 90028
+                      </p>
+                    </div>
+
                     <iframe
-                      title="Pandith Vikram Los Angeles Consultation Center Map - 7001 Hollywood Blvd"
-                      src="https://maps.google.com/maps?q=7001%20Hollywood%20Blvd%2C%20Los%20Angeles%2C%20CA%2090028&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                      title="Indian Astrologer - 7001 Hollywood Blvd, Los Angeles, CA 90028"
+                      src="https://maps.google.com/maps?q=Indian%20Astrologer%2C%207001%20Hollywood%20Blvd%2C%20Los%20Angeles%2C%20CA%2090028%2C%20United%20States&t=&z=16&ie=UTF8&iwloc=B&output=embed"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}

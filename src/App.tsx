@@ -7,6 +7,9 @@ import NotFoundView from './components/NotFoundView'
 import { detailedServicesData } from './data/servicesData'
 import AnimatedCounter from './components/AnimatedCounter'
 import BookingPageView from './components/BookingPageView'
+import LocationDetailView from './components/LocationDetailView'
+import { locationsData, locationsList, getLocationBySlug } from './data/locationsData'
+import type { LocationData } from './data/locationsData'
 
 interface ServiceItem {
   id: string
@@ -531,85 +534,20 @@ const homeFaqs: HomeFaq[] = [
   }
 ]
 
-interface UsaLocationItem {
-  id: string
-  hub: string
-  suburbs: string
-}
-
-// 12 Service Areas: Greater Los Angeles & California Regions, Plus Phone Readings Nationwide
-const usaLocations: UsaLocationItem[] = [
-  {
-    id: 'la',
-    hub: 'LOS ANGELES & HOLLYWOOD',
-    suburbs: 'Hollywood, West Hollywood, Beverly Hills, Santa Monica, Culver City, Downtown LA, Koreatown, Silver Lake'
-  },
-  {
-    id: 'sfv',
-    hub: 'SAN FERNANDO VALLEY',
-    suburbs: 'Burbank, Glendale, Northridge, Van Nuys, Sherman Oaks, Encino, Chatsworth, North Hollywood'
-  },
-  {
-    id: 'sgv',
-    hub: 'SAN GABRIEL VALLEY',
-    suburbs: 'Pasadena, Arcadia, Diamond Bar, Walnut, West Covina, Alhambra, Pomona'
-  },
-  {
-    id: 'art',
-    hub: 'ARTESIA & GATEWAY CITIES',
-    suburbs: 'Artesia, Cerritos, Norwalk, Lakewood, Downey, Bellflower, Long Beach'
-  },
-  {
-    id: 'oc',
-    hub: 'ORANGE COUNTY',
-    suburbs: 'Irvine, Anaheim, Tustin, Fullerton, Santa Ana, Buena Park, Huntington Beach'
-  },
-  {
-    id: 'ie',
-    hub: 'INLAND EMPIRE',
-    suburbs: 'Riverside, Ontario, Rancho Cucamonga, Corona, Chino Hills, Fontana, Temecula'
-  },
-  {
-    id: 'sd',
-    hub: 'SAN DIEGO COUNTY',
-    suburbs: 'San Diego, Carlsbad, Chula Vista, Escondido, Oceanside, Poway, La Jolla'
-  },
-  {
-    id: 'cc',
-    hub: 'VENTURA & CENTRAL COAST',
-    suburbs: 'Thousand Oaks, Simi Valley, Oxnard, Ventura, Santa Barbara, San Luis Obispo'
-  },
-  {
-    id: 'bay',
-    hub: 'SILICON VALLEY & BAY AREA',
-    suburbs: 'San Jose, Fremont, Sunnyvale, Santa Clara, Cupertino, Milpitas, Oakland, San Francisco'
-  },
-  {
-    id: 'sac',
-    hub: 'SACRAMENTO REGION',
-    suburbs: 'Sacramento, Elk Grove, Roseville, Folsom, Davis, Yuba City'
-  },
-  {
-    id: 'cv',
-    hub: 'CENTRAL VALLEY',
-    suburbs: 'Fresno, Bakersfield, Stockton, Modesto, Tracy, Merced, Visalia'
-  },
-  {
-    id: 'us',
-    hub: 'PHONE & VIDEO ACROSS THE USA',
-    suburbs: 'Las Vegas, Phoenix, Seattle, Portland, Denver, Dallas, Houston, Chicago, Atlanta, New Jersey, New York'
-  }
-]
-
 export default function App() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0)
   const [activeModal, setActiveModal] = useState<'question' | 'booking' | 'privacy' | 'terms' | 'disclaimer' | null>(null)
-  // Helper to resolve current route (Clean URL /services/<id>, /book-reading, root /<id>, or legacy #<id>) and 404 status
-  const parseCurrentUrl = (): { serviceId: string | null; notFound: boolean; isBooking: boolean } => {
-    if (typeof window === 'undefined') return { serviceId: null, notFound: false, isBooking: false }
+  // Helper to resolve current route (Clean URL /services/<id>, /locations/<slug>, /<slug>, /book-reading, root /<id>, or legacy #<id>) and 404 status
+  const parseCurrentUrl = (): {
+    serviceId: string | null
+    locationSlug: string | null
+    notFound: boolean
+    isBooking: boolean
+  } => {
+    if (typeof window === 'undefined') return { serviceId: null, locationSlug: null, notFound: false, isBooking: false }
     const pathname = window.location.pathname.replace(/\/+$/, '') || '/'
     const hash = window.location.hash.replace(/^#\/?/, '').trim().toLowerCase()
 
@@ -630,13 +568,13 @@ export default function App() {
       hash === 'contact' ||
       hash === 'contact-us'
     ) {
-      return { serviceId: null, notFound: false, isBooking: true }
+      return { serviceId: null, locationSlug: null, notFound: false, isBooking: true }
     }
 
-    // 1. Check Clean Path: /services/<serviceId> or /<serviceId>
-    const cleanMatch = pathname.match(/^\/services\/([a-z0-9-]+)$/i) || pathname.match(/^\/([a-z0-9-]+)$/i)
-    if (cleanMatch) {
-      const candidate = cleanMatch[1].toLowerCase()
+    // 1. Check Location Routes: /indian-astrologer-<city> or /locations/indian-astrologer-<city>
+    const locMatch = pathname.match(/^\/locations\/([a-z0-9-]+)$/i) || pathname.match(/^\/([a-z0-9-]+)$/i)
+    if (locMatch) {
+      const candidate = locMatch[1].toLowerCase()
       if (
         candidate === 'book-reading' ||
         candidate === 'book-session' ||
@@ -646,30 +584,43 @@ export default function App() {
         candidate === 'contact' ||
         candidate === 'contact-us'
       ) {
-        return { serviceId: null, notFound: false, isBooking: true }
+        return { serviceId: null, locationSlug: null, notFound: false, isBooking: true }
       }
+      if (Object.prototype.hasOwnProperty.call(locationsData, candidate)) {
+        return { serviceId: null, locationSlug: candidate, notFound: false, isBooking: false }
+      }
+    }
+
+    // 2. Check Clean Service Path: /services/<serviceId> or /<serviceId>
+    const cleanMatch = pathname.match(/^\/services\/([a-z0-9-]+)$/i) || pathname.match(/^\/([a-z0-9-]+)$/i)
+    if (cleanMatch) {
+      const candidate = cleanMatch[1].toLowerCase()
       if (Object.prototype.hasOwnProperty.call(detailedServicesData, candidate)) {
-        return { serviceId: candidate, notFound: false, isBooking: false }
+        return { serviceId: candidate, locationSlug: null, notFound: false, isBooking: false }
       }
       if (candidate !== 'index.html') {
-        return { serviceId: null, notFound: true, isBooking: false }
+        return { serviceId: null, locationSlug: null, notFound: true, isBooking: false }
       }
     }
 
-    // 2. Check legacy hash: #<serviceId>
+    // 3. Check legacy hash: #<serviceId> or #<locationSlug>
     if (hash && Object.prototype.hasOwnProperty.call(detailedServicesData, hash)) {
-      return { serviceId: hash, notFound: false, isBooking: false }
+      return { serviceId: hash, locationSlug: null, notFound: false, isBooking: false }
+    }
+    if (hash && Object.prototype.hasOwnProperty.call(locationsData, hash)) {
+      return { serviceId: null, locationSlug: hash, notFound: false, isBooking: false }
     }
 
-    // 3. Any unrecognized multi-segment path triggers 404 view
+    // 4. Any unrecognized multi-segment path triggers 404 view
     if (pathname !== '/' && pathname !== '/index.html') {
-      return { serviceId: null, notFound: true, isBooking: false }
+      return { serviceId: null, locationSlug: null, notFound: true, isBooking: false }
     }
 
-    return { serviceId: null, notFound: false, isBooking: false }
+    return { serviceId: null, locationSlug: null, notFound: false, isBooking: false }
   }
 
   const [activeDetailId, setActiveDetailId] = useState<string | null>(() => parseCurrentUrl().serviceId)
+  const [activeLocationSlug, setActiveLocationSlug] = useState<string | null>(() => parseCurrentUrl().locationSlug)
   const [isNotFound, setIsNotFound] = useState<boolean>(() => parseCurrentUrl().notFound)
   const [isBookingPage, setIsBookingPage] = useState<boolean>(() => parseCurrentUrl().isBooking)
   const [bookingInitialService, setBookingInitialService] = useState<string>('')
@@ -679,11 +630,12 @@ export default function App() {
   // Clean URL + History API routing synchronization
   useEffect(() => {
     const syncFromLocation = () => {
-      const { serviceId, notFound, isBooking } = parseCurrentUrl()
+      const { serviceId, locationSlug, notFound, isBooking } = parseCurrentUrl()
       setIsNotFound(notFound)
       setActiveDetailId(serviceId)
+      setActiveLocationSlug(locationSlug)
       setIsBookingPage(isBooking)
-      if (serviceId || notFound || isBooking) {
+      if (serviceId || locationSlug || notFound || isBooking) {
         window.scrollTo({ top: 0, behavior: 'smooth' })
       }
     }
@@ -719,6 +671,54 @@ export default function App() {
         metaDescEl.content = 'Book a private, 100% confidential Vedic astrology reading with Pandith Vikram. In person on Hollywood Blvd, Los Angeles, or via phone and WhatsApp. Call +1 510-371-4626.'
       }
       if (dynamicSchemaEl) dynamicSchemaEl.remove()
+      return
+    }
+
+    // Dynamic SEO for Location Pages (/indian-astrologer-<city>)
+    if (activeLocationSlug && Object.prototype.hasOwnProperty.call(locationsData, activeLocationSlug)) {
+      const loc = locationsData[activeLocationSlug]
+      const cleanLocUrl = `${baseUrl}/${loc.slug}`
+      document.title = loc.metaTitle
+      if (canonicalEl) canonicalEl.href = cleanLocUrl
+      if (metaDescEl) metaDescEl.content = loc.metaDescription
+
+      if (!dynamicSchemaEl) {
+        dynamicSchemaEl = document.createElement('script')
+        dynamicSchemaEl.id = 'dynamic-service-schema'
+        dynamicSchemaEl.type = 'application/ld+json'
+        document.head.appendChild(dynamicSchemaEl)
+      }
+      dynamicSchemaEl.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'LocalBusiness',
+            '@id': `${cleanLocUrl}#localbusiness`,
+            name: `Indian Astrologer Pandith Vikram - ${loc.name}, CA`,
+            description: loc.heroDescription,
+            url: cleanLocUrl,
+            telephone: '+1-510-371-4626',
+            priceRange: '$$',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: '7001 Hollywood Blvd',
+              addressLocality: 'Los Angeles',
+              addressRegion: 'CA',
+              postalCode: '90028',
+              addressCountry: 'US'
+            },
+            areaServed: [loc.name, loc.region, 'California']
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: `${baseUrl}/` },
+              { '@type': 'ListItem', position: 2, name: 'California Locations', item: `${baseUrl}/#usa-locations` },
+              { '@type': 'ListItem', position: 3, name: `${loc.name}, CA`, item: cleanLocUrl }
+            ]
+          }
+        ]
+      })
       return
     }
 
@@ -877,6 +877,7 @@ export default function App() {
   const navigateToBooking = (initialService?: string) => {
     setIsNotFound(false)
     setActiveDetailId(null)
+    setActiveLocationSlug(null)
     setIsBookingPage(true)
     if (initialService) setBookingInitialService(initialService)
     if (typeof window !== 'undefined' && window.history?.pushState) {
@@ -890,6 +891,7 @@ export default function App() {
   const closeBookingPage = (scrollToTop = true) => {
     setIsNotFound(false)
     setIsBookingPage(false)
+    setActiveLocationSlug(null)
     if (typeof window !== 'undefined' && window.history?.pushState) {
       if (window.location.pathname !== '/' || window.location.hash) {
         window.history.pushState(null, '', '/')
@@ -905,6 +907,7 @@ export default function App() {
     if (Object.prototype.hasOwnProperty.call(detailedServicesData, serviceId)) {
       setIsNotFound(false)
       setIsBookingPage(false)
+      setActiveLocationSlug(null)
       setActiveDetailId(serviceId)
       if (typeof window !== 'undefined' && window.history?.pushState) {
         const targetPath = `/services/${serviceId}`
@@ -920,6 +923,7 @@ export default function App() {
     setIsNotFound(false)
     setIsBookingPage(false)
     setActiveDetailId(null)
+    setActiveLocationSlug(null)
     if (typeof window !== 'undefined' && window.history?.pushState) {
       if (window.location.pathname !== '/' || window.location.hash) {
         window.history.pushState(null, '', '/')
@@ -929,6 +933,41 @@ export default function App() {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }
+
+  // Open dedicated screen for California city location (/indian-astrologer-<city>)
+  const openDedicatedLocation = (slug: string) => {
+    if (Object.prototype.hasOwnProperty.call(locationsData, slug)) {
+      setIsNotFound(false)
+      setIsBookingPage(false)
+      setActiveDetailId(null)
+      setActiveLocationSlug(slug)
+      if (typeof window !== 'undefined' && window.history?.pushState) {
+        const targetPath = `/${slug}`
+        if (window.location.pathname !== targetPath) {
+          window.history.pushState({ locationSlug: slug }, '', targetPath)
+        }
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
+  const closeDedicatedLocation = (scrollToTop = true) => {
+    setIsNotFound(false)
+    setIsBookingPage(false)
+    setActiveLocationSlug(null)
+    if (typeof window !== 'undefined' && window.history?.pushState) {
+      if (window.location.pathname !== '/' || window.location.hash) {
+        window.history.pushState(null, '', '/')
+      }
+    }
+    if (scrollToTop) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
+  const currentLocation = activeLocationSlug && Object.prototype.hasOwnProperty.call(locationsData, activeLocationSlug)
+    ? locationsData[activeLocationSlug]
+    : null
 
   const currentDetailedService = activeDetailId && Object.prototype.hasOwnProperty.call(detailedServicesData, activeDetailId)
     ? detailedServicesData[activeDetailId]
@@ -1066,7 +1105,13 @@ export default function App() {
             </a>
             <a
               href="#usa-locations"
-              onClick={() => { if (activeDetailId) closeDedicatedService(false) }}
+              onClick={() => {
+                if (activeDetailId || activeLocationSlug || isBookingPage || isNotFound) {
+                  closeDedicatedService(false)
+                  closeDedicatedLocation(false)
+                  closeBookingPage(false)
+                }
+              }}
               className="hover:text-[#B91C1C] transition-colors py-1 border-b-2 border-transparent hover:border-[#B91C1C] whitespace-nowrap"
             >
               Locations
@@ -1187,7 +1232,14 @@ export default function App() {
             </a>
             <a
               href="#usa-locations"
-              onClick={() => { if (activeDetailId || isBookingPage) closeDedicatedService(false); setMobileMenuOpen(false); }}
+              onClick={() => {
+                if (activeDetailId || activeLocationSlug || isBookingPage || isNotFound) {
+                  closeDedicatedService(false)
+                  closeDedicatedLocation(false)
+                  closeBookingPage(false)
+                }
+                setMobileMenuOpen(false)
+              }}
               className="block py-2 text-slate-800 hover:text-[#B91C1C] font-semibold border-b border-slate-100"
             >
               Service Locations
@@ -1221,10 +1273,14 @@ export default function App() {
         )}
       </header>
 
-      {/* DEDICATED SCREEN ROUTING: Render 404 NotFoundView, Dedicated BookingPageView, Full In-Depth Service Screen, or Home View */}
+      {/* DEDICATED SCREEN ROUTING: Render 404 NotFoundView, Dedicated BookingPageView, Dedicated Location Page, Full In-Depth Service Screen, or Home View */}
       {isNotFound ? (
         <NotFoundView
-          onGoHome={() => closeDedicatedService(true)}
+          onGoHome={() => {
+            closeDedicatedService(false)
+            closeDedicatedLocation(false)
+            closeBookingPage(true)
+          }}
           onSelectService={(serviceId) => openDedicatedService(serviceId)}
           onBookNow={() => navigateToBooking()}
         />
@@ -1232,6 +1288,14 @@ export default function App() {
         <BookingPageView
           onBack={() => closeBookingPage(true)}
           initialService={bookingInitialService}
+        />
+      ) : currentLocation ? (
+        <LocationDetailView
+          location={currentLocation}
+          onBack={() => closeDedicatedLocation(true)}
+          onBookNow={(label) => navigateToBooking(label || `Location: ${currentLocation.name}`)}
+          onSelectLocation={openDedicatedLocation}
+          onSelectService={openDedicatedService}
         />
       ) : currentDetailedService ? (
         <ServiceDetailView
@@ -2466,21 +2530,37 @@ export default function App() {
                 </p>
               </div>
 
-              {/* 2-Column California Regions & Cities Directory Grid (Matching Reference 3 Layout) */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4">
-                {usaLocations.map((loc) => (
+              {/* 15 California Cities Directory Grid (Exact Requested Locations) */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {locationsList.map((loc, idx) => (
                   <div
                     key={loc.id}
-                    onClick={() => navigateToBooking()}
-                    className="border-b border-dashed border-slate-300 pb-3.5 pt-1 flex flex-wrap sm:flex-nowrap items-baseline gap-2.5 group hover:bg-amber-50/50 px-2 transition-colors cursor-pointer"
+                    onClick={() => openDedicatedLocation(loc.slug)}
+                    className="bg-[#FAF9F5] hover:bg-amber-50/70 border border-slate-200 hover:border-[#8E1612] p-4 transition-all duration-200 cursor-pointer group flex flex-col justify-between space-y-2 shadow-2xs hover:shadow-sm"
                   >
-                    <span className="inline-block bg-[#B91C1C] group-hover:bg-[#8E1612] text-white font-oswald font-bold text-xs sm:text-[13px] px-3 py-1 uppercase tracking-wider shrink-0 border-l-3 border-[#FFD700] shadow-xs transition-colors">
-                      {loc.hub}
-                    </span>
-                    <span className="text-slate-700 group-hover:text-slate-900 text-xs sm:text-[13px] font-roboto leading-relaxed">
-                      <strong className="text-[#8E1612] mr-1">-</strong>
-                      {loc.suburbs}
-                    </span>
+                    <div className="space-y-1.5">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="inline-block bg-[#8E1612] group-hover:bg-[#b91c1c] text-white font-oswald font-bold text-xs px-2.5 py-0.5 uppercase tracking-wider border-l-2 border-[#FFD700] transition-colors">
+                          {idx + 1}. {loc.name}
+                        </span>
+                        <span className="text-[10px] text-slate-500 font-roboto truncate">
+                          {loc.region.split('/')[0]}
+                        </span>
+                      </div>
+                      <p className="text-slate-700 text-xs font-roboto leading-relaxed line-clamp-2 pt-0.5">
+                        {loc.suburbs.slice(0, 5).join(', ')}...
+                      </p>
+                    </div>
+
+                    <div className="pt-2 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-roboto font-bold">
+                      <span className="text-[#8E1612] group-hover:text-[#b91c1c] uppercase tracking-wider flex items-center gap-1">
+                        <span>View City Page</span>
+                        <span className="group-hover:translate-x-1 transition-transform">→</span>
+                      </span>
+                      <span className="text-slate-400 font-mono text-[10px]">
+                        /{loc.slug}
+                      </span>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -2775,7 +2855,7 @@ export default function App() {
                   <div className="leading-relaxed">
                     <p className="font-bold text-white uppercase text-xs">Office Address:</p>
                     <a
-                      href="https://www.google.com/maps/search/?api=1&query=7001+Hollywood+Blvd,+Los+Angeles,+CA+90028"
+                      href="https://maps.google.com?q=Indian%20Astrologer,%207001%20Hollywood%20Blvd,%20Los%20Angeles,%20CA%2090028,%20United%20States&ftid=0x80c2bf003e569f33:0x14bf83fe85d0f8d5&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,100821555,47071704,94218641,94282134,100835694,94286869,100820247,100822504,100838877,121816461&g_st=ic"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-[#FFD700] transition-colors"
@@ -2829,6 +2909,30 @@ export default function App() {
                   </button>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* California Locations Directory Bar */}
+          <div className="border-t border-slate-700/60 pt-6 mt-8">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3 font-roboto">
+              <span className="text-xs font-oswald font-bold uppercase tracking-wider text-[#FFD700]">
+                ✦ Dedicated California Service Locations:
+              </span>
+              <span className="text-[11px] text-amber-100/70">
+                In-Person Hollywood Consultations & Confidential Remote Readings Across CA
+              </span>
+            </div>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs font-roboto text-slate-300">
+              {locationsList.map((loc) => (
+                <button
+                  key={loc.id}
+                  onClick={() => openDedicatedLocation(loc.slug)}
+                  className="hover:text-[#FFD700] transition-colors cursor-pointer text-left flex items-center gap-1.5"
+                >
+                  <span className="text-[#FFD700] font-bold">›</span>
+                  <span>{loc.name}</span>
+                </button>
+              ))}
             </div>
           </div>
 
