@@ -147,7 +147,7 @@ export default function LocationDetailView({
             {/* Divider */}
             <hr className="border-slate-200 my-6" />
 
-            {/* H2: Meet Trusted best Indian Astrologer in [Location] CA and Ease your life */}
+            {/* H2: City-Specific Life Crossroads & Astrological Guidance */}
             <div className="space-y-4">
               <h2 className="font-oswald text-xl sm:text-2xl font-bold uppercase text-slate-900 border-b-2 border-[#8E1612] pb-2">
                 {location.meetTrustedHeading}
@@ -177,7 +177,7 @@ export default function LocationDetailView({
               </div>
             </div>
 
-            {/* H2: Get best astrology consultancy services in [Location] CA from renowned Indian astrologer */}
+            {/* H2: Specialized Vedic Consultations & Remedial Services */}
             <div className="space-y-4">
               <h2 className="font-oswald text-xl sm:text-2xl font-bold uppercase text-slate-900 border-b-2 border-[#8E1612] pb-2">
                 {location.consultancyHeading}
@@ -386,7 +386,7 @@ export default function LocationDetailView({
           {/* RIGHT COLUMN: Sticky Contact Form & Direct Helplines (4 cols on lg, matching screenshot) */}
           <div className="lg:col-span-4 lg:sticky lg:top-24 space-y-4">
             
-            {/* Navy Blue Card: Get On Touch Pandith Vikram (Matching Reference Screenshot) */}
+            {/* Navy Blue Card: Schedule a Private Consultation Form */}
             <div className="bg-[#192252] border-2 border-[#FFD700] p-5 sm:p-6 text-white shadow-xl rounded-none">
               
               {/* Header with Mail Icon */}
@@ -397,10 +397,10 @@ export default function LocationDetailView({
                   </svg>
                 </div>
                 <h3 className="font-oswald text-xl sm:text-2xl font-bold uppercase tracking-wide text-white">
-                  Get On Touch Pandith Vikram
+                  Schedule a Private Consultation
                 </h3>
                 <p className="text-[11px] text-amber-200 font-roboto mt-0.5">
-                  Direct Vedic Consultation Intake • {location.name}, CA
+                  Confidential Vedic Guidance • In-Person & Remote Readings • {location.name}, CA
                 </p>
               </div>
 
@@ -498,12 +498,12 @@ export default function LocationDetailView({
 
                   <button
                     type="submit"
-                    className="w-full bg-[#8E1612] hover:bg-[#b5140e] text-white py-3 font-oswald font-bold text-xs uppercase tracking-wider transition-colors shadow-md flex items-center justify-center gap-2 rounded-none cursor-pointer"
+                    className="w-full bg-[#8E1612] hover:bg-[#b5140e] text-white py-3.5 font-oswald font-bold text-xs uppercase tracking-wider transition-colors shadow-md flex items-center justify-center gap-2 rounded-none cursor-pointer"
                   >
                     <svg className="w-4 h-4 stroke-current fill-none" viewBox="0 0 24 24" strokeWidth="2.5">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Send Your Message</span>
+                    <span>Request Confidential Reading →</span>
                   </button>
 
                   <p className="text-[10px] text-slate-300 text-center italic pt-1">
@@ -513,9 +513,9 @@ export default function LocationDetailView({
               )}
             </div>
 
-            {/* Direct Helpline Buttons Below Form (Matching Reference Screenshot 1 & 2) */}
+            {/* Direct Helpline Buttons Below Form */}
             <div className="space-y-2.5 font-oswald">
-              {/* Click To Call Red Box */}
+              {/* Telephone Consultation Red Box */}
               <a
                 href="tel:+15103714626"
                 className="bg-[#8E1612] hover:bg-[#b5140e] text-white p-3.5 flex items-center justify-between shadow-md transition-colors border border-red-900 rounded-none"
@@ -527,7 +527,7 @@ export default function LocationDetailView({
                     </svg>
                   </div>
                   <div>
-                    <span className="block text-[11px] uppercase tracking-wider text-amber-200">Click To Call Pandith Vikram</span>
+                    <span className="block text-[11px] uppercase tracking-wider text-amber-200">Direct Telephone Reading</span>
                     <span className="text-base sm:text-lg font-bold tracking-tight">+1 510-371-4626</span>
                   </div>
                 </div>
