@@ -29,6 +29,7 @@ export default function LocationDetailView({
     message: ''
   })
   const [submitted, setSubmitted] = useState(false)
+  const [lastWhatsAppUrl, setLastWhatsAppUrl] = useState('')
 
   // Keep city pre-filled when location changes
   useEffect(() => {
@@ -41,40 +42,36 @@ export default function LocationDetailView({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     confetti({ particleCount: 70, spread: 60, origin: { y: 0.6 } })
-    setSubmitted(true)
 
     const formattedDetails = [
       `*✦ NEW CONSULTATION INQUIRY - ${location.name.toUpperCase()} (CA) ✦*`,
-      `*Client Name:* ${formData.name || 'Not provided'}`,
-      formData.email ? `*Email:* ${formData.email}` : null,
-      `*Phone Number:* ${formData.phone || 'Not provided'}`,
-      formData.dob ? `*Date of Birth:* ${formData.dob}` : null,
-      `*City Living In:* ${formData.cityLivingIn || location.name}`,
-      `*Country:* ${formData.country || 'United States'}`,
-      formData.message ? `*Message:* ${formData.message}` : null,
-      `*Source Page:* pandith-vikram.vercel.app/${location.slug}`
-    ].filter(Boolean).join('\n')
+      `*Name:* ${formData.name.trim() || 'Not provided'}`,
+      `*Email:* ${formData.email.trim() || 'Not provided'}`,
+      `*Phone:* ${formData.phone.trim() || 'Not provided'}`,
+      `*Date of Birth:* ${formData.dob || 'Not provided'}`,
+      `*City Living In:* ${formData.cityLivingIn.trim() || location.name}`,
+      `*Country:* ${formData.country.trim() || 'United States'}`,
+      `*Message / Situation:* ${formData.message.trim() || 'Vedic Astrology Consultation Request'}`,
+      `*Location Page:* https://pandith-vikram.vercel.app/${location.slug}`
+    ].join('\n')
 
     const whatsappUrl = `https://wa.me/15103714626?text=${encodeURIComponent(formattedDetails)}`
+    setLastWhatsAppUrl(whatsappUrl)
+    setSubmitted(true)
 
     try {
-      window.open(whatsappUrl, '_blank')
+      const isMobile = typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+      if (isMobile) {
+        window.location.href = whatsappUrl
+      } else {
+        const opened = window.open(whatsappUrl, '_blank')
+        if (!opened || opened.closed || typeof opened.closed === 'undefined') {
+          window.location.href = whatsappUrl
+        }
+      }
     } catch {
       window.location.href = whatsappUrl
     }
-
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        dob: '',
-        cityLivingIn: location.name,
-        country: 'United States',
-        message: ''
-      })
-    }, 3500)
   }
 
   return (
@@ -405,24 +402,41 @@ export default function LocationDetailView({
               </div>
 
               {submitted ? (
-                <div className="bg-emerald-500/20 border border-emerald-400 p-5 text-center space-y-2 font-roboto">
-                  <div className="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto">
-                    <svg className="w-4 h-4 stroke-current fill-none" viewBox="0 0 24 24" strokeWidth="2.5">
+                <div className="bg-emerald-500/20 border border-emerald-400 p-5 text-center space-y-3 font-roboto">
+                  <div className="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto">
+                    <svg className="w-5 h-5 stroke-current fill-none" viewBox="0 0 24 24" strokeWidth="2.5">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h4 className="font-bold text-emerald-300 text-sm">Inquiry Transmitted</h4>
+                  <h4 className="font-bold text-emerald-300 text-sm">Opening WhatsApp...</h4>
                   <p className="text-xs text-white/90">
-                    Opening WhatsApp to connect with Pandith Vikram directly (+1 510-371-4626)...
+                    All details entered in these boxes have been compiled for Pandith Vikram.
                   </p>
+                  <a
+                    href={lastWhatsAppUrl || `https://wa.me/15103714626`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 font-oswald font-bold text-xs uppercase tracking-wider transition-colors shadow-md rounded-none"
+                  >
+                    <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
+                      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.59 20.16 12.04 20.16C10.64 20.16 9.27 19.8 8.08 19.09L7.79 18.92L4.69 19.73L5.52 16.71L5.33 16.41C4.55 15.17 4.14 13.56 4.14 11.91C4.14 7.37 7.83 3.67 12.04 3.67ZM16.57 14.39C16.32 14.26 15.1 13.66 14.87 13.58C14.65 13.49 14.48 13.45 14.32 13.7C14.15 13.95 13.68 14.51 13.54 14.67C13.39 14.84 13.25 14.86 13 14.73C12.75 14.61 11.95 14.35 11 13.5C10.26 12.84 9.76 12.03 9.61 11.78C9.47 11.53 9.59 11.4 9.72 11.27C9.83 11.16 9.97 10.98 10.1 10.83C10.22 10.69 10.27 10.58 10.35 10.41C10.43 10.25 10.39 10.1 10.33 9.98C10.27 9.85 9.77 8.63 9.57 8.13C9.37 7.65 9.17 7.71 9.02 7.71C8.88 7.7 8.71 7.7 8.55 7.7C8.38 7.7 8.11 7.76 7.88 8.01C7.65 8.26 7 8.87 7 10.09C7 11.31 7.89 12.49 8.01 12.65C8.14 12.82 9.77 15.32 12.26 16.39C12.85 16.65 13.31 16.8 13.67 16.92C14.26 17.11 14.8 17.08 15.23 17.02C15.71 16.95 16.71 16.42 16.92 15.84C17.12 15.26 17.12 14.77 17.06 14.67C17 14.56 16.82 14.51 16.57 14.39Z"/>
+                    </svg>
+                    <span>Tap to Open WhatsApp Now →</span>
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => setSubmitted(false)}
+                    className="text-[11px] text-amber-200 hover:underline block mx-auto cursor-pointer"
+                  >
+                    ← Edit or resubmit details
+                  </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-3 font-roboto text-xs">
+                <form noValidate onSubmit={handleSubmit} className="space-y-3 font-roboto text-xs">
                   <div>
                     <label className="block text-slate-200 font-semibold mb-1 text-[11px]">Name</label>
                     <input
                       type="text"
-                      required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Your Full Name"
@@ -445,7 +459,6 @@ export default function LocationDetailView({
                     <label className="block text-slate-200 font-semibold mb-1 text-[11px]">Phone</label>
                     <input
                       type="tel"
-                      required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="Phone / WhatsApp Number"
@@ -500,10 +513,10 @@ export default function LocationDetailView({
                     type="submit"
                     className="w-full bg-[#8E1612] hover:bg-[#b5140e] text-white py-3.5 font-oswald font-bold text-xs uppercase tracking-wider transition-colors shadow-md flex items-center justify-center gap-2 rounded-none cursor-pointer"
                   >
-                    <svg className="w-4 h-4 stroke-current fill-none" viewBox="0 0 24 24" strokeWidth="2.5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
+                      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.04 3.67C14.24 3.67 16.31 4.53 17.87 6.08C19.42 7.64 20.28 9.71 20.28 11.92C20.28 16.46 16.59 20.16 12.04 20.16C10.64 20.16 9.27 19.8 8.08 19.09L7.79 18.92L4.69 19.73L5.52 16.71L5.33 16.41C4.55 15.17 4.14 13.56 4.14 11.91C4.14 7.37 7.83 3.67 12.04 3.67ZM16.57 14.39C16.32 14.26 15.1 13.66 14.87 13.58C14.65 13.49 14.48 13.45 14.32 13.7C14.15 13.95 13.68 14.51 13.54 14.67C13.39 14.84 13.25 14.86 13 14.73C12.75 14.61 11.95 14.35 11 13.5C10.26 12.84 9.76 12.03 9.61 11.78C9.47 11.53 9.59 11.4 9.72 11.27C9.83 11.16 9.97 10.98 10.1 10.83C10.22 10.69 10.27 10.58 10.35 10.41C10.43 10.25 10.39 10.1 10.33 9.98C10.27 9.85 9.77 8.63 9.57 8.13C9.37 7.65 9.17 7.71 9.02 7.71C8.88 7.7 8.71 7.7 8.55 7.7C8.38 7.7 8.11 7.76 7.88 8.01C7.65 8.26 7 8.87 7 10.09C7 11.31 7.89 12.49 8.01 12.65C8.14 12.82 9.77 15.32 12.26 16.39C12.85 16.65 13.31 16.8 13.67 16.92C14.26 17.11 14.8 17.08 15.23 17.02C15.71 16.95 16.71 16.42 16.92 15.84C17.12 15.26 17.12 14.77 17.06 14.67C17 14.56 16.82 14.51 16.57 14.39Z"/>
                     </svg>
-                    <span>Request Confidential Reading →</span>
+                    <span>Send Details via WhatsApp →</span>
                   </button>
 
                   <p className="text-[10px] text-slate-300 text-center italic pt-1">
