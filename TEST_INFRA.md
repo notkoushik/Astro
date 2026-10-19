@@ -23,7 +23,7 @@ The End-to-End (E2E) Test Suite for the Indian Astrologer Pandith Vikram web app
 ┌──────────────────────┐┌──────────────────────┐┌──────────────────────┐
 │  Tier 0: Build &     ││  Tier 1: Feature     ││  Tier 2: Boundary &  │
 │  Asset Integrity     ││  Coverage (75 Tests) ││  Corner Cases (75)   │
-│  (8 Tests)           ││  15 Services × 5     ││  15 Services × 5     │
+│  (9 Tests)           ││  15 Services × 5     ││  15 Services × 5     │
 └──────────────────────┘└──────────────────────┘└──────────────────────┘
     │                               │                               │
     └───────────────────────────────┼───────────────────────────────┘
@@ -53,7 +53,7 @@ The End-to-End (E2E) Test Suite for the Indian Astrologer Pandith Vikram web app
 
 ## 2. Test Matrix & Detailed Tier Specifications
 
-### 2.1 Tier 0: Production Build & Asset Integrity (8 Tests)
+### 2.1 Tier 0: Production Build & Asset Integrity (9 Tests)
 
 | Test ID | Target | Verification Criteria | Expected Outcome |
 |---|---|---|---|
@@ -65,6 +65,7 @@ The End-to-End (E2E) Test Suite for the Indian Astrologer Pandith Vikram web app
 | `T0-06` | Project Config | `package.json` contains React 19, Vite, Tailwind CSS v4, and build scripts | Valid JSON with required dependencies |
 | `T0-07` | TypeScript Config | `tsconfig.json` specifies ES2020+, React JSX, and strict module resolution | Valid JSON configuration |
 | `T0-08` | Build Script | `npm run build` command registered in `package.json` scripts | Script `build: "vite build"` present |
+| `T0-09` | Sitemap & robots.txt | Build generates `dist/sitemap.xml` listing the homepage, `/book-reading`, every service and every location on one site URL; `robots.txt` points to it; `index.html` canonical uses the same URL | 32 URLs, single origin, no unreplaced `%VITE_SITE_URL%` |
 
 ---
 
@@ -270,12 +271,12 @@ npm test
 
 | Tier | Focus Area | Test Count | Minimum Requirement | Status |
 |---|---|---|---|---|
-| **Tier 0** | Production Build & Static Asset Integrity | 8 | All core artifacts | **DEFINED & READY** |
+| **Tier 0** | Production Build & Static Asset Integrity | 9 | All core artifacts | **DEFINED & READY** |
 | **Tier 1** | Feature Coverage (15 Services × 5 Core Pillars) | 75 | >= 75 tests | **DEFINED & READY** |
 | **Tier 2** | Boundary & Corner Cases (15 Services × 5 Boundaries) | 75 | >= 75 tests | **DEFINED & READY** |
 | **Tier 3** | Cross-Feature Interactions & Navigation Flows | 18 | Multi-feature coverage | **DEFINED & READY** |
 | **Tier 4** | Real-World California Client End-to-End Scenarios | 15 | Realistic user journeys | **DEFINED & READY** |
-| **TOTAL** | **Full End-to-End Test Suite** | **191** | **>= 120 tests** | **100% COMPLETE** |
+| **TOTAL** | **Full End-to-End Test Suite** | **192** | **>= 120 tests** | **100% COMPLETE** |
 
 ---
 
