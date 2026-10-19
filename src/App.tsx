@@ -652,7 +652,7 @@ export default function App() {
 
   // Dynamic Canonical URL, Document Title, Meta Description & Per-Service JSON-LD Schema Markup
   useEffect(() => {
-    const baseUrl = 'https://pandithvikramastrology.com'
+    const baseUrl = import.meta.env.VITE_SITE_URL
     const canonicalEl = document.getElementById('canonical-link') as HTMLLinkElement | null
     const metaDescEl = document.getElementById('meta-description') as HTMLMetaElement | null
     let dynamicSchemaEl = document.getElementById('dynamic-service-schema') as HTMLScriptElement | null
@@ -769,7 +769,7 @@ export default function App() {
       }
       if (dynamicSchemaEl) dynamicSchemaEl.remove()
     }
-  }, [activeDetailId, isNotFound, isBookingPage])
+  }, [activeDetailId, activeLocationSlug, isNotFound, isBookingPage])
 
   // Auto-advance slides every 6 seconds when on home page
   useEffect(() => {
