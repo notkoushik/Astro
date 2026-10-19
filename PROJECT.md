@@ -42,6 +42,7 @@ The expansion introduces full dedicated Vedic astrology experiences for all 15 s
 
 ## Code Layout
 - `src/App.tsx`: Main application shell, state management, hash route synchronization, modal triggers.
+- `src/seo.ts`: Per-page title, description, canonical and Open Graph values, used by the app at runtime and by `vite.config.ts` to write each page's own HTML (`dist/<path>/index.html`) and the sitemap at build time.
 - `src/data/servicesData.ts`: Data definitions for all 15 services, visual themes, planetary deities, and galleries.
 - `src/components/ServiceDetailView.tsx`: Dedicated full-page service view with dynamic Vedic theming.
 - `src/components/ServiceConceptGallery.tsx`: Subcomponent rendering the 3-tier square concept gallery.

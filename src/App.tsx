@@ -10,6 +10,7 @@ import BookingPageView from './components/BookingPageView'
 import LocationDetailView from './components/LocationDetailView'
 import { locationsData, locationsList, getLocationBySlug } from './data/locationsData'
 import type { LocationData } from './data/locationsData'
+import { applyPageSeo, bookingSeo, homeSeo, locationSeo, notFoundSeo, serviceSeo } from './seo'
 
 interface ServiceItem {
   id: string
@@ -652,24 +653,19 @@ export default function App() {
 
   // Dynamic Canonical URL, Document Title, Meta Description & Per-Service JSON-LD Schema Markup
   useEffect(() => {
+    // Title, description, canonical and Open Graph tags come from src/seo.ts, the same values
+    // written into each page's HTML at build time, so the tags never change after load.
     const baseUrl = import.meta.env.VITE_SITE_URL
-    const canonicalEl = document.getElementById('canonical-link') as HTMLLinkElement | null
-    const metaDescEl = document.getElementById('meta-description') as HTMLMetaElement | null
     let dynamicSchemaEl = document.getElementById('dynamic-service-schema') as HTMLScriptElement | null
 
     if (isNotFound) {
-      document.title = 'Page Not Found (404) | Pandith Vikram, Vedic Astrologer in Los Angeles'
-      if (canonicalEl) canonicalEl.href = `${baseUrl}/404`
+      applyPageSeo(notFoundSeo, baseUrl)
       if (dynamicSchemaEl) dynamicSchemaEl.remove()
       return
     }
 
     if (isBookingPage) {
-      document.title = 'Book a Personal Reading | Pandith Vikram, Indian Vedic Astrologer in Los Angeles'
-      if (canonicalEl) canonicalEl.href = `${baseUrl}/book-reading`
-      if (metaDescEl) {
-        metaDescEl.content = 'Book a private, 100% confidential Vedic astrology reading with Pandith Vikram. In person on Hollywood Blvd, Los Angeles, or via phone and WhatsApp. Call +1 510-371-4626.'
-      }
+      applyPageSeo(bookingSeo, baseUrl)
       if (dynamicSchemaEl) dynamicSchemaEl.remove()
       return
     }
@@ -678,9 +674,7 @@ export default function App() {
     if (activeLocationSlug && Object.prototype.hasOwnProperty.call(locationsData, activeLocationSlug)) {
       const loc = locationsData[activeLocationSlug]
       const cleanLocUrl = `${baseUrl}/${loc.slug}`
-      document.title = loc.metaTitle
-      if (canonicalEl) canonicalEl.href = cleanLocUrl
-      if (metaDescEl) metaDescEl.content = loc.metaDescription
+      applyPageSeo(locationSeo(loc), baseUrl)
 
       if (!dynamicSchemaEl) {
         dynamicSchemaEl = document.createElement('script')
@@ -725,9 +719,7 @@ export default function App() {
     if (activeDetailId && Object.prototype.hasOwnProperty.call(detailedServicesData, activeDetailId)) {
       const srv = detailedServicesData[activeDetailId]
       const cleanServiceUrl = `${baseUrl}/services/${srv.id}`
-      document.title = `${srv.title} ${srv.subtitle} | Pandith Vikram, Vedic Astrologer in Los Angeles`
-      if (canonicalEl) canonicalEl.href = cleanServiceUrl
-      if (metaDescEl) metaDescEl.content = `${srv.desc} Book a private reading with Pandith Vikram on Hollywood Blvd, Los Angeles. Call +1 510-371-4626.`
+      applyPageSeo(serviceSeo(srv), baseUrl)
 
       if (!dynamicSchemaEl) {
         dynamicSchemaEl = document.createElement('script')
@@ -761,12 +753,7 @@ export default function App() {
         ]
       })
     } else {
-      document.title = 'Indian Astrologer Pandith Vikram | Vedic Astrologer in Los Angeles, California'
-      if (canonicalEl) canonicalEl.href = `${baseUrl}/`
-      if (metaDescEl) {
-        metaDescEl.content =
-          'Indian Vedic astrologer Pandith Vikram, 7001 Hollywood Blvd, Los Angeles, CA. 35+ years of horoscope, psychic and tarot readings, love spells, marriage matching, career and family guidance. In person, by phone or video. Call +1 510-371-4626.'
-      }
+      applyPageSeo(homeSeo, baseUrl)
       if (dynamicSchemaEl) dynamicSchemaEl.remove()
     }
   }, [activeDetailId, activeLocationSlug, isNotFound, isBookingPage])

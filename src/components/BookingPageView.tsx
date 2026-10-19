@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import confetti from 'canvas-confetti'
 
 export interface BookingPageViewProps {
@@ -26,14 +26,6 @@ export const servicesList = [
 ]
 
 export default function BookingPageView({ onBack, initialService }: BookingPageViewProps) {
-  useEffect(() => {
-    const originalTitle = document.title
-    document.title = 'Book a Session & Contact Pandith Vikram | Indian Astrologer in Los Angeles'
-    return () => {
-      document.title = originalTitle
-    }
-  }, [])
-
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
