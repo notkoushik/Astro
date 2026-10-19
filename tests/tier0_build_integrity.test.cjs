@@ -132,6 +132,25 @@ function registerTier0Tests(harness) {
       assert.ok(!html.includes('%VITE_SITE_URL%'), 'index.html must not contain an unreplaced %VITE_SITE_URL% placeholder');
       assert.ok(html.includes(`rel="canonical" href="${origin}/"`), 'Homepage canonical link must use the same site URL as the sitemap');
     });
+
+    harness.test('T0-10: Every sitemap page has its own pre-rendered HTML with its own canonical, og:url and title', () => {
+      const sitemap = fs.readFileSync(path.join(PROJECT_ROOT, 'dist/sitemap.xml'), 'utf-8');
+      const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+      const titles = new Set();
+      locs.forEach((loc) => {
+        const pagePath = new URL(loc).pathname;
+        const file = path.join(PROJECT_ROOT, 'dist', pagePath === '/' ? '' : pagePath, 'index.html');
+        assert.ok(fs.existsSync(file), `Pre-rendered HTML must exist for ${pagePath}`);
+        const html = fs.readFileSync(file, 'utf-8');
+        const canonical = (html.match(/id="canonical-link"[^>]*href="([^"]*)"/) || [])[1];
+        const ogUrl = (html.match(/id="og-url"[^>]*content="([^"]*)"/) || [])[1];
+        const title = (html.match(/<title>([^<]*)<\/title>/) || [])[1];
+        assert.strictEqual(canonical, loc, `${pagePath} must declare its own URL as canonical, found ${canonical}`);
+        assert.strictEqual(ogUrl, loc, `${pagePath} must declare its own URL as og:url, found ${ogUrl}`);
+        assert.ok(title && !titles.has(title), `${pagePath} must have a unique title, found "${title}"`);
+        titles.add(title);
+      });
+    });
   });
 }
 
